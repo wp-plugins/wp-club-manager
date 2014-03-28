@@ -1,10 +1,10 @@
-=== WP Club Manager by ClubPress ===
+=== WP Club Manager ===
 Contributors: ClubPress
-Tags: clubs, teams, sports team, sports club, club management, team management, league tables, football, rugby, cricket, soccer, hockey
+Tags: clubs, teams, sports team, sports club, club management, team management, league tables, football, rugby, soccer, hockey, ice hockey
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 3.8
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,7 +12,7 @@ WP Club Manager is a powerful tool to help you run any sports club website easil
 
 == Description ==
 
-Create and manage a sports club website quickly and easily using WordPress.
+Create and manage a sports club website quickly and easily using WordPress. Manage multiple teams, player profiles and statistics, club staff, sponsors, league tables and keep track of upcoming and played matches all within one single plugin.
 
 = Features =
 
@@ -68,8 +68,20 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 == Changelog ==
 
+= 1.0.1 - 29/03/2014
+* Tweak - Improved admin UI
+* Tweak - Added admin menu logo
+* Tweak - Removed some background and color properties to improve frontend CSS compatibility with themes
+* Tweak - Disabled manual player stats input for All Seasons. Makes sure stats are assigned to a season
+* Fix - Total player stats input fixed
+* Fix - Average rating calculated on player profiles
+* Fix - Average rating label on player profiles and player lists
+* Fix - Fixed manual club stats not updating
+
 = 1.0.0 - 18/03/2014
 * Initial release
 
 == Upgrade Notice ==
 
+= 1.0.1 =
+1.0.1 is a minor update with a few minor fixes and improvements. There shouldn't be any problems upgrading but some styles may be affected depending on your theme.

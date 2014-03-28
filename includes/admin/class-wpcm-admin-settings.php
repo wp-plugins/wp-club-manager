@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.0.0
+ * @version     1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -243,7 +243,7 @@ class WPCM_Admin_Settings {
 	        	// Section Titles
 	            case 'title':
 	            	if ( ! empty( $value['title'] ) ) {
-	            		echo '<h3>' . esc_html( $value['title'] ) . '</h3>';
+	            		echo '<div class="stuffbox"><h3>' . esc_html( $value['title'] ) . '</h3><div class="inside">';
 	            	}
 	            	if ( ! empty( $value['desc'] ) ) {
 	            		echo wpautop( wptexturize( wp_kses_post( $value['desc'] ) ) );
@@ -259,7 +259,7 @@ class WPCM_Admin_Settings {
 	            	if ( ! empty( $value['id'] ) ) {
 	            		do_action( 'wpclubmanager_settings_' . sanitize_title( $value['id'] ) . '_end' );
 	            	}
-	            	echo '</table>';
+	            	echo '</table></div></div>';
 	            	if ( ! empty( $value['id'] ) ) {
 	            		do_action( 'wpclubmanager_settings_' . sanitize_title( $value['id'] ) . '_after' );
 	            	}
