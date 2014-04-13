@@ -1,16 +1,16 @@
 <?php
 /**
  * Plugin Name: WP Club Manager
- * Version: 1.0.2
+ * Version: 1.0.3
  * Plugin URI: http://wpclubmanager.com
  * Description: A plugin to help you run any sports club website easily and quickly.
  * Author: ClubPress
  * Author URI: http://wpclubmanager.com
  * Requires at least: 3.8
- * Tested up to: 3.8
+ * Tested up to: 3.8.3
  * 
  * Text Domain: wpclubmanager
- * Domain Path: /i18n/
+ * Domain Path: /languages/
  *
  * @package   WPClubManager
  * @category  Core
@@ -25,14 +25,14 @@ if ( ! class_exists( 'WPClubManager' ) ) :
  * Main WPClubManager Class
  *
  * @class WPClubManager
- * @version	1.0.2
+ * @version	1.0.3
  */
 final class WPClubManager {
 
 	/**
 	 * @var string
 	 */
-	public $version = '1.0.2';
+	public $version = '1.0.3';
 
 	/**
 	 * @var WPClubManager The single instance of the class
@@ -115,28 +115,28 @@ final class WPClubManager {
 	 */
 	public function autoload( $class ) {
 
+		$path  = null;
 		$class = strtolower( $class );
+		$file = 'class-' . str_replace( '_', '-', $class ) . '.php';
 
 		if ( strpos( $class, 'wpcm_meta_box' ) === 0 ) {
-
 			$path = $this->plugin_path() . '/includes/admin/post-types/meta-boxes/';
-			$file = 'class-' . str_replace( '_', '-', $class ) . '.php';
+		} elseif ( strpos( $class, 'wpcm_admin' ) === 0 ) {
+			$path = $this->plugin_path() . '/includes/admin/';
+		}
 
-			if ( is_readable( $path . $file ) ) {
-				include_once( $path . $file );
-				return;
-			}
+		if ( $path && is_readable( $path . $file ) ) {
+			include_once( $path . $file );
+			return;
 		}
 
 		if ( strpos( $class, 'wpcm_' ) === 0 ) {
+			$path = $this->plugin_path() . '/includes/';
+		}
 
-			$path = $this->plugin_path() . 'includes/';
-			$file = 'class-' . str_replace( '_', '-', $class ) . '.php';
-
-			if ( is_readable( $path . $file ) ) {
-				include_once( $path . $file );
-				return;
-			}
+		if ( $path && is_readable( $path . $file ) ) {
+			include_once( $path . $file );
+			return;
 		}
 	}
 
@@ -285,13 +285,17 @@ final class WPClubManager {
 	/**
 	 * Loads the translation files.
 	 *
-	 * @since  1.0.0
+	 * @since  1.0.3
 	 * @access public
 	 * @return void
 	 */
 	public function load_plugin_textdomain() {
-		
-		load_plugin_textdomain( 'wpclubmanager', false, WPCM_BASENAME . '/i18n' );
+
+		$locale = apply_filters( 'plugin_locale', get_locale(), 'wpclubmanager' );
+
+		// Global + Frontend Locale
+		load_textdomain( 'wpclubmanager', WP_LANG_DIR . "/wpclubmanager/wpclubmanager-$locale.mo" );
+		load_plugin_textdomain( 'wpclubmanager', false, plugin_basename( dirname( __FILE__ ) . "/languages" ) );
 	}
 
 	/**
