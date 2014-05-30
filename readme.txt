@@ -18,7 +18,7 @@ Create and manage a sports club website quickly and easily using WordPress. Mana
 
 Comes with all the tools you need to manage your sports club or team website. Features include:
 
-* Included sports are soccer, baseball, basketball, hockey, netball, vollayball, Aussie rules, American football and rugby
+* Included sports are soccer, baseball, basketball, hockey, netball, volleyball, Aussie rules, American football and rugby
 * Manage multiple teams
 * Player and staff profiles
 * Player ratings
