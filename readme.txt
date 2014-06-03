@@ -18,7 +18,7 @@ Create and manage a sports club website quickly and easily using WordPress. Mana
 
 Comes with all the tools you need to manage your sports club or team website. Features include:
 
-* Included sports are soccer, baseball, basketball, hockey, netball, vollayball, Aussie rules, American football and rugby
+* Included sports are soccer, baseball, basketball, hockey, netball, volleyball, Aussie rules, American football and rugby
 * Manage multiple teams
 * Player and staff profiles
 * Player ratings
@@ -40,7 +40,7 @@ Comes with all the tools you need to manage your sports club or team website. Fe
 
 Developers can contribute to the source code on the [WP Club Manager GitHub Repository](https://github.com/ClubPress/wpclubmanager).
 
-Translators can contribute new languages to WooCommerce through [Transifex](https://www.transifex.com/projects/p/wp-club-manager/).
+Translators can contribute new languages to WP Club Manager through [Transifex](https://www.transifex.com/projects/p/wp-club-manager/).
 
 == Installation ==
 
