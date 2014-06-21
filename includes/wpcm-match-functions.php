@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Functions
- * @version     1.1.4
+ * @version     1.1.5
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -168,7 +168,7 @@ function wpcm_match_player_stats_table( $selected_players = array(), $club = nul
 				<?php foreach( $wpcm_player_stats_labels as $key => $val ) { 
 
 					if( get_option( 'wpcm_show_stats_' . $key ) == 'yes' ) : ?>
-						<th<?php if( $key == 'greencards' ||$key == 'yellowcards' || $key == 'redcards' ) echo ' class="th-checkbox"'; if( $key == 'mvp' ) echo ' class="th-radio"'; ?>><?php echo $val; ?></th>
+						<th<?php if( $key == 'greencards' ||$key == 'yellowcards' || $key == 'blackcards' || $key == 'redcards' ) echo ' class="th-checkbox"'; if( $key == 'mvp' ) echo ' class="th-radio"'; ?>><?php echo $val; ?></th>
 					<?php
 					endif;
 				}
@@ -233,6 +233,12 @@ function wpcm_match_player_stats_table( $selected_players = array(), $club = nul
 
 								<td class="<?php echo $key; ?>">
 									<input type="checkbox" data-card="yellow" data-player="<?php echo $player->ID; ?>" name="wpcm_players[<?php echo $type; ?>][<?php echo $player->ID; ?>][<?php echo $key; ?>]" value="1" <?php checked( true, $keyarray ); ?><?php if ( !$played ) echo ' disabled'; ?>/>
+								</td>
+
+							<?php } elseif ( $key == 'blackcards' ) { ?>
+
+								<td class="<?php echo $key; ?>">
+									<input type="checkbox" data-card="black" data-player="<?php echo $player->ID; ?>" name="wpcm_players[<?php echo $type; ?>][<?php echo $player->ID; ?>][<?php echo $key; ?>]" value="1" <?php checked( true, $keyarray ); ?><?php if ( !$played ) echo ' disabled'; ?>/>
 								</td>
 
 							<?php } elseif ( $key == 'redcards' ) { ?>
@@ -322,7 +328,7 @@ function wpcm_match_player_row( $key, $value, $count = 0 ) {
 			$stat = '&mdash;';
 		}
 
-		if( $key == 'checked' || $key == 'sub' || $key == 'greencards' || $key == 'yellowcards' || $key == 'redcards' || $key == 'mvp' ) {
+		if( $key == 'checked' || $key == 'sub' || $key == 'greencards' || $key == 'yellowcards' || $key == 'blackcards' || $key == 'redcards' || $key == 'mvp' ) {
 			$output .= '';
 		} else {
 			if( get_option( 'wpcm_show_stats_' . $key ) == 'yes' ) {
@@ -331,7 +337,7 @@ function wpcm_match_player_row( $key, $value, $count = 0 ) {
 		}
 	}
 
-	if( $sport == 'soccer' || $sport == 'rugby' || $sport == 'hockey_field' || $sport == 'footy' ) {
+	if( $sport == 'soccer' || $sport == 'rugby' || $sport == 'hockey_field' || $sport == 'footy' || $sport == 'floorball' || $sport == 'gaelic' ) {
 
 		$output .= '<td class="notes">';
 
@@ -343,6 +349,11 @@ function wpcm_match_player_row( $key, $value, $count = 0 ) {
 		if ( isset( $value['yellowcards'] ) ) {
 			
 			$output .= '<span class="yellowcard" title="' . __( 'Yellow Card', 'wpclubmanager' ) . '">' . __( 'Yellow Card', 'wpclubmanager' ) . '</span>';
+		}
+
+		if ( isset( $value['blackcards'] ) ) {
+			
+			$output .= '<span class="blackcard" title="' . __( 'Black Card', 'wpclubmanager' ) . '">' . __( 'Black Card', 'wpclubmanager' ) . '</span>';
 		}
 		
 		if ( isset( $value['redcards'] ) ) {
