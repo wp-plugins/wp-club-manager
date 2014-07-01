@@ -520,6 +520,8 @@ if (!function_exists('wpcm_array_filter_checked')) {
 }
 
 /**
+ * Sports presets. Code adapted from SportsPress
+ *
  * Get an array of sport options and settings.
  * @return array
  */

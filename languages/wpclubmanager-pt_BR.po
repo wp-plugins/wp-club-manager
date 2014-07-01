@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2014-06-10 09:06-0000\n"
-"PO-Revision-Date: 2014-06-21 02:17-0000\n"
+"PO-Revision-Date: 2014-07-01 21:59-0000\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/wp-"
 "club-manager/language/pt_BR/)\n"
@@ -2092,7 +2092,7 @@ msgstr "Jogador da Partida"
 #: ../includes/wpcm-core-functions.php:979
 #: ../includes/wpcm-core-functions.php:1021
 msgid "POM"
-msgstr "POM"
+msgstr "Melhor em Campo"
 
 #: ../includes/wpcm-core-functions.php:562
 msgid "Basketball"
@@ -3482,7 +3482,7 @@ msgstr ""
 #: ../templates/content-single-staff.php:49
 #: ../templates/single-player/meta.php:38
 msgid "Birthday"
-msgstr "Aniversári"
+msgstr "Aniversário"
 
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:98
 msgid "Staff Image Sizes"

@@ -1,13 +1,13 @@
 <?php
 /**
- * WPClubManager Match Functions
+ * WPClubManager Match Functions. Some code adapted from Football Club theme by themeboy.
  *
  * Functions for matches.
  *
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Functions
- * @version     1.1.5
+ * @version     1.1.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -39,7 +39,7 @@ function match_title( $title, $id = null ) {
 add_filter( 'the_title', 'match_title', 10, 2 );
 
 // generate title
-function match_wp_title( $title, $sep ) {
+function match_wp_title( $title ) {
 	global $post;
 	if ( get_post_type( ) == 'wpcm_match' ) {
 
@@ -191,19 +191,25 @@ function wpcm_match_player_stats_table( $selected_players = array(), $club = nul
 					);
 
 					$teams = get_the_terms( $player->ID, 'wpcm_team' );
-
-					$teamclass = '';
+					$seasons = get_the_terms( $player->ID, 'wpcm_season' );
 
 					if($teams > 0){
 						foreach( $teams as $team ) {
-							$teamclass .= 'team_' . $team->term_id . ' ';
+							$teamclass = 'team_' . $team->term_id . ' ';
 						}
 					}else{
-						$teamclass .= 'team_0 ';
+						$teamclass = 'team_0 ';
+					}
+					if($seasons > 0){
+						foreach( $seasons as $season ) {
+							$seasonclass = 'season_' . $season->term_id . ' ';
+						}
+					}else{
+						$seasonclass = 'season_0 ';
 					}
 				?>
 
-				<tr data-player="<?php echo $player->ID; ?>" class="player-stats-list <?php echo $teamclass; ?>">
+				<tr data-player="<?php echo $player->ID; ?>" class="player-stats-list <?php echo $teamclass; ?> <?php echo $seasonclass; ?>">
 					<td class="names">
 						<label class="selectit">
 							<input type="checkbox" data-player="<?php echo $player->ID; ?>" name="wpcm_players[<?php echo $type; ?>][<?php echo $player->ID; ?>][checked]" class="player-select" value="1" <?php checked( true, $played ); ?> /><span class="name">
@@ -300,7 +306,7 @@ function wpcm_match_player_row( $key, $value, $count = 0 ) {
 	$sport = get_option('wpcm_sport');
 	
 	if( $show_number == 'yes') {
-		$snumber = $number;
+		$snumber = $number .'. ';
 	}
 
 	if ( isset( $value['mvp'] ) ) {
@@ -313,7 +319,7 @@ function wpcm_match_player_row( $key, $value, $count = 0 ) {
 
 	$output .= '<tr>';
 
-	$output .= '<th class="name"><div>' . $snumber . '. <a href="' . get_permalink( $key ) . '">' . get_the_title( $key ) . '</a>' . $mvp;
+	$output .= '<th class="name"><div>' . $snumber . ' <a href="' . get_permalink( $key ) . '">' . get_the_title( $key ) . '</a>' . $mvp;
 
 	if ( array_key_exists( 'sub', $value ) && $value['sub'] > 0 ) {
 

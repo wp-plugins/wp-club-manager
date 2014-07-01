@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2014-06-10 09:06-0000\n"
-"PO-Revision-Date: 2014-06-21 02:21-0000\n"
+"PO-Revision-Date: 2014-07-01 21:58-0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/wp-club-"
 "manager/language/de_DE/)\n"
@@ -2553,7 +2553,7 @@ msgstr "SH"
 #: ../includes/wpcm-core-functions.php:789
 #: ../includes/wpcm-core-functions.php:829
 msgid "Shots on Goal"
-msgstr "Shots on Goal"
+msgstr "Torschüsse"
 
 #: ../includes/wpcm-core-functions.php:789
 #: ../includes/wpcm-core-functions.php:829
@@ -2563,7 +2563,7 @@ msgstr "SOG"
 #: ../includes/wpcm-core-functions.php:790
 #: ../includes/wpcm-core-functions.php:836
 msgid "Saves"
-msgstr "Saves"
+msgstr "Gehalten"
 
 #: ../includes/wpcm-core-functions.php:790
 #: ../includes/wpcm-core-functions.php:836
@@ -2572,7 +2572,7 @@ msgstr "SAV"
 
 #: ../includes/wpcm-core-functions.php:791
 msgid "Green Cards"
-msgstr "Green Cards"
+msgstr "Grüne Karte"
 
 #: ../includes/wpcm-core-functions.php:791
 msgid "GC"
@@ -2580,7 +2580,7 @@ msgstr "GC"
 
 #: ../includes/wpcm-core-functions.php:799
 msgid "Ice Hockey"
-msgstr "Ice Hockey"
+msgstr "Eishockey"
 
 #: ../includes/wpcm-core-functions.php:828
 msgid "Plus/Minus Rating"
@@ -2673,7 +2673,7 @@ msgstr "DG"
 
 #: ../includes/wpcm-core-functions.php:900
 msgid "Football (Soccer)"
-msgstr "Football (Soccer)"
+msgstr "Fussball"
 
 #: ../includes/wpcm-core-functions.php:923
 #: ../includes/wpcm-core-functions.php:969
@@ -2690,7 +2690,7 @@ msgstr "PENS"
 
 #: ../includes/wpcm-core-functions.php:926
 msgid "Own Goals"
-msgstr "Own Goals"
+msgstr "Eigentore"
 
 #: ../includes/wpcm-core-functions.php:926
 msgid "OG"
@@ -2821,7 +2821,7 @@ msgstr "WPClubManager"
 
 #: ../includes/admin/class-wpcm-admin-menus.php:32
 msgid "Club Manager"
-msgstr "Vereinsverwalter"
+msgstr "WP Club Manager"
 
 #: ../includes/admin/class-wpcm-admin-settings.php:49
 msgid "Action failed. Please refresh the page and retry."
@@ -3039,17 +3039,17 @@ msgstr "Vereinsname"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:87
 msgid "Club Badge"
-msgstr "Vereinskennzeichen"
+msgstr "Vereinswappen"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:89
 msgid "Remove club badge"
-msgstr "Vereinkennzeichen entfernen"
+msgstr "Vereinwappen entfernen"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:91
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:107
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:108
 msgid "Set club badge"
-msgstr "Vereinskennzeichen setzen"
+msgstr "Vereinswappen setzen"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:161
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:171
@@ -3074,7 +3074,7 @@ msgstr "Wettbewerbe"
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:214
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:210
 msgid "seasons"
-msgstr "Spielzeiten"
+msgstr "Saisons"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:78
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:80
@@ -3208,7 +3208,7 @@ msgstr "Einfügen in %s"
 #: ../includes/admin/post-types/class-wpcm-admin-cpt.php:41
 #, php-format
 msgid "Uploaded to this %s"
-msgstr "Hochladen zu %s"
+msgstr "Zu %s hochladen"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:94
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:102
@@ -3264,7 +3264,7 @@ msgstr "Startaufstellung"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:32
 msgid "Substitutes"
-msgstr "Ersatzbank"
+msgstr "Auswechselspieler"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:36
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:40
@@ -3277,7 +3277,7 @@ msgstr "Spieler"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:40
 msgid "substitutes"
-msgstr "Ersatzbank"
+msgstr "Auswechselspieler"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:37
 #: ../templates/shortcodes/matches.php:125

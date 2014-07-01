@@ -4,7 +4,7 @@ Tags: clubs, teams, sports club, club management, team management, league tables
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 3.9.1
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -38,6 +38,7 @@ Comes with all the tools you need to manage your sports club or team website. Fe
 * German - Deutsch (de_DE)
 * French – Français (fr_FR)
 * Greek - Ελληνικά (el_GR)
+* Hungarian - Magyar (hu_HU)
 * Italian - Italiano (it_IT)
 * Polish - Polski (pl_PL)
 * Portuguese (Brazil) – Português do Brasil (pt_BR)
@@ -89,6 +90,13 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 4. A slick admin interface blends in with WordPress
 
 == Changelog ==
+
+= 1.1.6 - 1/07/2014
+
+* Fix - Fixed missing comps column in results/fixtures shortcode
+* Fix - Fix call to undefined `$sep` function
+* Localisation - Add Hungarian language
+* Localisation - Update Brazilian, German and Polish languages
 
 = 1.1.5 - 21/06/2014
 
