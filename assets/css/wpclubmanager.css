@@ -363,7 +363,7 @@ table {
 		font-weight: 600;
 		padding-top: .5em;
 		text-align: center;
-		width: 40%;
+		width: 37%;
 	}
 	.wpcm-match-away-club {
 		float: right;
@@ -371,14 +371,14 @@ table {
 		font-weight: 600;
 		padding-top: .5em;
 		text-align: center;
-		width: 40%;
+		width: 37%;
 	}
 	.wpcm-match-score {
 		display: inline-block;
 		font-size: 2.4em;
 		font-weight: 600;
 		text-align: center;
-		width: 16%;
+		width: 24%;
 	}
 	.wpcm-match-score-delimiter {
 		font-size: 1em;
@@ -684,22 +684,19 @@ table {
 		overflow: hidden;
 		margin-left: 8px;
 		text-indent: -100px;
+		background-size: 48px 18px;
 	}
 	.wpcm-match-details table td.notes .greencard {
 		background-position: -48px 0px;
-		background-size: 12px 18px;
 	}
 	.wpcm-match-details table td.notes .yellowcard {
 		background-position: 0px 0px;
-		background-size: 12px 18px;
 	}
 	.wpcm-match-details table td.notes .redcard {
 		background-position: -24px 0px;
-		background-size: 12px 18px;
 	}
 	.wpcm-match-details table td.notes .blackcard {
 		background-position: -72px 0px;
-		background-size: 12px 18px;
 	}
 	.wpcm-match-details table th.name span.mvp {
 		margin-left: 16px;
