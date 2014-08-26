@@ -11,7 +11,7 @@
 	<div id="wpcm-support" class="stuffbox ">
 		<h3>Looking for support?</h3>
 		<div class="inside">
-			<p>Make sure to have a look at the plugin <a href="https://wpclubmanager.com/docs/" target="_blank">documentation</a> or ask any questions in our <a href="https://wpclubmanager.com/support/" target="_blank">support forums</a>.</p>
+			<p>Make sure to have a look at the plugin <a href="http://wpclubmanager.com/docs/" target="_blank">documentation</a> or ask any questions in our <a href="http://wpclubmanager.com/support/" target="_blank">support forums</a>.</p>
 		</div>
 	</div>
 	
