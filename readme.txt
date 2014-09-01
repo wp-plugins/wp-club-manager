@@ -3,7 +3,7 @@ Contributors: ClubPress
 Tags: clubs, teams, sports club, club management, team management, league tables, football, rugby, soccer, field hockey, ice hockey, baseball, basketball, aussie rules, netball, volleyball
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
-Tested up to: 3.9.2
+Tested up to: 4.0
 Stable tag: 1.1.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
