@@ -4,7 +4,7 @@ Tags: clubs, teams, sports club, club management, team management, league tables
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,8 +45,10 @@ Comes with all the tools you need to manage your sports club or team website. Fe
 * Latvian - Latviešu (lv_LV)
 * Polish - Polski (pl_PL)
 * Portuguese (Brazil) – Português do Brasil (pt_BR)
+* Russian - Русский (ru_RU)
 * Spanish - Español (es_ES)
 * Swedish – Svenska (sv_SE)
+* Turkish - Türkçe (tr_TR)
 
 = Get Involved =
 
@@ -98,6 +100,11 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.6 - 20/11/2014
+
+* Localisation - Added Russian language (Thanks Akinshin and retbys)
+* Localisation - Added Turkish language (Thanks sivasspor, cengizyilmaz, cemsacan and muhahmetkara)
 
 = 1.2.5 - 31/10/2014
 
