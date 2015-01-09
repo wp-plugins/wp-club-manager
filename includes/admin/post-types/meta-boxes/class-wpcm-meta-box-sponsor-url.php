@@ -21,10 +21,18 @@ class WPCM_Meta_Box_Sponsor_Url {
 
 		global $post;
 
+		$post_id = $post->ID;
+		$link_new_window = get_post_meta( $post_id, 'wpcm_link_nw', true );
+
 		wp_nonce_field( 'wpclubmanager_save_data', 'wpclubmanager_meta_nonce' );
 
-		wpclubmanager_wp_text_input( array( 'id' => 'wpcm_link_url', 'label' => __( 'Link URL', 'wpclubmanager' ), 'class' => 'regular-text' ) );
-	}
+		wpclubmanager_wp_text_input( array( 'id' => 'wpcm_link_url', 'label' => __( 'Link URL', 'wpclubmanager' ), 'class' => 'regular-text' ) ); ?>
+
+		<p class="wpcm_link_nw_field">
+			<label for="wpcm_link_nw"><?php _e( 'Open link in new window?', 'wpclubmanager' ); ?></label>
+			<input type="checkbox" name="wpcm_link_nw" id="wpcm_link_nw" value="1" <?php checked( true, $link_new_window ); ?> />
+		</p>
+	<?php }
 
 	/**
 	 * Save meta box data
@@ -32,10 +40,17 @@ class WPCM_Meta_Box_Sponsor_Url {
 	public static function save( $post_id, $post ) {
 
 		$link_url = $_POST['wpcm_link_url'];
+
+		if(isset($_POST['wpcm_link_nw'])){
+			$link_new_window = $_POST['wpcm_link_nw'];
+		} else {
+			$link_new_window = null;
+		}
 		
 		if ( isset( $link_url ) && strpos( $link_url, 'http://' ) === false )
 			$link_url = 'http://' . $link_url;
 
 		update_post_meta( $post_id, 'wpcm_link_url', $link_url );
+		update_post_meta( $post_id, 'wpcm_link_nw', $link_new_window );
 	}
 }

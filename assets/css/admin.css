@@ -200,6 +200,9 @@ input.measure-text {
 	width: 150px;
 	padding: 0;
 }
+#wpclubmanager-sponsor-link label {
+	width: 190px;
+}
 
 /* wpclubmanager messages */
 .wpclubmanager-message {

@@ -335,34 +335,81 @@ if (!function_exists('wpcm_dropdown_taxonomies')) {
 			'show_option_none' => false,
 			'taxonomy' => null,
 			'name' => null,
-			'selected' => null
+			'id' => null,
+			'selected' => null,
+			'hide_empty' => false,
+			'values' => 'slug',
+		    'class' => null,
+		    'attribute' => null,
+		    'placeholder' => null,
+		    'chosen' => false,
 		);
 
 		$args = array_merge( $defaults, $args ); 
-		$terms = get_terms( $args['taxonomy'] );
+		if ( ! $args['taxonomy'] ) return false;
+		$terms = get_terms( $args['taxonomy'], $args );
 		$name = ( $args['name'] ) ? $args['name'] : $args['taxonomy'];
+		$id = ( $args['id'] ) ? $args['id'] : $name;
 
-		if ( $terms ) {
+		unset( $args['name'] );
+		unset( $args['id'] );
 
-			printf( '<select name="%s" class="postform">', $name );
+		$class = $args['class'];
+		unset( $args['class'] );
 
-			if ( $args['show_option_all'] ) {
+		$attribute = $args['attribute'];
+		unset( $args['attribute'] );
 
-				printf( '<option value="0">%s</option>', $args['show_option_all'] );
-			}
+		$placeholder = $args['placeholder'];
+		unset( $args['placeholder'] );
 
-			if ( $args['show_option_none'] ) {
+		$selected = $args['selected'];
+		unset( $args['selected'] );
 
-				printf( '<option value="-1">%s</option>', $args['show_option_none'] );
-			}
+		$chosen = $args['chosen'];
+		unset( $args['chosen'] );
 
-			foreach ( $terms as $term ) {
+		printf( '<input type="hidden" name="tax_input[%s][]" value="0">', $args['taxonomy'] );
 
-				printf( '<option value="%s" %s>%s</option>', $term->slug, selected( true, $args['selected'] == $term->slug ), $term->name );
-			}
+		if ( $terms ):
 
+			printf( '<select name="%s" class="postform %s" %s>', $name, $class . ( $chosen ? ' chosen_select' : '' ), ( $placeholder != null ? 'data-placeholder="' . $placeholder . '" ' : '' ) . $attribute );
+
+			if ( strpos( $attribute, 'multiple' ) === false ):
+
+				if ( $args['show_option_all'] ):
+
+					printf( '<option value="0">%s</option>', $args['show_option_all'] );
+
+				endif;
+
+				if ( $args['show_option_none'] ):
+
+					printf( '<option value="-1">%s</option>', $args['show_option_none'] );
+
+				endif;
+
+			endif;
+
+			foreach ( $terms as $term ):
+				if ( $args['values'] == 'term_id' ):
+					$this_value = $term->term_id;
+				else:
+					$this_value = $term->slug;
+				endif;
+				if ( strpos( $attribute, 'multiple' ) !== false ):
+					$selected_attribute = in_array( $this_value, $selected ) ? 'selected' : '';
+				else:
+					$selected_attribute = selected( $this_value, $selected, false );
+				endif;
+				printf( '<option value="%s" %s>%s</option>', $this_value, $selected_attribute, $term->name );
+			endforeach;
 			print( '</select>' );
-		}
+			return true;
+		else:
+			return false;
+
+		endif;
 	}
 }
 

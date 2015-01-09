@@ -57,6 +57,7 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 		$direct_link = $instance['direct_link'];
 
 		$link_url = get_post_meta( $id, 'wpcm_link_url', true );
+		$link_new_window = get_post_meta( $id, 'wpcm_link_nw', true );
 
 		echo $before_widget;
 
@@ -65,9 +66,15 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 
 		echo '<div class="wpcm-sponsor-widget clearfix">';
 
+		if ( $link_new_window ) {
+			$nw = ' target="_blank"';
+		} else {
+			$nw = '';
+		}
+
 		if ( $direct_link ) {
 
-			echo '<a href="'.$link_url.'" target="_blank">';
+			echo '<a href="'.$link_url.'"'.$nw.'>';
 								
 			echo get_the_post_thumbnail( $id );
 

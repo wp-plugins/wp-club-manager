@@ -129,7 +129,7 @@ if ( sizeof( $players ) > 0 ) {
 	} else{
 		$pos = '';
 	}
-	$output .= '<div class="wpcm-players-shortcode' . $pos . '">
+	$output .= '<div class="wpcm-players-shortcode' . strtolower($pos) . '">
 		' . $title . '
 		<table>
 			<thead>

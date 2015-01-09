@@ -313,23 +313,23 @@ class WPCM_Admin_Welcome {
 			</div>
 			<div class="changelog">
 
-				<h3><?php _e( '', 'wpclubmanager' ); ?></h3>
+				<h3></h3>
 
 				<div class="wpcm-feature feature-section col three-col">
 
 					<div>
-						<h4><?php _e( '', 'wpclubmanager' ); ?></h4>
-						<p><?php _e( '', 'wpclubmanager' ); ?></p>
+						<h4></h4>
+						<p></p>
 					</div>
 
 					<div>
-						<h4><?php _e( '', 'wpclubmanager' ); ?></h4>
-						<p><?php _e( '', 'wpclubmanager' ); ?></p>
+						<h4></h4>
+						<p></p>
 					</div>
 
 					<div class="last-feature">
-						<h4><?php _e( '', 'wpclubmanager' ); ?></h4>
-						<p><?php _e( '', 'wpclubmanager' ); ?></p>
+						<h4></h4>
+						<p></p>
 					</div>
 
 				</div>

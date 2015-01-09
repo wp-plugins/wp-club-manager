@@ -26,9 +26,12 @@ class WPCM_Meta_Box_Player_Details {
 		$number = get_post_meta( $post->ID, 'wpcm_number', true );
 		$position_id = null;
 		$positions = get_the_terms( $post->ID, 'wpcm_position' );
-
-		if ( !empty( $positions ) )
-			$position_id = $positions[0]->term_id;
+		$position_ids = array();
+		if ( $positions ):
+			foreach ( $positions as $position ):
+				$position_ids[] = $position->term_id;
+			endforeach;
+		endif;
 
 		$dob = get_post_meta( $post->ID, 'wpcm_dob', true );
 
@@ -50,15 +53,17 @@ class WPCM_Meta_Box_Player_Details {
 		<p>
 			<label><?php _e( 'Position', 'wpclubmanager' ); ?></label>
 			<?php
-				wp_dropdown_categories( array(
-					'show_option_none' => __( 'None' ),
-					'orderby' => 'title',
-					'hide_empty' => false,
-					'taxonomy' => 'wpcm_position',
-					'selected' => $position_id,
-					'name' => 'wpcm_position',
-					'class' => 'chosen_select',
-				) );
+			$args = array(
+				'taxonomy' => 'wpcm_position',
+				'name' => 'tax_input[wpcm_position][]',
+				'selected' => $position_ids,
+				'values' => 'term_id',
+				'placeholder' => sprintf( __( 'Choose %s', 'wpclubmanager' ), __( 'positions', 'wpclubmanager' ) ),
+				'class' => '',
+				'attribute' => 'multiple',
+				'chosen' => true,
+			);
+			wpcm_dropdown_taxonomies( $args );
 			?>
 		</p>
 
@@ -104,7 +109,7 @@ class WPCM_Meta_Box_Player_Details {
 		
 		update_post_meta( $post_id, 'wpcm_club', get_option('wpcm_default_club') );		
 		update_post_meta( $post_id, 'wpcm_number', $_POST['wpcm_number'] );
-		wp_set_post_terms( $post_id, $_POST['wpcm_position'], 'wpcm_position' );
+		// wp_set_post_terms( $post_id, $_POST['wpcm_position'], 'wpcm_position' );
 		update_post_meta( $post_id, 'wpcm_dob', $dob_year . '-' . $dob_month. '-' . $dob_day );
 		update_post_meta( $post_id, 'wpcm_height', $_POST['wpcm_height'] );
 		update_post_meta( $post_id, 'wpcm_weight', $_POST['wpcm_weight'] );
