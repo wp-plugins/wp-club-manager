@@ -122,7 +122,14 @@ if ( sizeof( $players ) > 0 ) {
 	} else{
 		$title = '';
 	}
-	$output .= '<div class="wpcm-players-shortcode">
+	if( $position ) {
+		$term = get_term( $position, 'wpcm_position' );
+		$name = $term->name;
+		$pos = ' ' . $name;
+	} else{
+		$pos = '';
+	}
+	$output .= '<div class="wpcm-players-shortcode' . $pos . '">
 		' . $title . '
 		<table>
 			<thead>

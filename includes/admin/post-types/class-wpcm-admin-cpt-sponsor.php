@@ -107,8 +107,7 @@ class WPCM_Admin_CPT_Sponsor extends WPCM_Admin_CPT {
 		$columns = array(
 			'cb' => '<input type="checkbox" />',
 			'title' => __( 'Name' ),
-			'link_url' => __( 'URL', 'wpclubmanager' ),
-			'link_directly' => __( 'Link directly?', 'wpclubmanager' )
+			'link_url' => __( 'URL', 'wpclubmanager' )
 		);
 
 		return $columns;
@@ -128,10 +127,10 @@ class WPCM_Admin_CPT_Sponsor extends WPCM_Admin_CPT {
 				if ( isset( $link_url ) )
 					echo '<a href="'.$link_url.'" target="_blank">' . $link_url . '</a>';
 				break;
-			case 'link_directly':
-				$link_directly = get_post_meta($post_id, 'wpcm_link_directly', true );
-				echo $link_directly ? __( 'Yes' ) : __( 'No' );
-				break;
+			// case 'link_directly':
+			// 	$link_directly = get_post_meta($post_id, 'wpcm_link_directly', true );
+			// 	echo $link_directly ? __( 'Yes' ) : __( 'No' );
+			// 	break;
 			}
 		}
 	}
@@ -140,8 +139,7 @@ class WPCM_Admin_CPT_Sponsor extends WPCM_Admin_CPT {
 	public function custom_sortable_columns($columns) {
 
 		$custom = array(
-			'link_url' => 'link_url',
-			'link_directly' => 'link_directly'
+			'link_url' => 'link_url'
 		);
 
 		return wp_parse_args($custom, $columns);
@@ -153,7 +151,7 @@ class WPCM_Admin_CPT_Sponsor extends WPCM_Admin_CPT {
 		global $pagenow;
 
 		if ( $pagenow == 'edit.php' && $vars['post_type'] == 'wpcm_sponsor' && isset( $vars['orderby'] )):
-			if ( in_array( $vars['orderby'], array( 'link_url', 'link_directly' ) ) ):
+			if ( in_array( $vars['orderby'], array( 'link_url' ) ) ):
 				$vars = array_merge( $vars, array(
 					'meta_key' => 'wpcm_' . $vars['orderby'],
 					'orderby' => 'meta_value'

@@ -30,7 +30,9 @@ class WPCM_Meta_Box_Match_Result {
 		$shootout = get_post_meta( $post_id, 'wpcm_shootout', true );
 
 		$goals = array_merge( array( 'total' => array( 'home' => 0, 'away' => 0	) ), (array)unserialize( get_post_meta( $post_id, 'wpcm_goals', true ) ) );
-		$bonus = array_merge( array( 'home' => 0, 'away' => 0	), (array)unserialize( get_post_meta( $post_id, 'wpcm_bonus', true ) ) ); ?>
+		$bonus = array_merge( array( 'home' => 0, 'away' => 0	), (array)unserialize( get_post_meta( $post_id, 'wpcm_bonus', true ) ) );
+		$gaa_goals = array_merge( array( 'home' => 0, 'away' => 0	), (array)unserialize( get_post_meta( $post_id, 'wpcm_gaa_goals', true ) ) );
+		$gaa_points = array_merge( array( 'home' => 0, 'away' => 0	), (array)unserialize( get_post_meta( $post_id, 'wpcm_gaa_points', true ) ) ); ?>
 
 		<p>
 			<label class="selectit">
@@ -81,6 +83,22 @@ class WPCM_Meta_Box_Match_Result {
 						<?php _e( 'Shootout', 'wpclubmanager' ); ?>
 					</label>
 				</p>
+			<?php }
+			if ( $sport == 'gaelic' ) { ?>
+				<table class="wpcm-results-gaelic">
+					<tbody>
+						<tr>
+							<th align="right"><?php _e( 'Goals', 'wpclubmanager' ); ?></th>
+							<td><input type="text" name="wpcm_gaa_goals[home]" id="wpcm_gaa_goals_home" value="<?php echo (int)$gaa_goals['home']; ?>" size="3" /></td>
+							<td><input type="text" name="wpcm_gaa_goals[away]" id="wpcm_gaa_goals_away" value="<?php echo (int)$gaa_goals['away']; ?>" size="3" /></td>
+						</tr>
+						<tr>
+							<th align="right"><?php _e( 'Points', 'wpclubmanager' ); ?></th>
+							<td><input type="text" name="wpcm_gaa_points[home]" id="wpcm_gaa_points_home" value="<?php echo (int)$gaa_points['home']; ?>" size="3" /></td>
+							<td><input type="text" name="wpcm_gaa_points[away]" id="wpcm_gaa_points_away" value="<?php echo (int)$gaa_points['away']; ?>" size="3" /></td>
+						</tr>
+					</tbody>
+				</table>
 			<?php } ?>
 		</div>
 		<p>
@@ -128,6 +146,18 @@ class WPCM_Meta_Box_Match_Result {
 			$bonus = null;
 		}
 
+		if(isset($_POST['wpcm_gaa_goals'])){
+			$gaa_goals = $_POST['wpcm_gaa_goals'];
+		} else {
+			$gaa_goals = null;
+		}
+
+		if(isset($_POST['wpcm_gaa_points'])){
+			$gaa_points = $_POST['wpcm_gaa_points'];
+		} else {
+			$gaa_points = null;
+		}
+
 		update_post_meta( $post_id, 'wpcm_played', $played );
 		update_post_meta( $post_id, 'wpcm_friendly', $friendly );
 		update_post_meta( $post_id, 'wpcm_overtime', $overtime );
@@ -138,5 +168,11 @@ class WPCM_Meta_Box_Match_Result {
 		update_post_meta( $post_id, 'wpcm_bonus', serialize( $bonus ) );
 		update_post_meta( $post_id, 'wpcm_home_bonus', $bonus['home'] );
 		update_post_meta( $post_id, 'wpcm_away_bonus', $bonus['away'] );
+		update_post_meta( $post_id, 'wpcm_gaa_goals', serialize( $gaa_goals ) );
+		update_post_meta( $post_id, 'wpcm_home_gaa_goals', $gaa_goals['home'] );
+		update_post_meta( $post_id, 'wpcm_away_gaa_goals', $gaa_goals['away'] );
+		update_post_meta( $post_id, 'wpcm_gaa_points', serialize( $gaa_points ) );
+		update_post_meta( $post_id, 'wpcm_home_gaa_points', $gaa_points['home'] );
+		update_post_meta( $post_id, 'wpcm_away_gaa_points', $gaa_points['away'] );
 	}
 }

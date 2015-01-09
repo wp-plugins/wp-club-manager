@@ -136,11 +136,18 @@ $output .= '<div class="wpcm-fixtures-shortcode">
 	if ( $size > 0 ) {
 		foreach( $matches as $match ) {
 			$count++;
+			$sport = get_option( 'wpcm_sport' );
 			$home_club = get_post_meta( $match->ID, 'wpcm_home_club', true );
 			$away_club = get_post_meta( $match->ID, 'wpcm_away_club', true );
 			$default_club = get_option( 'wpcm_default_club' );
 			$home_goals = get_post_meta( $match->ID, 'wpcm_home_goals', true );
 			$away_goals = get_post_meta( $match->ID, 'wpcm_away_goals', true );
+			if( $sport == 'gaelic' ) {
+				$home_gaa_goals = get_post_meta( $match->ID, 'wpcm_home_gaa_goals', true );
+				$home_gaa_points = get_post_meta( $match->ID, 'wpcm_home_gaa_points', true );
+				$away_gaa_goals = get_post_meta( $match->ID, 'wpcm_away_gaa_goals', true );
+				$away_gaa_points = get_post_meta( $match->ID, 'wpcm_away_gaa_points', true );
+			}
 			$played = get_post_meta( $match->ID, 'wpcm_played', true );
 			$timestamp = strtotime( $match->post_date );
 			$gmt_offset = get_option( 'gmt_offset' );
@@ -227,8 +234,11 @@ $output .= '<div class="wpcm-fixtures-shortcode">
 							$status = ' win';
 						}
 					}
-
-			$output .= '<td class="result' . $status . '">' . ( $played ? $home_goals . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_goals : '' ) . ' ' . ( $played ? $result : '' ) . '</td>';
+			if( $sport == 'gaelic' ) {
+				$output .= '<td class="result' . $status . '">' . ( $played ? $home_gaa_goals . '-' . $home_gaa_points . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_gaa_goals . '-' . $away_gaa_points : '' ) . ' ' . ( $played ? $result : '' ) . '</td>';
+			} else {
+				$output .= '<td class="result' . $status . '">' . ( $played ? $home_goals . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_goals : '' ) . ' ' . ( $played ? $result : '' ) . '</td>';
+			}
 			$output .= '</tr>';
 		}
 	}

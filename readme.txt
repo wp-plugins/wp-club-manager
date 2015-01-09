@@ -4,7 +4,7 @@ Tags: clubs, teams, sports club, club management, team management, league tables
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -120,6 +120,14 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.8 - 09/01/2015
+
+* Tweak - Added points and goals to scores for Gaelic sports in matches
+* Tweak - Added points and goals scoring to results widget and matches shortcode for Gaelic sports
+* Tweak - Added class to players shortcode if position is set
+* Tweak - Tidy columns for sponsors overview
+* Localisation - Updated wpclubmanager.pot resource file
 
 = 1.2.7 - 28/12/2014
 
