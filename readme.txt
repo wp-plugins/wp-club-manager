@@ -121,7 +121,7 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 == Changelog ==
 
-= 1.2.10 - /01/2015
+= 1.2.10 - 13/01/2015
 
 * New - Option to set neutral venue for matches
 * New - Added field to enter cup rounds to competitions in matches
