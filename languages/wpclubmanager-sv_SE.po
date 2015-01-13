@@ -1,11 +1,12 @@
 #
 # Translators:
 # Kim Göransson <kaugee@gmail.com>, 2014
+# Sebastian Strandberg <sebastian.strandberg@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
-"POT-Creation-Date: 2015-01-09 16:04-0000\n"
-"PO-Revision-Date: 2015-01-09 16:36-0000\n"
+"POT-Creation-Date: 2015-01-13 14:52-0000\n"
+"PO-Revision-Date: 2015-01-13 15:10-0000\n"
 "Last-Translator: \n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/projects/p/wp-club-"
 "manager/language/sv_SE/)\n"
@@ -80,7 +81,7 @@ msgstr "Bredd"
 #: ../templates/shortcodes/players.php:41
 #: ../templates/single-player/meta.php:64
 msgid "Height"
-msgstr "Höjd"
+msgstr "Längd"
 
 #: ../includes/class-wpcm-ajax.php:143
 msgid "Zoom"
@@ -125,7 +126,7 @@ msgstr "Titel"
 #: ../includes/class-wpcm-post-types.php:52
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:122
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:149
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:55
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:56
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:47
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:95
 #: ../includes/widgets/class-wpcm-widget-results.php:47
@@ -142,7 +143,7 @@ msgstr "Tävling"
 #: ../includes/class-wpcm-ajax.php:541 ../includes/class-wpcm-ajax.php:558
 #: ../includes/class-wpcm-ajax.php:702 ../includes/class-wpcm-ajax.php:719
 #: ../includes/abstracts/abstract-wpcm-widget.php:149
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:86
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:88
 #: ../includes/widgets/class-wpcm-widget-players.php:173
 #: ../includes/widgets/class-wpcm-widget-players.php:187
 #: ../includes/widgets/class-wpcm-widget-players.php:201
@@ -159,7 +160,7 @@ msgstr "Alla"
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:123
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:150
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:123
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:69
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:71
 #: ../includes/admin/settings/class-wpcm-settings-players.php:81
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:57
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:53
@@ -181,7 +182,7 @@ msgstr "Säsong"
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:151
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:122
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:120
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:83
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:85
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:82
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:102
 #: ../includes/admin/settings/class-wpcm-settings-players.php:89
@@ -202,7 +203,7 @@ msgstr "Lag"
 #: ../includes/class-wpcm-ajax.php:237
 #: ../includes/class-wpcm-post-types.php:154
 #: ../includes/class-wpcm-post-types.php:162
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:97
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:99
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:65
 #: ../includes/widgets/class-wpcm-widget-results.php:65
 #: ../templates/shortcodes/matches.php:116
@@ -236,9 +237,9 @@ msgstr "Länka till sida"
 #: ../includes/wpcm-match-functions.php:122
 #: ../includes/abstracts/abstract-wpcm-widget.php:166
 #: ../includes/admin/class-wpcm-admin-settings.php:493
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:58
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:72
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:100
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:59
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:74
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:102
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:51
 #: ../includes/widgets/class-wpcm-widget-players.php:271
 #: ../includes/widgets/class-wpcm-widget-sponsors.php:153
@@ -453,7 +454,7 @@ msgstr "Visa alla tabeller"
 #: ../includes/widgets/class-wpcm-widget-standings.php:120
 #: ../templates/shortcodes/standings.php:22
 msgid "Standings"
-msgstr "Ta"
+msgstr "Tabell"
 
 #: ../includes/class-wpcm-ajax.php:785
 #: ../includes/widgets/class-wpcm-widget-standings.php:195
@@ -518,7 +519,7 @@ msgstr "Aruba"
 
 #: ../includes/class-wpcm-countries.php:45
 msgid "Australia"
-msgstr "Australie"
+msgstr "Australien"
 
 #: ../includes/class-wpcm-countries.php:46
 msgid "Austria"
@@ -702,767 +703,767 @@ msgstr "Danmark"
 
 #: ../includes/class-wpcm-countries.php:91
 msgid "Djibouti"
-msgstr ""
+msgstr "Djibouti"
 
 #: ../includes/class-wpcm-countries.php:92
 msgid "Dominica"
-msgstr ""
+msgstr "Dominica"
 
 #: ../includes/class-wpcm-countries.php:93
 msgid "Dominican Republic"
-msgstr ""
+msgstr "Dominikanska Rrepubliken"
 
 #: ../includes/class-wpcm-countries.php:94
 msgid "Ecuador"
-msgstr ""
+msgstr "Ecuador"
 
 #: ../includes/class-wpcm-countries.php:95
 msgid "Egypt"
-msgstr ""
+msgstr "Egypten"
 
 #: ../includes/class-wpcm-countries.php:96
 msgid "El Salvador"
-msgstr ""
+msgstr "El Salvador"
 
 #: ../includes/class-wpcm-countries.php:97
 msgid "England"
-msgstr ""
+msgstr "England"
 
 #: ../includes/class-wpcm-countries.php:98
 msgid "Equatorial Guinea"
-msgstr ""
+msgstr "Ekvatorialguinea"
 
 #: ../includes/class-wpcm-countries.php:99
 msgid "Eritrea"
-msgstr ""
+msgstr "Eritrea"
 
 #: ../includes/class-wpcm-countries.php:100
 msgid "Estonia"
-msgstr ""
+msgstr "Estland"
 
 #: ../includes/class-wpcm-countries.php:101
 msgid "Ethiopia"
-msgstr ""
+msgstr "Etiopien"
 
 #: ../includes/class-wpcm-countries.php:102
 msgid "Falkland Islands"
-msgstr ""
+msgstr "Falklandsöarna"
 
 #: ../includes/class-wpcm-countries.php:103
 msgid "Faroe Islands"
-msgstr ""
+msgstr "Färöarna"
 
 #: ../includes/class-wpcm-countries.php:104
 msgid "Fiji"
-msgstr ""
+msgstr "Fiji"
 
 #: ../includes/class-wpcm-countries.php:105
 msgid "Finland"
-msgstr ""
+msgstr "Finland"
 
 #: ../includes/class-wpcm-countries.php:106
 msgid "France"
-msgstr ""
+msgstr "Frankrike"
 
 #: ../includes/class-wpcm-countries.php:107
 msgid "French Guiana"
-msgstr ""
+msgstr "Franska Guinea"
 
 #: ../includes/class-wpcm-countries.php:108
 msgid "French Polynesia"
-msgstr ""
+msgstr "Franska Polynesien"
 
 #: ../includes/class-wpcm-countries.php:109
 msgid "French Southern Territories"
-msgstr ""
+msgstr "Franska Södra Territorierna"
 
 #: ../includes/class-wpcm-countries.php:110
 msgid "Gabon"
-msgstr ""
+msgstr "Gabon"
 
 #: ../includes/class-wpcm-countries.php:111
 msgid "Gambia"
-msgstr ""
+msgstr "Gambia"
 
 #: ../includes/class-wpcm-countries.php:112
 msgid "Georgia"
-msgstr ""
+msgstr "Georgien"
 
 #: ../includes/class-wpcm-countries.php:113
 msgid "Germany"
-msgstr ""
+msgstr "Tyskland"
 
 #: ../includes/class-wpcm-countries.php:114
 msgid "Ghana"
-msgstr ""
+msgstr "Ghana"
 
 #: ../includes/class-wpcm-countries.php:115
 msgid "Gibraltar"
-msgstr ""
+msgstr "Gibraltar"
 
 #: ../includes/class-wpcm-countries.php:116
 msgid "Greece"
-msgstr ""
+msgstr "Grekland"
 
 #: ../includes/class-wpcm-countries.php:117
 msgid "Greenland"
-msgstr ""
+msgstr "Grönland"
 
 #: ../includes/class-wpcm-countries.php:118
 msgid "Grenada"
-msgstr ""
+msgstr "Grenada"
 
 #: ../includes/class-wpcm-countries.php:119
 msgid "Guadeloupe"
-msgstr ""
+msgstr "Guadeloupe"
 
 #: ../includes/class-wpcm-countries.php:120
 msgid "Guam"
-msgstr ""
+msgstr "Guam"
 
 #: ../includes/class-wpcm-countries.php:121
 msgid "Guatemala"
-msgstr ""
+msgstr "Guatemala"
 
 #: ../includes/class-wpcm-countries.php:122
 msgid "Guernsey"
-msgstr ""
+msgstr "Guernsey"
 
 #: ../includes/class-wpcm-countries.php:123
 msgid "Guinea"
-msgstr ""
+msgstr "Guinea"
 
 #: ../includes/class-wpcm-countries.php:124
 msgid "Guinea-Bissau"
-msgstr ""
+msgstr "Guinea-Bissau"
 
 #: ../includes/class-wpcm-countries.php:125
 msgid "Guyana"
-msgstr ""
+msgstr "Guyana"
 
 #: ../includes/class-wpcm-countries.php:126
 msgid "Haiti"
-msgstr ""
+msgstr "Haiti"
 
 #: ../includes/class-wpcm-countries.php:127
 msgid "Heard Island and McDonald Islands"
-msgstr ""
+msgstr "Heard- och McDonaldöarna"
 
 #: ../includes/class-wpcm-countries.php:128
 msgid "Holy See (Vatican City State)"
-msgstr ""
+msgstr "Vatikanstaten"
 
 #: ../includes/class-wpcm-countries.php:129
 msgid "Honduras"
-msgstr ""
+msgstr "Honduras"
 
 #: ../includes/class-wpcm-countries.php:130
 msgid "Hong Kong"
-msgstr ""
+msgstr "Hong Kong"
 
 #: ../includes/class-wpcm-countries.php:131
 msgid "Hungary"
-msgstr ""
+msgstr "Ungern"
 
 #: ../includes/class-wpcm-countries.php:132
 msgid "Iceland"
-msgstr ""
+msgstr "Island"
 
 #: ../includes/class-wpcm-countries.php:133
 msgid "India"
-msgstr ""
+msgstr "Indien"
 
 #: ../includes/class-wpcm-countries.php:134
 msgid "Indonesia"
-msgstr ""
+msgstr "Indonesien"
 
 #: ../includes/class-wpcm-countries.php:135
 msgid "Iran"
-msgstr ""
+msgstr "Iran"
 
 #: ../includes/class-wpcm-countries.php:136
 msgid "Iraq"
-msgstr ""
+msgstr "Irak"
 
 #: ../includes/class-wpcm-countries.php:137
 msgid "Ireland"
-msgstr ""
+msgstr "Irland"
 
 #: ../includes/class-wpcm-countries.php:138
 msgid "Isle of Man"
-msgstr ""
+msgstr "Isle of Man"
 
 #: ../includes/class-wpcm-countries.php:139
 msgid "Israel"
-msgstr ""
+msgstr "Israel"
 
 #: ../includes/class-wpcm-countries.php:140
 msgid "Italy"
-msgstr ""
+msgstr "Italien"
 
 #: ../includes/class-wpcm-countries.php:141
 msgid "Ivory Coast"
-msgstr ""
+msgstr "Elfenbenskusten"
 
 #: ../includes/class-wpcm-countries.php:142
 msgid "Jamaica"
-msgstr ""
+msgstr "Jamaica"
 
 #: ../includes/class-wpcm-countries.php:143
 msgid "Japan"
-msgstr ""
+msgstr "Japan"
 
 #: ../includes/class-wpcm-countries.php:144
 msgid "Jersey"
-msgstr ""
+msgstr "Jersey"
 
 #: ../includes/class-wpcm-countries.php:145
 msgid "Jordan"
-msgstr ""
+msgstr "Jordanien"
 
 #: ../includes/class-wpcm-countries.php:146
 msgid "Kazakhstan"
-msgstr ""
+msgstr "Kazakstan"
 
 #: ../includes/class-wpcm-countries.php:147
 msgid "Kenya"
-msgstr ""
+msgstr "Kenya"
 
 #: ../includes/class-wpcm-countries.php:148
 msgid "Kiribati"
-msgstr ""
+msgstr "Kiribati"
 
 #: ../includes/class-wpcm-countries.php:149
 msgid "Kosovo"
-msgstr ""
+msgstr "Kosovo"
 
 #: ../includes/class-wpcm-countries.php:150
 msgid "Kuwait"
-msgstr ""
+msgstr "Kuwait"
 
 #: ../includes/class-wpcm-countries.php:151
 msgid "Kyrgyzstan"
-msgstr ""
+msgstr "Kirgizistan"
 
 #: ../includes/class-wpcm-countries.php:152
 msgid "Laos"
-msgstr ""
+msgstr "Laos"
 
 #: ../includes/class-wpcm-countries.php:153
 msgid "Latvia"
-msgstr ""
+msgstr "Lettland"
 
 #: ../includes/class-wpcm-countries.php:154
 msgid "Lebanon"
-msgstr ""
+msgstr "Libanon"
 
 #: ../includes/class-wpcm-countries.php:155
 msgid "Lesotho"
-msgstr ""
+msgstr "Lesotho"
 
 #: ../includes/class-wpcm-countries.php:156
 msgid "Liberia"
-msgstr ""
+msgstr "Liberia"
 
 #: ../includes/class-wpcm-countries.php:157
 msgid "Libya"
-msgstr ""
+msgstr "Libyen"
 
 #: ../includes/class-wpcm-countries.php:158
 msgid "Liechtenstein"
-msgstr ""
+msgstr "Liechtenstein"
 
 #: ../includes/class-wpcm-countries.php:159
 msgid "Lithuania"
-msgstr ""
+msgstr "Litauen"
 
 #: ../includes/class-wpcm-countries.php:160
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luxemburg"
 
 #: ../includes/class-wpcm-countries.php:161
 msgid "Macao"
-msgstr ""
+msgstr "Macao"
 
 #: ../includes/class-wpcm-countries.php:162
 msgid "Macedonia"
-msgstr ""
+msgstr "Makedonien"
 
 #: ../includes/class-wpcm-countries.php:163
 msgid "Madagascar"
-msgstr ""
+msgstr "Madagaskar"
 
 #: ../includes/class-wpcm-countries.php:164
 msgid "Malawi"
-msgstr ""
+msgstr "Malawi"
 
 #: ../includes/class-wpcm-countries.php:165
 msgid "Malaysia"
-msgstr ""
+msgstr "Malaysia"
 
 #: ../includes/class-wpcm-countries.php:166
 msgid "Maldives"
-msgstr ""
+msgstr "Maldiverna"
 
 #: ../includes/class-wpcm-countries.php:167
 msgid "Mali"
-msgstr ""
+msgstr "Mali"
 
 #: ../includes/class-wpcm-countries.php:168
 msgid "Malta"
-msgstr ""
+msgstr "Malta"
 
 #: ../includes/class-wpcm-countries.php:169
 msgid "Marshall Islands"
-msgstr ""
+msgstr "Marshallöarna"
 
 #: ../includes/class-wpcm-countries.php:170
 msgid "Martinique"
-msgstr ""
+msgstr "Martinique"
 
 #: ../includes/class-wpcm-countries.php:171
 msgid "Mauritania"
-msgstr ""
+msgstr "Mauretanien"
 
 #: ../includes/class-wpcm-countries.php:172
 msgid "Mauritius"
-msgstr ""
+msgstr "Mauritius"
 
 #: ../includes/class-wpcm-countries.php:173
 msgid "Mayotte"
-msgstr ""
+msgstr "Mayotte"
 
 #: ../includes/class-wpcm-countries.php:174
 msgid "Mexico"
-msgstr ""
+msgstr "Mexiko"
 
 #: ../includes/class-wpcm-countries.php:175
 msgid "Micronesia, Federal States of"
-msgstr ""
+msgstr "Mikronesien"
 
 #: ../includes/class-wpcm-countries.php:176
 msgid "Moldova, Republic of"
-msgstr ""
+msgstr "Moldavien"
 
 #: ../includes/class-wpcm-countries.php:177
 msgid "Monaco"
-msgstr ""
+msgstr "Monaco"
 
 #: ../includes/class-wpcm-countries.php:178
 msgid "Mongolia"
-msgstr ""
+msgstr "Moldavien"
 
 #: ../includes/class-wpcm-countries.php:179
 msgid "Monserrat"
-msgstr ""
+msgstr "Montserrat"
 
 #: ../includes/class-wpcm-countries.php:180
 msgid "Montenegro"
-msgstr ""
+msgstr "Montenegro"
 
 #: ../includes/class-wpcm-countries.php:181
 msgid "Morocco"
-msgstr ""
+msgstr "Marocko"
 
 #: ../includes/class-wpcm-countries.php:182
 msgid "North Korea"
-msgstr ""
+msgstr "Nordkorea"
 
 #: ../includes/class-wpcm-countries.php:183
 msgid "Mozambique"
-msgstr ""
+msgstr "Moçambique"
 
 #: ../includes/class-wpcm-countries.php:184
 msgid "Myanmar"
-msgstr ""
+msgstr "Burma"
 
 #: ../includes/class-wpcm-countries.php:185
 msgid "Namibia"
-msgstr ""
+msgstr "Namibia"
 
 #: ../includes/class-wpcm-countries.php:186
 msgid "Nauru"
-msgstr ""
+msgstr "Nauru"
 
 #: ../includes/class-wpcm-countries.php:187
 msgid "Nepal"
-msgstr ""
+msgstr "Nepal"
 
 #: ../includes/class-wpcm-countries.php:188
 msgid "Netherlands"
-msgstr ""
+msgstr "Nederländerna"
 
 #: ../includes/class-wpcm-countries.php:189
 msgid "New Caledonia"
-msgstr ""
+msgstr "Nya Kaledonien"
 
 #: ../includes/class-wpcm-countries.php:190
 msgid "New Zealand"
-msgstr ""
+msgstr "Nya Zeeland"
 
 #: ../includes/class-wpcm-countries.php:191
 msgid "Nicaragua"
-msgstr ""
+msgstr "Nicaragua"
 
 #: ../includes/class-wpcm-countries.php:192
 msgid "Niger"
-msgstr ""
+msgstr "Niger"
 
 #: ../includes/class-wpcm-countries.php:193
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigeria"
 
 #: ../includes/class-wpcm-countries.php:194
 msgid "Niue"
-msgstr ""
+msgstr "Niue"
 
 #: ../includes/class-wpcm-countries.php:195
 msgid "Norfolk Island"
-msgstr ""
+msgstr "Norfolkön"
 
 #: ../includes/class-wpcm-countries.php:196
 msgid "Northern Ireland"
-msgstr ""
+msgstr "Nordirland"
 
 #: ../includes/class-wpcm-countries.php:197
 msgid "Northern Mariana Islands"
-msgstr ""
+msgstr "Nordmarianerna"
 
 #: ../includes/class-wpcm-countries.php:198
 msgid "Norway"
-msgstr ""
+msgstr "Norge"
 
 #: ../includes/class-wpcm-countries.php:199
 msgid "Oman"
-msgstr ""
+msgstr "Oman"
 
 #: ../includes/class-wpcm-countries.php:200
 msgid "Pakistan"
-msgstr ""
+msgstr "Pakistan"
 
 #: ../includes/class-wpcm-countries.php:201
 msgid "Palau"
-msgstr ""
+msgstr "Palau"
 
 #: ../includes/class-wpcm-countries.php:202
 msgid "Palestine, State of"
-msgstr ""
+msgstr "Palestina"
 
 #: ../includes/class-wpcm-countries.php:203
 msgid "Panama"
-msgstr ""
+msgstr "Panama"
 
 #: ../includes/class-wpcm-countries.php:204
 msgid "Papua New Guinea"
-msgstr ""
+msgstr "Papua Nya Guinea"
 
 #: ../includes/class-wpcm-countries.php:205
 msgid "Paraguay"
-msgstr ""
+msgstr "Paraguay"
 
 #: ../includes/class-wpcm-countries.php:206
 msgid "Peru"
-msgstr ""
+msgstr "Peru"
 
 #: ../includes/class-wpcm-countries.php:207
 msgid "Philippines"
-msgstr ""
+msgstr "Filippinerna"
 
 #: ../includes/class-wpcm-countries.php:208
 msgid "Pitcairn"
-msgstr ""
+msgstr "Pitcairnöarna"
 
 #: ../includes/class-wpcm-countries.php:209
 msgid "Poland"
-msgstr ""
+msgstr "Polen"
 
 #: ../includes/class-wpcm-countries.php:210
 msgid "Portugal"
-msgstr ""
+msgstr "Portugal"
 
 #: ../includes/class-wpcm-countries.php:211
 msgid "Puerto Rico"
-msgstr ""
+msgstr "Puerto Rico"
 
 #: ../includes/class-wpcm-countries.php:212
 msgid "Qatar"
-msgstr ""
+msgstr "Qatar"
 
 #: ../includes/class-wpcm-countries.php:213
 msgid "Reunion"
-msgstr ""
+msgstr "Réunion"
 
 #: ../includes/class-wpcm-countries.php:214
 msgid "Romania"
-msgstr ""
+msgstr "Rumänien"
 
 #: ../includes/class-wpcm-countries.php:215
 msgid "Russian Federation"
-msgstr ""
+msgstr "Ryssland"
 
 #: ../includes/class-wpcm-countries.php:216
 msgid "Rwanda"
-msgstr ""
+msgstr "Rwanda"
 
 #: ../includes/class-wpcm-countries.php:217
 msgid "Saint Helena"
-msgstr ""
+msgstr "Sankta Helena"
 
 #: ../includes/class-wpcm-countries.php:218
 msgid "Saint Kitts and Nevis"
-msgstr ""
+msgstr "Saint Kitts och Nevis"
 
 #: ../includes/class-wpcm-countries.php:219
 msgid "Saint Lucia"
-msgstr ""
+msgstr "Saint Lucia"
 
 #: ../includes/class-wpcm-countries.php:220
 msgid "Saint Pierre & Miquelon"
-msgstr ""
+msgstr "Saint-Pierre och Miquelon"
 
 #: ../includes/class-wpcm-countries.php:221
 msgid "Saint Vincent and the Grenadines"
-msgstr ""
+msgstr "Saint Vincent och Grenadinerna"
 
 #: ../includes/class-wpcm-countries.php:222
 msgid "Samoa"
-msgstr ""
+msgstr "Samoa"
 
 #: ../includes/class-wpcm-countries.php:223
 msgid "San Marino"
-msgstr ""
+msgstr "San Marino"
 
 #: ../includes/class-wpcm-countries.php:224
 msgid "S&atilde;o Tom&eacute; and Pr&iacute;ncipe"
-msgstr ""
+msgstr "São Tomé och Príncipe"
 
 #: ../includes/class-wpcm-countries.php:225
 msgid "Saudi Arabia"
-msgstr ""
+msgstr "Saudiarabien"
 
 #: ../includes/class-wpcm-countries.php:226
 msgid "Scotland"
-msgstr ""
+msgstr "Skottland"
 
 #: ../includes/class-wpcm-countries.php:227
 msgid "Senegal"
-msgstr ""
+msgstr "Senegal"
 
 #: ../includes/class-wpcm-countries.php:228
 msgid "Serbia"
-msgstr ""
+msgstr "Serbien"
 
 #: ../includes/class-wpcm-countries.php:229
 msgid "Seychelles"
-msgstr ""
+msgstr "Seychellerna"
 
 #: ../includes/class-wpcm-countries.php:230
 msgid "Sierre Leone"
-msgstr ""
+msgstr "Sierra Leone"
 
 #: ../includes/class-wpcm-countries.php:231
 msgid "Singapore"
-msgstr ""
+msgstr "Singapore"
 
 #: ../includes/class-wpcm-countries.php:232
 msgid "Slovakia"
-msgstr ""
+msgstr "Slovakien"
 
 #: ../includes/class-wpcm-countries.php:233
 msgid "Slovenia"
-msgstr ""
+msgstr "Slovenien"
 
 #: ../includes/class-wpcm-countries.php:234
 msgid "Solomon Islands"
-msgstr ""
+msgstr "Salomonöarna"
 
 #: ../includes/class-wpcm-countries.php:235
 msgid "Somalia"
-msgstr ""
+msgstr "Somalia"
 
 #: ../includes/class-wpcm-countries.php:236
 msgid "South Africa"
-msgstr ""
+msgstr "Sydafrika"
 
 #: ../includes/class-wpcm-countries.php:237
 msgid "South Georgia / Sandwich Islands"
-msgstr ""
+msgstr "Sydgeorgien och Sydsandwichöarna"
 
 #: ../includes/class-wpcm-countries.php:238
 msgid "South Korea"
-msgstr ""
+msgstr "Sydkorea"
 
 #: ../includes/class-wpcm-countries.php:239
 msgid "Spain"
-msgstr ""
+msgstr "Spanien"
 
 #: ../includes/class-wpcm-countries.php:240
 msgid "Sri Lanka"
-msgstr ""
+msgstr "Sri Lanka"
 
 #: ../includes/class-wpcm-countries.php:241
 msgid "Svalbard and Jan Mayen"
-msgstr ""
+msgstr "Svalbard och Jan Mayen"
 
 #: ../includes/class-wpcm-countries.php:242
 msgid "Sudan"
-msgstr ""
+msgstr "Sudan"
 
 #: ../includes/class-wpcm-countries.php:243
 msgid "Suriname"
-msgstr ""
+msgstr "Surinam"
 
 #: ../includes/class-wpcm-countries.php:244
 msgid "Swaziland"
-msgstr ""
+msgstr "Swaziland"
 
 #: ../includes/class-wpcm-countries.php:245
 msgid "Sweden"
-msgstr ""
+msgstr "Sverige"
 
 #: ../includes/class-wpcm-countries.php:246
 msgid "Switzerland"
-msgstr ""
+msgstr "Schweiz"
 
 #: ../includes/class-wpcm-countries.php:247
 msgid "Syrian Arab Republic"
-msgstr ""
+msgstr "Syrien"
 
 #: ../includes/class-wpcm-countries.php:248
 msgid "Taiwan, Province of China"
-msgstr ""
+msgstr "Taiwan"
 
 #: ../includes/class-wpcm-countries.php:249
 msgid "Tajikstan"
-msgstr ""
+msgstr "Tadzjikistan"
 
 #: ../includes/class-wpcm-countries.php:250
 msgid "Tanzania, United Republic of"
-msgstr ""
+msgstr "Tanzania"
 
 #: ../includes/class-wpcm-countries.php:251
 msgid "Thailand"
-msgstr ""
+msgstr "Thailand"
 
 #: ../includes/class-wpcm-countries.php:252
 msgid "Timor-Leste"
-msgstr ""
+msgstr "Östtimor"
 
 #: ../includes/class-wpcm-countries.php:253
 msgid "Togo"
-msgstr ""
+msgstr "Togo"
 
 #: ../includes/class-wpcm-countries.php:254
 msgid "Tokelau"
-msgstr ""
+msgstr "Tokelauöarna"
 
 #: ../includes/class-wpcm-countries.php:255
 msgid "Tonga"
-msgstr ""
+msgstr "Tonga"
 
 #: ../includes/class-wpcm-countries.php:256
 msgid "Trinidad and Tobago"
-msgstr ""
+msgstr "Trinidad och Tobago"
 
 #: ../includes/class-wpcm-countries.php:257
 msgid "Tunisia"
-msgstr ""
+msgstr "Tunisien"
 
 #: ../includes/class-wpcm-countries.php:258
 msgid "Turkey"
-msgstr ""
+msgstr "Turkiet"
 
 #: ../includes/class-wpcm-countries.php:259
 msgid "Turkmenistan"
-msgstr ""
+msgstr "Turkmenistan"
 
 #: ../includes/class-wpcm-countries.php:260
 msgid "Turks and Caicos Islands"
-msgstr ""
+msgstr "Turks- och Caicosöarna"
 
 #: ../includes/class-wpcm-countries.php:261
 msgid "Tuvalu"
-msgstr ""
+msgstr "Tuvalu"
 
 #: ../includes/class-wpcm-countries.php:262
 msgid "Uganda"
-msgstr ""
+msgstr "Uganda"
 
 #: ../includes/class-wpcm-countries.php:263
 msgid "Ukraine"
-msgstr ""
+msgstr "Ukraina"
 
 #: ../includes/class-wpcm-countries.php:264
 msgid "United Arab Emirates"
-msgstr ""
+msgstr "Förenade Arabemiraten"
 
 #: ../includes/class-wpcm-countries.php:265
 msgid "United Kingdom (UK)"
-msgstr ""
+msgstr "Storbritannien"
 
 #: ../includes/class-wpcm-countries.php:266
 msgid "United States (US)"
-msgstr ""
+msgstr "USA"
 
 #: ../includes/class-wpcm-countries.php:267
 msgid "Uruguay"
-msgstr ""
+msgstr "Uruguay"
 
 #: ../includes/class-wpcm-countries.php:268
 msgid "US Minor Outlying Islands"
-msgstr ""
+msgstr "Förenta staternas mindre öar i Oceanien och Västindien"
 
 #: ../includes/class-wpcm-countries.php:269
 msgid "Uzbekistan"
-msgstr ""
+msgstr "Uzbekistan"
 
 #: ../includes/class-wpcm-countries.php:270
 msgid "Vanuata"
-msgstr ""
+msgstr "Vanuatu"
 
 #: ../includes/class-wpcm-countries.php:271
 msgid "Venezuala"
-msgstr ""
+msgstr "Venezuela"
 
 #: ../includes/class-wpcm-countries.php:272
 msgid "Vietnam"
-msgstr ""
+msgstr "Vietnam"
 
 #: ../includes/class-wpcm-countries.php:273
 msgid "Virgin Islands, British"
-msgstr ""
+msgstr "Brittiska Jungfruöarna"
 
 #: ../includes/class-wpcm-countries.php:274
 msgid "Virgin Islands, U.S."
-msgstr ""
+msgstr "Amerikanska Jungfruöarna"
 
 #: ../includes/class-wpcm-countries.php:275
 msgid "Wales"
-msgstr ""
+msgstr "Wales"
 
 #: ../includes/class-wpcm-countries.php:276
 msgid "Wallis and Futuna"
-msgstr ""
+msgstr "Wallis- och Futunaöarna"
 
 #: ../includes/class-wpcm-countries.php:277
 msgid "Western Sahara"
-msgstr ""
+msgstr "Västsahara"
 
 #: ../includes/class-wpcm-countries.php:278
 msgid "Yemen"
-msgstr ""
+msgstr "Jemen"
 
 #: ../includes/class-wpcm-countries.php:279
 msgid "Yugoslavia"
-msgstr ""
+msgstr "Jugoslavien"
 
 #: ../includes/class-wpcm-countries.php:280
 msgid "Zambia"
-msgstr ""
+msgstr "Zambia"
 
 #: ../includes/class-wpcm-countries.php:281
 msgid "Zimbabwe"
-msgstr ""
+msgstr "Zimbabwe"
 
 #: ../includes/class-wpcm-install.php:163
 #: ../includes/class-wpcm-post-types.php:223
@@ -1471,7 +1472,7 @@ msgstr "Spelare"
 
 #: ../includes/class-wpcm-install.php:237
 msgid "Team Manager"
-msgstr "Lagledar"
+msgstr "Lagledare"
 
 #: ../includes/class-wpcm-install.php:428
 msgid "What's new:"
@@ -1730,7 +1731,7 @@ msgstr "Alla spelare"
 
 #: ../includes/class-wpcm-post-types.php:226
 msgid "Add New Player"
-msgstr ""
+msgstr "Lägg till ny spelare"
 
 #: ../includes/class-wpcm-post-types.php:227
 msgid "Edit Player"
@@ -1762,15 +1763,15 @@ msgstr "Huvudspelare"
 
 #: ../includes/class-wpcm-post-types.php:261
 msgid "All Staff"
-msgstr "All persona"
+msgstr "All personal"
 
 #: ../includes/class-wpcm-post-types.php:262
 msgid "Add New Staff"
-msgstr "Lägg till ny persona"
+msgstr "Lägg till ny personal"
 
 #: ../includes/class-wpcm-post-types.php:263
 msgid "Edit Staff"
-msgstr "Ändra persona"
+msgstr "Ändra personal"
 
 #: ../includes/class-wpcm-post-types.php:264
 msgid "New Staff"
@@ -1778,7 +1779,7 @@ msgstr "Ny personal"
 
 #: ../includes/class-wpcm-post-types.php:265
 msgid "View Staff"
-msgstr "Visa persona"
+msgstr "Visa personal"
 
 #: ../includes/class-wpcm-post-types.php:266
 msgid "Search Staff"
@@ -1816,7 +1817,7 @@ msgstr "Lägg till ny match"
 
 #: ../includes/class-wpcm-post-types.php:299
 msgid "Edit Match"
-msgstr ""
+msgstr "Ändra match"
 
 #: ../includes/class-wpcm-post-types.php:300
 msgid "New Match"
@@ -1896,7 +1897,7 @@ msgstr "Auto"
 #: ../includes/wpcm-club-functions.php:388
 #: ../includes/wpcm-player-functions.php:309
 msgid "Manual"
-msgstr "Manuel"
+msgstr "Manual"
 
 #: ../includes/wpcm-core-functions.php:578
 msgid "Baseball"
@@ -1904,7 +1905,7 @@ msgstr "Baseball"
 
 #: ../includes/wpcm-core-functions.php:589
 msgid "At Bats"
-msgstr ""
+msgstr "At Bats"
 
 #: ../includes/wpcm-core-functions.php:589
 msgid "AB"
@@ -1913,10 +1914,10 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:590
 #: ../includes/wpcm-core-functions.php:993
 msgid "Hits"
-msgstr ""
+msgstr "Tacklingar"
 
 #: ../includes/wpcm-core-functions.php:590
-#: ../templates/shortcodes/matches.php:180
+#: ../templates/shortcodes/matches.php:186
 msgid "H"
 msgstr ""
 
@@ -2030,7 +2031,7 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:679
 #: ../includes/wpcm-core-functions.php:947
 #: ../includes/wpcm-core-functions.php:987
-#: ../templates/shortcodes/matches.php:182
+#: ../templates/shortcodes/matches.php:194
 msgid "A"
 msgstr ""
 
@@ -2193,7 +2194,7 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:647
 #: ../includes/wpcm-core-functions.php:1040
 msgid "Rebounds"
-msgstr ""
+msgstr "Returer"
 
 #: ../includes/wpcm-core-functions.php:647
 #: ../includes/wpcm-core-functions.php:1040
@@ -2247,7 +2248,7 @@ msgstr ""
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:96
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:203
 msgid "Points"
-msgstr ""
+msgstr "Poäng"
 
 #: ../includes/wpcm-core-functions.php:653
 #: ../includes/wpcm-core-functions.php:764
@@ -2256,7 +2257,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:659
 msgid "Floorball"
-msgstr ""
+msgstr "Innebandy"
 
 #: ../includes/wpcm-core-functions.php:678
 #: ../includes/wpcm-core-functions.php:835
@@ -2268,7 +2269,7 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:1132
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:91
 msgid "Goals"
-msgstr ""
+msgstr "Mål"
 
 #: ../includes/wpcm-core-functions.php:678
 #: ../includes/wpcm-core-functions.php:835
@@ -2286,13 +2287,13 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:680
 #: ../includes/wpcm-core-functions.php:988
 msgid "+/-"
-msgstr ""
+msgstr "+/-"
 
 #: ../includes/wpcm-core-functions.php:681
 #: ../includes/wpcm-core-functions.php:949
 #: ../includes/wpcm-core-functions.php:989
 msgid "Shots on Goal"
-msgstr ""
+msgstr "Skott på mål"
 
 #: ../includes/wpcm-core-functions.php:681
 #: ../includes/wpcm-core-functions.php:949
@@ -2303,12 +2304,12 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:682
 #: ../includes/wpcm-core-functions.php:992
 msgid "Penalty Minutes"
-msgstr ""
+msgstr "Utvisnings minuter"
 
 #: ../includes/wpcm-core-functions.php:682
 #: ../includes/wpcm-core-functions.php:992
 msgid "PIM"
-msgstr ""
+msgstr "UTV"
 
 #: ../includes/wpcm-core-functions.php:683
 #: ../includes/wpcm-core-functions.php:838
@@ -2318,7 +2319,7 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:1103
 #: ../includes/wpcm-core-functions.php:1138
 msgid "Red Cards"
-msgstr ""
+msgstr "Röda kort"
 
 #: ../includes/wpcm-core-functions.php:683
 #: ../includes/wpcm-core-functions.php:838
@@ -2334,7 +2335,7 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:950
 #: ../includes/wpcm-core-functions.php:996
 msgid "Saves"
-msgstr ""
+msgstr "Räddningar"
 
 #: ../includes/wpcm-core-functions.php:684
 #: ../includes/wpcm-core-functions.php:950
@@ -2460,7 +2461,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:760
 msgid "Touchdowns"
-msgstr ""
+msgstr "Touchdowns"
 
 #: ../includes/wpcm-core-functions.php:760
 msgid "TD"
@@ -2672,23 +2673,23 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:1037
 #: ../includes/wpcm-core-functions.php:1132
 msgid "GLS"
-msgstr ""
+msgstr "MÅL"
 
 #: ../includes/wpcm-core-functions.php:915
 msgid "2 Minute Suspension"
-msgstr ""
+msgstr "2 Minuters utvisning"
 
 #: ../includes/wpcm-core-functions.php:915
 msgid "2MIN"
-msgstr ""
+msgstr "2MIN"
 
 #: ../includes/wpcm-core-functions.php:923
 msgid "Field Hockey"
-msgstr ""
+msgstr "Landhockey"
 
 #: ../includes/wpcm-core-functions.php:948
 msgid "Shots"
-msgstr ""
+msgstr "Skott"
 
 #: ../includes/wpcm-core-functions.php:948
 msgid "SH"
@@ -2696,15 +2697,15 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:951
 msgid "Green Cards"
-msgstr ""
+msgstr "Gröna kort"
 
 #: ../includes/wpcm-core-functions.php:951
 msgid "GC"
-msgstr ""
+msgstr "GK"
 
 #: ../includes/wpcm-core-functions.php:959
 msgid "Ice Hockey"
-msgstr ""
+msgstr "Ishockey"
 
 #: ../includes/wpcm-core-functions.php:990
 msgid "Missed Shots"
@@ -2728,7 +2729,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:994
 msgid "Faceoffs Won"
-msgstr ""
+msgstr "Tekningar, vunna"
 
 #: ../includes/wpcm-core-functions.php:994
 msgid "FW"
@@ -2736,7 +2737,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:995
 msgid "Faceoffs Lost"
-msgstr ""
+msgstr "Tekningar, förlorade"
 
 #: ../includes/wpcm-core-functions.php:995
 msgid "FL"
@@ -2776,7 +2777,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:1044
 msgid "Penaties"
-msgstr ""
+msgstr "Utvisningar"
 
 #: ../includes/wpcm-core-functions.php:1044
 #: ../includes/wpcm-core-functions.php:1100
@@ -2785,7 +2786,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:1051
 msgid "Rugby"
-msgstr ""
+msgstr "Rugby"
 
 #: ../includes/wpcm-core-functions.php:1098
 msgid "Tries"
@@ -2805,7 +2806,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:1100
 msgid "Penalties"
-msgstr ""
+msgstr "Utvisningar"
 
 #: ../includes/wpcm-core-functions.php:1101
 msgid "Drop Goals"
@@ -3040,12 +3041,12 @@ msgstr "Permalänk"
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:216
 #: ../templates/single-match/venue-info.php:37
 msgid "Venue Address"
-msgstr "Platsadress"
+msgstr "Adress"
 
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:193
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:220
 msgid "The venue address is used to display a map of the venue."
-msgstr "Platsadressen används för att visa en karta över platsen."
+msgstr "Adressen används för att visa en karta över platsen."
 
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:196
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:225
@@ -3201,7 +3202,7 @@ msgstr ""
 #: ../includes/admin/class-wpcm-admin-welcome.php:560
 #: ../includes/admin/class-wpcm-admin-welcome.php:589
 msgid "Go to WP Club Manager Settings"
-msgstr ""
+msgstr "Gå till WP Club Manager Inställningarna"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:367
 msgid ""
@@ -3215,7 +3216,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:381
 msgid "1. Choose Your Sport"
-msgstr ""
+msgstr "1. Välj din sport"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:382
 #, php-format
@@ -3230,11 +3231,11 @@ msgstr ""
 #: ../includes/admin/class-wpcm-admin-welcome.php:431
 #: ../includes/admin/views/html-admin-settings.php:25
 msgid "Save changes"
-msgstr ""
+msgstr "Spara ändingar"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:401
 msgid "2. Create Your Club"
-msgstr ""
+msgstr "2. Skapa din klubb"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:402
 #, php-format
@@ -3249,7 +3250,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:438
 msgid "3. Seasons, Competitions and Teams"
-msgstr ""
+msgstr "3. Säsonger, Tävlingar och Lag"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:439
 #, php-format
@@ -3270,7 +3271,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:444
 msgid "4. Add Your Players"
-msgstr ""
+msgstr "4. Lägg till spelare"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:445
 #: ../includes/admin/class-wpcm-admin-welcome.php:448
@@ -3296,7 +3297,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:456
 msgid "Need Help?"
-msgstr ""
+msgstr "Behöver du hjälp?"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:460
 msgid "Plugin Documentation"
@@ -3356,7 +3357,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:505
 msgid "Player Appearances"
-msgstr ""
+msgstr "Spelar framträdanden"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:506
 msgid "Display a list of a players matches, season by season, on their profile"
@@ -3397,21 +3398,21 @@ msgstr ""
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:74
 msgid "Club name"
-msgstr ""
+msgstr "Klubb namn"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:87
 msgid "Club Badge"
-msgstr ""
+msgstr "Klubb emblem"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:89
 msgid "Remove club badge"
-msgstr ""
+msgstr "Ta bort klubb emblem"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:91
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:107
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:108
 msgid "Set club badge"
-msgstr ""
+msgstr "Välj klubb emblem"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:161
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:171
@@ -3425,58 +3426,58 @@ msgstr ""
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:181
 #, php-format
 msgid "Show all %s"
-msgstr ""
+msgstr "Visa alla %s"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:161
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:204
 msgid "competitions"
-msgstr ""
+msgstr "tävlingar"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:171
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:214
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:210
 msgid "seasons"
-msgstr ""
+msgstr "säsonger"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:78
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:80
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:82
 #, php-format
 msgid "Kick-off: <b>%1$s</b>"
-msgstr ""
+msgstr "Matchstart: <b>%1$s</b>"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:148
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:99
 msgid "Fixture"
-msgstr ""
+msgstr "Match"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:152
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:85
 #: ../includes/widgets/class-wpcm-widget-results.php:85
 #: ../templates/shortcodes/matches.php:114
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:153
 msgid "Kick-off"
-msgstr ""
+msgstr "Matchstart"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:154
 #: ../includes/widgets/class-wpcm-widget-results.php:32
 msgid "Results"
-msgstr ""
+msgstr "Resultat"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:224
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:200
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:181
 msgid "teams"
-msgstr ""
+msgstr "lagen"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:80
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:78
 #, php-format
 msgid "Joins on: <b>%1$s</b>"
-msgstr ""
+msgstr "Ansluter: <b>%1$s</b>"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:82
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:84
@@ -3484,49 +3485,49 @@ msgstr ""
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:82
 #, php-format
 msgid "Joined on: <b>%1$s</b>"
-msgstr ""
+msgstr "Anslöt: <b>%1$s</b>"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:87
 msgid "Player Image"
-msgstr ""
+msgstr "Spelarbild"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:89
 msgid "Remove player image"
-msgstr ""
+msgstr "Ta bort spelarbild"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:91
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:106
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:107
 msgid "Set player image"
-msgstr ""
+msgstr "Välj spelarbild"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:190
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:61
 msgid "positions"
-msgstr ""
+msgstr "positioner"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:68
 msgid "Sponsor name"
-msgstr ""
+msgstr "Sponsornamn"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:77
 msgid "Sponsor Logo"
-msgstr ""
+msgstr "Sponsor logo"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:79
 msgid "Remove sponsor logo"
-msgstr ""
+msgstr "Ta bort sponsor logo"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:81
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:96
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:97
 msgid "Set sponsor logo"
-msgstr ""
+msgstr "Välj sponsor logo"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:110
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:32
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:86
 msgid "Staff Image"
@@ -3546,7 +3547,7 @@ msgstr ""
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:48
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:73
 msgid "Job Title"
-msgstr ""
+msgstr "Jobb titel"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:171
 msgid "jobs"
@@ -3567,188 +3568,193 @@ msgstr ""
 #: ../includes/widgets/class-wpcm-widget-players.php:240
 #: ../includes/widgets/class-wpcm-widget-standings.php:199
 msgid "Statistics"
-msgstr ""
+msgstr "Statistik"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:97
 msgid "Match Result"
-msgstr ""
+msgstr "Match resultat"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:98
 msgid "Match Video"
-msgstr ""
+msgstr "Match Video"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:100
 msgid "Match Details"
-msgstr ""
+msgstr "Match Detaljer"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:103
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:106
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:108
 msgid "Basic Information"
-msgstr ""
+msgstr "Bas information"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-club-stats.php:30
 msgid "Choose a competition and season to edit the manual stats."
 msgstr ""
 
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:111
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:113
+msgid "Neutral?"
+msgstr ""
+
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:117
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:110
 #: ../templates/single-match/attendance.php:24
 msgid "Attendance"
-msgstr ""
+msgstr "Publik"
 
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:113
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:119
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:90
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:118
 #: ../templates/single-match/referee.php:21
 msgid "Referee"
-msgstr ""
+msgstr "Domare"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-fixture.php:31
 msgid "Home"
-msgstr ""
+msgstr "Hemma"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-fixture.php:32
 msgid "Away"
-msgstr ""
+msgstr "Borta"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:31
 msgid "Starting Lineup"
-msgstr ""
+msgstr "Start uppställning"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:32
 msgid "Substitutes"
-msgstr ""
+msgstr "Avbytare"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:36
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:40
 msgid "You have selected"
-msgstr ""
+msgstr "Du har valt"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:36
 msgid "players"
-msgstr ""
+msgstr "spelare"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:40
 msgid "substitutes"
-msgstr ""
+msgstr "avbytare"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:40
 #: ../templates/shortcodes/matches.php:125
 msgid "Result"
-msgstr ""
+msgstr "Resultat"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:48
 msgctxt "team"
 msgid "Home"
-msgstr ""
+msgstr "Hemma"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:49
 msgctxt "team"
 msgid "Away"
-msgstr ""
+msgstr "Borta"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:55
 #: ../includes/widgets/class-wpcm-widget-results.php:95
 msgid "Score"
-msgstr ""
+msgstr "Ställning"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:66
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:194
 msgid "Bonus Points"
-msgstr ""
+msgstr "Bonus Poäng"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:77
 msgid "Overtime"
-msgstr ""
+msgstr "Övertid"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:83
 msgid "Shootout"
-msgstr ""
+msgstr "Straffläggning"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:107
 msgid "Friendly"
-msgstr ""
+msgstr "Träningsmatch"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:28
 msgid "Remove video"
-msgstr ""
+msgstr "Ta bort video"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:34
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:37
 msgid "Add video"
-msgstr ""
+msgstr "Lägg till video"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:51
 msgid "Squad Number"
-msgstr ""
+msgstr "Spelarnummer"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:61
 #, php-format
 msgid "Choose %s"
-msgstr ""
+msgstr "Välj %s"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:93
 #: ../includes/admin/settings/class-wpcm-settings-players.php:121
 #: ../templates/single-player/meta.php:170
 msgid "Birthplace"
-msgstr ""
+msgstr "Födelseort"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:95
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:80
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:81
 #: ../templates/content-single-staff.php:150
 msgid "Nationality"
-msgstr ""
+msgstr "Nationalitet"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:97
 #: ../includes/admin/settings/class-wpcm-settings-players.php:129
 #: ../templates/single-player/meta.php:211
 msgid "Previous Clubs"
-msgstr ""
+msgstr "Tidigare klubbar"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-stats.php:29
 #: ../templates/single-player/stats.php:19
 #, php-format
 msgid "All %s"
-msgstr ""
+msgstr "Alla %s"
 
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:29
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:31
 msgid "Link URL"
-msgstr ""
+msgstr "Länk URL"
 
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:32
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:34
 msgid "Open link in new window?"
-msgstr ""
+msgstr "Öppna länk i nytt fönster?"
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:22
 msgid "General"
-msgstr ""
+msgstr "Allmänt"
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:40
 msgid "General Options"
-msgstr ""
+msgstr "Allmänna alternativ"
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:43
 msgid "Sport"
-msgstr ""
+msgstr "Sport"
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:44
 msgid ""
 "Choose your sport. Your choice will determine the player stats that are "
 "available."
 msgstr ""
+"Välj er sport. Ert val avgör vilken spelarstatistik som finns tillgänglig"
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:55
 msgid "Default Club"
-msgstr ""
+msgstr "Förvald Klubb"
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:56
 msgid "This is the default club."
-msgstr ""
+msgstr "Detta är förvald klubb."
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:65
 msgid "Base Location"
@@ -3762,7 +3768,7 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-licenses.php:22
 msgid "Licenses"
-msgstr ""
+msgstr "Licenser"
 
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:38
 msgid "Title Format Options"
@@ -3872,7 +3878,7 @@ msgstr ""
 #: ../templates/content-single-staff.php:49
 #: ../templates/single-player/meta.php:38
 msgid "Birthday"
-msgstr ""
+msgstr "Födelsedag"
 
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:98
 msgid "Staff Image Sizes"
@@ -3901,7 +3907,7 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:41
 msgid "Points for win"
-msgstr ""
+msgstr "Poäng för vinst"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:42
 msgid "This sets the points for won matches."
@@ -3909,7 +3915,7 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:51
 msgid "Points for draw"
-msgstr ""
+msgstr "Poäng för oavgjort"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:52
 msgid "This sets the points for drawn matches."
@@ -3917,7 +3923,7 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:61
 msgid "Points for loss"
-msgstr ""
+msgstr "Poäng för förlust"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:62
 msgid "This sets the points for lost matches."
@@ -3925,7 +3931,7 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:71
 msgid "Points for overtime win"
-msgstr ""
+msgstr "Poäng för övertidsvinst"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:72
 msgid ""
@@ -3934,7 +3940,7 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:81
 msgid "Points for overtime loss"
-msgstr ""
+msgstr "Poäng för övertidsförlust"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:82
 msgid ""
@@ -3947,31 +3953,31 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:104
 msgid "Played"
-msgstr ""
+msgstr "Spelade"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:113
 msgid "Win"
-msgstr ""
+msgstr "Vinst"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:122
 msgid "Draw"
-msgstr ""
+msgstr "Oavgjord"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:131
 msgid "Lost"
-msgstr ""
+msgstr "Förlust"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:140
 msgid "Won in Overtime"
-msgstr ""
+msgstr "Vinster på övertid"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:149
 msgid "Lost in Overtime"
-msgstr ""
+msgstr "Förluster på övertid"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:158
 msgid "Win Percentage"
-msgstr ""
+msgstr "Vinst procent"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:167
 msgid "Goals For"
@@ -4006,33 +4012,33 @@ msgstr ""
 
 #: ../includes/admin/views/html-notice-theme-support.php:8
 msgid "Hide this notice"
-msgstr ""
+msgstr "Göm denna notis"
 
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:26
 msgid "Display upcoming fixtures."
-msgstr ""
+msgstr "Visa kommande matcher"
 
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:28
 msgid "WPCM Fixtures"
-msgstr ""
+msgstr "WPCM Matcher"
 
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:32
 msgid "Fixtures"
-msgstr ""
+msgstr "Matcher"
 
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:69
 #: ../includes/widgets/class-wpcm-widget-results.php:69
 msgid "View all matches"
-msgstr ""
+msgstr "Visa alla matcher"
 
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:90
 #: ../includes/widgets/class-wpcm-widget-results.php:90
 msgid "Kick Off"
-msgstr ""
+msgstr "Match start"
 
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:225
 msgid "No more matches scheduled."
-msgstr ""
+msgstr "Inga matcher inplanerade"
 
 #: ../includes/widgets/class-wpcm-widget-players.php:31
 msgid "Display a table of players details."
@@ -4044,7 +4050,7 @@ msgstr ""
 
 #: ../includes/widgets/class-wpcm-widget-players.php:140
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: ../includes/widgets/class-wpcm-widget-results.php:26
 msgid "Display most recent results."
@@ -4057,11 +4063,11 @@ msgstr ""
 #: ../includes/widgets/class-wpcm-widget-results.php:230
 #: ../templates/shortcodes/matches.php:130
 msgid "No matches played yet."
-msgstr ""
+msgstr "Inga matcher spelade ännu"
 
 #: ../includes/widgets/class-wpcm-widget-sponsors.php:31
 msgid "Display a sponsors logo."
-msgstr ""
+msgstr "Visa en sponsor logo"
 
 #: ../includes/widgets/class-wpcm-widget-sponsors.php:33
 msgid "WPCM Sponsors"
@@ -4069,11 +4075,11 @@ msgstr ""
 
 #: ../includes/widgets/class-wpcm-widget-sponsors.php:149
 msgid "Choose a sponsor"
-msgstr ""
+msgstr "Välj en sponsor"
 
 #: ../includes/widgets/class-wpcm-widget-sponsors.php:166
 msgid "Link directly to website?"
-msgstr ""
+msgstr "Direktlänk till hemsida?"
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:31
 msgid "Display your clubs league standings."
@@ -4093,33 +4099,38 @@ msgstr ""
 
 #: ../templates/content-single-club.php:82
 msgid "More Info"
-msgstr ""
+msgstr "Mer info"
 
 #: ../templates/content-single-sponsor.php:32
 msgid "Visit website"
-msgstr ""
+msgstr "Besök hemsida"
 
 #: ../templates/shortcodes/matches.php:117
 msgid "Opponent"
+msgstr "Motståndare"
+
+#: ../templates/shortcodes/matches.php:184
+#: ../templates/shortcodes/matches.php:192
+msgid "N"
 msgstr ""
 
 #: ../templates/single-match/lineup.php:31
 msgid "Lineup"
-msgstr ""
+msgstr "Uppställning"
 
 #: ../templates/single-match/lineup.php:59
 #: ../templates/single-match/lineup.php:118
 msgid "Cards"
-msgstr ""
+msgstr "Kort"
 
 #: ../templates/single-match/lineup.php:90
 msgid "Subs"
-msgstr ""
+msgstr "A"
 
 #: ../templates/single-match/report.php:22
 msgid "Match Report"
-msgstr ""
+msgstr "Match referat"
 
 #: ../templates/single-player/meta.php:25
 msgid "Squad No."
-msgstr ""
+msgstr "Spelar nr."

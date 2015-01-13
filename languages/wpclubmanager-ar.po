@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
-"POT-Creation-Date: 2015-01-09 16:04-0000\n"
-"PO-Revision-Date: 2015-01-09 16:34-0000\n"
+"POT-Creation-Date: 2015-01-13 14:52-0000\n"
+"PO-Revision-Date: 2015-01-13 15:09-0000\n"
 "Last-Translator: \n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/wp-club-manager/"
 "language/ar/)\n"
@@ -125,7 +125,7 @@ msgstr "عنوان"
 #: ../includes/class-wpcm-post-types.php:52
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:122
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:149
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:55
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:56
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:47
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:95
 #: ../includes/widgets/class-wpcm-widget-results.php:47
@@ -142,7 +142,7 @@ msgstr "البطولة"
 #: ../includes/class-wpcm-ajax.php:541 ../includes/class-wpcm-ajax.php:558
 #: ../includes/class-wpcm-ajax.php:702 ../includes/class-wpcm-ajax.php:719
 #: ../includes/abstracts/abstract-wpcm-widget.php:149
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:86
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:88
 #: ../includes/widgets/class-wpcm-widget-players.php:173
 #: ../includes/widgets/class-wpcm-widget-players.php:187
 #: ../includes/widgets/class-wpcm-widget-players.php:201
@@ -159,7 +159,7 @@ msgstr "الكل"
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:123
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:150
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:123
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:69
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:71
 #: ../includes/admin/settings/class-wpcm-settings-players.php:81
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:57
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:53
@@ -181,7 +181,7 @@ msgstr "موسم"
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:151
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:122
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:120
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:83
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:85
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:82
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:102
 #: ../includes/admin/settings/class-wpcm-settings-players.php:89
@@ -202,7 +202,7 @@ msgstr "فريق"
 #: ../includes/class-wpcm-ajax.php:237
 #: ../includes/class-wpcm-post-types.php:154
 #: ../includes/class-wpcm-post-types.php:162
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:97
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:99
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:65
 #: ../includes/widgets/class-wpcm-widget-results.php:65
 #: ../templates/shortcodes/matches.php:116
@@ -236,9 +236,9 @@ msgstr "ربط الصفحة"
 #: ../includes/wpcm-match-functions.php:122
 #: ../includes/abstracts/abstract-wpcm-widget.php:166
 #: ../includes/admin/class-wpcm-admin-settings.php:493
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:58
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:72
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:100
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:59
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:74
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:102
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:51
 #: ../includes/widgets/class-wpcm-widget-players.php:271
 #: ../includes/widgets/class-wpcm-widget-sponsors.php:153
@@ -1916,7 +1916,7 @@ msgid "Hits"
 msgstr ""
 
 #: ../includes/wpcm-core-functions.php:590
-#: ../templates/shortcodes/matches.php:180
+#: ../templates/shortcodes/matches.php:186
 msgid "H"
 msgstr ""
 
@@ -2030,7 +2030,7 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:679
 #: ../includes/wpcm-core-functions.php:947
 #: ../includes/wpcm-core-functions.php:987
-#: ../templates/shortcodes/matches.php:182
+#: ../templates/shortcodes/matches.php:194
 msgid "A"
 msgstr ""
 
@@ -3567,13 +3567,17 @@ msgstr "معلومات أساسية"
 msgid "Choose a competition and season to edit the manual stats."
 msgstr "إختر البطولة و الموسم لتعديل الإحصائيات يدوياً."
 
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:111
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:113
+msgid "Neutral?"
+msgstr ""
+
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:117
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:110
 #: ../templates/single-match/attendance.php:24
 msgid "Attendance"
 msgstr "الحضور"
 
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:113
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:119
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:90
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:118
 #: ../templates/single-match/referee.php:21
@@ -3692,11 +3696,11 @@ msgstr "الأندية السابقة"
 msgid "All %s"
 msgstr "الكل %s"
 
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:29
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:31
 msgid "Link URL"
 msgstr "الرابط"
 
-#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:32
+#: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:34
 msgid "Open link in new window?"
 msgstr ""
 
@@ -4079,6 +4083,11 @@ msgstr "زيارة الموقع"
 #: ../templates/shortcodes/matches.php:117
 msgid "Opponent"
 msgstr "المنافس"
+
+#: ../templates/shortcodes/matches.php:184
+#: ../templates/shortcodes/matches.php:192
+msgid "N"
+msgstr ""
 
 #: ../templates/single-match/lineup.php:31
 msgid "Lineup"

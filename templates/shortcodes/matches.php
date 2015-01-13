@@ -4,7 +4,7 @@
  *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
- * @version     1.1.1
+ * @version     1.2.10
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -153,7 +153,9 @@ $output .= '<div class="wpcm-fixtures-shortcode">
 			$gmt_offset = get_option( 'gmt_offset' );
 			$date_format = get_option( 'date_format' );
 			$time_format = get_option( 'time_format' );
+			$neutral = get_post_meta( $match->ID, 'wpcm_neutral', true );
 			$comps = get_the_terms( $match->ID, 'wpcm_comp' );
+			$comp_status = get_post_meta( $match->ID, 'wpcm_comp_status', true );
 			$teams = get_the_terms( $match->ID, 'wpcm_team' );
 			if( $thumb == 1 ) {
 				if ( has_post_thumbnail( $home_club ) ) {
@@ -177,9 +179,20 @@ $output .= '<div class="wpcm-fixtures-shortcode">
 				$output .= '<td class="wpcm-date"><a href="' . get_permalink( $match->ID ) . '">' . date_i18n( 'd M', $timestamp ) . ', ' . date_i18n( $time_format, $timestamp ) . '</a></td>';
 
 				if ( $default_club == $home_club ) {
-					$output .= '<td class="venue">' . __('H', 'wpclubmanager') . '</td><td class="opponent away">' . $away_crest . '' . get_the_title ( $away_club ) . '</td>';
+
+					if ( $neutral ) {
+						$output .= '<td class="venue">' . __('N', 'wpclubmanager') . '</td><td class="opponent away">' . $away_crest . '' . get_the_title ( $away_club ) . '</td>';
+					} else {
+						$output .= '<td class="venue">' . __('H', 'wpclubmanager') . '</td><td class="opponent away">' . $away_crest . '' . get_the_title ( $away_club ) . '</td>';
+					}
+
 				} elseif ( $default_club == $away_club ) {
-					$output .= '<td class="venue">' . __('A', 'wpclubmanager') . '</td><td class="opponent home">' . $home_crest . '' . get_the_title ( $home_club ) . '</td>';
+
+					if ( $neutral ) {
+						$output .= '<td class="venue">' . __('N', 'wpclubmanager') . '</td><td class="opponent home">' . $home_crest . '' . get_the_title ( $home_club ) . '</td>';
+					} else {
+						$output .= '<td class="venue">' . __('A', 'wpclubmanager') . '</td><td class="opponent home">' . $home_crest . '' . get_the_title ( $home_club ) . '</td>';
+					}
 				}
 
 				if ( $show_team ):
@@ -201,9 +214,9 @@ $output .= '<div class="wpcm-fixtures-shortcode">
 							$comp_meta = get_option( "taxonomy_term_$t_id" );
 							$comp_label = $comp_meta['wpcm_comp_label'];
 							if ( $comp_label ) {
-								$output .= $comp_label . '<br />';
+								$output .= $comp_label . '&nbsp;' . $comp_status;
 							} else {
-								$output .= $comp->name . '<br />';
+								$output .= $comp->name . '&nbsp;' . $comp_status;
 							}
 						endforeach;
 					}

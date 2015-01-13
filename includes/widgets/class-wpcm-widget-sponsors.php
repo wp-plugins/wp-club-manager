@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Widgets
  * @package 	WPClubManager/Widgets
- * @version 	1.0.0
+ * @version 	1.2.10
  * @extends 	WP_Widget
  */
 
@@ -54,7 +54,6 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 
 		$title  = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
 		$id = $instance['id'];
-		$direct_link = $instance['direct_link'];
 
 		$link_url = get_post_meta( $id, 'wpcm_link_url', true );
 		$link_new_window = get_post_meta( $id, 'wpcm_link_nw', true );
@@ -72,24 +71,12 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 			$nw = '';
 		}
 
-		if ( $direct_link ) {
-
-			echo '<a href="'.$link_url.'"'.$nw.'>';
+		echo '<a href="'.$link_url.'"'.$nw.'>';
 								
-			echo get_the_post_thumbnail( $id );
+		echo get_the_post_thumbnail( $id );
 
-			echo '</a>';
+		echo '</a>';
 
-		} else {
-
-			echo '<a href="'.get_permalink( $id ).'">';
-								
-			echo get_the_post_thumbnail( $id );
-
-			echo '</a>';
-
-		}
-								
 		echo '</div>';
 
 		wp_reset_postdata();
@@ -112,7 +99,6 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance['id'] = strip_tags( $new_instance['id'] );
-		$instance['direct_link'] = strip_tags( $new_instance['direct_link'] );
 		$instance['title'] = strip_tags( $new_instance['title'] );
 
 		foreach( $new_instance as $key => $value ) {
@@ -135,7 +121,6 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 
 		$defaults = array( 
 			'id' => null,
-			'direct_link' => null,
 			'title' => __( 'Sponsors', 'wpclubmanager' )
 		);
 
@@ -158,14 +143,7 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 			'name' => $this->get_field_name( $field ),
 			'id' => $this->get_field_id( $field )
 		) );
-		?>
-
-		<?php $field = 'direct_link'; ?>
-		<p><label class="selectit" for="<?php echo $this->get_field_id( $field ); ?>">
-				<input type="checkbox" id="<?php echo $this->get_field_id( $field ); ?>" name="<?php echo $this->get_field_name( $field ); ?>" value="1"<?php if( $instance[$field] ) echo ' checked' ?> />
-							<?php _e( 'Link directly to website?', 'wpclubmanager' ); ?>
-			</label></p>
-	<?php }
+	}
 }
 
 register_widget( 'WPCM_Sponsors_Widget' );

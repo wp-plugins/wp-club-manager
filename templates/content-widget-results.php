@@ -16,6 +16,7 @@ if( $sport == 'gaelic' ) {
 }
 $played = get_post_meta( $postid, 'wpcm_played', true );
 $comps = get_the_terms( $postid, 'wpcm_comp' );
+$comp_status = get_post_meta( $postid, 'wpcm_comp_status', true );
 $teams = get_the_terms( $postid, 'wpcm_team' );
 
 echo '<li class="fixture">';
@@ -32,7 +33,7 @@ echo '<li class="fixture">';
 		if ( $show_comp && is_array( $comps ) ):
 			echo '<div class="competition">';
 			foreach ( $comps as $comp ):
-				echo '<span>' . $comp->name . '</span>';
+				echo '<span>' . $comp->name . '&nbsp;' . $comp_status . '</span>';
 			endforeach;
 			echo '</div>';
 		endif;

@@ -7,6 +7,7 @@ $postid = get_the_ID();
 $home_club = get_post_meta( $postid, 'wpcm_home_club', true );
 $away_club = get_post_meta( $postid, 'wpcm_away_club', true );
 $comps = get_the_terms( $postid, 'wpcm_comp' );
+$comp_status = get_post_meta( $postid, 'wpcm_comp_status', true );
 $seasons = get_the_terms( $postid, 'wpcm_season' );
 $teams = get_the_terms( $postid, 'wpcm_team' );
 			
@@ -24,7 +25,7 @@ echo '<li class="fixture">';
 		if ( $show_comp && is_array( $comps ) ):
 			echo '<div class="competition">';
 			foreach ( $comps as $comp ):
-				echo '<span>' . $comp->name . '</span>';
+				echo '<span>' . $comp->name . '&nbsp;' . $comp_status . '</span>';
 			endforeach;
 			echo '</div>';
 		endif;

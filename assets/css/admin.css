@@ -200,6 +200,11 @@ input.measure-text {
 	width: 150px;
 	padding: 0;
 }
+#wpclubmanager-match-details label.wpcm-cb-block {
+	float: none;
+	display: inline-block;
+	margin-top: 5px;
+}
 #wpclubmanager-sponsor-link label {
 	width: 190px;
 }
@@ -418,7 +423,8 @@ img.tips {
 {
 	position:relative;
 	display:inline-block;
-	vertical-align:middle;
+	vertical-align:top;
+	margin-right: 5px;
 	font-size:13px;
 	zoom:1;
 	*display:inline;
