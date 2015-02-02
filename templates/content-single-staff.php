@@ -141,6 +141,36 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 						}
 					}
 
+					if ( get_option( 'wpcm_show_staff_email' ) == 'yes') {
+
+						$email = get_post_meta( $post->ID, '_wpcm_staff_email', true ); ?>
+
+						<tr>
+							<th>
+								<?php _e( 'Email', 'wpclubmanager' ); ?>
+							</th>
+							<td>
+								<a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+							</td>
+						</tr>
+					<?php
+					}
+
+					if ( get_option( 'wpcm_show_staff_phone' ) == 'yes') {
+
+						$phone = get_post_meta( $post->ID, '_wpcm_staff_phone', true ); ?>
+
+						<tr>
+							<th>
+								<?php _e( 'Phone', 'wpclubmanager' ); ?>
+							</th>
+							<td>
+								<?php echo $phone; ?>
+							</td>
+						</tr>
+					<?php
+					}
+
 					if ( get_option( 'wpcm_staff_profile_show_nationality' ) == 'yes') {
 
 						$natl = get_post_meta( $post->ID, 'wpcm_natl', true ); ?>

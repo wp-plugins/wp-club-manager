@@ -8,7 +8,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.0.0
+ * @version     1.2.11
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -43,6 +43,11 @@ class WPCM_Admin {
 			include( 'class-wpcm-admin-notices.php' );
 			include( 'class-wpcm-admin-assets.php' );
 			include( 'class-wpcm-admin-editor.php' );
+		}
+
+		// Importers
+		if ( defined( 'WP_LOAD_IMPORTERS' ) ) {
+			include( 'class-wpcm-admin-importers.php' );
 		}
 	}
 

@@ -496,6 +496,8 @@ class WPCM_AJAX {
 			'flag' => __( 'Flag', 'wpclubmanager' ),
 			'name' => __( 'Name', 'wpclubmanager' ),
 			'job' => __( 'Job', 'wpclubmanager' ),
+			'email' => __( 'Email', 'wpclubmanager' ),
+			'phone' => __( 'Phone', 'wpclubmanager' ),
 			'age' => __( 'Age', 'wpclubmanager' ),
 			'team' => __( 'Team', 'wpclubmanager' ),
 			'season' => __( 'Season', 'wpclubmanager' ),

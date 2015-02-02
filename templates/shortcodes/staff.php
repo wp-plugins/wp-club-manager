@@ -32,6 +32,8 @@ $stats_labels = array(
 	'name' => __( 'Name', 'wpclubmanager' ),
 	'thumb' => '&nbsp',
 	'job' => __( 'Job', 'wpclubmanager' ),
+	'email' => __( 'Email', 'wpclubmanager' ),
+	'phone' => __( 'Phone', 'wpclubmanager' ),
 	'age' => __( 'Age', 'wpclubmanager' ),
 	'team' => __( 'Team', 'wpclubmanager' ),
 	'season' => __( 'Season', 'wpclubmanager' ),
@@ -143,6 +145,8 @@ if ( sizeof( $staff ) > 0 ) {
 		}
 
 		$natl = get_post_meta( $player->ID, 'wpcm_natl', true );
+		$email = get_post_meta( $player->ID, '_wpcm_staff_email', true );
+		$phone = get_post_meta( $player->ID, '_wpcm_staff_phone', true );
 
 		foreach( $stats as $stat ) {
 
@@ -169,6 +173,14 @@ if ( sizeof( $staff ) > 0 ) {
 						}
 						$player_details[$player->ID][$stat] .= implode( ', ', $player_jobs );
 					}
+					break;
+				case 'email':
+					$player_details[$player->ID][$stat] = '';
+					$player_details[$player->ID][$stat] .= '<a href="mailto:'.$email.'">'.$email.'</a>';
+					break;
+				case 'phone':
+					$player_details[$player->ID][$stat] = '';
+					$player_details[$player->ID][$stat] .= $phone;
 					break;
 				case 'team':
 					$player_details[$player->ID][$stat] = '';

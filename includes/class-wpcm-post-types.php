@@ -36,7 +36,7 @@ class WPCM_Post_Types {
 		do_action( 'wpclubmanager_register_taxonomy' );
 
 		register_taxonomy( 'wpcm_comp',
-			apply_filters( 'wpclubmanager_taxonomy_objects_wpcm_comp', array( 'wpcm_club', 'wpcm_table' ) ),
+			apply_filters( 'wpclubmanager_taxonomy_objects_wpcm_comp', array( 'wpcm_club' ) ),
 			apply_filters( 'wpclubmanager_taxonomy_args_wpcm_comp', array(
 				'hierarchical' => true,
 				'labels' => array (
@@ -102,7 +102,7 @@ class WPCM_Post_Types {
 		);
 
 		register_taxonomy( 'wpcm_season',
-			apply_filters( 'wpclubmanager_taxonomy_objects_wpcm_season', array('wpcm_club','wpcm_player','wpcm_staff', 'wpcm_table') ),
+			apply_filters( 'wpclubmanager_taxonomy_objects_wpcm_season', array('wpcm_club','wpcm_player','wpcm_staff' ) ),
 			apply_filters( 'wpclubmanager_taxonomy_args_wpcm_season', array(
 				'hierarchical' => true,
 				'labels' => array(

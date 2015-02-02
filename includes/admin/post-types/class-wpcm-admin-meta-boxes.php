@@ -103,7 +103,7 @@ class WPCM_Admin_Meta_Boxes {
 		add_meta_box( 'wpclubmanager-player-details', __( 'Basic Information', 'wpclubmanager' ), 'WPCM_Meta_Box_Player_Details::output', 'wpcm_player', 'normal', 'core' );
 		add_meta_box( 'wpclubmanager-player-stats', __( 'Statistics', 'wpclubmanager' ), 'WPCM_Meta_Box_Player_Stats::output', 'wpcm_player', 'normal', 'low' );
 
-		add_meta_box( 'wpclubmanager-sponsor-link', __( 'Basic Information', 'wpclubmanager' ), 'WPCM_Meta_Box_Sponsor_Url::output', 'wpcm_sponsor', 'normal', 'core' );
+		add_meta_box( 'wpclubmanager-sponsor-link', __( 'Sponsor Details', 'wpclubmanager' ), 'WPCM_Meta_Box_Sponsor_Url::output', 'wpcm_sponsor', 'normal', 'core' );
 
 		add_meta_box( 'wpclubmanager-staff-details', __( 'Basic Information', 'wpclubmanager' ), 'WPCM_Meta_Box_Staff_Details::output', 'wpcm_staff', 'normal', 'core' );
 	}

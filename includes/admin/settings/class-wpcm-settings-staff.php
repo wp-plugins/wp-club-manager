@@ -78,6 +78,22 @@ class WPCM_Settings_Staff extends WPCM_Settings_Page {
 			),
 
 			array(
+				'title' => __( 'Email', 'wpclubmanager' ),
+				'desc' 		=> '',
+				'id' 		=> 'wpcm_show_staff_email',
+				'default'	=> 'no',
+				'type' 		=> 'checkbox'
+			),
+
+			array(
+				'title' => __( 'Phone', 'wpclubmanager' ),
+				'desc' 		=> '',
+				'id' 		=> 'wpcm_show_staff_phone',
+				'default'	=> 'no',
+				'type' 		=> 'checkbox'
+			),
+
+			array(
 				'title' => __( 'Nationality', 'wpclubmanager' ),
 				'desc' 		=> '',
 				'id' 		=> 'wpcm_staff_profile_show_nationality',

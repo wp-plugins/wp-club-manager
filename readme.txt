@@ -1,10 +1,10 @@
 === WP Club Manager ===
-Contributors: ClubPress
+Contributors: ClubPress, leonterry
 Tags: clubs, teams, sports club, club management, team management, league tables, football, rugby, soccer, field hockey, ice hockey, baseball, basketball, aussie rules, netball, volleyball
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.2.10
+Stable tag: 1.2.11
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -26,8 +26,9 @@ Comes with all the tools you need to manage your sports club or team website. Fe
 * Fixtures and results table
 * League tables
 * Match reports
-* Sponsors
+* Manage club sponsors
 * Fixture, results, player, table and sponsor widgets
+* Import matches, players, staff and clubs from a CSV file
 * Flexible templates
 
 = Supported Sports =
@@ -120,6 +121,15 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.11 - 02/02/2015
+
+* New - Added ability to import matches, players, staff and clubs via CSV file
+* New - Added dummy data CSV files
+* New - Added staff contact details
+* Localisation - Updated Latvian and Russian languages (Thanks sigma66699969669 and dimych13)
+* Localisation - Updated wpclubmanager.pot resource file
+* Localisation - Update all language files
 
 = 1.2.10 - 13/01/2015
 

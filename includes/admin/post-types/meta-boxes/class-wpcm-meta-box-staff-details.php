@@ -23,7 +23,6 @@ class WPCM_Meta_Box_Staff_Details {
 
 		wp_nonce_field( 'wpclubmanager_save_data', 'wpclubmanager_meta_nonce' );
 
-		//$selected_club = get_post_meta( $post->ID, 'wpcm_club', true );
 		$jobs_id = null;
 		$jobs = get_the_terms( $post->ID, 'wpcm_jobs' );
 
@@ -58,6 +57,11 @@ class WPCM_Meta_Box_Staff_Details {
 				) );
 			?>
 		</p>
+		<?php
+		wpclubmanager_wp_text_input( array( 'id' => '_wpcm_staff_email', 'label' => __( 'Email Address', 'wpclubmanager' ), 'class' => 'regular-text' ) );
+
+		wpclubmanager_wp_text_input( array( 'id' => '_wpcm_staff_phone', 'label' => __( 'Contact Number', 'wpclubmanager' ), 'class' => 'regular-text' ) );
+		?>
 		<p>
 			<label><?php _e( 'Date of Birth', 'wpclubmanager' ); ?></label>
 			<select name="wpcm_dob_day" id="wpcm_dob_day" class="chosen_select_dob">
@@ -85,11 +89,16 @@ class WPCM_Meta_Box_Staff_Details {
 	 */
 	public static function save( $post_id, $post ) {
 
+		$staff_email = $_POST['_wpcm_staff_email'];
+		$staff_phone = $_POST['_wpcm_staff_phone'];
+
+		update_post_meta( $post_id, '_wpcm_staff_email', $staff_email );
+		update_post_meta( $post_id, '_wpcm_staff_phone', $staff_phone );
+
 		$dob_year = substr( zeroise( (int) $_POST['wpcm_dob_year'], 4 ), 0, 4 );
 		$dob_month = substr( zeroise( (int) $_POST['wpcm_dob_month'], 2 ), 0, 2 );
 		$dob_day = substr( zeroise( (int) $_POST['wpcm_dob_day'], 2 ), 0, 2 );
 		
-		//update_post_meta( $post->ID, 'wpcm_club', $_POST['wpcm_club'] );
 		wp_set_post_terms( $post_id, $_POST['wpcm_jobs'], 'wpcm_jobs' );	
 		update_post_meta( $post_id, 'wpcm_dob', $dob_year . '-' . $dob_month. '-' . $dob_day );
 		update_post_meta( $post_id, 'wpcm_natl', $_POST['wpcm_natl'] );
