@@ -4,7 +4,7 @@ Tags: clubs, teams, sports club, club management, team management, league tables
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.2.11
+Stable tag: 1.2.12
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,11 +14,9 @@ WP Club Manager is a powerful tool to help you run a sports club website easily 
 
 Create and manage a sports club website quickly and easily using WordPress. Manage multiple teams in your club, player profiles and statistics, club staff, sponsors, league tables and keep track of upcoming and played matches all within one single plugin.
 
-= Features =
+= Features Include =
 
-Comes with all the tools you need to manage your sports club or team website. Features include:
-
-* Manage multiple teams
+* Manage multiple teams in your club
 * Player and staff profiles
 * Player ratings
 * Player stats for each season
@@ -57,8 +55,10 @@ The WP Club Manager plugin has a growing catalogue of themes and extensions to a
 * English - UK (en_GB)
 * Arabic – العربية (ar)
 * Czech – Čeština (cs_CZ)
+* Danish – Dansk (da_DK)
 * Dutch - Nederlands (nl_NL)
 * German - Deutsch (de_DE)
+* Finnish - Suomi (fi)
 * French – Français (fr_FR)
 * Greek - Ελληνικά (el_GR)
 * Hungarian - Magyar (hu_HU)
@@ -66,6 +66,7 @@ The WP Club Manager plugin has a growing catalogue of themes and extensions to a
 * Latvian - Latviešu (lv_LV)
 * Polish - Polski (pl_PL)
 * Portuguese (Brazil) – Português do Brasil (pt_BR)
+* Portuguese (Portugal) – Português (pt_PT)
 * Russian - Русский (ru_RU)
 * Spanish - Español (es_ES)
 * Swedish – Svenska (sv_SE)
@@ -121,6 +122,13 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.12 - 19/02/2015
+
+* Tweak - Improved extensions page
+* Localisation - Added Finnish language (Thanks tonttuu)
+* Localisation - Added Portuguese (Portugal) language (Thanks nunoluisazevedo)
+* Localisation - Added Danish language (Thanks morbri63 and vibevi)
 
 = 1.2.11 - 02/02/2015
 
