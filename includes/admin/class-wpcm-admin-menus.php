@@ -69,8 +69,8 @@ class WPCM_Admin_Menus {
 	 * Init the extensions page
 	 */
 	public function extensions_page() {
-		$page = include( 'class-wpcm-admin-extensions.php' );
-		$page->output();
+		//$page = include( 'class-wpcm-admin-extensions.php' );
+		WPCM_Admin_Extensions::output();
 	}
 }
 
