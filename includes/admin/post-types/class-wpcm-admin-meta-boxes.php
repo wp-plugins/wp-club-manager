@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Meta Boxes
- * @version     1.0.0
+ * @version     1.2.13
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -98,7 +98,7 @@ class WPCM_Admin_Meta_Boxes {
 		add_meta_box( 'wpclubmanager-match-video', __('Match Video', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Video::output', 'wpcm_match', 'side', 'default');
 		add_meta_box( 'wpclubmanager-match-fixture', __('Fixture', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Fixture::output', 'wpcm_match', 'normal', 'high');
 		add_meta_box( 'wpclubmanager-match-details', __('Match Details', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Details::output', 'wpcm_match', 'normal', 'high');
-		add_meta_box( 'wpclubmanager-match-players', __('Players', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Players::output', 'wpcm_match', 'normal', 'high');
+		add_meta_box( 'wpclubmanager-match-players', __('Players', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Players::output', 'wpcm_match', 'normal', 'low');
 
 		add_meta_box( 'wpclubmanager-player-details', __( 'Basic Information', 'wpclubmanager' ), 'WPCM_Meta_Box_Player_Details::output', 'wpcm_player', 'normal', 'core' );
 		add_meta_box( 'wpclubmanager-player-stats', __( 'Statistics', 'wpclubmanager' ), 'WPCM_Meta_Box_Player_Stats::output', 'wpcm_player', 'normal', 'low' );

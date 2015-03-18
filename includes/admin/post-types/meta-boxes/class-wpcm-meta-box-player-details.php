@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Meta Boxes
- * @version     1.1.0
+ * @version     1.2.13
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -116,5 +116,7 @@ class WPCM_Meta_Box_Player_Details {
 		update_post_meta( $post_id, 'wpcm_natl', $_POST['wpcm_natl'] );
 		update_post_meta( $post_id, 'wpcm_hometown', $_POST['wpcm_hometown'] );
 		update_post_meta( $post_id, 'wpcm_prevclubs', $_POST['wpcm_prevclubs'] );
+
+		do_action('wpclubmanager_after_admin_player_save', $post_id );
 	}
 }

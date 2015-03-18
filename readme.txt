@@ -4,11 +4,11 @@ Tags: clubs, teams, sports club, club management, team management, league tables
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.2.12
+Stable tag: 1.2.13
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-WP Club Manager is a powerful tool to help you run a sports club website easily and quickly.
+WP Club Manager is a powerful plugin to help you create and manage a sports club website quickly and easily.
 
 == Description ==
 
@@ -46,17 +46,19 @@ Create and manage a sports club website quickly and easily using WordPress. Mana
 * Rugby
 * Volleyball
 
+Get support by posting in our [community forum](https://wpclubmanager.com/support/).
+
 = Themes & Extensions =
 
 The WP Club Manager plugin has a growing catalogue of themes and extensions to add extra functionality and a professioanl look to your club website. Check out our [WP Club Manager extensions](https://wpclubmanager.com/extensions/) page to see what features you can add or browse through our collection of [WP Club Manager themes](https://wpclubmanager.com/themes/).
 
 = Included Languages =
 
-* English - UK (en_GB)
 * Arabic – العربية (ar)
 * Czech – Čeština (cs_CZ)
 * Danish – Dansk (da_DK)
 * Dutch - Nederlands (nl_NL)
+* English - UK (en_GB)
 * German - Deutsch (de_DE)
 * Finnish - Suomi (fi)
 * French – Français (fr_FR)
@@ -122,6 +124,15 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.13 - 18/03/2015
+
+* Fix - Fixed missing competition column in matches shortcode
+* Fix - Fixed php warning on club page if no venue set
+* Fix - Fixed broken map shortcode on club single pages
+* Tweak - Added more admin hooks to improve extensibility
+* Tweak - Tweaked wpcm_sponsor post type functions
+* Localisation - Updated French, Finnish and Portuguese (Brazil) languages (Thanks lfrodines and tonttuu)
 
 = 1.2.12 - 19/02/2015
 

@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Meta Boxes
- * @version     1.2.10
+ * @version     1.2.13
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -156,5 +156,7 @@ class WPCM_Meta_Box_Match_Details {
 
 		update_post_meta( $post_id, 'wpcm_referee', $_POST['wpcm_referee'] );
 		update_post_meta( $post_id, 'wpcm_attendance', $_POST['wpcm_attendance'] );
+
+		do_action('wpclubmanager_after_admin_match_save', $post_id );
 	}
 }

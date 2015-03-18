@@ -5,7 +5,7 @@
  * Registers post types.
  *
  * @class 		WPCM_Post_Types
- * @version		1.1.1
+ * @version		1.2.13
  * @package		WPClubManager/Classes/
  * @category	Class
  * @author 		ClubPress
@@ -329,7 +329,7 @@ class WPCM_Post_Types {
 					'labels' => array(
 						'name'                => __( 'Sponsors', 'wpclubmanager' ),
 						'singular_name'       => __( 'Sponsor', 'wpclubmanager' ),
-						'add_new'             => __( 'Add New', 'wpclubmanager' ),
+						'add_new'             => __( 'Add New Sponsor', 'wpclubmanager' ),
 						'all_items'           => __( 'All Sponsors', 'wpclubmanager' ),
 						'add_new_item'        => __( 'Add New Sponsor', 'wpclubmanager' ),
 						'edit_item'           => __( 'Edit Sponsor', 'wpclubmanager' ),
@@ -343,7 +343,7 @@ class WPCM_Post_Types {
 					),
 					'hierarchical'         => false,
 					'supports'             => array( 'title', 'thumbnail' ),
-					'public'               => true,
+					'public'               => false,
 					'show_ui'              => true,
 					'show_in_menu'         => true,
 					'show_in_nav_menus'    => false,
@@ -351,9 +351,9 @@ class WPCM_Post_Types {
 					'publicly_queryable'   => false,
 					'exclude_from_search'  => true,
 					'has_archive'          => false,
-					'query_var'            => true,
+					'query_var'            => false,
 					'can_export'           => true,
-					'rewrite'              => array( 'slug' => 'sponsors' ),
+					'rewrite'              => false,
 					'capability_type'      => 'post'
 				)
 			)

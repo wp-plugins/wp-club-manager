@@ -43,19 +43,15 @@ class WPCM_Meta_Box_Sponsor_Url {
 	 */
 	public static function save( $post_id, $post ) {
 
+		$link_new_window = $_POST['wpcm_link_nw'];
 		$link_url = $_POST['wpcm_link_url'];
 
-		if(isset($_POST['wpcm_link_nw'])){
-			$link_new_window = $_POST['wpcm_link_nw'];
-		} else {
-			$link_new_window = null;
+		if( isset( $link_new_window ) ) {
+			update_post_meta( $post_id, 'wpcm_link_nw', $link_new_window );
 		}
-		
-		if ( isset( $link_url ) && strpos( $link_url, 'http://' ) === false )
-			$link_url = 'http://' . $link_url;
-
-		update_post_meta( $post_id, 'wpcm_link_url', $link_url );
-		update_post_meta( $post_id, 'wpcm_link_nw', $link_new_window );
+		if ( isset( $link_url ) ) {
+			update_post_meta( $post_id, 'wpcm_link_url', $link_url );
+		}
 
 		do_action('wpclubmanager_after_admin_sponsors_save', $post_id );
 	}

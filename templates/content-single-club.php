@@ -6,7 +6,7 @@
  *
  * @author 		ClubPress
  * @package 	WPClubManager/Templates
- * @version     1.0.0
+ * @version     1.2.13
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -19,15 +19,17 @@ if ( is_array( $venues ) ) {
 	$venue = reset($venues);
 	$t_id = $venue->term_id;
 	$venue_meta = get_option( "taxonomy_term_$t_id" );
-	if( array_key_exists('wpcm_address', $venue_meta) ) {
-		$address = $venue_meta['wpcm_address'];
-	} else {
-		$address = null;
-	}
-	if( array_key_exists('wpcm_capacity', $venue_meta) ) {
-		$cap = $venue_meta['wpcm_capacity'];
-	} else {
-		$cap = null;
+	if( is_array( $venue_meta ) ) {
+		if( array_key_exists('wpcm_address', $venue_meta) ) {
+			$address = $venue_meta['wpcm_address'];
+		} else {
+			$address = null;
+		}
+		if( array_key_exists('wpcm_capacity', $venue_meta) ) {
+			$cap = $venue_meta['wpcm_capacity'];
+		} else {
+			$cap = null;
+		}
 	}
 } else {
 	$venue = null;
@@ -93,7 +95,7 @@ do_action( 'wpclubmanager_before_single_club' ); ?>
 
 	<div class="wpcm-club-map">
 
-		<?php echo do_shortcode( '[wpcm_map address="' . $address . '" width="100%" height="260px"]' ); ?>
+		<?php echo do_shortcode( '[wpcm_map address="' . $address . '" width="100%" height="260" marker="1"]' ); ?>
 
 	</div>
 

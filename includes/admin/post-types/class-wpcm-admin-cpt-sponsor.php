@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Post Types
- * @version     1.0.0
+ * @version     1.2.13
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -30,10 +30,10 @@ class WPCM_Admin_CPT_Sponsor extends WPCM_Admin_CPT {
 		add_filter( 'gettext', array( $this, 'text_replace' ), 10, 4 );
 		add_filter( 'media_view_strings', array( $this, 'media_view_strings' ), 10, 2 );
 
-		add_filter( 'manage_edit-wpcm_sponsor_columns', array( $this, 'custom_edit_columns' ) );
-		add_action( 'manage_wpcm_sponsor_posts_custom_column', array( $this, 'custom_columns' ) );
-		add_filter( 'manage_edit-wpcm_sponsor_sortable_columns', array( $this, 'custom_sortable_columns' ) );
-		add_filter( 'request', array( $this, 'custom_column_orderby' ) );
+		// add_filter( 'manage_edit-wpcm_sponsor_columns', array( $this, 'custom_edit_columns' ) );
+		// add_action( 'manage_wpcm_sponsor_posts_custom_column', array( $this, 'custom_columns' ) );
+		// add_filter( 'manage_edit-wpcm_sponsor_sortable_columns', array( $this, 'custom_sortable_columns' ) );
+		// add_filter( 'request', array( $this, 'custom_column_orderby' ) );
 
 		// Call WC_Admin_CPT constructor
 		parent::__construct();
@@ -43,7 +43,7 @@ class WPCM_Admin_CPT_Sponsor extends WPCM_Admin_CPT {
 	 * Check if we're editing or adding a match
 	 * @return boolean
 	 */
-	private function is_editing_product() {
+	private function is_editing_sponsor() {
 		if ( ! empty( $_GET['post_type'] ) && 'wpcm_sponsor' == $_GET['post_type'] ) {
 			return true;
 		}
@@ -73,11 +73,11 @@ class WPCM_Admin_CPT_Sponsor extends WPCM_Admin_CPT {
 	// text replace
 	public function text_replace( $string = '' ) {
 
-		if ( 'Featured Image' == $string && $this->is_editing_product() ) {
+		if ( 'Featured Image' == $string && $this->is_editing_sponsor() ) {
 			$string = __( 'Sponsor Logo', 'wpclubmanager' );
-		} elseif ( 'Remove featured image' == $string && $this->is_editing_product() ) {
+		} elseif ( 'Remove featured image' == $string && $this->is_editing_sponsor() ) {
 			$string = __( 'Remove sponsor logo', 'wpclubmanager' );
-		} elseif ( 'Set featured image' == $string && $this->is_editing_product() ) {
+		} elseif ( 'Set featured image' == $string && $this->is_editing_sponsor() ) {
 			$string = __( 'Set sponsor logo', 'wpclubmanager' );
 		}
 		return $string;

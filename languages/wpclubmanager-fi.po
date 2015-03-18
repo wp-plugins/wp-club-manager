@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2015-02-02 01:04-0000\n"
-"PO-Revision-Date: 2015-02-19 14:12-0000\n"
+"PO-Revision-Date: 2015-03-18 23:22-0000\n"
 "Last-Translator: \n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/wp-club-manager/"
 "language/fi/)\n"
@@ -82,7 +82,7 @@ msgstr "Leveys"
 #: ../templates/shortcodes/players.php:41
 #: ../templates/single-player/meta.php:64
 msgid "Height"
-msgstr "Korkeus"
+msgstr "Pituus"
 
 #: ../includes/class-wpcm-ajax.php:143
 msgid "Zoom"

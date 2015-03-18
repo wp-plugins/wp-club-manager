@@ -1,11 +1,12 @@
 #
 # Translators:
+# Lucas Martins, 2015
 # Pirolla <vitorpirolla123@hotmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2015-02-02 01:04-0000\n"
-"PO-Revision-Date: 2015-02-02 10:02-0000\n"
+"PO-Revision-Date: 2015-03-18 23:23-0000\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/wp-"
 "club-manager/language/pt_BR/)\n"
@@ -452,7 +453,7 @@ msgstr "Cargo"
 #: ../templates/content-single-staff.php:150
 #: ../templates/shortcodes/staff.php:35
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: ../includes/class-wpcm-ajax.php:500
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:32
@@ -460,7 +461,7 @@ msgstr ""
 #: ../templates/content-single-staff.php:165
 #: ../templates/shortcodes/staff.php:36
 msgid "Phone"
-msgstr ""
+msgstr "Telefone"
 
 #: ../includes/class-wpcm-ajax.php:556
 #: ../includes/class-wpcm-post-types.php:65
@@ -2705,7 +2706,7 @@ msgstr "CP"
 
 #: ../includes/wpcm-core-functions.php:879
 msgid "Handball"
-msgstr ""
+msgstr "Handebol"
 
 #: ../includes/wpcm-core-functions.php:914
 #: ../includes/wpcm-core-functions.php:1037
@@ -2715,11 +2716,11 @@ msgstr "GLS"
 
 #: ../includes/wpcm-core-functions.php:915
 msgid "2 Minute Suspension"
-msgstr ""
+msgstr "Suspensão de 2 Minutos"
 
 #: ../includes/wpcm-core-functions.php:915
 msgid "2MIN"
-msgstr ""
+msgstr "2MIN"
 
 #: ../includes/wpcm-core-functions.php:923
 msgid "Field Hockey"
@@ -2997,30 +2998,33 @@ msgstr "WPCM Jogadores"
 #: ../includes/admin/class-wpcm-admin-importers.php:33
 msgid "Import <strong>players</strong> to your club via a csv file."
 msgstr ""
+"Importar <strong>jogadores</strong> para o seu clube através de um arquivo "
+"csv."
 
 #: ../includes/admin/class-wpcm-admin-importers.php:34
 msgid "WPCM Staff"
-msgstr ""
+msgstr "WPCM Staff"
 
 #: ../includes/admin/class-wpcm-admin-importers.php:34
 msgid "Import <strong>staff</strong> to your club via a csv file."
 msgstr ""
+"Importar <strong>staff</strong> para o seu clube através de um arquivo csv."
 
 #: ../includes/admin/class-wpcm-admin-importers.php:35
 msgid "WPCM Clubs"
-msgstr ""
+msgstr "WPCM Clubes"
 
 #: ../includes/admin/class-wpcm-admin-importers.php:35
 msgid "Import <strong>clubs</strong> via a csv file."
-msgstr ""
+msgstr "Importar <strong>clubes</strong> através de um arquivo csv."
 
 #: ../includes/admin/class-wpcm-admin-importers.php:36
 msgid "WPCM Matches"
-msgstr ""
+msgstr "WPCM Partidas"
 
 #: ../includes/admin/class-wpcm-admin-importers.php:36
 msgid "Import <strong>matches</strong> via a csv file."
-msgstr ""
+msgstr "Importar <strong>partidas</strong> através de um arquivo csv."
 
 #: ../includes/admin/class-wpcm-admin-menus.php:37
 msgid "Club Manager"
@@ -3517,7 +3521,7 @@ msgstr ""
 #: ../includes/admin/importers/class-wpcm-club-importer.php:23
 #: ../includes/admin/importers/class-wpcm-club-importer.php:115
 msgid "Import Clubs"
-msgstr ""
+msgstr "Importar Clubes"
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:96
 #, php-format
@@ -3525,17 +3529,19 @@ msgid ""
 "Import complete - imported <strong>%s</strong> clubs and skipped <strong>%s</"
 "strong>."
 msgstr ""
+"Importação completa - importado <strong>%s</strong> clubes e ignorado "
+"<strong>%s</strong>."
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:106
 #: ../includes/admin/importers/class-wpcm-match-importer.php:178
 #: ../includes/admin/importers/class-wpcm-player-importer.php:131
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:119
 msgid "All done!"
-msgstr ""
+msgstr "Tudo feito!"
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:106
 msgid "View Clubs"
-msgstr ""
+msgstr "Ver Clubes"
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:123
 #: ../includes/admin/importers/class-wpcm-match-importer.php:195
@@ -3543,6 +3549,8 @@ msgstr ""
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:136
 msgid "Choose a .csv file to upload, then click \"Upload file and import\"."
 msgstr ""
+"Escolha um arquivo .csv para fazer upload, em seguida clique em \"Fazer "
+"upload de arquivo e importar\"."
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:124
 #, php-format
@@ -3550,35 +3558,37 @@ msgid ""
 "Clubs need to be defined with columns in a specific order (5 columns). <a "
 "href=\"%s\">Click here to download a sample</a>."
 msgstr ""
+"Clubes precisam ser definidos com colunas em uma ordem específica (5 "
+"colunas). <a href=\"%s\">Clique aqui para baixar uma demonstração</a>."
 
 #: ../includes/admin/importers/class-wpcm-importers.php:96
 msgid "Disable"
-msgstr ""
+msgstr "Desabilitar"
 
 #: ../includes/admin/importers/class-wpcm-importers.php:119
 #: ../includes/admin/importers/class-wpcm-importers.php:178
 #: ../includes/admin/importers/class-wpcm-importers.php:215
 #: ../includes/admin/importers/class-wpcm-importers.php:230
 msgid "Sorry, there has been an error."
-msgstr ""
+msgstr "Desculpe, ocorreu um erro."
 
 #: ../includes/admin/importers/class-wpcm-importers.php:120
 msgid "The file does not exist, please try again."
-msgstr ""
+msgstr "O arquivo não existe, por favor tente novamente."
 
 #: ../includes/admin/importers/class-wpcm-importers.php:169
 #, php-format
 msgid "Displaying %s&#8211;%s of %s"
-msgstr ""
+msgstr "Exibindo %s&#8211;%s de %s"
 
 #: ../includes/admin/importers/class-wpcm-importers.php:179
 msgid "The CSV is invalid."
-msgstr ""
+msgstr "O CSV é inválido."
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:23
 #: ../includes/admin/importers/class-wpcm-match-importer.php:187
 msgid "Import Matches"
-msgstr ""
+msgstr "Importar Partidas"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:25
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:152
@@ -3590,15 +3600,15 @@ msgstr "Data"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:26
 msgid "Kickoff"
-msgstr ""
+msgstr "Kickoff"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:27
 msgid "Home Club"
-msgstr ""
+msgstr "Clube da Casa"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:28
 msgid "Away Club"
-msgstr ""
+msgstr "Clube Visitante"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:29
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:40
@@ -3612,10 +3622,12 @@ msgid ""
 "Import complete - imported <strong>%s</strong> matches and skipped <strong>"
 "%s</strong>."
 msgstr ""
+"Importação completa - importado <strong>%s</ strong> partidas e ignorado "
+"<strong>%s</ strong>."
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:178
 msgid "View Matches"
-msgstr ""
+msgstr "Ver Partidas"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:196
 #, php-format
@@ -3623,11 +3635,13 @@ msgid ""
 "Matches need to be defined with columns in a specific order (9 columns). <a "
 "href=\"%s\">Click here to download a sample</a>."
 msgstr ""
+"Partidas precisam ser definidas com colunas em uma ordem específica (9 "
+"colunas). <a href=\"%s\">Clique aqui para baixar uma demonstração</a>."
 
 #: ../includes/admin/importers/class-wpcm-player-importer.php:23
 #: ../includes/admin/importers/class-wpcm-player-importer.php:140
 msgid "Import Players"
-msgstr ""
+msgstr "Importar Jogadores"
 
 #: ../includes/admin/importers/class-wpcm-player-importer.php:33
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:93
@@ -3658,10 +3672,12 @@ msgid ""
 "Import complete - imported <strong>%s</strong> players and skipped <strong>"
 "%s</strong>."
 msgstr ""
+"Importação completa - importado <strong>%s</ strong> jogadores e ignorado "
+"<strong>%s</ strong>."
 
 #: ../includes/admin/importers/class-wpcm-player-importer.php:131
 msgid "View Players"
-msgstr ""
+msgstr "Ver Jogadores"
 
 #: ../includes/admin/importers/class-wpcm-player-importer.php:149
 #, php-format
@@ -3669,11 +3685,13 @@ msgid ""
 "Players need to be defined with columns in a specific order (11 columns). <a "
 "href=\"%s\">Click here to download a sample</a>."
 msgstr ""
+"Jogadores precisam ser definidos com colunas em uma ordem específica (11 "
+"colunas). <a href=\"%s\">Clique aqui para baixar uma demonstração</a>."
 
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:23
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:128
 msgid "Import Staff"
-msgstr ""
+msgstr "Importar Staff"
 
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:109
 #, php-format
@@ -3681,6 +3699,8 @@ msgid ""
 "Import complete - imported <strong>%s</strong> staff and skipped <strong>%s</"
 "strong>."
 msgstr ""
+"Importação completa - importado <strong>%s</ strong> staff e ignorado "
+"<strong>%s</ strong>."
 
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:137
 #, php-format
@@ -3688,6 +3708,8 @@ msgid ""
 "Staff need to be defined with columns in a specific order (8 columns). <a "
 "href=\"%s\">Click here to download a sample</a>."
 msgstr ""
+"Staff precisa ser definida com colunas em uma ordem específica (8 colunas). "
+"<a href=\"%s\">Clique aqui para baixar uma demonstração</a>."
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:74
 msgid "Club name"
@@ -3862,7 +3884,7 @@ msgstr "Resultado da Partida"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:98
 msgid "Match Video"
-msgstr ""
+msgstr "Vídeo da Partida"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:100
 msgid "Match Details"
@@ -3875,7 +3897,7 @@ msgstr "Informações Básicas"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:106
 msgid "Sponsor Details"
-msgstr ""
+msgstr "Detalhes do Patrocinador"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-club-stats.php:30
 msgid "Choose a competition and season to edit the manual stats."
@@ -3884,7 +3906,7 @@ msgstr ""
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:113
 msgid "Neutral?"
-msgstr ""
+msgstr "Campo Neutro?"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:117
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:110
@@ -3962,15 +3984,15 @@ msgstr "Amistoso"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:28
 msgid "Remove video"
-msgstr ""
+msgstr "Remover vídeo"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:34
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:37
 msgid "Add video"
-msgstr ""
+msgstr "Adicionar vídeo"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:51
 msgid "Squad Number"
@@ -3979,7 +4001,7 @@ msgstr "Camisa"
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:61
 #, php-format
 msgid "Choose %s"
-msgstr ""
+msgstr "Selecione %s"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-stats.php:29
 #: ../templates/single-player/stats.php:19
@@ -3993,15 +4015,15 @@ msgstr "Link URL"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:34
 msgid "Open link in new window?"
-msgstr ""
+msgstr "Abrir link em uma nova janela?"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:61
 msgid "Email Address"
-msgstr ""
+msgstr "Endereço de Email"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:63
 msgid "Contact Number"
-msgstr ""
+msgstr "Número de Contato"
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:22
 msgid "General"
@@ -4221,12 +4243,14 @@ msgstr "Isso define os pontos para derrotas."
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:71
 msgid "Points for overtime win"
-msgstr ""
+msgstr "Pontos para vitória na prorrogação"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:72
 msgid ""
 "This sets the points for win in overtime matches. Often used in Ice Hockey"
 msgstr ""
+"Isso define os pontos perdidos em jogos com prorrogação. Frequentemente "
+"usado em Hóquei no Gelo"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:81
 msgid "Points for overtime loss"
@@ -4261,7 +4285,7 @@ msgstr "Derrota"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:140
 msgid "Won in Overtime"
-msgstr ""
+msgstr "Vitória na Prorrogação"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:149
 msgid "Lost in Overtime"
@@ -4399,7 +4423,7 @@ msgstr "Oponente"
 #: ../templates/shortcodes/matches.php:184
 #: ../templates/shortcodes/matches.php:192
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: ../templates/single-match/lineup.php:31
 msgid "Lineup"

@@ -74,8 +74,10 @@ function wpclubmanager_wp_textarea_input( $field ) {
 	$field['class'] 		= isset( $field['class'] ) ? $field['class'] : 'short';
 	$field['wrapper_class'] = isset( $field['wrapper_class'] ) ? $field['wrapper_class'] : '';
 	$field['value'] 		= isset( $field['value'] ) ? $field['value'] : get_post_meta( $thepostid, $field['id'], true );
+	$field['rows'] 	= isset( $field['rows'] ) ? $field['rows'] : '4';
+	$field['cols'] 	= isset( $field['cols'] ) ? $field['cols'] : '40';
 
-	echo '<p class="' . esc_attr( $field['id'] ) . '_field ' . esc_attr( $field['wrapper_class'] ) . '"><label for="' . esc_attr( $field['id'] ) . '">' . wp_kses_post( $field['label'] ) . '</label><textarea class="' . esc_attr( $field['class'] ) . '" name="' . esc_attr( $field['id'] ) . '" id="' . esc_attr( $field['id'] ) . '" placeholder="' . esc_attr( $field['placeholder'] ) . '" rows="4" cols="40">' . esc_textarea( $field['value'] ) . '</textarea> ';
+	echo '<p class="' . esc_attr( $field['id'] ) . '_field ' . esc_attr( $field['wrapper_class'] ) . '"><label for="' . esc_attr( $field['id'] ) . '">' . wp_kses_post( $field['label'] ) . '</label><textarea class="' . esc_attr( $field['class'] ) . '" name="' . esc_attr( $field['id'] ) . '" id="' . esc_attr( $field['id'] ) . '" placeholder="' . esc_attr( $field['placeholder'] ) . '" rows="' . esc_attr( $field['rows'] ) . '" cols="' . esc_attr( $field['cols'] ) . '">' . esc_textarea( $field['value'] ) . '</textarea> ';
 
 	if ( ! empty( $field['description'] ) ) {
 

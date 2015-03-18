@@ -1,13 +1,14 @@
 #
 # Translators:
 # Wuko, 2014
+# Clubpress <leon@wpclubmanager.com>, 2015
 # Vadim_C <vcourtheoux@hotmail.com>, 2014
 # Vadim_C <vcourtheoux@hotmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2015-02-02 01:04-0000\n"
-"PO-Revision-Date: 2015-02-02 10:02-0000\n"
+"PO-Revision-Date: 2015-03-18 23:23-0000\n"
 "Last-Translator: \n"
 "Language-Team: French (http://www.transifex.com/projects/p/wp-club-manager/"
 "language/fr/)\n"
@@ -590,7 +591,7 @@ msgstr "Belize"
 
 #: ../includes/class-wpcm-countries.php:55
 msgid "Benin"
-msgstr "Belize"
+msgstr "Benin"
 
 #: ../includes/class-wpcm-countries.php:56
 msgid "Bermuda"
