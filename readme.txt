@@ -4,7 +4,7 @@ Tags: clubs, teams, sports club, club management, team management, league tables
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.2.13
+Stable tag: 1.2.14
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -63,6 +63,7 @@ The WP Club Manager plugin has a growing catalogue of themes and extensions to a
 * Finnish - Suomi (fi)
 * French – Français (fr_FR)
 * Greek - Ελληνικά (el_GR)
+* Hebrew - עברית (he_IL)
 * Hungarian - Magyar (hu_HU)
 * Italian - Italiano (it_IT)
 * Latvian - Latviešu (lv_LV)
@@ -104,6 +105,14 @@ Automatic updates should work as expected but as always, it is recommended that 
 
 == Frequently Asked Questions ==
 
+= Is this plugin suitable for managing a league website?
+
+No. WP Club Manager is built to manage a single club only.
+
+= My sport is not supported. How can I add my sport?
+
+If your sport is not supported please [contact us](https://wpclubmanager.com/contact/) with details of your sport, including any information that may be useful, for example player stats info and player positions. If possible we will add it to the list of supported sports.
+
 = Where can I find documentation and support for the WP Club Manager plugin? =
 
 You can find documentation for the plugin at [WP Club Manager documentation](https://wpclubmanager.com/docs/). Support is available in our [Support Forum](https://wpclubmanager.com/support/)
@@ -124,6 +133,11 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.14 - 20/03/2015
+
+* Localisation - Updated German and Greek languages (Thanks filippos.sdr)
+* Localisation - Added Hebrew language (Thanks Adam Lahav)
 
 = 1.2.13 - 18/03/2015
 

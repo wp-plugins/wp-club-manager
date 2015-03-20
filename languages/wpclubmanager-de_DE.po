@@ -1,5 +1,6 @@
 #
 # Translators:
+# Joe <stielerjohannes@ymail.com>, 2015
 # Patrick Kindler <patrick.kindler@gmx.de>, 2014
 # Sven <germantic@emailoo.de>, 2015
 # fvottendorf <transifex@fv-o.de>, 2014
@@ -7,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2015-02-02 01:04-0000\n"
-"PO-Revision-Date: 2015-02-02 10:02-0000\n"
+"PO-Revision-Date: 2015-03-20 14:14-0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/wp-club-"
 "manager/language/de_DE/)\n"
@@ -2866,7 +2867,7 @@ msgstr "Tore nach Strafstoß"
 
 #: ../includes/wpcm-core-functions.php:1134
 msgid "PENS"
-msgstr "PENS"
+msgstr "ST"
 
 #: ../includes/wpcm-core-functions.php:1135
 msgid "Own Goals"
@@ -2975,7 +2976,7 @@ msgstr "Rote Karte"
 #: ../includes/wpcm-player-functions.php:275
 #: ../templates/shortcodes/players.php:31
 msgid "Apps"
-msgstr "Applikationen"
+msgstr "Spiele"
 
 #: ../includes/wpcm-player-functions.php:367
 #: ../includes/admin/settings/class-wpcm-settings-players.php:175
@@ -3841,7 +3842,7 @@ msgstr ""
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:110
 #: ../templates/single-match/attendance.php:24
 msgid "Attendance"
-msgstr "Teilnahme"
+msgstr "Zuschauerzahl"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:119
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:90
