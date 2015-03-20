@@ -105,11 +105,11 @@ Automatic updates should work as expected but as always, it is recommended that 
 
 == Frequently Asked Questions ==
 
-= Is this plugin suitable for managing a league website?
+= Is this plugin suitable for managing a league website? =
 
 No. WP Club Manager is built to manage a single club only.
 
-= My sport is not supported. How can I add my sport?
+= My sport is not supported. How can I add my sport? =
 
 If your sport is not supported please [contact us](https://wpclubmanager.com/contact/) with details of your sport, including any information that may be useful, for example player stats info and player positions. If possible we will add it to the list of supported sports.
 
