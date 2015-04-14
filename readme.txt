@@ -4,7 +4,7 @@ Tags: clubs, teams, sports club, club management, team management, league tables
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.2.14
+Stable tag: 1.2.15
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -133,6 +133,13 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.15 - 14/04/2015
+
+* Tweak - Improved the license key activation and updating process for extensions
+* Tweak - Some general cleaning and tidying
+* Localisation - Updated German and French (Thanks BBruns)
+* Localisation - Update all language files
 
 = 1.2.14 - 20/03/2015
 

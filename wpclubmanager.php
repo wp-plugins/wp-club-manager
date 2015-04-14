@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WP Club Manager
- * Version: 1.2.14
+ * Version: 1.2.15
  * Plugin URI: https://wpclubmanager.com
  * Description: A plugin to help you run a sports club website easily and quickly.
  * Author: Clubpress
@@ -31,7 +31,7 @@ final class WPClubManager {
 	/**
 	 * @var string
 	 */
-	public $version = '1.2.14';
+	public $version = '1.2.15';
 
 	/**
 	 * @var WPClubManager The single instance of the class
@@ -224,6 +224,8 @@ final class WPClubManager {
 		include_once( 'includes/wpcm-template-hooks.php' );
 
 		include_once( 'includes/class-wpcm-shortcodes.php' );
+
+		include_once( 'includes/class-wpcm-license-handler.php' );
 	}
 
 	/**

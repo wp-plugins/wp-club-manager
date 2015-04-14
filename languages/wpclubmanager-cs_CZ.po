@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
-"POT-Creation-Date: 2015-02-02 01:04-0000\n"
-"PO-Revision-Date: 2015-02-02 10:02-0000\n"
+"POT-Creation-Date: 2015-04-14 15:45-0000\n"
+"PO-Revision-Date: 2015-04-14 16:02-0000\n"
 "Last-Translator: \n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/"
 "wp-club-manager/language/cs_CZ/)\n"
@@ -58,7 +58,7 @@ msgstr "Klub"
 
 #: ../includes/class-wpcm-ajax.php:118
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:268
-#: ../templates/content-single-club.php:74
+#: ../templates/content-single-club.php:76
 msgid "Address"
 msgstr "Adresa"
 
@@ -134,7 +134,7 @@ msgstr "Titulek"
 #: ../includes/widgets/class-wpcm-widget-results.php:47
 #: ../includes/widgets/class-wpcm-widget-results.php:100
 #: ../includes/widgets/class-wpcm-widget-standings.php:136
-#: ../templates/shortcodes/matches.php:123
+#: ../templates/shortcodes/matches.php:112
 msgid "Competition"
 msgstr "Soutěž"
 
@@ -198,7 +198,6 @@ msgstr "Sezóna"
 #: ../includes/widgets/class-wpcm-widget-results.php:59
 #: ../includes/widgets/class-wpcm-widget-results.php:105
 #: ../templates/content-single-staff.php:109
-#: ../templates/shortcodes/matches.php:120
 #: ../templates/shortcodes/players.php:43 ../templates/shortcodes/staff.php:38
 #: ../templates/single-player/meta.php:128
 msgid "Team"
@@ -212,7 +211,7 @@ msgstr "Tým"
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:99
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:65
 #: ../includes/widgets/class-wpcm-widget-results.php:65
-#: ../templates/shortcodes/matches.php:116
+#: ../templates/shortcodes/matches.php:110
 msgid "Venue"
 msgstr "Místo konání"
 
@@ -242,7 +241,7 @@ msgstr "Odkaz na stránku"
 #: ../includes/class-wpcm-ajax.php:609 ../includes/class-wpcm-ajax.php:770
 #: ../includes/wpcm-match-functions.php:122
 #: ../includes/abstracts/abstract-wpcm-widget.php:166
-#: ../includes/admin/class-wpcm-admin-settings.php:493
+#: ../includes/admin/class-wpcm-admin-settings.php:494
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:59
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:74
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:102
@@ -1508,6 +1507,40 @@ msgstr "Vedoucí týmu"
 msgid "What's new:"
 msgstr "Novinky:"
 
+#: ../includes/class-wpcm-license-handler.php:129
+#, php-format
+msgid "%1$s License Key"
+msgstr ""
+
+#: ../includes/class-wpcm-license-handler.php:162
+#: ../includes/class-wpcm-license-handler.php:227
+msgid "Nonce verification failed"
+msgstr ""
+
+#: ../includes/class-wpcm-license-handler.php:162
+#: ../includes/class-wpcm-license-handler.php:227
+msgid "Error"
+msgstr ""
+
+#: ../includes/class-wpcm-license-handler.php:296
+msgid "This license does not belong to the product you have entered it for."
+msgstr ""
+
+#: ../includes/class-wpcm-license-handler.php:301
+msgid "This license does not have any activations left"
+msgstr ""
+
+#: ../includes/class-wpcm-license-handler.php:306
+msgid "This license key is expired. Please renew it."
+msgstr ""
+
+#: ../includes/class-wpcm-license-handler.php:311
+#, php-format
+msgid ""
+"There was a problem activating your license key, please try again or contact "
+"support. Error code: %s"
+msgstr ""
+
 #: ../includes/class-wpcm-post-types.php:43
 #: ../includes/admin/importers/class-wpcm-club-importer.php:26
 msgid "Competitions"
@@ -1723,7 +1756,6 @@ msgstr "Kluby"
 #: ../includes/class-wpcm-post-types.php:224
 #: ../includes/class-wpcm-post-types.php:260
 #: ../includes/class-wpcm-post-types.php:296
-#: ../includes/class-wpcm-post-types.php:332
 msgid "Add New"
 msgstr "Přidat nový"
 
@@ -1892,13 +1924,14 @@ msgstr "Sponzoři"
 msgid "Sponsor"
 msgstr "Sponzor"
 
-#: ../includes/class-wpcm-post-types.php:333
-msgid "All Sponsors"
-msgstr "Všichni sponzoři"
-
+#: ../includes/class-wpcm-post-types.php:332
 #: ../includes/class-wpcm-post-types.php:334
 msgid "Add New Sponsor"
 msgstr "Přidat nového sponzora"
+
+#: ../includes/class-wpcm-post-types.php:333
+msgid "All Sponsors"
+msgstr "Všichni sponzoři"
 
 #: ../includes/class-wpcm-post-types.php:335
 msgid "Edit Sponsor"
@@ -1956,7 +1989,7 @@ msgid "Hits"
 msgstr ""
 
 #: ../includes/wpcm-core-functions.php:590
-#: ../templates/shortcodes/matches.php:186
+#: ../templates/shortcodes/matches.php:172
 msgid "H"
 msgstr "D"
 
@@ -2070,7 +2103,7 @@ msgstr "Asistence"
 #: ../includes/wpcm-core-functions.php:679
 #: ../includes/wpcm-core-functions.php:947
 #: ../includes/wpcm-core-functions.php:987
-#: ../templates/shortcodes/matches.php:194
+#: ../templates/shortcodes/matches.php:180
 msgid "A"
 msgstr "H"
 
@@ -2986,6 +3019,21 @@ msgstr "Odehrané zápasy"
 msgid "GP"
 msgstr "OZ"
 
+#: ../includes/WPCM_Plugin_Updater.php:175
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+
+#: ../includes/WPCM_Plugin_Updater.php:182
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+
 #: ../includes/admin/class-wpcm-admin-assets.php:70
 msgid "WPClubManager"
 msgstr "WPClubManager"
@@ -3028,7 +3076,7 @@ msgid "Club Manager"
 msgstr "Klubový manažer"
 
 #: ../includes/admin/class-wpcm-admin-menus.php:50
-#: ../includes/admin/views/html-admin-page-extensions.php:3
+#: ../includes/admin/views/html-admin-page-extensions.php:8
 msgid "WP Club Manager Extensions"
 msgstr "WP Club Manger rozšíření"
 
@@ -3055,30 +3103,22 @@ msgid "The changes you made will be lost if you navigate away from this page."
 msgstr ""
 "Změny, které jste provedli, budou ztraceny, pokud opustíte tuto stránku."
 
-#: ../includes/admin/class-wpcm-admin-settings.php:480
+#: ../includes/admin/class-wpcm-admin-settings.php:481
 msgid "Hard Crop?"
 msgstr "Pevné oříznutí?"
 
-#: ../includes/admin/class-wpcm-admin-settings.php:531
+#: ../includes/admin/class-wpcm-admin-settings.php:532
 msgid "Select a page&hellip;"
 msgstr "Zvolte stránku&hellip;"
 
-#: ../includes/admin/class-wpcm-admin-settings.php:552
-#: ../includes/admin/wpcm-meta-box-functions.php:225
+#: ../includes/admin/class-wpcm-admin-settings.php:553
+#: ../includes/admin/wpcm-meta-box-functions.php:227
 msgid "Choose a country&hellip;"
 msgstr "Zvolte zemi&hellip;"
 
-#: ../includes/admin/class-wpcm-admin-settings.php:590
-msgid "Active"
-msgstr "Aktivní"
-
-#: ../includes/admin/class-wpcm-admin-settings.php:592
+#: ../includes/admin/class-wpcm-admin-settings.php:570
 msgid "Deactivate License"
 msgstr "Deaktivovat licenci"
-
-#: ../includes/admin/class-wpcm-admin-settings.php:595
-msgid "Activate License"
-msgstr "Aktivovat licenci"
 
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:53
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:73
@@ -3133,7 +3173,7 @@ msgstr ""
 "vzhledy je můžou zobrazit."
 
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:269
-#: ../templates/content-single-club.php:66
+#: ../templates/content-single-club.php:68
 msgid "Capacity"
 msgstr "Kapacita"
 
@@ -3528,7 +3568,7 @@ msgstr ""
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:152
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:85
 #: ../includes/widgets/class-wpcm-widget-results.php:85
-#: ../templates/shortcodes/matches.php:114
+#: ../templates/shortcodes/matches.php:109
 msgid "Date"
 msgstr "Datum"
 
@@ -3546,7 +3586,7 @@ msgstr ""
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:29
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:40
-#: ../templates/shortcodes/matches.php:125
+#: ../templates/shortcodes/matches.php:113
 msgid "Result"
 msgstr "Výsledek"
 
@@ -4216,16 +4256,27 @@ msgstr "Vstřelené góly"
 msgid "Goal Difference"
 msgstr "Rozdíl"
 
-#: ../includes/admin/views/html-admin-page-extensions.php:4
+#: ../includes/admin/views/html-admin-page-extensions.php:9
 msgid "Browse all extensions"
 msgstr ""
 
-#: ../includes/admin/views/html-admin-page-extensions.php:5
+#: ../includes/admin/views/html-admin-page-extensions.php:10
 msgid "Browse themes"
 msgstr ""
 
-#: ../includes/admin/views/html-admin-page-extensions.php:8
+#: ../includes/admin/views/html-admin-page-extensions.php:13
 msgid "These add-ons extend the functionality of WP Club Manager."
+msgstr ""
+
+#: ../includes/admin/views/html-admin-page-extensions.php:39
+#, php-format
+msgid ""
+"Our catalog of WP Club Manager Extensions can be found on wpclubmanager.com "
+"here: <a href=\"%s\">WP Club Manager Extensions Catalog</a>"
+msgstr ""
+
+#: ../includes/admin/views/html-admin-settings.php:2
+msgid "WP Club Manager Settings"
 msgstr ""
 
 #: ../includes/admin/views/html-notice-theme-support.php:5
@@ -4289,7 +4340,7 @@ msgid "WPCM Results"
 msgstr "WPCM Výsledky"
 
 #: ../includes/widgets/class-wpcm-widget-results.php:230
-#: ../templates/shortcodes/matches.php:130
+#: ../templates/shortcodes/matches.php:118
 msgid "No matches played yet."
 msgstr "Žádné zápasy nebyly ještě odehrány."
 
@@ -4317,11 +4368,11 @@ msgstr "WPCM Pořadí"
 msgid "Show Club Badge"
 msgstr "Zobrazit klubový znak"
 
-#: ../templates/content-single-club.php:59
+#: ../templates/content-single-club.php:61
 msgid "Ground"
 msgstr "Hřiště"
 
-#: ../templates/content-single-club.php:82
+#: ../templates/content-single-club.php:84
 msgid "More Info"
 msgstr "Více info"
 
@@ -4329,12 +4380,12 @@ msgstr "Více info"
 msgid "Visit website"
 msgstr "Navštívit web"
 
-#: ../templates/shortcodes/matches.php:117
+#: ../templates/shortcodes/matches.php:111
 msgid "Opponent"
 msgstr "Soupeř"
 
-#: ../templates/shortcodes/matches.php:184
-#: ../templates/shortcodes/matches.php:192
+#: ../templates/shortcodes/matches.php:170
+#: ../templates/shortcodes/matches.php:178
 msgid "N"
 msgstr ""
 

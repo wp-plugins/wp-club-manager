@@ -198,6 +198,7 @@ class WPCM_Admin_Settings {
 	    	if ( ! isset( $value['default'] ) ) $value['default'] = '';
 	    	if ( ! isset( $value['desc'] ) ) $value['desc'] = '';
 	    	if ( ! isset( $value['desc_tip'] ) ) $value['desc_tip'] = false;
+	    	if ( ! isset( $value['options'] ) ) $value['options'] = '';
 
 	    	// Custom attribute handling
 			$custom_attributes = array();
@@ -558,48 +559,19 @@ class WPCM_Admin_Settings {
 
 	            case 'license_key':
 
-	            	$option_value 	= self::get_option( $value['id'], $value['default'] ); ?>
+	    			$option_value = self::get_option( $value['id'], $value['default'] ); ?>
 
-	            	<tr valign="top">
-						<th scope="row" class="titledesc">
-							<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
-						</th>
-	                    <td class="forminp forminp-<?php echo sanitize_title( $value['type'] ) ?>">
-	                    	<input
-	                    		name="<?php echo esc_attr( $value['id'] ); ?>"
-	                    		id="<?php echo esc_attr( $value['id'] ); ?>"
-	                    		type="text"
-	                    		style="<?php echo esc_attr( $value['css'] ); ?>"
-	                    		value="<?php echo esc_attr( $option_value ); ?>"
-	                    		<?php echo implode( ' ', $custom_attributes ); ?>
-	                    		/>
-	                    <?php
-	            break;
-
-	            case 'license_activate' :
-
-	            	$option_value 	= self::get_option( $value['id'].'_license_key', $value['default'] );
-
-	            	$license 	= get_option( 'wpcm_pa_license_key' );
-					$status 	= get_option( 'wpcm_pa_license_status' );
-
-	            	if( false !== $license ) {
-
-						if( $status !== false && $status == 'valid' ) { ?>
-
-							<span style="font-size:12px;color:#fff;background:green;padding:2px 5px;margin-right:15px;border-radius:3px;"><?php _e('Active'); ?></span>
-							<?php wp_nonce_field( 'wpcm_pa_nonce', 'wpcm_pa_nonce' ); ?>
-							<input type="submit" class="button-secondary" name="wpcm_pa_license_deactivate" value="<?php _e('Deactivate License'); ?>"/>
-						<?php } else {
-							wp_nonce_field( 'wpcm_pa_nonce', 'wpcm_pa_nonce' ); ?>
-							<input type="submit" class="button-secondary" name="wpcm_pa_license_activate" value="<?php _e('Activate License'); ?>"/>
+					<div class="wpcm-license-keys">
+						<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
+	                    <input name="<?php echo esc_attr( $value['id'] ); ?>" id="<?php echo esc_attr( $value['id'] ); ?>" value="<?php echo esc_attr( $option_value ); ?>"
+	                    		class="regular-text" />
+                    	<?php
+                    	if ( 'valid' == get_option( $value['options']['is_valid_license_option'] ) ) { ?>
+							<input type="submit" class="button-secondary" name="<?php echo esc_attr( $value['id'] ); ?>_deactivate" value="<?php _e( 'Deactivate License', 'wpclubmanager' ); ?>"/>
 						<?php } ?>
-					<?php } ?>
+	                </div><?php
 
-					</td>
-				</tr> <?php
-
-				break;
+	            break;
 
 	            // Default: run an action
 	            default:

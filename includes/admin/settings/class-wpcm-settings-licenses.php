@@ -32,7 +32,7 @@ class WPCM_Settings_Licenses extends WPCM_Settings_Page {
 	 * @return array
 	 */
 	public function get_settings() {
-		
+
 		return apply_filters( 'wpclubmanager_license_settings', array() );
 
 	}

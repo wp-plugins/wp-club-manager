@@ -343,17 +343,17 @@ class WPCM_Post_Types {
 					),
 					'hierarchical'         => false,
 					'supports'             => array( 'title', 'thumbnail' ),
-					'public'               => false,
+					'public'               => true,
 					'show_ui'              => true,
 					'show_in_menu'         => true,
 					'show_in_nav_menus'    => false,
 					'menu_icon'            => 'dashicons-megaphone',
-					'publicly_queryable'   => false,
+					'publicly_queryable'   => true,
 					'exclude_from_search'  => true,
 					'has_archive'          => false,
-					'query_var'            => false,
+					'query_var'            => true,
 					'can_export'           => true,
-					'rewrite'              => false,
+					'rewrite'              => array( 'with_front' => false, 'slug' => 'sponsors' ),
 					'capability_type'      => 'post'
 				)
 			)

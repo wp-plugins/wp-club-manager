@@ -292,6 +292,20 @@ div.stuffbox h3 {
 	padding-left: 6px;
 }
 
+/* Extension License keys */
+
+.wpcm-license-keys {
+	display: block;
+	margin-bottom: 10px;
+}
+.wpcm-license-keys:first-of-type {
+	margin-top: 30px;
+}
+.wpcm-license-keys label {
+	display: inline-block;
+	width: 230px;
+}
+
 /* Tiptip styles */
 .tips {
 	cursor:help;

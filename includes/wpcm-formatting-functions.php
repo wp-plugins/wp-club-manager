@@ -67,7 +67,7 @@ function wpcm_array_overlay( $a1, $a2 ) {
 }
 
 /**
- * WooCommerce Date Format - Allows to change date format for everything WooCommerce
+ * WP Club Manager Date Format - Allows to change date format for everything WP Club Manager
  *
  * @access public
  * @return string
@@ -78,7 +78,7 @@ function wpcm_date_format() {
 }
 
 /**
- * WooCommerce Time Format - Allows to change time format for everything WooCommerce
+ * WP Club Manager Time Format - Allows to change time format for everything WP Club Manager
  *
  * @access public
  * @return string
