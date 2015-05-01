@@ -2,14 +2,14 @@
 # Translators:
 # Benjamin Bruns <brunsben@gmail.com>, 2015
 # Joe <stielerjohannes@ymail.com>, 2015
-# Patrick Kindler <patrick.kindler@gmx.de>, 2014
+# Patrick Kindler <patrick.kindler@gmx.de>, 2014-2015
 # Sven <germantic@emailoo.de>, 2015
 # fvottendorf <transifex@fv-o.de>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2015-04-14 15:45-0000\n"
-"PO-Revision-Date: 2015-04-14 16:02-0000\n"
+"PO-Revision-Date: 2015-05-01 22:24-0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/wp-club-"
 "manager/language/de_DE/)\n"
@@ -1513,7 +1513,7 @@ msgstr "Was ist neu:"
 #: ../includes/class-wpcm-license-handler.php:129
 #, php-format
 msgid "%1$s License Key"
-msgstr ""
+msgstr "%1$s Lizenzschlüssel"
 
 #: ../includes/class-wpcm-license-handler.php:162
 #: ../includes/class-wpcm-license-handler.php:227
@@ -1523,19 +1523,21 @@ msgstr ""
 #: ../includes/class-wpcm-license-handler.php:162
 #: ../includes/class-wpcm-license-handler.php:227
 msgid "Error"
-msgstr ""
+msgstr "Fehler"
 
 #: ../includes/class-wpcm-license-handler.php:296
 msgid "This license does not belong to the product you have entered it for."
 msgstr ""
+"Diese Lizenz gehört nicht zu dem Produkt, für welche Sie sie eingegeben "
+"haben."
 
 #: ../includes/class-wpcm-license-handler.php:301
 msgid "This license does not have any activations left"
-msgstr ""
+msgstr "Diese Lizenz hat keine freien Aktivierungen mehr."
 
 #: ../includes/class-wpcm-license-handler.php:306
 msgid "This license key is expired. Please renew it."
-msgstr ""
+msgstr "Dieser Lizenzschlüssel ist abgelaufen. Bitte erneuern Sie ihn."
 
 #: ../includes/class-wpcm-license-handler.php:311
 #, php-format
@@ -1543,6 +1545,8 @@ msgid ""
 "There was a problem activating your license key, please try again or contact "
 "support. Error code: %s"
 msgstr ""
+"Es gab ein Problem beim Aktivieren Ihres Lizenzschlüssels, bitte versuchen "
+"Sie es erneut oder kontaktieren Sie den Support. Fehlercode: %s"
 
 #: ../includes/class-wpcm-post-types.php:43
 #: ../includes/admin/importers/class-wpcm-club-importer.php:26
@@ -3028,6 +3032,8 @@ msgid ""
 "There is a new version of %1$s available. <a target=\"_blank\" class="
 "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
 msgstr ""
+"Es steht eine neue Version von %1$s zur Verfügung. <a target=\"_blank\" "
+"class=\"thickbox\" href=\"%2$s\">Zeige Details der Version für %3$s</a>."
 
 #: ../includes/WPCM_Plugin_Updater.php:182
 #, php-format
@@ -3272,7 +3278,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:298
 msgid "Drag and Drop Player Sorting"
-msgstr ""
+msgstr "Drag&Drop Spielersortierung"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:299
 msgid ""
@@ -3280,6 +3286,10 @@ msgid ""
 "Using the new sorting feature you can drag players into whichever order you "
 "want and finally get the match lineups you've always wanted!"
 msgstr ""
+"Sie können nun durch Drag&Drop die Aufstellung der Spieler für jedes Spiel "
+"neu ordnen. Mit der neuen Sortierfunktion können Sie die Spieler in jede "
+"beliebige Reihenfolge bringen, die Sie möchten. So bekommen Sie die "
+"Spielaufstellung, die Sie schon immer haben wollten."
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:305
 msgid "Improved Player Dropdowns"
@@ -3303,6 +3313,10 @@ msgid ""
 "allowing you to choose whether to display the pointer, set zoom level and "
 "define the position by latitude and longtitude."
 msgstr ""
+"Der Karten-Kurzcode hat auch eine Überarbeitung erhalten. Der Kurzcode hat "
+"mehr Einstellungen erhalten. Diese erlauben Ihnen festzulegen wie der Zeiger "
+"angezeigt wird, Sie können die Zoom-Stufe einstellen und die Position von "
+"Breiten- und Längengrad definieren."
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:340
 #: ../includes/admin/class-wpcm-admin-welcome.php:519
@@ -3316,6 +3330,9 @@ msgid ""
 "WP Club Manager has been built with the focus on simplicity and ease of use "
 "so it won't be long before your club website is up and ready for action."
 msgstr ""
+"WP Club Manager wurde mit dem Fokus auf Einfachheit und "
+"Benutzerfreundlichkeit entwickelt, damit Ihre Vereinswebseite schnell bereit "
+"gestellt werden kann."
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:375
 msgid "Quick and Easy Setup"
@@ -3443,6 +3460,10 @@ msgid ""
 "and themes being created. Stay in touch with the latest developments, newest "
 "extensions and get special offers by subscribing to our newsletter."
 msgstr ""
+"WP Club Manager wird mit jedem Tag besser, mit neuen Funktionen, "
+"Erweiterungen und Themes welche erstellt werden. Bleiben Sie in Kontakt mit "
+"den neuesten Entwicklungen, neuesten Erweiterungen und erhalten spezielle "
+"Angebote indem Sie unseren Newsletter abonnieren."
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:494
 msgid "Want More Features?"
@@ -4301,10 +4322,12 @@ msgid ""
 "Our catalog of WP Club Manager Extensions can be found on wpclubmanager.com "
 "here: <a href=\"%s\">WP Club Manager Extensions Catalog</a>"
 msgstr ""
+"Unser Katalog an WP Club Manager Erweiterungen kann hier unter wpclubmanager."
+"com: <a href=\"%s\">WP Club Manager Erweiterungenkatalog</a> gefunden werden."
 
 #: ../includes/admin/views/html-admin-settings.php:2
 msgid "WP Club Manager Settings"
-msgstr ""
+msgstr "WP Club Manager Einstellungen"
 
 #: ../includes/admin/views/html-notice-theme-support.php:5
 msgid ""

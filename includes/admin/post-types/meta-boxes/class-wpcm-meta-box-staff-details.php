@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Meta Boxes
- * @version     1.0.0
+ * @version     1.2.16
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -23,12 +23,14 @@ class WPCM_Meta_Box_Staff_Details {
 
 		wp_nonce_field( 'wpclubmanager_save_data', 'wpclubmanager_meta_nonce' );
 
-		$jobs_id = null;
+		$job_id = null;
 		$jobs = get_the_terms( $post->ID, 'wpcm_jobs' );
-
-		if ( !empty( $jobs ) ) {
-			$jobs_id = $jobs[0]->term_id;
-		}
+		$job_ids = array();
+		if ( $jobs ):
+			foreach ( $jobs as $job ):
+				$job_ids[] = $job->term_id;
+			endforeach;
+		endif;
 
 		$dob = get_post_meta( $post->ID, 'wpcm_dob', true );
 
@@ -46,15 +48,17 @@ class WPCM_Meta_Box_Staff_Details {
 		<p>
 			<label><?php _e( 'Job Title', 'wpclubmanager' ); ?></label>
 			<?php
-				wp_dropdown_categories( array(
-					'show_option_none' => __( 'None' ),
-					'orderby' => 'title',
-					'hide_empty' => false,
+				$args = array(
 					'taxonomy' => 'wpcm_jobs',
-					'selected' => $jobs_id,
-					'name' => 'wpcm_jobs',
-					'class' => 'chosen_select',
-				) );
+					'name' => 'tax_input[wpcm_jobs][]',
+					'selected' => $job_ids,
+					'values' => 'term_id',
+					'placeholder' => sprintf( __( 'Choose %s', 'wpclubmanager' ), __( 'jobs', 'wpclubmanager' ) ),
+					'class' => '',
+					'attribute' => 'multiple',
+					'chosen' => true,
+				);
+				wpcm_dropdown_taxonomies( $args );
 			?>
 		</p>
 		<?php
@@ -99,7 +103,7 @@ class WPCM_Meta_Box_Staff_Details {
 		$dob_month = substr( zeroise( (int) $_POST['wpcm_dob_month'], 2 ), 0, 2 );
 		$dob_day = substr( zeroise( (int) $_POST['wpcm_dob_day'], 2 ), 0, 2 );
 		
-		wp_set_post_terms( $post_id, $_POST['wpcm_jobs'], 'wpcm_jobs' );	
+		//wp_set_post_terms( $post_id, $_POST['wpcm_jobs'], 'wpcm_jobs' );	
 		update_post_meta( $post_id, 'wpcm_dob', $dob_year . '-' . $dob_month. '-' . $dob_day );
 		update_post_meta( $post_id, 'wpcm_natl', $_POST['wpcm_natl'] );
 	}

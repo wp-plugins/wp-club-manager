@@ -3,12 +3,12 @@
 # Clubpress <leon@wpclubmanager.com>, 2014
 # drebrez <drebrez@gmail.com>, 2014
 # Luca Barbetti <lucabarbetti@gmail.com>, 2014
-# Massimo, 2014
+# Massimo, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2015-04-14 15:45-0000\n"
-"PO-Revision-Date: 2015-04-14 16:03-0000\n"
+"PO-Revision-Date: 2015-05-01 22:24-0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/projects/p/wp-club-"
 "manager/language/it_IT/)\n"
@@ -454,7 +454,7 @@ msgstr "Ruolo"
 #: ../templates/content-single-staff.php:150
 #: ../templates/shortcodes/staff.php:35
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: ../includes/class-wpcm-ajax.php:500
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:32
@@ -462,7 +462,7 @@ msgstr ""
 #: ../templates/content-single-staff.php:165
 #: ../templates/shortcodes/staff.php:36
 msgid "Phone"
-msgstr ""
+msgstr "Telefono"
 
 #: ../includes/class-wpcm-ajax.php:556
 #: ../includes/class-wpcm-post-types.php:65
@@ -1522,7 +1522,7 @@ msgstr ""
 #: ../includes/class-wpcm-license-handler.php:162
 #: ../includes/class-wpcm-license-handler.php:227
 msgid "Error"
-msgstr ""
+msgstr "Errore"
 
 #: ../includes/class-wpcm-license-handler.php:296
 msgid "This license does not belong to the product you have entered it for."
@@ -3230,7 +3230,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:260
 msgid "Getting Started"
-msgstr ""
+msgstr "Per Iniziare"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:263
 msgid "Translators"
@@ -3238,7 +3238,7 @@ msgstr "Traduttori"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:266
 msgid "Changelog"
-msgstr ""
+msgstr "Changelog"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:285
 msgid ""
@@ -3319,7 +3319,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:381
 msgid "1. Choose Your Sport"
-msgstr ""
+msgstr "1. Scegli il Tuo Sport"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:382
 #, php-format
@@ -3338,7 +3338,7 @@ msgstr "Salva le impostazioni"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:401
 msgid "2. Create Your Club"
-msgstr ""
+msgstr "2. Crea Il Tuo Club"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:402
 #, php-format
@@ -3400,7 +3400,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:456
 msgid "Need Help?"
-msgstr ""
+msgstr "Hai Bisogno Di Aiuto?"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:460
 msgid "Plugin Documentation"
@@ -3456,7 +3456,7 @@ msgstr ""
 #: ../includes/admin/class-wpcm-admin-welcome.php:501
 #: ../includes/admin/class-wpcm-admin-welcome.php:507
 msgid "Download"
-msgstr ""
+msgstr "Download"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:505
 msgid "Player Appearances"
@@ -3566,7 +3566,7 @@ msgstr ""
 
 #: ../includes/admin/importers/class-wpcm-importers.php:179
 msgid "The CSV is invalid."
-msgstr ""
+msgstr "Il file CSV non è corretto."
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:23
 #: ../includes/admin/importers/class-wpcm-match-importer.php:187
@@ -3959,7 +3959,7 @@ msgstr ""
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:34
 msgid "Cancel"
-msgstr ""
+msgstr "Cancella"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:37
 msgid "Add video"
@@ -3990,7 +3990,7 @@ msgstr ""
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:61
 msgid "Email Address"
-msgstr ""
+msgstr "Indirizzo Email"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:63
 msgid "Contact Number"
@@ -4294,7 +4294,7 @@ msgstr ""
 
 #: ../includes/admin/views/html-admin-settings.php:2
 msgid "WP Club Manager Settings"
-msgstr ""
+msgstr "Impostazioni WP Club Manager"
 
 #: ../includes/admin/views/html-notice-theme-support.php:5
 msgid ""
@@ -4392,7 +4392,7 @@ msgstr "Stadio"
 
 #: ../templates/content-single-club.php:84
 msgid "More Info"
-msgstr ""
+msgstr "Maggiori Informazioni"
 
 #: ../templates/content-single-sponsor.php:32
 msgid "Visit website"

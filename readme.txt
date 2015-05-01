@@ -1,10 +1,10 @@
 === WP Club Manager ===
 Contributors: ClubPress, leonterry
-Tags: clubs, teams, sports club, club management, team management, league tables, football, rugby, soccer, field hockey, ice hockey, baseball, basketball, aussie rules, netball, volleyball
+Tags: clubs, teams, sport, sports club, club management, team management, league tables, football, rugby, soccer, field hockey, ice hockey, baseball, basketball, aussie rules, netball, volleyball
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
-Tested up to: 4.1
-Stable tag: 1.2.15
+Tested up to: 4.2
+Stable tag: 1.2.16
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -71,6 +71,7 @@ The WP Club Manager plugin has a growing catalogue of themes and extensions to a
 * Portuguese (Brazil) – Português do Brasil (pt_BR)
 * Portuguese (Portugal) – Português (pt_PT)
 * Russian - Русский (ru_RU)
+* Slovak - Slovenčina (sk_SK)
 * Spanish - Español (es_ES)
 * Swedish – Svenska (sv_SE)
 * Turkish - Türkçe (tr_TR)
@@ -133,6 +134,14 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.16 - 01/05/2015
+
+* Fix - Fixed broken player position occuring after upgrading WP to 4.2
+* Tweak - Added multiple jobs selection for staff
+* Tweak - Upgraded Chosen library
+* Localisation - Added Slovak language (Thanks lsvk072)
+* Localisation - Updated Czech, German and Italian (Thanks lsvk072, King3R and GhiMax)
 
 = 1.2.15 - 14/04/2015
 

@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Functions
- * @version     1.1.1
+ * @version     1.2.16
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -346,8 +346,13 @@ if (!function_exists('wpcm_dropdown_taxonomies')) {
 		);
 
 		$args = array_merge( $defaults, $args ); 
+
 		if ( ! $args['taxonomy'] ) return false;
-		$terms = get_terms( $args['taxonomy'], $args );
+
+		$get_terms_args = $args;
+		unset( $get_terms_args['name'] );
+
+		$terms = get_terms( $args['taxonomy'], $get_terms_args );
 		$name = ( $args['name'] ) ? $args['name'] : $args['taxonomy'];
 		$id = ( $args['id'] ) ? $args['id'] : $name;
 
