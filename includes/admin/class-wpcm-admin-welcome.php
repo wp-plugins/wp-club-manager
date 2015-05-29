@@ -9,7 +9,7 @@
  * @author 		Clubpress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.2.16
+ * @version     1.2.17
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -542,7 +542,7 @@ class WPCM_Admin_Welcome {
 				<div class="wpcm-feature feature-section col three-col">
 
 					<?php
-					$translator_handles = array( 'ClubPress', 'King3R', 'rychu_cmg', 'fvottendorf', 'Spirossmil', 'lucabarbetti', 'baldovi', 'thegreat', 'Vadim_C', 'hushiea', 'Pirolla', 'hatasu', 'piotr01', 'cherreman', 'Wuko', 'sigma66699969669', 'Kauge', 'SzJanos', 'Abdulelah', 'mwestrik', 'GhiMax', 'lasiton', 'Akinshin', 'retbys', 'sivasspor', 'cengizyilmaz', 'cemsacan', 'muhahmetkara', 'basse_99', 'dimych13', 'tonttuu', 'nunoluisazevedo', 'morbri63', 'vibevi', 'lfrodines', 'filippos.sdr', 'lsvk072' );
+					$translator_handles = array( 'ClubPress', 'King3R', 'rychu_cmg', 'fvottendorf', 'Spirossmil', 'lucabarbetti', 'baldovi', 'thegreat', 'Vadim_C', 'hushiea', 'Pirolla', 'hatasu', 'piotr01', 'cherreman', 'Wuko', 'sigma66699969669', 'Kauge', 'SzJanos', 'Abdulelah', 'mwestrik', 'GhiMax', 'lasiton', 'Akinshin', 'retbys', 'sivasspor', 'cengizyilmaz', 'cemsacan', 'muhahmetkara', 'basse_99', 'dimych13', 'tonttuu', 'nunoluisazevedo', 'morbri63', 'vibevi', 'lfrodines', 'filippos.sdr', 'lsvk072', 't00kie', 'wolforg', 'BBruns', 'fengshengxie' );
 					$translator_links = array();
 					foreach ( $translator_handles as $handle ):
 						$translator_links[] = '<a href="https://www.transifex.com/accounts/profile/' . $handle . '">' . $handle . '</a>';

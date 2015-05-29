@@ -1,4 +1,11 @@
 <?php
+/**
+ * Fixtures Widget
+ *
+ * @author 		Clubpress
+ * @package 	WPClubManager/Templates
+ * @version     1.2.17
+ */
 
 global $post;
 
@@ -32,7 +39,8 @@ echo '<li class="fixture">';
 
 	echo '</div>';
 
-	echo '<a href="' . get_permalink( $postid ) . '">';
+	echo '<a href="' . get_post_permalink( $postid, false, true ) . '">';
+
 		echo '<div class="clubs">';
 			echo '<h4 class="home-clubs">';
 				echo '<div class="home-logo">' . get_the_post_thumbnail( $home_club, 'crest-medium', array( 'title' => get_the_title( $home_club ) ) ) . '</div>';

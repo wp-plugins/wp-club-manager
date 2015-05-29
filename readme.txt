@@ -1,10 +1,10 @@
-=== WP Club Manager ===
+=== WP Club Manager - Manage your sports club ===
 Contributors: ClubPress, leonterry
-Tags: clubs, teams, sport, sports club, club management, team management, league tables, football, rugby, soccer, field hockey, ice hockey, baseball, basketball, aussie rules, netball, volleyball
+Tags: club, clubs, team, teams, sport, sports, sports club, club management, team management, league tables, leagues, clubpress, football, rugby, soccer, field hockey, ice hockey, baseball, basketball, aussie rules, netball, volleyball, floorball, gaelic football, hurling, handball
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 4.2
-Stable tag: 1.2.16
+Stable tag: 1.2.17
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -55,6 +55,7 @@ The WP Club Manager plugin has a growing catalogue of themes and extensions to a
 = Included Languages =
 
 * Arabic – العربية (ar)
+* Chinese (China) - 中文 (zh_CN)
 * Czech – Čeština (cs_CZ)
 * Danish – Dansk (da_DK)
 * Dutch - Nederlands (nl_NL)
@@ -134,6 +135,12 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.17 - 29/05/2015
+
+* Fix - Fixed broken links for scheduled matches since WP 4.2
+* Localisation - Added Chinese (China) (Thanks fengshengxie)
+* Localisation - Updated Polish, German, Italian and French (Thanks t00kie, BBruns, GhiMax and wolforg)
 
 = 1.2.16 - 01/05/2015
 

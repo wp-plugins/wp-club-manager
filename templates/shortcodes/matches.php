@@ -4,7 +4,7 @@
  *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
- * @version     1.2.13
+ * @version     1.2.17
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -160,9 +160,9 @@ if ( $size > 0 ) {
 			$away_crest = '';
 		}
 
-		$output .= '<tr data-url="' . get_permalink( $match->ID ) . '">';
+		$output .= '<tr data-url="' . get_post_permalink( $match->ID, false, true ) . '">';
 		
-		$output .= '<td class="wpcm-date"><a href="' . get_permalink( $match->ID ) . '">' . date_i18n( 'd M', $timestamp ) . ', ' . date_i18n( $time_format, $timestamp ) . '</a></td>';
+		$output .= '<td class="wpcm-date"><a href="' . get_post_permalink( $match->ID, false, true ) . '">' . date_i18n( 'd M', $timestamp ) . ', ' . date_i18n( $time_format, $timestamp ) . '</a></td>';
 
 		if ( $club == $home_club ) {
 
