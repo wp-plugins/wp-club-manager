@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2015-04-14 15:45-0000\n"
-"PO-Revision-Date: 2015-05-01 22:24-0000\n"
+"PO-Revision-Date: 2015-05-28 21:55-0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/wp-club-"
 "manager/language/de_DE/)\n"
@@ -3042,6 +3042,9 @@ msgid ""
 "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
 "\">update now</a>."
 msgstr ""
+"Es gibt eine neue Version von %1$s.\n"
+"<a target=\"_blank\" class=\"thickbox\" href=\"%2$s\">Details der Version "
+"%3$s anzeigen</a> or <a href=\"%4$s\">jetzt aktualisieren</a>."
 
 #: ../includes/admin/class-wpcm-admin-assets.php:70
 msgid "WPClubManager"
@@ -3063,7 +3066,7 @@ msgstr "WPCM Offizielle"
 #: ../includes/admin/class-wpcm-admin-importers.php:34
 msgid "Import <strong>staff</strong> to your club via a csv file."
 msgstr ""
-"Importiere <strong>Offizielle</strong> aus einer .csv Datei in dein Team"
+"Importiere <strong>Mitarbeiter</strong> aus einer .csv Datei in dein Team"
 
 #: ../includes/admin/class-wpcm-admin-importers.php:35
 msgid "WPCM Clubs"
@@ -3336,7 +3339,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:375
 msgid "Quick and Easy Setup"
-msgstr ""
+msgstr "Schnelle und einfache installation."
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:381
 msgid "1. Choose Your Sport"
@@ -3693,7 +3696,7 @@ msgstr ""
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:23
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:128
 msgid "Import Staff"
-msgstr "Offizielle importieren"
+msgstr "Mitarbeiter importieren"
 
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:109
 #, php-format
@@ -4437,7 +4440,7 @@ msgstr "Gegner"
 #: ../templates/shortcodes/matches.php:170
 #: ../templates/shortcodes/matches.php:178
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: ../templates/single-match/lineup.php:31
 msgid "Lineup"

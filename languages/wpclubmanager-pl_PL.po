@@ -2,11 +2,12 @@
 # Translators:
 # piotr01 <epiotr@gmail.com>, 2014
 # rychu_cmg <gebala@g.pl>, 2014
+# Grzesiek Pyz <t00kson@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2015-04-14 15:45-0000\n"
-"PO-Revision-Date: 2015-04-14 16:03-0000\n"
+"PO-Revision-Date: 2015-05-28 21:55-0000\n"
 "Last-Translator: \n"
 "Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/wp-club-"
 "manager/language/pl_PL/)\n"
@@ -28,7 +29,7 @@ msgstr ""
 
 #: ../wpclubmanager.php:74 ../wpclubmanager.php:83
 msgid "Cheatin&#8217; huh?"
-msgstr ""
+msgstr "Oszuścik&#8217; co?"
 
 #: ../wpclubmanager.php:127 ../includes/admin/class-wpcm-admin-welcome.php:243
 msgid "Docs"
@@ -65,11 +66,11 @@ msgstr "Adres"
 
 #: ../includes/class-wpcm-ajax.php:123
 msgid "Latitude"
-msgstr ""
+msgstr "Szerokość geograficzna"
 
 #: ../includes/class-wpcm-ajax.php:128
 msgid "Longtitude"
-msgstr ""
+msgstr "Długość geograficzna"
 
 #: ../includes/class-wpcm-ajax.php:133
 msgid "Width"
@@ -87,11 +88,11 @@ msgstr "Wysokość"
 
 #: ../includes/class-wpcm-ajax.php:143
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: ../includes/class-wpcm-ajax.php:148
 msgid "Display Marker"
-msgstr ""
+msgstr "Wyświetlany znacznik"
 
 #: ../includes/class-wpcm-ajax.php:153 ../includes/class-wpcm-ajax.php:278
 #: ../includes/class-wpcm-ajax.php:467 ../includes/class-wpcm-ajax.php:645
@@ -227,7 +228,7 @@ msgstr "Pokaż miniaturkę"
 #: ../includes/widgets/class-wpcm-widget-results.php:70
 #: ../includes/widgets/class-wpcm-widget-standings.php:172
 msgid "Link text"
-msgstr ""
+msgstr "Tekst linku"
 
 #: ../includes/class-wpcm-ajax.php:264 ../includes/class-wpcm-ajax.php:427
 #: ../includes/class-wpcm-ajax.php:605 ../includes/class-wpcm-ajax.php:766
@@ -236,7 +237,7 @@ msgstr ""
 #: ../includes/widgets/class-wpcm-widget-results.php:74
 #: ../includes/widgets/class-wpcm-widget-standings.php:176
 msgid "Link page"
-msgstr ""
+msgstr "Strona linku"
 
 #: ../includes/class-wpcm-ajax.php:268 ../includes/class-wpcm-ajax.php:431
 #: ../includes/class-wpcm-ajax.php:609 ../includes/class-wpcm-ajax.php:770
@@ -453,7 +454,7 @@ msgstr "Stanowisko"
 #: ../templates/content-single-staff.php:150
 #: ../templates/shortcodes/staff.php:35
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: ../includes/class-wpcm-ajax.php:500
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:32
@@ -461,7 +462,7 @@ msgstr ""
 #: ../templates/content-single-staff.php:165
 #: ../templates/shortcodes/staff.php:36
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 #: ../includes/class-wpcm-ajax.php:556
 #: ../includes/class-wpcm-post-types.php:65
@@ -489,7 +490,7 @@ msgstr "Pozycja"
 #: ../includes/class-wpcm-ajax.php:787
 #: ../includes/widgets/class-wpcm-widget-standings.php:195
 msgid "Link to Clubs"
-msgstr ""
+msgstr "Link do Klubów"
 
 #: ../includes/class-wpcm-ajax.php:794
 msgid "Display columns"
@@ -965,7 +966,7 @@ msgstr "Kiribati"
 
 #: ../includes/class-wpcm-countries.php:149
 msgid "Kosovo"
-msgstr ""
+msgstr "Kosowo"
 
 #: ../includes/class-wpcm-countries.php:150
 msgid "Kuwait"
@@ -1511,7 +1512,7 @@ msgstr "Co nowego:"
 #: ../includes/class-wpcm-license-handler.php:129
 #, php-format
 msgid "%1$s License Key"
-msgstr ""
+msgstr "%1$s Klucz Licencji"
 
 #: ../includes/class-wpcm-license-handler.php:162
 #: ../includes/class-wpcm-license-handler.php:227
@@ -1521,15 +1522,15 @@ msgstr ""
 #: ../includes/class-wpcm-license-handler.php:162
 #: ../includes/class-wpcm-license-handler.php:227
 msgid "Error"
-msgstr ""
+msgstr "Błąd"
 
 #: ../includes/class-wpcm-license-handler.php:296
 msgid "This license does not belong to the product you have entered it for."
-msgstr ""
+msgstr "Licencja nie pasuje do produktu, w który wpisałeś klucz"
 
 #: ../includes/class-wpcm-license-handler.php:301
 msgid "This license does not have any activations left"
-msgstr ""
+msgstr "Żadna aktywacja nie pozostała dla tej licencji"
 
 #: ../includes/class-wpcm-license-handler.php:306
 msgid "This license key is expired. Please renew it."

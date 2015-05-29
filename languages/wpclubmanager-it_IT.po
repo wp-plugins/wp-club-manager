@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
 "POT-Creation-Date: 2015-04-14 15:45-0000\n"
-"PO-Revision-Date: 2015-05-01 22:24-0000\n"
+"PO-Revision-Date: 2015-05-28 21:55-0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/projects/p/wp-club-"
 "manager/language/it_IT/)\n"
@@ -2331,7 +2331,7 @@ msgstr "PTS"
 
 #: ../includes/wpcm-core-functions.php:659
 msgid "Floorball"
-msgstr ""
+msgstr "Floorball"
 
 #: ../includes/wpcm-core-functions.php:678
 #: ../includes/wpcm-core-functions.php:835
@@ -2361,7 +2361,7 @@ msgstr ""
 #: ../includes/wpcm-core-functions.php:680
 #: ../includes/wpcm-core-functions.php:988
 msgid "+/-"
-msgstr ""
+msgstr "+/-"
 
 #: ../includes/wpcm-core-functions.php:681
 #: ../includes/wpcm-core-functions.php:949
@@ -2595,7 +2595,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:823
 msgid "D"
-msgstr ""
+msgstr "P"
 
 #: ../includes/wpcm-core-functions.php:824
 msgid "Contested Possesion"
@@ -2713,7 +2713,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:868
 msgid "P"
-msgstr ""
+msgstr "PG"
 
 #: ../includes/wpcm-core-functions.php:869
 msgid "Goals from Frees"
@@ -2860,7 +2860,7 @@ msgstr ""
 
 #: ../includes/wpcm-core-functions.php:1051
 msgid "Rugby"
-msgstr ""
+msgstr "Rugby"
 
 #: ../includes/wpcm-core-functions.php:1098
 msgid "Tries"
@@ -3052,7 +3052,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-importers.php:34
 msgid "WPCM Staff"
-msgstr ""
+msgstr "WPCM Staff"
 
 #: ../includes/admin/class-wpcm-admin-importers.php:34
 msgid "Import <strong>staff</strong> to your club via a csv file."
@@ -3060,7 +3060,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-importers.php:35
 msgid "WPCM Clubs"
-msgstr ""
+msgstr "WPCM Club"
 
 #: ../includes/admin/class-wpcm-admin-importers.php:35
 msgid "Import <strong>clubs</strong> via a csv file."
@@ -3068,7 +3068,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-importers.php:36
 msgid "WPCM Matches"
-msgstr ""
+msgstr "WPCM Incontri"
 
 #: ../includes/admin/class-wpcm-admin-importers.php:36
 msgid "Import <strong>matches</strong> via a csv file."
@@ -3226,7 +3226,7 @@ msgstr "Versione %s"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:257
 msgid "What's New"
-msgstr ""
+msgstr "Cosa c'è di nuovo"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:260
 msgid "Getting Started"
@@ -3252,7 +3252,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:289
 msgid "What's New In This Version"
-msgstr ""
+msgstr "Cosa c'è di nuovo in questa versione"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:295
 msgid "New Club Profiles"
@@ -3268,7 +3268,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:298
 msgid "Drag and Drop Player Sorting"
-msgstr ""
+msgstr "Trascina i giocatori per ordinarli"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:299
 msgid ""
@@ -3315,7 +3315,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:375
 msgid "Quick and Easy Setup"
-msgstr ""
+msgstr "Installazione rapida e facile"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:381
 msgid "1. Choose Your Sport"
@@ -3353,7 +3353,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:438
 msgid "3. Seasons, Competitions and Teams"
-msgstr ""
+msgstr "3. Stagioni, Girone e Squadre"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:439
 #, php-format
@@ -3374,7 +3374,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:444
 msgid "4. Add Your Players"
-msgstr ""
+msgstr "4. Aggiungi i tuoi giocatori"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:445
 #: ../includes/admin/class-wpcm-admin-welcome.php:448
@@ -3388,7 +3388,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:447
 msgid "5. Play A Match"
-msgstr ""
+msgstr "5. Gioca una partita"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:449
 #, php-format
@@ -3404,7 +3404,7 @@ msgstr "Hai Bisogno Di Aiuto?"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:460
 msgid "Plugin Documentation"
-msgstr ""
+msgstr "Documentazione Plugin"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:461
 msgid ""
@@ -3486,7 +3486,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:581
 msgid "Full Changelog"
-msgstr ""
+msgstr "Changelog Completo"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:605
 msgid "No valid changlog was found."
@@ -3510,7 +3510,7 @@ msgstr ""
 #: ../includes/admin/importers/class-wpcm-club-importer.php:23
 #: ../includes/admin/importers/class-wpcm-club-importer.php:115
 msgid "Import Clubs"
-msgstr ""
+msgstr "Importa Squadre"
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:96
 #, php-format
@@ -3528,7 +3528,7 @@ msgstr ""
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:106
 msgid "View Clubs"
-msgstr ""
+msgstr "Visualizza Squadre"
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:123
 #: ../includes/admin/importers/class-wpcm-match-importer.php:195
@@ -3536,6 +3536,8 @@ msgstr ""
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:136
 msgid "Choose a .csv file to upload, then click \"Upload file and import\"."
 msgstr ""
+"Scegliere un file .csv da caricare, quindi fare clic su \"Carica file e "
+"importa\"."
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:124
 #, php-format
@@ -3546,18 +3548,18 @@ msgstr ""
 
 #: ../includes/admin/importers/class-wpcm-importers.php:96
 msgid "Disable"
-msgstr ""
+msgstr "Disabilita"
 
 #: ../includes/admin/importers/class-wpcm-importers.php:119
 #: ../includes/admin/importers/class-wpcm-importers.php:178
 #: ../includes/admin/importers/class-wpcm-importers.php:215
 #: ../includes/admin/importers/class-wpcm-importers.php:230
 msgid "Sorry, there has been an error."
-msgstr ""
+msgstr "Siamo spiacenti, si è verificato un errore."
 
 #: ../includes/admin/importers/class-wpcm-importers.php:120
 msgid "The file does not exist, please try again."
-msgstr ""
+msgstr "Il file non esiste, riprova."
 
 #: ../includes/admin/importers/class-wpcm-importers.php:169
 #, php-format
@@ -3571,7 +3573,7 @@ msgstr "Il file CSV non è corretto."
 #: ../includes/admin/importers/class-wpcm-match-importer.php:23
 #: ../includes/admin/importers/class-wpcm-match-importer.php:187
 msgid "Import Matches"
-msgstr ""
+msgstr "Importa Incontri"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:25
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:152
@@ -3583,15 +3585,15 @@ msgstr "Data"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:26
 msgid "Kickoff"
-msgstr ""
+msgstr "Calcio D'Inizio"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:27
 msgid "Home Club"
-msgstr ""
+msgstr "Squadra Casa"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:28
 msgid "Away Club"
-msgstr ""
+msgstr "Squadra Ospite"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:29
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:40
@@ -3608,7 +3610,7 @@ msgstr ""
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:178
 msgid "View Matches"
-msgstr ""
+msgstr "Visualizza Incontri"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:196
 #, php-format
@@ -3620,7 +3622,7 @@ msgstr ""
 #: ../includes/admin/importers/class-wpcm-player-importer.php:23
 #: ../includes/admin/importers/class-wpcm-player-importer.php:140
 msgid "Import Players"
-msgstr ""
+msgstr "Importa Giocatori"
 
 #: ../includes/admin/importers/class-wpcm-player-importer.php:33
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:93
@@ -3654,7 +3656,7 @@ msgstr ""
 
 #: ../includes/admin/importers/class-wpcm-player-importer.php:131
 msgid "View Players"
-msgstr ""
+msgstr "Visualizza Giocatori"
 
 #: ../includes/admin/importers/class-wpcm-player-importer.php:149
 #, php-format
@@ -3666,7 +3668,7 @@ msgstr ""
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:23
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:128
 msgid "Import Staff"
-msgstr ""
+msgstr "Importa Staff"
 
 #: ../includes/admin/importers/class-wpcm-staff-importer.php:109
 #, php-format
@@ -3868,7 +3870,7 @@ msgstr "Informazioni principali"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:106
 msgid "Sponsor Details"
-msgstr ""
+msgstr "Dettagli Sponsor"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-club-stats.php:30
 msgid "Choose a competition and season to edit the manual stats."
@@ -3955,7 +3957,7 @@ msgstr "Amichevole"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:28
 msgid "Remove video"
-msgstr ""
+msgstr "Rimuovi video"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:34
 msgid "Cancel"
@@ -3963,7 +3965,7 @@ msgstr "Cancella"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:37
 msgid "Add video"
-msgstr ""
+msgstr "Aggiungi video"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:51
 msgid "Squad Number"
@@ -3986,7 +3988,7 @@ msgstr "Link URL"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:34
 msgid "Open link in new window?"
-msgstr ""
+msgstr "Aprire link in una nuova finestra?"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:61
 msgid "Email Address"
@@ -4038,7 +4040,7 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-licenses.php:22
 msgid "Licenses"
-msgstr ""
+msgstr "Licenze"
 
 #: ../includes/admin/settings/class-wpcm-settings-matches.php:38
 msgid "Title Format Options"
@@ -4215,12 +4217,14 @@ msgstr "Questo imposta i punti per ogni incontro perso"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:71
 msgid "Points for overtime win"
-msgstr ""
+msgstr "Punti per una vittoria ai supplementari"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:72
 msgid ""
 "This sets the points for win in overtime matches. Often used in Ice Hockey"
 msgstr ""
+"Questo imposta i punti per una vittoria ai supplementari. Utilizzata spesso "
+"nell'hockey"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:81
 msgid "Points for overtime loss"
@@ -4255,7 +4259,7 @@ msgstr "Sconfitta"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:140
 msgid "Won in Overtime"
-msgstr ""
+msgstr "Vinto ai Supplementari"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:149
 msgid "Lost in Overtime"
@@ -4384,7 +4388,7 @@ msgstr "Classifiche WPCM"
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:189
 msgid "Show Club Badge"
-msgstr ""
+msgstr "Mostra Stemma Club"
 
 #: ../templates/content-single-club.php:61
 msgid "Ground"
