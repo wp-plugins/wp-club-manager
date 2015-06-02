@@ -5,7 +5,7 @@
  * Registers post types.
  *
  * @class 		WPCM_Post_Types
- * @version		1.2.13
+ * @version		1.2.18
  * @package		WPClubManager/Classes/
  * @category	Class
  * @author 		ClubPress
@@ -270,7 +270,7 @@ class WPCM_Post_Types {
 						'menu_name'           => __( 'Staff', 'wpclubmanager' )
 					),
 					'hierarchical'         => false,
-					'supports'             => array( 'title', 'editor', 'thumbnail' ),
+					'supports'             => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 					'public'               => true,
 					'show_ui'              => true,
 					'show_in_menu'         => true,

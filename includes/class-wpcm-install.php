@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Classes
- * @version     1.1.0
+ * @version     1.2.18
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -214,17 +214,17 @@ class WPCM_Install {
 				'edit_wpcm_match'				=> true,
 	            'read_wpcm_match'				=> true,
 	            'delete_wpcm_match'				=> true,
-	            'edit_wpcm_matches' 			=> true,
-	            'publish_wpcm_matches' 			=> true,
-	            'delete_wpcm_matches' 			=> true,
-	            'delete_published_wpcm_matches' => true,
-	            'edit_published_wpcm_matches' 	=> true,
+	            'edit_wpcm_matchs' 				=> true,
+	            'publish_wpcm_matchs' 			=> true,
+	            'delete_wpcm_matchs' 			=> true,
+	            'delete_published_wpcm_matchs' 	=> true,
+	            'edit_published_wpcm_matchs' 	=> true,
 				'assign_wpcm_match_terms' 		=> true,
 
 				'edit_wpcm_sponsor'				=> true,
 	            'read_wpcm_sponsor'				=> true,
 	            'delete_wpcm_sponsor'			=> true,
-	            'edit_wpcm_sponsores' 			=> true,
+	            'edit_wpcm_sponsors' 			=> true,
 	            'publish_wpcm_sponsors' 		=> true,
 	            'delete_wpcm_sponsors' 			=> true,
 	            'delete_published_wpcm_sponsors'=> true,

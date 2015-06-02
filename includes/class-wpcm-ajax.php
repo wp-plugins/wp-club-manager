@@ -5,7 +5,7 @@
  * AJAX Event Handler
  *
  * @class 		WPCM_AJAX
- * @version		1.1.2
+ * @version		1.2.18
  * @package		WPClubManager/Classes
  * @category	Class
  * @author 		ClubPress
@@ -574,6 +574,7 @@ class WPCM_AJAX {
 						<td>
 							<select id="option-<?php echo $field; ?>" name="<?php echo $field; ?>">
 								<option id="name" value="name"<?php if ( $args[$field] == 'name' ) echo ' selected'; ?>><?php _e( 'Alphabetical' ); ?></option>
+								<option id="menu_order" value="menu_order"<?php if ( $args[$field] == 'menu_order' ) echo ' selected'; ?>><?php _e( 'Page order' ); ?></option>
 								<option id="rand" value="rand"<?php if ( $args[$field] == 'rand' ) echo ' selected'; ?>><?php _e( 'Random' ); ?></option>
 							</select>
 						</td>
