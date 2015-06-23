@@ -1,9 +1,9 @@
 <?php
 /**
- * License handler for Easy Digital Downloads
+ * License handler for WP Club Manager
  *
  * This class should simplify the process of adding license information
- * to new EDD extensions.
+ * to new WPCM extensions.
  *
  * @version 1.1
  */
@@ -27,7 +27,6 @@ class WPCM_License {
 	/**
 	 * Class constructor
 	 *
-	 * @global  array $wpclubmanager_options
 	 * @param string  $_file
 	 * @param string  $_item_name
 	 * @param string  $_version
@@ -36,7 +35,7 @@ class WPCM_License {
 	 * @param string  $_api_url
 	 */
 	function __construct( $_file, $_item_name, $_version, $_author, $_optname = null, $_api_url = null ) {
-		//global $wpclubmanager_options;
+		
 
 		$this->file           = $_file;
 		$this->item_name      = $_item_name;
@@ -144,8 +143,7 @@ class WPCM_License {
 	 * @return  void
 	 */
 	public function activate_license() {
-		//if ( ! isset( $_POST['wpclubmanager_settings'] ) )
-			//return;
+		
 
 		if ( ! isset( $_POST[ $this->item_shortname . '_license_key' ] ) )
 			return;
@@ -216,8 +214,6 @@ class WPCM_License {
 	 * @return  void
 	 */
 	public function deactivate_license() {
-		//if ( ! isset( $_POST['wpclubmanager_settings'] ) )
-			//return;
 
 		if ( ! isset( $_POST[ $this->item_shortname . '_license_key' ] ) )
 			return;
@@ -329,35 +325,3 @@ class WPCM_License {
 }
 
 endif; // end class_exists check
-
-
-/**
- * Register the new license field type
- *
- * This has been included in core, but is maintained for backwards compatibility
- *
- * @return  void
- */
-// if ( ! function_exists( 'wpclubmanager_license_key_callback' ) ) {
-// 	function wpclubmanager_license_key_callback( $args ) {
-// 		//global $wpclubmanager_options;
-
-// 		if ( isset( $args['id'] ) )
-// 			$value = $args['id'];
-// 		else
-// 			$value = isset( $args['std'] ) ? $args['std'] : '';
-
-// 		$size = isset( $args['size'] ) && ! is_null( $args['size'] ) ? $args['size'] : 'regular';
-// 		$html = '<input type="text" class="' . $size . '-text hello" id="' . $args['id'] . '" name="' . $args['id'] . '" value="' . esc_attr( $value ) . '"/>';
-
-// 		if ( 'valid' == get_option( $args['options']['is_valid_license_option'] ) ) {
-// 			$html .= '<input type="submit" class="button-secondary" name="' . $args['id'] . '_deactivate" value="' . __( 'Deactivate License', 'wpclubmanager' ) . '"/>';
-// 		}
-
-// 		$html .= '<label for="' . $args['id'] . '"> '  . $args['desc'] . '</label>';
-
-// 		wp_nonce_field( $args['id'] . '-nonce', $args['id'] . '-nonce' );
-
-// 		echo $html;
-// 	}
-// }

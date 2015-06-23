@@ -4,7 +4,7 @@ Tags: club, clubs, team, teams, sport, sports, sports club, club management, tea
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 3.8
 Tested up to: 4.2
-Stable tag: 1.2.19
+Stable tag: 1.2.20
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -135,6 +135,10 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 
 == Changelog ==
+
+= 1.2.20 - 23/06/2015
+
+* Fix - Fixed extension licence key activation
 
 = 1.2.19 - 03/06/2015
 

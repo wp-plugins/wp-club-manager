@@ -571,6 +571,8 @@ class WPCM_Admin_Settings {
 						<?php } ?>
 	                </div><?php
 
+	                wp_nonce_field( $value['id'] . '-nonce', $value['id'] . '-nonce' );
+
 	            break;
 
 	            // Default: run an action
