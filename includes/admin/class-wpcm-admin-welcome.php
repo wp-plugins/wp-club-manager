@@ -9,7 +9,7 @@
  * @author 		Clubpress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.2.17
+ * @version     1.3.0
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -290,50 +290,48 @@ class WPCM_Admin_Welcome {
 
 				<div class="wpcm-feature feature-section col three-col">
 
-					<img src="<?php echo WPCM_URL . 'assets/images/welcome/12-club-profiles.png'; ?>" class="wpcm-welcome-screenshots"/>
+					<img src="<?php echo WPCM_URL . 'assets/images/welcome/13-new-matches.png'; ?>" class="wpcm-welcome-screenshots"/>
 
-					<h4><?php _e( 'New Club Profiles', 'wpclubmanager' );?></h4>
-					<p><?php _e( 'Club profiles allow you to add more detailed information about each club. The new single club template displays that information and details of the club venue and we\'ve added the option to link to each clubs profile page from the standings shortcode or widget.', 'wpclubmanager' );?></p>
+					<h4><?php _e( 'Display Team Names', 'wpclubmanager' );?></h4>
+					<p><?php _e( 'Get more clarity with the new team display names feature which enables you to set a name for each team in your club that will be displayed throughout the front-end of your site.', 'wpclubmanager' );?></p>
 
-					<h4><?php _e( 'Drag and Drop Player Sorting', 'wpclubmanager' );?></h4>
-					<p><?php _e( 'You can now drag and drop players to reorder the lineup for each match. Using the new sorting feature you can drag players into whichever order you want and finally get the match lineups you\'ve always wanted!', 'wpclubmanager' ); ?></p>
+					<h4><?php _e( 'New Matches Shortcode List', 'wpclubmanager' );?></h4>
+					<p><?php _e( 'More choice to display your fixtures and results with a new matches shortcode style option. You can choose between the original classic table layout or a new, modern list style.', 'wpclubmanager' ); ?></p>
 
 					<div style="clear:both;width:100%;"></div>
 
-					<img src="<?php echo WPCM_URL . 'assets/images/welcome/12-player-dropdowns.png'; ?>" class="wpcm-welcome-screenshots"/>
+					<img src="<?php echo WPCM_URL . 'assets/images/welcome/13-head2head.png'; ?>" class="wpcm-welcome-screenshots"/>
 
-					<h4><?php _e( 'Improved Player Dropdowns', 'wpclubmanager' );?></h4>
-					<p><?php _e( 'We\'ve overhauled the player dropdowns on single player profile pages and match lineup substitutes. The player and substitutes dropdowns are now filtered by team and season so theres no more long lists of every player in the club!', 'wpclubmanager' );?></p>
+					<h4><?php _e( 'Head to Head Club Records', 'wpclubmanager' );?></h4>
+					<p><?php _e( 'Easily view your clubs match records against your opponents with the new clubs head-to-head features. See your wins, losses and draws at a glance or view each match in more detail.', 'wpclubmanager' );?></p>
 
-					<h4><?php _e( 'Improved Map Shortcode', 'wpclubmanager' );?></h4>
-					<p><?php _e( 'The map shortcode has also had a makeover. The shortcode has more options allowing you to choose whether to display the pointer, set zoom level and define the position by latitude and longtitude.', 'wpclubmanager' );?></p>
+					<h4><?php _e( 'Rich Snippets for Matches', 'wpclubmanager' );?></h4>
+					<p><?php _e( 'Improve your club websites SERPs with the new Rich Snippets for matches which allow search engines to gather information about your matches and display them search results.', 'wpclubmanager' );?></p>
 
 				</div>
 
 			</div>
 			<div class="changelog">
+				<h3><?php _e( 'Stay Up to Date', 'wpclubmanager' );?></h3>
 
-				<h3></h3>
+				<div class="feature-section">
 
-				<div class="wpcm-feature feature-section col three-col">
-
-					<div>
-						<h4></h4>
-						<p></p>
+					<h4><?php _e( 'Get Notified of New Extensions and Plugin Updates','wpclubmanager' );?></h4>
+					<p><?php _e( 'WP Club Manager is getting better every day with new features, extensions and themes being created. Stay in touch with the latest developments, newest extensions and get special offers by subscribing to our newsletter.', 'wpclubmanager' );?></p>
+					<!-- Begin MailChimp Signup Form -->
+					<div id="mc_embed_signup">
+					<form action="//wpclubmanager.us1.list-manage.com/subscribe/post?u=5af3e709ddae81bdc7aa50610&amp;id=909adae053" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email address" required>
+					    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					    <div style="position: absolute; left: -5000px;"><input type="text" name="b_5af3e709ddae81bdc7aa50610_909adae053" tabindex="-1" value=""></div>
+					    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+					</form>
 					</div>
 
-					<div>
-						<h4></h4>
-						<p></p>
-					</div>
-
-					<div class="last-feature">
-						<h4></h4>
-						<p></p>
-					</div>
+					<!--End mc_embed_signup-->
 
 				</div>
-
 			</div>
 
 			<div class="return-to-dashboard">
@@ -489,32 +487,6 @@ class WPCM_Admin_Welcome {
 				</div>
 			</div>
 
-			<div class="changelog about-integrations">
-
-				<h3><?php _e( 'Want More Features?', 'wpclubmanager' ); ?></h3>
-
-				<div class="wpcm-feature feature-section col three-col">
-
-					<div>
-						<h4><?php _e( 'Score Summary', 'wpclubmanager' ); ?></h4>
-						<p><?php _e( 'Keep record of the interval scores and add a score summary to your clubs matches', 'wpclubmanager' ); ?></p>
-						<p><a href="https://wpclubmanager.com/extensions/score-summary" class="button"><?php _e( 'Download', 'wpclubmanager' ); ?></a></p>
-					</div>
-
-					<div>
-						<h4><?php _e( 'Player Appearances', 'wpclubmanager' ); ?></h4>
-						<p><?php _e( 'Display a list of a players matches, season by season, on their profile', 'wpclubmanager' ); ?></p>
-						<p><a href="https://wpclubmanager.com/extensions/player-appearances" class="button"><?php _e( 'Download', 'wpclubmanager' ); ?></a></p>
-					</div>
-
-					<div class="last-feature">
-						
-					</div>
-
-				</div>
-
-			</div>
-
 			<div class="return-to-dashboard">
 				<a href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'wpcm-settings' ), 'admin.php' ) ) ); ?>"><?php _e( 'Go to WP Club Manager Settings', 'wpclubmanager' ); ?></a>
 			</div>
@@ -542,7 +514,7 @@ class WPCM_Admin_Welcome {
 				<div class="wpcm-feature feature-section col three-col">
 
 					<?php
-					$translator_handles = array( 'ClubPress', 'King3R', 'rychu_cmg', 'fvottendorf', 'Spirossmil', 'lucabarbetti', 'baldovi', 'thegreat', 'Vadim_C', 'hushiea', 'Pirolla', 'hatasu', 'piotr01', 'cherreman', 'Wuko', 'sigma66699969669', 'Kauge', 'SzJanos', 'Abdulelah', 'mwestrik', 'GhiMax', 'lasiton', 'Akinshin', 'retbys', 'sivasspor', 'cengizyilmaz', 'cemsacan', 'muhahmetkara', 'basse_99', 'dimych13', 'tonttuu', 'nunoluisazevedo', 'morbri63', 'vibevi', 'lfrodines', 'filippos.sdr', 'lsvk072', 't00kie', 'wolforg', 'BBruns', 'fengshengxie' );
+					$translator_handles = array( 'ClubPress', 'King3R', 'rychu_cmg', 'fvottendorf', 'Spirossmil', 'lucabarbetti', 'baldovi', 'thegreat', 'Vadim_C', 'hushiea', 'Pirolla', 'hatasu', 'piotr01', 'cherreman', 'Wuko', 'sigma66699969669', 'Kauge', 'SzJanos', 'Abdulelah', 'mwestrik', 'GhiMax', 'lasiton', 'Akinshin', 'retbys', 'sivasspor', 'cengizyilmaz', 'cemsacan', 'muhahmetkara', 'basse_99', 'dimych13', 'tonttuu', 'nunoluisazevedo', 'morbri63', 'vibevi', 'lfrodines', 'filippos.sdr', 'lsvk072', 't00kie', 'wolforg', 'BBruns', 'fengshengxie', 'Shvark' );
 					$translator_links = array();
 					foreach ( $translator_handles as $handle ):
 						$translator_links[] = '<a href="https://www.transifex.com/accounts/profile/' . $handle . '">' . $handle . '</a>';
@@ -631,18 +603,21 @@ class WPCM_Admin_Welcome {
 		// Delete the redirect transient
 		delete_transient( '_wpcm_activation_redirect' );
 
-		// // Bail if we are waiting to install or update via the interface update/install links
-		// if ( get_option( '_wpcm_needs_update' ) == 1 || get_option( '_wpcm_needs_pages' ) == 1 )
-		// 	return;
+		// Bail if we are waiting to install or update via the interface update/install links
+		if ( WPCM_Admin_Notices::has_notice( 'update' ) ) {
+			return;
+		}
 
 		// Bail if activating from network, or bulk, or within an iFrame
-		if ( is_network_admin() || isset( $_GET['activate-multi'] ) || defined( 'IFRAME_REQUEST' ) )
+		if ( is_network_admin() || isset( $_GET['activate-multi'] ) || defined( 'IFRAME_REQUEST' ) ) {
 			return;
+		}
 
-		// if ( ( isset( $_GET['action'] ) && 'upgrade-plugin' == $_GET['action'] ) && ( isset( $_GET['plugin'] ) && strstr( $_GET['plugin'], 'wpclubmanager.php' ) ) )
+		// if ( ( isset( $_GET['action'] ) && 'upgrade-plugin' == $_GET['action'] ) || ( ! empty( $_GET['page'] ) && $_GET['page'] === 'wpcm-about' ) ) {
 		// 	return;
+		// }
 
-		// wp_redirect( admin_url( 'index.php?page=wpcm-about' ) );
+		// wp_redirect( admin_url( 'index.php?page=wc-about' ) );
 		// exit;
 
 		$upgrade = get_option( 'wpcm_version_upgraded_from' );

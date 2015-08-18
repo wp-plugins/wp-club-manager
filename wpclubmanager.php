@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WP Club Manager
- * Version: 1.2.20
+ * Version: 1.3.0
  * Plugin URI: https://wpclubmanager.com
  * Description: A plugin to help you run a sports club website easily and quickly.
  * Author: Clubpress
@@ -31,7 +31,7 @@ final class WPClubManager {
 	/**
 	 * @var string
 	 */
-	public $version = '1.2.20';
+	public $version = '1.3.0';
 
 	/**
 	 * @var WPClubManager The single instance of the class
@@ -92,76 +92,25 @@ final class WPClubManager {
 	 */
 	public function __construct() {
 
-		// Auto-load classes on demand
-		if ( function_exists( "__autoload" ) ) {
-			spl_autoload_register( "__autoload" );
-    	}
-		spl_autoload_register( array( $this, 'autoload' ) );
-
-		// Include constants
 		$this->constants();
-
-		// Include required files
 		$this->includes();
+		$this->init_hooks();
 
-		// Hooks.
-		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'action_links' ) );
-		add_action( 'widgets_init', array( $this, 'register_widgets' ) );
-		add_action( 'init', array( $this, 'init' ), 0 );
-		add_action( 'init', array( $this, 'include_template_functions' ) );
-		add_action( 'init', array( 'WPCM_Shortcodes', 'init' ) );
-		add_action( 'after_setup_theme', array( $this, 'compatibility' ) );
-
-		// Loaded action
 		do_action( 'wpclubmanager_loaded' );
 	}
 
 	/**
-	 * Show action links on the plugin screen
-	 *
-	 * @param mixed $links
-	 * @return array
+	 * Hook into actions and filters
+	 * @since  2.3
 	 */
-	public function action_links( $links ) {
-		return array_merge( array(
-			'<a href="' . esc_url( apply_filters( 'wpclubmanager_docs_url', 'http://wpclubmanager.com/docs/', 'wpclubmanager' ) ) . '">' . __( 'Docs', 'wpclubmanager' ) . '</a>'
-		), $links );
-	}
+	private function init_hooks() {
 
-	/**
-	 * Auto-load WPCM classes on demand to reduce memory consumption.
-	 *
-	 * @access public
-	 * @param mixed $class
-	 * @return void
-	 */
-	public function autoload( $class ) {
+		register_activation_hook( __FILE__, array( 'WPCM_Install', 'install' ) );
 
-		$path  = null;
-		$class = strtolower( $class );
-		$file = 'class-' . str_replace( '_', '-', $class ) . '.php';
-
-		if ( strpos( $class, 'wpcm_shortcode_' ) === 0 ) {
-			$path = $this->plugin_path() . '/includes/shortcodes/';
-		} elseif ( strpos( $class, 'wpcm_meta_box' ) === 0 ) {
-			$path = $this->plugin_path() . '/includes/admin/post-types/meta-boxes/';
-		} elseif ( strpos( $class, 'wpcm_admin' ) === 0 ) {
-			$path = $this->plugin_path() . '/includes/admin/';
-		}
-
-		if ( $path && is_readable( $path . $file ) ) {
-			include_once( $path . $file );
-			return;
-		}
-
-		if ( strpos( $class, 'wpcm_' ) === 0 ) {
-			$path = $this->plugin_path() . '/includes/';
-		}
-
-		if ( $path && is_readable( $path . $file ) ) {
-			include_once( $path . $file );
-			return;
-		}
+		add_action( 'after_setup_theme', array( $this, 'compatibility' ) );
+		add_action( 'after_setup_theme', array( $this, 'include_template_functions' ), 11 );
+		add_action( 'init', array( $this, 'init' ), 0 );
+		add_action( 'init', array( 'WPCM_Shortcodes', 'init' ) );
 	}
 
 	/**
@@ -185,8 +134,27 @@ final class WPClubManager {
 		if ( !defined( 'WPCM_PATH' ) ) {
 			define( 'WPCM_PATH', plugin_dir_path( __FILE__ ) );
 		}
+		if ( !defined( 'WPCM_PLUGIN_BASENAME' ) ) {
+			define( 'WPCM_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+		}
 		if ( !defined( 'WPCM_BASENAME' ) ) {
 			define( 'WPCM_BASENAME', plugin_basename( __FILE__ ) );
+		}
+	}
+
+	/**
+	 * What type of request is this?
+	 * string $type ajax, frontend or admin
+	 * @return bool
+	 */
+	private function is_request( $type ) {
+		switch ( $type ) {
+			case 'admin' :
+				return is_admin();
+			case 'ajax' :
+				return defined( 'DOING_AJAX' );
+			case 'frontend' :
+				return ( ! is_admin() || defined( 'DOING_AJAX' ) );
 		}
 	}
 
@@ -199,32 +167,25 @@ final class WPClubManager {
 	 */
 	private function includes() {
 
-		include( 'includes/wpcm-core-functions.php' );
-		include( 'includes/class-wpcm-install.php' );
+		include_once( 'includes/class-wpcm-autoloader.php' );
+		include_once( 'includes/wpcm-core-functions.php' );
+		include_once( 'includes/wpcm-widget-functions.php' );
+		include_once( 'includes/class-wpcm-install.php' );
 
-		if ( is_admin() ) {
+		if ( $this->is_request( 'admin' ) ) {
 			include_once( 'includes/admin/class-wpcm-admin.php' );
 		}
 
-		if ( defined('DOING_AJAX') ) {
+		if ( $this->is_request( 'ajax' ) ) {
 			$this->ajax_includes();
 		}
 
-		if ( ! is_admin() || defined('DOING_AJAX') ) {
+		if ( $this->is_request( 'frontend' ) ) {
 			$this->frontend_includes();
 		}
 
-		// Post types
 		include_once( 'includes/class-wpcm-post-types.php' );
-
-		// Classes (used on all pages)
 		include_once( 'includes/class-wpcm-countries.php' );
-
-		// Include template hooks in time for themes to remove/modify them
-		include_once( 'includes/wpcm-template-hooks.php' );
-
-		include_once( 'includes/class-wpcm-shortcodes.php' );
-
 		include_once( 'includes/class-wpcm-license-handler.php' );
 	}
 
@@ -248,6 +209,7 @@ final class WPClubManager {
 	 */
 	public function frontend_includes() {
 
+		include_once( 'includes/wpcm-template-hooks.php' );
 		include_once( 'includes/class-wpcm-template-loader.php' );
 		include_once( 'includes/class-wpcm-frontend-scripts.php' );
 		include_once( 'includes/class-wpcm-shortcodes.php' );
@@ -263,23 +225,6 @@ final class WPClubManager {
 	public function include_template_functions() {
 
 		include_once( 'includes/wpcm-template-functions.php' );
-	}
-
-	/**
-	 * Register widgets function.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return void
-	 */
-	public function register_widgets() {
-
-		include_once( 'includes/abstracts/abstract-wpcm-widget.php' );
-		include_once( 'includes/widgets/class-wpcm-widget-fixtures.php');
-		include_once( 'includes/widgets/class-wpcm-widget-results.php');
-		include_once( 'includes/widgets/class-wpcm-widget-standings.php');
-		include_once( 'includes/widgets/class-wpcm-widget-sponsors.php');
-		include_once( 'includes/widgets/class-wpcm-widget-players.php');
 	}
 
 	/**

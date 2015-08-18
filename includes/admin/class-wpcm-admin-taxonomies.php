@@ -3,7 +3,7 @@
  * Handles taxonomies in admin
  *
  * @class 		WPCM_Admin_Taxonomies
- * @version		1.0.0
+ * @version		1.3
  * @package		WPClubManager/Admin
  * @category	Class
  * @author 		ClubPress
@@ -17,6 +17,12 @@ class WPCM_Admin_Taxonomies {
 	 * Constructor
 	 */
 	public function __construct() {
+
+		add_action( 'wpcm_team_add_form_fields', array( $this, 'team_add_new_extra_fields' ), 10, 2 );
+		add_action('wpcm_team_edit_form_fields', array( $this, 'team_edit_extra_fields' ), 10, 2);
+
+		add_action('edited_wpcm_team', array( $this, 'save_team_extra_fields' ), 10, 2);
+		add_action( 'create_wpcm_team', array( $this, 'save_team_extra_fields' ), 10, 2 );
 
 		add_action( 'wpcm_comp_add_form_fields', array( $this, 'comp_add_new_extra_fields' ), 10, 2 );
 		add_action('wpcm_comp_edit_form_fields',array( $this, 'comp_edit_extra_fields' ), 10, 2);
@@ -39,6 +45,67 @@ class WPCM_Admin_Taxonomies {
 		add_filter('manage_edit-wpcm_venue_columns', array( $this, 'venue_edit_columns') );
 	}
 
+
+	/**
+	 * Thumbnail column added to category admin.
+	 *
+	 * @access public
+	 * @param mixed $columns
+	 * @return array
+	 */
+	public function team_add_new_extra_fields( $tag ) { ?>
+
+		<div class="form-field">
+			<label for="term_meta[wpcm_team_label]"><?php _e('Display Name', 'wpclubmanager'); ?></label>
+			<input name="term_meta[wpcm_team_label]" id="term_meta[wpcm_team_label]" type="text" value="<?php echo (isset($term_meta['wpcm_team_label'])&&!empty($term_meta['wpcm_team_label'])) ? $term_meta['wpcm_team_label'] : '' ?>"/>
+			<p><?php _e('The team label is used to display a shortened version of the team name.', 'wpclubmanager'); ?></p>
+		</div>
+	<?php }
+
+	/**
+	 * Thumbnail column added to category admin.
+	 *
+	 * @access public
+	 * @param mixed $columns
+	 * @return array
+	 */
+	public function team_edit_extra_fields( $tag ) {
+
+		$t_id = $tag->term_id;
+		$term_meta = get_option( "taxonomy_term_$t_id" ); ?>
+
+		<tr class="form-field">
+			<th scope="row" valign="top">
+				<label for="term_meta[wpcm_team_label]"><?php _e('Display Name', 'wpclubmanager'); ?></label>
+			</th>
+			<td>
+				<input name="term_meta[wpcm_team_label]" id="term_meta[wpcm_team_label]" type="text" value="<?php echo $term_meta['wpcm_team_label'] ? $term_meta['wpcm_team_label'] : '' ?>"/>
+				<p class="description"><?php _e('The team label is used to display a shortened version of the team name.', 'wpclubmanager'); ?></p>
+			</td>
+		</tr>
+	<?php }
+
+	/**
+	 * Thumbnail column added to category admin.
+	 *
+	 * @access public
+	 * @param mixed $columns
+	 * @return array
+	 */
+	public function save_team_extra_fields( $term_id ) {
+		
+		if ( isset( $_POST['term_meta'] ) ) {
+			$t_id = $term_id;
+			$term_meta = get_option( "taxonomy_term_$t_id" );
+			$cat_keys = array_keys( $_POST['term_meta'] );
+				foreach ( $cat_keys as $key ){
+				if ( isset( $_POST['term_meta'][$key] ) ){
+					$term_meta[$key] = $_POST['term_meta'][$key];
+				}
+			}
+			update_option( "taxonomy_term_$t_id", $term_meta );
+		}
+	}
 
 	/**
 	 * Thumbnail column added to category admin.

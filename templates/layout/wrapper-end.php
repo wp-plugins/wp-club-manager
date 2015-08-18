@@ -4,7 +4,7 @@
  *
  * @author 		ClubPress
  * @package 	WPClubManager/Templates
- * @version     1.0.0
+ * @version     1.3.0
  */
 
 $template = get_option( 'template' );
@@ -22,6 +22,9 @@ switch( $template ) {
 	case 'twentyfourteen' :
 		echo '</div></div></div>';
 		get_sidebar( 'content' );
+		break;
+	case 'twentyfifteen' :
+		echo '</div></div>';
 		break;
 	default :
 		echo '</div></div>';

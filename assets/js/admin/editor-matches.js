@@ -23,30 +23,24 @@
 			// defines the options and their default values
 			// again, this is not the most elegant way to do this
 			// but well, this gets the job done nonetheless
-			var options = { 
+			var options = {
+				'type': '1',
 				'comp': '-1',
 				'season': '-1',
 				'team': '-1',
+				'month': '-1',
 				'venue': '-1',
 				'linktext': '',
 				'linkpage': '',
 				'title': '',
-				'thumb': 1,
+				'thumb': '1',
+				'link_club': '0',
 				};
 			var shortcode = '[wpcm_matches';
 			
 			for( var index in options) {
-				if ( index == 'thumb' ) {
-					values = form.find('[name="thumb"]');
-					var stats = new Array();
-					$.each( values, function( key, val) {
-						if ( $(val).attr( 'checked' ))
-							stats.push( $(val).val() );
-					});
-					value = stats;
-				} else {
-					var value = form.find('#option-' + index).val();
-				}
+				
+				var value = form.find('#option-' + index).val();
 				
 				// attaches the attribute to the shortcode only if it's different from the default value
 				if ( value !== options[index] )

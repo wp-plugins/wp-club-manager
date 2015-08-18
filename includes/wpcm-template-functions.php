@@ -8,7 +8,7 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Templates
- * @version     1.1.2
+ * @version     1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -223,18 +223,20 @@ if ( ! function_exists( 'wpclubmanager_template_single_player_dropdown' ) ) {
 		
 		$args = array(
 			'post_type' => 'wpcm_player',
-			'tax_query' => array(
-				array(
-					'taxonomy' => 'wpcm_team',
-					'field' => 'term_id',
-					'terms' => $player_teams
-				)
-			),
+			'tax_query' => array(),
 			'numberposts' => -1,
 			'orderby' => 'meta_value_num',
 			'order' => 'ASC',
 			'meta_key' => 'wpcm_number'
 		);
+
+		if ( is_array( $team ) ) {
+			$args['tax_query'][] = array(
+				'taxonomy' => 'wpcm_team',
+				'field' => 'term_id',
+				'terms' => $player_teams
+			);
+		}
 
 		$player_posts = get_posts($args);
 		$players = array();
@@ -286,17 +288,21 @@ if ( ! function_exists( 'wpclubmanager_template_single_staff_dropdown' ) ) {
 		}
 		
 		$args = array(
-			'post_type' => 'wpcm_staff',
-			'tax_query' => array(
-				array(
-					'taxonomy' => 'wpcm_team',
-					'field' => 'term_id',
-					'terms' => $staff_teams
-				)
-			),
+			'post_type' => 'wpcm_player',
+			'tax_query' => array(),
 			'numberposts' => -1,
-			'orderby' => 'name',
-			'order' => 'ASC',		);
+			'orderby' => 'meta_value_num',
+			'order' => 'ASC',
+			'meta_key' => 'wpcm_number'
+		);
+
+		if ( is_array( $teams ) ) {
+			$args['tax_query'][] = array(
+				'taxonomy' => 'wpcm_team',
+				'field' => 'term_id',
+				'terms' => $staff_teams
+			);
+		}
 
 		$player_posts = get_posts($args);
 		$players = array();

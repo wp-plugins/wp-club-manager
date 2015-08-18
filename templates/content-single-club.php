@@ -6,12 +6,15 @@
  *
  * @author 		ClubPress
  * @package 	WPClubManager/Templates
- * @version     1.2.13
+ * @version     1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $post;
+
+$address = '';
+$cap = '';
 
 $venues = get_the_terms( $post->ID, 'wpcm_venue' );
 
@@ -22,19 +25,11 @@ if ( is_array( $venues ) ) {
 	if( is_array( $venue_meta ) ) {
 		if( array_key_exists('wpcm_address', $venue_meta) ) {
 			$address = $venue_meta['wpcm_address'];
-		} else {
-			$address = null;
 		}
 		if( array_key_exists('wpcm_capacity', $venue_meta) ) {
 			$cap = $venue_meta['wpcm_capacity'];
-		} else {
-			$cap = null;
 		}
 	}
-} else {
-	$venue = null;
-	$address = null;
-	$cap = null;
 }
 
 do_action( 'wpclubmanager_before_single_club' ); ?>
@@ -74,7 +69,7 @@ do_action( 'wpclubmanager_before_single_club' ); ?>
 				if ( $address ) { ?>
 					<tr class="address">
 						<th><?php _e('Address', 'wpclubmanager'); ?></th>
-						<td><?php echo nl2br( $address );?></td>
+						<td><?php echo stripslashes( nl2br( $address ) );?></td>
 					</tr>
 				<?php
 				}
@@ -82,7 +77,7 @@ do_action( 'wpclubmanager_before_single_club' ); ?>
 				if ( $venue->description ) { ?>
 					<tr class="description">
 						<th><?php _e('More Info', 'wpclubmanager'); ?></th>
-						<td><?php echo nl2br( $venue->description ); ?></td>
+						<td><?php echo stripslashes( nl2br( $venue->description ) ); ?></td>
 					</tr>
 				<?php
 				} ?>
@@ -93,13 +88,21 @@ do_action( 'wpclubmanager_before_single_club' ); ?>
 
 	</div>
 
-	<div class="wpcm-club-map">
+	<?php if( $address ) { ?>
 
-		<?php echo do_shortcode( '[wpcm_map address="' . $address . '" width="100%" height="260" marker="1"]' ); ?>
+		<div class="wpcm-club-map">
 
-	</div>
+			<?php echo do_shortcode( '[wpcm_map address="' . $address . '" width="100%" height="260" marker="1"]' ); ?>
 
-	<?php if ( get_the_content() ) : ?>
+		</div>
+
+	<?php } ?>
+
+	<h3><?php printf( __( 'Matches against %s', 'wpclubmanager'), $post->post_title ); ?></h3>
+
+	<?php wpcm_head_to_heads( $post->ID );
+
+	if ( get_the_content() ) : ?>
 
 		<div class="wpcm-entry-content">
 

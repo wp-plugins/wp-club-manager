@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.1.0
+ * @version     1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -47,6 +47,10 @@ class WPCM_Admin_Assets {
 			wp_enqueue_style( 'jquery-ui-style', '//ajax.googleapis.com/ajax/libs/jqueryui/' . $jquery_version . '/themes/smoothness/jquery-ui.css', array(), WPCM_VERSION );
 		}
 
+		if ( in_array( $screen->id, array( 'dashboard' ) ) ) {
+			wp_enqueue_style( 'wpclubmanager_admin_dashboard_styles', WPCM()->plugin_url() . '/assets/css/dashboard.css', array(), WPCM_VERSION );
+		}
+
 		if ( in_array( $screen->id, array( 'dashboard_page_wpcm-getting-started' ) ) ) {
 
 	    	wp_enqueue_style( 'mailchimp-form', '//cdn-images.mailchimp.com/embedcode/slim-081711.css', array(), false );
@@ -76,7 +80,7 @@ class WPCM_Admin_Assets {
 		wp_register_script( 'jquery-tiptip', WPCM()->plugin_url() . '/assets/js/jquery-tiptip/jquery.tipTip' . $suffix . '.js', array( 'jquery' ), WPCM_VERSION, true );
 
 		wp_register_script( 'wpclubmanager_admin_meta_boxes', WPCM()->plugin_url() . '/assets/js/admin/meta-boxes' . $suffix . '.js', array( 'jquery' ), WPCM_VERSION );
-
+		
 		wp_register_script( 'ajax-chosen', WPCM()->plugin_url() . '/assets/js/jquery-chosen/ajax-chosen.jquery' . $suffix . '.js', array('jquery', 'chosen'), WPCM_VERSION );
 
 		wp_register_script( 'chosen', WPCM()->plugin_url() . '/assets/js/jquery-chosen/chosen.jquery' . $suffix . '.js', array('jquery'), WPCM_VERSION );
@@ -95,6 +99,11 @@ class WPCM_Admin_Assets {
 	    	wp_enqueue_script( 'wpclubmanager_admin_meta_boxes' );
 			wp_enqueue_script( 'ajax-chosen' );
 			wp_enqueue_script( 'chosen' );
+		}
+
+		// System status
+		if ( 'club-manager_page_wpcm-status' === $screen->id ) {
+			wp_enqueue_script( 'zeroclipboard', WPCM()->plugin_url() . '/assets/js/zeroclipboard/jquery.zeroclipboard' . $suffix . '.js', array( 'jquery' ), WPCM_VERSION );
 		}
 	}
 }

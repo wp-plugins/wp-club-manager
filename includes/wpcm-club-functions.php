@@ -534,3 +534,193 @@ if (!function_exists('wpcm_club_standings_sort_by')) {
 		return array();
 	}
 }
+
+if (!function_exists('wpcm_head_to_heads')) {
+	function wpcm_head_to_heads( $post ) {
+
+		$club = get_default_club();
+
+		// get matches
+		$query_args = array(
+			'numberposts' => '-1',
+			'order' => 'ASC',
+			'orderby' => 'post_date',
+			'post_type' => 'wpcm_match',
+			'post_status' => array('publish'),
+			'posts_per_page' => '-1'
+		);
+
+
+		$query_args['meta_query'] = array(
+			'relation' => 'OR',
+			array(
+				'relation' => 'AND',
+				array (
+					'key' => 'wpcm_home_club',
+					'value' => $club,
+				),
+				array (
+					'key' => 'wpcm_away_club',
+					'value' => $post,
+				),
+			),
+			array(
+				'relation' => 'AND',
+				array (
+					'key' => 'wpcm_home_club',
+					'value' => $post,
+				),
+				array (
+					'key' => 'wpcm_away_club',
+					'value' => $club,
+				),
+			)
+		);
+
+		$matches = get_posts( $query_args );
+
+		$size = count( $matches );
+
+		if ( $size > 0 ) {
+
+			$wins = 0;
+			$losses = 0;
+			$draws = 0;
+
+			foreach( $matches as $match ) {
+
+				$home_club = get_post_meta( $match->ID, 'wpcm_home_club', true );
+				$home_goals = get_post_meta( $match->ID, 'wpcm_home_goals', true );
+				$away_goals = get_post_meta( $match->ID, 'wpcm_away_goals', true );
+
+				if ( $home_goals == $away_goals ) {
+					$draws ++;
+				}
+
+				if ( $club == $home_club ) {
+					if ( $home_goals > $away_goals ) {
+						$wins ++;
+					}
+					if ( $home_goals < $away_goals ) {
+						$losses ++;
+					}
+				} else {
+					if ( $home_goals > $away_goals ) {
+						$losses ++;
+					}
+					if ( $home_goals < $away_goals ) {
+						$wins ++;
+					}
+				}
+
+			} ?>
+
+			<ul class="wpcm-h2h-list">
+				<li class="wpcm-h2h-list-p">
+					<span class="wpcm-h2h-list-count"><?php echo $size; ?></span> <span class="wpcm-h2h-list-desc">games</span>
+				</li>
+				<li class="wpcm-h2h-list-w">
+					<span class="wpcm-h2h-list-count"><?php echo $wins; ?></span> <span class="wpcm-h2h-list-desc">wins</span>
+				</li>
+				<li class="wpcm-h2h-list-d">
+					<span class="wpcm-h2h-list-count"><?php echo $draws; ?></span> <span class="wpcm-h2h-list-desc">draws</span>
+				</li>
+				<li class="wpcm-h2h-list-l">
+					<span class="wpcm-h2h-list-count"><?php echo $losses; ?></span> <span class="wpcm-h2h-list-desc">losses</span>
+				</li>
+			</ul>
+
+			<ul class="wpcm-matches-list">
+
+			<?php
+			foreach( $matches as $match ) {
+		
+				$sport = get_option( 'wpcm_sport' );
+				$home_club = get_post_meta( $match->ID, 'wpcm_home_club', true );
+				$away_club = get_post_meta( $match->ID, 'wpcm_away_club', true );
+				$home_goals = get_post_meta( $match->ID, 'wpcm_home_goals', true );
+				$away_goals = get_post_meta( $match->ID, 'wpcm_away_goals', true );
+				if( $sport == 'gaelic' ) {
+					$home_gaa_goals = get_post_meta( $match->ID, 'wpcm_home_gaa_goals', true );
+					$home_gaa_points = get_post_meta( $match->ID, 'wpcm_home_gaa_points', true );
+					$away_gaa_goals = get_post_meta( $match->ID, 'wpcm_away_gaa_goals', true );
+					$away_gaa_points = get_post_meta( $match->ID, 'wpcm_away_gaa_points', true );
+				}
+				$played = get_post_meta( $match->ID, 'wpcm_played', true );
+				$timestamp = strtotime( $match->post_date );
+				$time_format = get_option( 'time_format' );
+				$neutral = get_post_meta( $match->ID, 'wpcm_neutral', true );
+				$comps = get_the_terms( $match->ID, 'wpcm_comp' );
+				$comp_status = get_post_meta( $match->ID, 'wpcm_comp_status', true );
+
+				if ( $home_goals == $away_goals ) {
+					$class = 'draw';
+				}
+
+				if ( $club == $home_club ) {
+					if ( $home_goals > $away_goals ) {
+						$class = 'win';
+					}
+					if ( $home_goals < $away_goals ) {
+						$class = 'loss';
+					}
+				} else {
+					if ( $home_goals > $away_goals ) {
+						$class = 'loss';
+					}
+					if ( $home_goals < $away_goals ) {
+						$class = 'win';
+					}
+				}
+
+				if ( is_array( $comps ) ) {
+					foreach ( $comps as $comp ):
+						$comp = reset($comps);
+						$t_id = $comp->term_id;
+						$comp_meta = get_option( "taxonomy_term_$t_id" );
+						$comp_label = $comp_meta['wpcm_comp_label'];
+						if ( $comp_label ) {
+							$info = $comp_label . '&nbsp;' . $comp_status;
+						} else {
+							$info = $comp->name . '&nbsp;' . $comp_status;
+						}
+					endforeach;
+				}
+
+				if( $played ) {
+					if( $sport == 'gaelic' ) {
+						$status = '<span class="wpcm-matches-list-result">' . ( $played ? $home_gaa_goals . '-' . $home_gaa_points . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_gaa_goals . '-' . $away_gaa_points : '' ) . '</span>';
+					} else {
+						$status = '<span class="wpcm-matches-list-result">' . ( $played ? $home_goals . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_goals : '' ) . '</span>';
+					}
+				} else {
+					$status = '<span class="wpcm-matches-list-time">' . date_i18n( $time_format, $timestamp ) . '</span>';
+				} ?>
+
+
+				<li class="wpcm-matches-list-item"><a href="<?php echo get_post_permalink( $match->ID, false, true ); ?>" class="wpcm-matches-list-link">
+				
+				<span class="wpcm-matches-list-col wpcm-matches-list-date"><?php echo date_i18n( 'd M Y', $timestamp ); ?></span>
+
+				<span class="wpcm-matches-list-col wpcm-matches-list-club1"><?php echo wpcm_get_team_name($home_club, $match->ID); ?></span>
+
+				<span class="wpcm-matches-list-col wpcm-matches-list-status">
+					<span class="wpcm-matches-list-result <?php echo $class; ?>">
+						<?php echo $status; ?>
+					</span>
+				</span>
+
+				<span class="wpcm-matches-list-col wpcm-matches-list-club2"><?php echo wpcm_get_team_name($away_club, $match->ID); ?></span>
+
+				<span class="wpcm-matches-list-col wpcm-matches-list-info"><?php echo $info; ?></span>
+
+				</a></li>
+			<?php
+			} ?>
+
+			</ul>
+
+		<?php
+		} 
+	}
+}

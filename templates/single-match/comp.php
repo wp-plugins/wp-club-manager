@@ -1,6 +1,6 @@
 <?php
 /**
- * Single Player Bio
+ * Single Match - Comp
  *
  * @author 		ClubPress
  * @package 	WPClubManager/Templates

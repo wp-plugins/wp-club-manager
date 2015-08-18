@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Functions
- * @version     1.1.0
+ * @version     1.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -95,7 +95,7 @@ if (!function_exists('get_wpcm_player_manual_stats')) {
  * @return mixed $output
  */
 if (!function_exists('get_wpcm_player_auto_stats')) {
-	function get_wpcm_player_auto_stats( $post_id = null, $team_id = null, $season_id = null ) {
+	function get_wpcm_player_auto_stats( $post_id = null, $team = null, $season_id = null ) {
 
 		if ( !$post_id ) global $post_id;
 
@@ -113,9 +113,22 @@ if (!function_exists('get_wpcm_player_auto_stats')) {
 				array(
 					'key' => 'wpcm_home_club',
 					'value' => $club_id
-				)
+				),
+				array(
+					'key' => 'wpcm_friendly',
+					'value' => '1',
+					'compare' => '!='
+				),
 			)
 		);
+
+		if ( isset( $team ) ) {
+			$args['tax_query'][] = array(
+				'taxonomy' => 'wpcm_team',
+				'terms' => $team,
+				'field' => 'term_id'
+			);
+		}
 
 		if ( isset( $season_id ) ) {
 			$args['tax_query'][] = array(
@@ -154,6 +167,11 @@ if (!function_exists('get_wpcm_player_auto_stats')) {
 			array(
 				'key' => 'wpcm_away_club',
 				'value' => $club_id
+			),
+			array(
+				'key' => 'wpcm_friendly',
+				'value' => '1',
+				'compare' => '!='
 			)
 		);
 		$matches = get_posts( $args );
@@ -193,16 +211,43 @@ if (!function_exists('get_wpcm_player_auto_stats')) {
  * @return mixed $output
  */
 if (!function_exists('get_wpcm_player_stats')) {
-	function get_wpcm_player_stats( $post_id = null ) {
+	function get_wpcm_player_stats( $post = null ) {
 
-		if ( !$post_id ) global $post_id;
+		if ( !$post ) global $post;
 
 		$output = array();
-		$teams = get_the_terms( $post_id, 'wpcm_team' );
-		$seasons = get_the_terms( $post_id, 'wpcm_season' );
+		$teams = get_the_terms( $post->ID, 'wpcm_team' );
+		$seasons = get_the_terms( $post->ID, 'wpcm_season' );
+
+		// isolated team stats
+		if ( is_array( $teams ) ) {
+
+			foreach ( $teams as $team ) {
+
+				// combined season stats per team
+				$stats = get_wpcm_player_auto_stats( $post->ID, $team->term_id, null );
+				$output[$team->term_id][0] = array(
+					'auto' => $stats,
+					'total' => $stats
+				);
+
+				// isolated season stats per team
+				if ( is_array( $seasons ) ) {
+
+					foreach ( $seasons as $season ) {
+
+						$stats = get_wpcm_player_auto_stats( $post->ID, $team->term_id, $season->term_id );
+						$output[$team->term_id][$season->term_id] = array(
+							'auto' => $stats,
+							'total' => $stats
+						);
+					}
+				}
+			}
+		}
 
 		// combined season stats for combined team
-		$stats = get_wpcm_player_auto_stats( $post_id );
+		$stats = get_wpcm_player_auto_stats( $post->ID );
 		$output[0][0] = array(
 			'auto' => $stats,
 			'total' => $stats
@@ -213,7 +258,7 @@ if (!function_exists('get_wpcm_player_stats')) {
 
 			foreach ( $seasons as $season ) {
 
-				$stats = get_wpcm_player_auto_stats( $post_id, null, $season->term_id );
+				$stats = get_wpcm_player_auto_stats( $post->ID, null, $season->term_id );
 				$output[0][$season->term_id] = array(
 					'auto' => $stats,
 					'total' => $stats
@@ -222,7 +267,100 @@ if (!function_exists('get_wpcm_player_stats')) {
 		}
 
 		// manual stats
-		$stats = (array)unserialize( get_post_meta( $post_id, 'wpcm_stats', true ) );
+		$stats = (array)unserialize( get_post_meta( $post->ID, 'wpcm_stats', true ) );
+		if ( is_array( $stats ) ):
+
+			foreach( $stats as $team_key => $team_val ):
+
+				if ( is_array( $team_val ) && array_key_exists( $team_key, $output ) ):
+
+					foreach( $team_val as $season_key => $season_val ):
+
+						if ( array_key_exists ( $season_key, $output[$team_key] ) ) {
+
+							$output[$team_key][$season_key]['manual'] = $season_val;
+
+							foreach( $output[$team_key][$season_key]['total'] as $index_key => &$index_val ) {
+
+								if ( array_key_exists( $index_key, $season_val ) )
+
+								 $index_val += $season_val[$index_key];
+							}
+						}
+					endforeach;
+				endif;
+			endforeach;
+		endif;
+
+		return $output;
+	}
+}
+
+/**
+ * Get total player stats.
+ *
+ * @access public
+ * @param string $post_id
+ * @return mixed $output
+ */
+if (!function_exists('get_wpcm_player_stats_from_post')) {
+	function get_wpcm_player_stats_from_post( $post = null ) {
+
+		if ( !$post ) global $post;
+
+		$output = array();
+		$teams = get_the_terms( $post, 'wpcm_team' );
+		$seasons = get_the_terms( $post, 'wpcm_season' );
+
+		// isolated team stats
+		if ( is_array( $teams ) ) {
+
+			foreach ( $teams as $team ) {
+
+				// combined season stats per team
+				$stats = get_wpcm_player_auto_stats( $post, $team->term_id, null );
+				$output[$team->term_id][0] = array(
+					'auto' => $stats,
+					'total' => $stats
+				);
+
+				// isolated season stats per team
+				if ( is_array( $seasons ) ) {
+
+					foreach ( $seasons as $season ) {
+
+						$stats = get_wpcm_player_auto_stats( $post, $team->term_id, $season->term_id );
+						$output[$team->term_id][$season->term_id] = array(
+							'auto' => $stats,
+							'total' => $stats
+						);
+					}
+				}
+			}
+		}
+
+		// combined season stats for combined team
+		$stats = get_wpcm_player_auto_stats( $post );
+		$output[0][0] = array(
+			'auto' => $stats,
+			'total' => $stats
+		);
+
+		// isolated season stats for combined team
+		if ( is_array( $seasons ) ) {
+
+			foreach ( $seasons as $season ) {
+
+				$stats = get_wpcm_player_auto_stats( $post, null, $season->term_id );
+				$output[0][$season->term_id] = array(
+					'auto' => $stats,
+					'total' => $stats
+				);
+			}
+		}
+
+		// manual stats
+		$stats = (array)unserialize( get_post_meta( $post, 'wpcm_stats', true ) );
 		if ( is_array( $stats ) ):
 
 			foreach( $stats as $team_key => $team_val ):
@@ -315,30 +453,6 @@ function wpcm_player_stats_table( $stats = array(), $team = 0, $season = 0 ) {
 			</tr>
 		</tbody>
 	</table>
-	<script type="text/javascript">
-		(function($) {
-			<?php foreach( $stats_labels as $key => $val ) { ?>
-
-				var sum = 0;
-				$('.stats-table-season .player-stats-manual-<?php echo $key; ?>').each(function(){
-					sum += Number($(this).val());
-				});
-				$('#wpcm_team-0_season-0 .player-stats-manual-<?php echo $key; ?>').val(sum);
-
-				var sum = 0;
-				$('.stats-table-season .player-stats-auto-<?php echo $key; ?>').each(function(){
-					sum += Number($(this).val());
-				});
-				$('#wpcm_team-0_season-0 .player-stats-auto-<?php echo $key; ?>').val(sum);
-
-				var a = +$('#wpcm_team-0_season-0 .player-stats-auto-<?php echo $key; ?>').val();
-				var b = +$('#wpcm_team-0_season-0 .player-stats-manual-<?php echo $key; ?>').val();
-				var total = a+b;
-				$('#wpcm_team-0_season-0 .player-stats-total-<?php echo $key; ?>').val(total);
-
-			<?php } ?>
-		})(jQuery);
-	</script>
 
 <?php
 }
@@ -390,11 +504,7 @@ function wpcm_profile_stats_table( $stats = array(), $team = 0, $season = 0 ) {
 
 						$rating = get_wpcm_stats_value( $stats, 'total', 'rating' );
 						$apps = get_wpcm_stats_value( $stats, 'total', 'appearances' );
-						if( $apps > 0 ) {
-							$avrating = $rating / $apps;
-						} else {
-							$avrating = 0;
-						}
+						$avrating = wpcm_divide( $rating, $apps );
 
 						if( get_option( 'wpcm_show_stats_rating' ) == 'yes' ) : ?>
 					

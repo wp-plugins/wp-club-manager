@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.1.0
+ * @version     1.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -278,7 +278,7 @@ class WPCM_Admin_Settings {
 	            	$class 			= '';
 	            	$option_value 	= self::get_option( $value['id'], $value['default'] ); ?>
 
-	            	<tr valign="top">
+	            	<tr>
 						<th scope="row" class="titledesc">
 							<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
 							<?php echo $tip; ?>
@@ -302,7 +302,7 @@ class WPCM_Admin_Settings {
 
 	            	$option_value 	= self::get_option( $value['id'], $value['default'] );
 
-	            	?><tr valign="top">
+	            	?><tr>
 						<th scope="row" class="titledesc">
 							<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
 							<?php echo $tip; ?>
@@ -327,10 +327,10 @@ class WPCM_Admin_Settings {
 
 	            	$option_value 	= self::get_option( $value['id'], $value['default'] );
 
-	            	?><tr valign="top">
+	            	?><tr>
 						<th scope="row" class="titledesc">
-							<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
-							<?php echo $tip; ?>
+							<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?> <?php echo $tip; ?></label>
+							
 						</th>
 	                    <td class="forminp forminp-<?php echo sanitize_title( $value['type'] ) ?>">
 	                    	<select
@@ -365,7 +365,7 @@ class WPCM_Admin_Settings {
 
 	            	$option_value 	= self::get_option( $value['id'], $value['default'] );
 
-	            	?><tr valign="top">
+	            	?><tr>
 						<th scope="row" class="titledesc">
 							<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
 							<?php echo $tip; ?>
@@ -422,7 +422,7 @@ class WPCM_Admin_Settings {
 
 	            	if ( ! isset( $value['checkboxgroup'] ) || 'start' == $value['checkboxgroup'] ) {
 	            		?>
-		            		<tr valign="top" class="<?php echo esc_attr( implode( ' ', $visbility_class ) ); ?>">
+		            		<tr class="<?php echo esc_attr( implode( ' ', $visbility_class ) ); ?>">
 								<th scope="row" class="titledesc"><?php echo esc_html( $value['title'] ) ?></th>
 								<td class="forminp forminp-checkbox">
 									<fieldset>
@@ -472,7 +472,7 @@ class WPCM_Admin_Settings {
 	            	$height = self::get_option( $value['id'] . '[height]', $value['default']['height'] );
 	            	$crop 	= checked( 1, self::get_option( $value['id'] . '[crop]', $value['default']['crop'] ), false );
 
-	            	?><tr valign="top">
+	            	?><tr>
 						<th scope="row" class="titledesc"><?php echo esc_html( $value['title'] ) ?> <?php echo $tip; ?></th>
 	                    <td class="forminp image_width_settings">
 
@@ -500,8 +500,8 @@ class WPCM_Admin_Settings {
 	            	if( isset( $value['args'] ) )
 	            		$args = wp_parse_args( $value['args'], $args );
 
-	            	?><tr valign="top" class="single_select_page">
-	                    <th scope="row" class="titledesc"><?php echo esc_html( $value['title'] ) ?> <?php echo $tip; ?></th>
+	            	?><tr>
+	                    <th scope="row" class="titledesc"><label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ) ?> <?php echo $tip; ?></label></th>
 	                    <td class="forminp">
 				        	<?php wpcm_dropdown_posts( $args ); ?> <?php echo $description; ?>
 				        </td>
@@ -526,7 +526,7 @@ class WPCM_Admin_Settings {
 	            	if( isset( $value['args'] ) )
 	            		$args = wp_parse_args( $value['args'], $args );
 
-	            	?><tr valign="top" class="single_select_page">
+	            	?><tr class="single_select_page">
 	                    <th scope="row" class="titledesc"><?php echo esc_html( $value['title'] ) ?> <?php echo $tip; ?></th>
 	                    <td class="forminp">
 				        	<?php echo str_replace(' id=', " data-placeholder='" . __( 'Select a page&hellip;', 'wpclubmanager' ) .  "' style='" . $value['css'] . "' class='" . $value['class'] . "' id=", wp_dropdown_pages( $args ) ); ?> <?php echo $description; ?>
@@ -545,7 +545,7 @@ class WPCM_Admin_Settings {
 	            	} else {
 						$country = $country_setting;
 	            	}
-	            	?><tr valign="top">
+	            	?><tr>
 						<th scope="row" class="titledesc">
 							<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
 							<?php echo $tip; ?>

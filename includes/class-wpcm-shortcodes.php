@@ -46,7 +46,7 @@ class WPCM_Shortcodes {
 		$function,
 		$atts    = array(),
 		$wrapper = array(
-			'class'  => 'wpcm',
+			'class'  => 'wpcm-shortcode-wrapper',
 			'before' => null,
 			'after'  => null
 		)

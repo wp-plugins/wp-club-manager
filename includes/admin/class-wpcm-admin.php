@@ -8,7 +8,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.2.11
+ * @version     1.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -42,6 +42,7 @@ class WPCM_Admin {
 			include( 'class-wpcm-admin-welcome.php' );
 			include( 'class-wpcm-admin-notices.php' );
 			include( 'class-wpcm-admin-assets.php' );
+			include( 'class-wpcm-admin-permalink-settings.php' );
 			include( 'class-wpcm-admin-editor.php' );
 		}
 
@@ -59,7 +60,10 @@ class WPCM_Admin {
 
 		switch ( $screen->id ) {
 			case 'dashboard' :
-				//include( 'class-wpcm-admin-dashboard.php' );
+				include( 'class-wpcm-admin-dashboard.php' );
+			break;
+			case 'options-permalink' :
+				include( 'class-wpcm-admin-permalink-settings.php' );
 			break;
 			case 'users' :
 			case 'user' :

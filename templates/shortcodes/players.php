@@ -4,13 +4,12 @@
  *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
- * @version     1.1.2
+ * @version     1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $default = array(
-	'id' => get_the_ID(),
 	'limit' => -1,
 	'season' => null,
 	'team' => null,
@@ -20,8 +19,7 @@ $default = array(
 	'linktext' => __( 'View all players', 'wpclubmanager' ),
 	'linkpage' => null,
 	'stats' => 'flag,number,name,position,age,height,weight',
-	'title' => __( 'Players', 'wpclubmanager' ),
-	'type' => 'list',
+	'title' => __( 'Players', 'wpclubmanager' )
 );
 
 extract( $default, EXTR_SKIP );
@@ -65,21 +63,20 @@ foreach( $stats as $key => $value ) {
 $numposts = $limit;
 
 if ( array_intersect_key( array_flip( $stats ), $player_stats_labels ) )
-	$numposts = -1;
-	$orderby = strtolower( $orderby );	
-	$order = strtoupper( $order );
-	$club = get_option( 'wpcm_default_club' );
-	$output = '';
-	$args = array(
-		'post_type' => 'wpcm_player',
-		'tax_query' => array(),
-		'numposts' => $numposts,
-		'posts_per_page' => $numposts,
-		'orderby' => 'meta_value_num',
-		'meta_key' => 'wpcm_number',
-		'order' => $order,
-		'suppress_filters' => 0
-	);
+$numposts = -1;
+$orderby = strtolower( $orderby );	
+$order = strtoupper( $order );
+$output = '';
+$args = array(
+	'post_type' => 'wpcm_player',
+	'tax_query' => array(),
+	'numposts' => $numposts,
+	'posts_per_page' => $numposts,
+	'orderby' => 'meta_value_num',
+	'meta_key' => 'wpcm_number',
+	'order' => $order,
+	'suppress_filters' => 0
+);
 
 if ( $orderby == 'name' ) {
     $args['orderby'] = 'name';
@@ -149,7 +146,7 @@ if ( sizeof( $players ) > 0 ) {
 		$count++;
 
 		if ( array_intersect_key( array_flip( $stats ), $player_stats_labels ) )
-			$player_stats = get_wpcm_player_stats( $player->ID );
+			$player_stats = get_wpcm_player_stats_from_post( $player->ID );
 			$number = get_post_meta( $player->ID, 'wpcm_number', true );
 			$name = $player->post_title;
 			$positions = get_the_terms( $player->ID, 'wpcm_position' );
@@ -287,12 +284,14 @@ if ( sizeof( $players ) > 0 ) {
 				if ( $player_detail['rating'] > 0 ) {
 					if ( $season ) {
 						$player_details[$player->ID]['appearances'] = '';
-						$player_details[$player->ID]['appearances'] .= $player_stats[0][ $season ]['total']['appearances'];
+						$player_details[$player->ID]['appearances'] = $player_stats[0][ $season ]['total']['appearances'];
 					} else {
 						$player_details[$player->ID]['appearances'] = '';
-						$player_details[$player->ID]['appearances'] .= $player_stats[0][0]['total']['appearances'];
+						$player_details[$player->ID]['appearances'] = $player_stats[0][0]['total']['appearances'];
 					}
-					$avrating = $player_detail['rating'] / $player_details[$player->ID]['appearances'];
+					$r = $player_detail['rating'];
+					$a = $player_details['appearances'];
+					$avrating = wpcm_divide( $r, $a );
 					$output .= sprintf( "%01.2f", round($avrating, 2) );
 				} else {
 					$output .= '0';

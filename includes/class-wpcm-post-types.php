@@ -5,7 +5,7 @@
  * Registers post types.
  *
  * @class 		WPCM_Post_Types
- * @version		1.2.18
+ * @version		1.3
  * @package		WPClubManager/Classes/
  * @category	Class
  * @author 		ClubPress
@@ -209,7 +209,7 @@ class WPCM_Post_Types {
 					'has_archive'          => false,
 					'query_var'            => true,
 					'can_export'           => true,
-					'rewrite'              => array( 'slug' => 'club' ),
+					'rewrite'              => array( 'slug' => get_option( 'wpclubmanager_club_slug', 'club' ) ),
 					'capability_type'      => 'post'
 				)
 			)
@@ -245,7 +245,7 @@ class WPCM_Post_Types {
 					'has_archive'          => false,
 					'query_var'            => true,
 					'can_export'           => true,
-					'rewrite'              => array( 'slug' => 'player' ),
+					'rewrite'              => array( 'slug' => get_option( 'wpclubmanager_player_slug', 'player' ) ),
 					'capability_type'      => 'post'
 				)
 			)
@@ -281,7 +281,7 @@ class WPCM_Post_Types {
 					'has_archive'          => false,
 					'query_var'            => true,
 					'can_export'           => true,
-					'rewrite'              => array( 'slug' => 'staff' ),
+					'rewrite'              => array( 'slug' => get_option( 'wpclubmanager_staff_slug', 'staff' ) ),
 					'capability_type'      => 'post'
 				)
 			)
@@ -317,7 +317,7 @@ class WPCM_Post_Types {
 					'has_archive'          => false,
 					'query_var'            => true,
 					'can_export'           => true,
-					'rewrite'              => array( 'slug' => 'match' ),
+					'rewrite'              => array( 'slug' => get_option( 'wpclubmanager_match_slug', 'match' ) ),
 					'capability_type'      => 'post'
 				)
 			)

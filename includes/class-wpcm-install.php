@@ -5,25 +5,23 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Classes
- * @version     1.2.18
+ * @version     1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-if ( ! class_exists( 'WPCM_Install' ) ) :
 
 class WPCM_Install {
 
 	/**
 	 * Hook in tabs.
 	 */
-	public function __construct() {
+	public static function init() {
 
-		register_activation_hook( WPCM_PLUGIN_FILE, array( $this, 'install' ) );
-
-		add_action( 'admin_init', array( $this, 'install_actions' ) );
-		add_action( 'admin_init', array( $this, 'check_version' ), 5 );
-		add_action( 'in_plugin_update_message-wp-club-manager/wpclubmanager.php', array( $this, 'in_plugin_update_message' ) );
+		add_action( 'admin_init', array( __CLASS__, 'check_version' ), 5 );
+		add_action( 'admin_init', array( __CLASS__, 'install_actions' ) );
+		add_action( 'in_plugin_update_message-wp-club-manager/wpclubmanager.php', array( __CLASS__, 'in_plugin_update_message' ) );
+		add_filter( 'plugin_action_links_' . WPCM_PLUGIN_BASENAME, array( __CLASS__, 'plugin_action_links' ) );
+		add_filter( 'plugin_row_meta', array( __CLASS__, 'plugin_row_meta' ), 10, 2 );
 	}
 
 	/**
@@ -32,9 +30,10 @@ class WPCM_Install {
 	 * @access public
 	 * @return void
 	 */
-	public function check_version() {
+	public static function check_version() {
+
 		if ( ! defined( 'IFRAME_REQUEST' ) && ( get_option( 'wpclubmanager_version' ) != WPCM()->version ) ) {
-			$this->install();
+			self::install();
 
 			do_action( 'wpclubmanager_updated' );
 		}
@@ -43,17 +42,17 @@ class WPCM_Install {
 	/**
 	 * Install actions such as installing pages when a button is clicked.
 	 */
-	public function install_actions() {
+	public static function install_actions() {
 		
 		if ( ! empty( $_GET['do_update_wpclubmanager'] ) ) {
 
-			$this->update();
+			self::update();
 
 			// Update complete
-			delete_option( '_wpcm_needs_update' );
-			delete_transient( '_wpcm_activation_redirect' );
+			WPCM_Admin_Notices::remove_notice( 'update' );
 
 			// What's new redirect
+			delete_transient( '_wpcm_activation_redirect' );
 			wp_redirect( admin_url( 'index.php?page=wpcm-about&wpcm-updated=true' ) );
 			exit;
 		}
@@ -62,12 +61,19 @@ class WPCM_Install {
 	/**
 	 * Install WPCM
 	 */
-	public function install() {
-		$this->create_options();
-		$this->create_roles();
+	public static function install() {
+
+		if ( ! defined( 'WPCM_INSTALLING' ) ) {
+			define( 'WPCM_INSTALLING', true );
+		}
+
+		// Ensure needed classes are loaded
+		include_once( 'admin/class-wpcm-admin-notices.php' );
+
+		self::create_options();
+		self::create_roles();
 
 		// Register post types
-		include_once( 'class-wpcm-post-types.php' );
 		WPCM_Post_Types::register_post_types();
 		WPCM_Post_Types::register_taxonomies();
 
@@ -78,30 +84,26 @@ class WPCM_Install {
 		}
 		
 		// Update version
-		update_option( 'wpclubmanager_version', WPCM()->version );
-
-		// Check if pages are needed
-		// if ( ! get_option( 'wpcm_sport' ) ) {
-		// 	update_option( '_wpcm_needs_welcome', 1 );
-		// }
-
-		// Bail if activating from network, or bulk
-		// if ( is_network_admin() || isset( $_GET['activate-multi'] ) ) {
-		// 	return;
-		// }
+		delete_option( 'wpclubmanager_version' );
+		add_option( 'wpclubmanager_version', WPCM()->version );
 
 		// Flush rules after install
 		flush_rewrite_rules();
 
 		// Redirect to welcome screen
-		set_transient( '_wpcm_activation_redirect', 1, 60 * 60 );
+		if ( ! is_network_admin() && ! isset( $_GET['activate-multi'] ) ) {
+			set_transient( '_wpcm_activation_redirect', 1, 30 );
+		}
+
+		// Trigger action
+		do_action( 'wpclubmanager_installed' );
 
 	}
 
 	/**
 	 * Handle updates
 	 */
-	public function update() {
+	private static function update() {
 		// Do updates
 		$current_version = get_option( 'wpclubmanager_version' );
 
@@ -109,8 +111,6 @@ class WPCM_Install {
 			include( 'updates/wpclubmanager-update-1.1.0.php' );
 			update_option( 'wpclubmanager_version', '1.1.0' );
 		}
-
-		update_option( 'wpclubmanager_version', WPCM()->version );
 	}
 
 	/**
@@ -120,7 +120,7 @@ class WPCM_Install {
 	 *
 	 * @access public
 	 */
-	function create_options() {
+	private static function create_options() {
 		// Include settings so that we can run through defaults
 		include_once( 'admin/class-wpcm-admin-settings.php' );
 
@@ -148,7 +148,7 @@ class WPCM_Install {
 	/**
 	 * Create roles and capabilities
 	 */
-	public function create_roles() {
+	public static function create_roles() {
 		global $wp_roles;
 
 		if ( class_exists( 'WP_Roles' ) ) {
@@ -278,7 +278,7 @@ class WPCM_Install {
 				'assign_wpcm_match_terms' 		=> true,
 			) );
 
-			$capabilities = $this->get_core_capabilities();
+			$capabilities = self::get_core_capabilities();
 
 			foreach ( $capabilities as $cap_group ) {
 				foreach ( $cap_group as $cap ) {
@@ -292,12 +292,12 @@ class WPCM_Install {
 	}
 
 	/**
-	 * Get capabilities for WooCommerce - these are assigned to admin/shop manager during installation or reset
+	 * Get capabilities for WP Club Manager - these are assigned to admin/shop manager during installation or reset
 	 *
 	 * @access public
 	 * @return array
 	 */
-	public function get_core_capabilities() {
+	private static function get_core_capabilities() {
 		$capabilities = array();
 
 		$capabilities['core'] = array(
@@ -341,7 +341,7 @@ class WPCM_Install {
 	 * @access public
 	 * @return void
 	 */
-	public function remove_roles() {
+	public static function remove_roles() {
 		global $wp_roles;
 
 		if ( class_exists( 'WP_Roles' ) ) {
@@ -352,7 +352,7 @@ class WPCM_Install {
 
 		if ( is_object( $wp_roles ) ) {
 
-			$capabilities = $this->get_core_capabilities();
+			$capabilities = self::get_core_capabilities();
 
 			foreach ( $capabilities as $cap_group ) {
 				foreach ( $cap_group as $cap ) {
@@ -370,102 +370,86 @@ class WPCM_Install {
 	}
 
 	/**
-	 * Active plugins pre update option filter
-	 *
-	 * @param string $new_value
-	 * @return string
+	 * Show plugin changes. Code adapted from W3 Total Cache.
 	 */
-	function pre_update_option_active_plugins( $new_value ) {
-		$old_value = (array) get_option( 'active_plugins' );
+	public static function in_plugin_update_message( $args ) {
+		$transient_name = 'wpcm_upgrade_notice_' . $args['Version'];
 
-		if ( $new_value !== $old_value && in_array( W3TC_FILE, (array) $new_value ) && in_array( W3TC_FILE, (array) $old_value ) ) {
-			$this->_config->set( 'notes.plugins_updated', true );
-			try {
-				$this->_config->save();
-			} catch( Exception $ex ) {}
+		if ( false === ( $upgrade_notice = get_transient( $transient_name ) ) ) {
+			$response = wp_safe_remote_get( 'https://plugins.svn.wordpress.org/wp-club-manager/trunk/readme.txt' );
+
+			if ( ! is_wp_error( $response ) && ! empty( $response['body'] ) ) {
+				$upgrade_notice = self::parse_update_notice( $response['body'] );
+				set_transient( $transient_name, $upgrade_notice, DAY_IN_SECONDS );
+			}
 		}
 
-		return $new_value;
+		echo wp_kses_post( $upgrade_notice );
 	}
 
 	/**
-	 * Show plugin changes. Code adapted from W3 Total Cache.
-	 *
-	 * @return void
+	 * Parse update notice from readme file
+	 * @param  string $content
+	 * @return string
 	 */
-	function in_plugin_update_message() {
-		$response = wp_remote_get( 'https://plugins.svn.wordpress.org/wp-club-manager/trunk/readme.txt' );
+	private static function parse_update_notice( $content ) {
+		// Output Upgrade Notice
+		$matches        = null;
+		$regexp         = '~==\s*Upgrade Notice\s*==\s*=\s*(.*)\s*=(.*)(=\s*' . preg_quote( WPCM_VERSION ) . '\s*=|$)~Uis';
+		$upgrade_notice = '';
 
-		if ( ! is_wp_error( $response ) && ! empty( $response['body'] ) ) {
+		if ( preg_match( $regexp, $content, $matches ) ) {
+			$version = trim( $matches[1] );
+			$notices = (array) preg_split('~[\r\n]+~', trim( $matches[2] ) );
 
-			// Output Upgrade Notice
-			$matches = null;
-			$regexp = '~==\s*Upgrade Notice\s*==\s*=\s*(.*)\s*=(.*)(=\s*' . preg_quote( WPCM_VERSION ) . '\s*=|$)~Uis';
+			if ( version_compare( WPCM_VERSION, $version, '<' ) ) {
 
-			if ( preg_match( $regexp, $response['body'], $matches ) ) {
-				$version = trim( $matches[1] );
-				$notices = (array) preg_split('~[\r\n]+~', trim( $matches[2] ) );
+				$upgrade_notice .= '<div class="wpcm_plugin_upgrade_notice">';
 
-				if ( version_compare( WPCM_VERSION, $version, '<' ) ) {
-
-					echo '<div style="font-weight: normal; background: #cc99c2; color: #fff !important; border: 1px solid #b76ca9; padding: 9px; margin: 9px 0;">';
-
-					foreach ( $notices as $index => $line ) {
-						echo '<p style="margin: 0; font-size: 1.1em; color: #fff; text-shadow: 0 1px 1px #b574a8;">' . wp_kses_post( preg_replace( '~\[([^\]]*)\]\(([^\)]*)\)~', '<a href="${2}">${1}</a>', $line ) ) . '</p>';
-					}
-
-					echo '</div> ';
-				}
-			}
-
-			// Output Changelog
-			$matches = null;
-			$regexp = '~==\s*Changelog\s*==\s*=\s*[0-9.]+\s*-(.*)=(.*)(=\s*' . preg_quote( WPCM_VERSION ) . '\s*-(.*)=|$)~Uis';
-
-			if ( preg_match( $regexp, $response['body'], $matches ) ) {
-				$changelog = (array) preg_split( '~[\r\n]+~', trim( $matches[2] ) );
-
-				echo __( 'What\'s new:', 'wpclubmanager' ) . '<div style="font-weight: normal;">';
-
-				$ul = false;
-
-				foreach ( $changelog as $index => $line ) {
-					if ( preg_match('~^\s*\*\s*~', $line ) ) {
-						if ( ! $ul ) {
-							echo '<ul style="list-style: disc inside; margin: 9px 0 9px 20px; overflow:hidden; zoom: 1;">';
-							$ul = true;
-						}
-						
-						$line = preg_replace( '~^\s*\*\s*~', '', htmlspecialchars( $line ) );
-						
-						echo '<li style="width: 50%; margin: 0; float: left; ' . ( $index % 2 == 0 ? 'clear: left;' : '' ) . '">' . esc_html( $line ) . '</li>';
-					} else {
-
-						$version = trim( current( explode( '-', str_replace( '=', '', $line ) ) ) );
-
-						if ( version_compare( WPCM_VERSION, $version, '>=' ) ) {
-							break;
-						}
-
-						if ( $ul ) {
-							echo '</ul>';
-							$ul = false;
-						}
-
-						echo '<p style="margin: 9px 0;">' . esc_html( htmlspecialchars( $line ) ) . '</p>';
-					}
+				foreach ( $notices as $index => $line ) {
+					$upgrade_notice .= wp_kses_post( preg_replace( '~\[([^\]]*)\]\(([^\)]*)\)~', '<a href="${2}">${1}</a>', $line ) );
 				}
 
-				if ( $ul ) {
-					echo '</ul>';
-				}
-
-				echo '</div>';
+				$upgrade_notice .= '</div> ';
 			}
 		}
+
+		return wp_kses_post( $upgrade_notice );
+	}
+
+	/**
+	 * Show action links on the plugin screen.
+	 *
+	 * @param	mixed $links Plugin Action links
+	 * @return	array
+	 */
+	public static function plugin_action_links( $links ) {
+		$action_links = array(
+			'settings' => '<a href="' . admin_url( 'admin.php?page=wpcm-settings' ) . '" title="' . esc_attr( __( 'View WP Club Manager Settings', 'wpclubmanager' ) ) . '">' . __( 'Settings', 'wpclubmanager' ) . '</a>'
+		);
+
+		return array_merge( $action_links, $links );
+	}
+
+	/**
+	 * Show row meta on the plugin screen.
+	 *
+	 * @param	mixed $links Plugin Row Meta
+	 * @param	mixed $file  Plugin Base file
+	 * @return	array
+	 */
+	public static function plugin_row_meta( $links, $file ) {
+		if ( $file == WPCM_PLUGIN_BASENAME ) {
+			$row_meta = array(
+				'docs'    => '<a href="' . esc_url( apply_filters( 'wpclubmanager_docs_url', 'http://wpclubmanager.com/docs/', 'wpclubmanager' ) ) . '" title="' . esc_attr( __( 'View WP Club Manager Documentation', 'wpclubmanager' ) ) . '">' . __( 'Docs', 'wpclubmanager' ) . '</a>',
+				'support' => '<a href="' . esc_url( apply_filters( 'wpclubmanager_support_url', 'http://wpclubmanager.com/support/' ) ) . '" title="' . esc_attr( __( 'Visit Support Forum', 'wpclubmanager' ) ) . '">' . __( 'Support', 'wpclubmanager' ) . '</a>',
+			);
+
+			return array_merge( $links, $row_meta );
+		}
+
+		return (array) $links;
 	}
 }
-
-endif;
 
 return new WPCM_Install();

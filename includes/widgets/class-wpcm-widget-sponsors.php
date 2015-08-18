@@ -5,18 +5,13 @@
  * @author 		ClubPress
  * @category 	Widgets
  * @package 	WPClubManager/Widgets
- * @version 	1.2.10
- * @extends 	WP_Widget
+ * @version 	1.3.0
+ * @extends 	WPCM_Widget
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WPCM_Sponsors_Widget extends WP_Widget {
-
-	var $wpcm_widget_cssclass;
-	var $wpcm_widget_description;
-	var $wpcm_widget_idbase;
-	var $wpcm_widget_name;
+class WPCM_Sponsors_Widget extends WPCM_Widget {
 
 	/**
 	 * constructor
@@ -24,19 +19,30 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 	 * @access public
 	 * @return void
 	 */
-	function WPCM_Sponsors_Widget() {
+	public function __construct() {
 
 		/* Widget variable settings. */
-		$this->wpcm_widget_cssclass = 'wpcm-widget widget-sponsors';
-		$this->wpcm_widget_description = __( 'Display a sponsors logo.', 'wpclubmanager' );
-		$this->wpcm_widget_idbase = 'wpcm-sponsors-widget';
-		$this->wpcm_widget_name = __( 'WPCM Sponsors', 'wpclubmanager' );
-
-		/* Widget settings. */
-		$widget_ops = array( 'classname' => $this->wpcm_widget_cssclass, 'description' => $this->wpcm_widget_description );
-
-		/* Create the widget. */
-		$this->WP_Widget('wpcm_sponsors', $this->wpcm_widget_name, $widget_ops);
+		$this->widget_cssclass 		= 'wpcm-widget widget-sponsors';
+		$this->widget_description 	= __( 'Display a sponsors logo.', 'wpclubmanager' );
+		$this->widget_idbase 		= 'wpcm-sponsors-widget';
+		$this->widget_name 			= __( 'WPCM Sponsors', 'wpclubmanager' );
+		$this->settings           	= array(
+			'title'  => array(
+				'type'  		=> 'text',
+				'std'   		=> __( 'Sponsors', 'wpclubmanager' ),
+				'label' 		=> __( 'Title', 'wpclubmanager' )
+			),
+			'id' => array(
+				'type'  		=> 'posts_select',
+				'post_type'   	=> 'wpcm_sponsor',
+				'std'   		=> 'None',
+				'label' 		=> __( 'Choose a sponsor', 'wpclubmanager' ),
+				'orderby' 		=> 'post_date',
+				'order' 		=> 'DESC',
+				'limit' 		=> -1
+			),
+		);
+		parent::__construct();
 	}
 
 	/**
@@ -50,18 +56,14 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 	 */
 	function widget( $args, $instance ) {
 			
-		extract( $args );
+		$this->widget_start( $args, $instance );
 
-		$title  = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
-		$id = $instance['id'];
+		if(isset($instance['id'])):
+			$id = $instance['id'];
+		endif;
 
 		$link_url = get_post_meta( $id, 'wpcm_link_url', true );
 		$link_new_window = get_post_meta( $id, 'wpcm_link_nw', true );
-
-		echo $before_widget;
-
-		if ( $title )
-			echo $before_title . $title . $after_title;
 
 		echo '<div class="wpcm-sponsor-widget clearfix">';
 
@@ -81,69 +83,7 @@ class WPCM_Sponsors_Widget extends WP_Widget {
 
 		wp_reset_postdata();
 
-		echo $after_widget;
+		$this->widget_end( $args );
 
-	}
-
-	/**
-	 * update function.
-	 *
-	 * @see WP_Widget->update
-	 * @access public
-	 * @param array $new_instance
-	 * @param array $old_instance
-	 * @return array
-	 */
-	function update( $new_instance, $old_instance ) {
-
-		$instance = $old_instance;
-
-		$instance['id'] = strip_tags( $new_instance['id'] );
-		$instance['title'] = strip_tags( $new_instance['title'] );
-
-		foreach( $new_instance as $key => $value ) {
-
-			$instance[$key] = strip_tags( $value );
-		}
-
-		return $instance;
-	}
-
-	/**
-	 * form function.
-	 *
-	 * @see WP_Widget->form
-	 * @access public
-	 * @param array $instance
-	 * @return void
-	 */
-	function form( $instance ) {
-
-		$defaults = array( 
-			'id' => null,
-			'title' => __( 'Sponsors', 'wpclubmanager' )
-		);
-
-		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
-
-		<?php $field = 'title'; ?>
-		<p><label for="<?php echo $this->get_field_id( $field ); ?>"><?php _e('Title', 'wpclubmanager') ?>:</label>
-		<input class="widefat" id="<?php echo $this->get_field_id( $field ); ?>" name="<?php echo $this->get_field_name( $field ); ?>" value="<?php echo $instance[$field]; ?>" type="text" /></p>
-
-		<?php $field = 'id'; ?>
-		<p><label for="<?php echo $this->get_field_id( $field ); ?>"><?php _e('Choose a sponsor', 'wpclubmanager') ?>:</label>
-		<?php
-		wpcm_dropdown_posts( array(
-			'post_type' => 'wpcm_sponsor',
-			'show_option_none' => __( 'None' ),
-			'limit' => -1,
-			'selected' => $instance[$field],
-			'orderby' => 'post_date',
-			'order' => 'DESC',
-			'name' => $this->get_field_name( $field ),
-			'id' => $this->get_field_id( $field )
-		) );
 	}
 }
-
-register_widget( 'WPCM_Sponsors_Widget' );

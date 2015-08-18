@@ -4,7 +4,7 @@
  *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
- * @version     1.1.1
+ * @version     1.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -55,8 +55,8 @@ if ( $season <= 0 )
 	$season = null;
 $comp_slug = wpcm_get_term_slug( $comp, 'wpcm_comp' );
 $season_slug = wpcm_get_term_slug( $season, 'wpcm_season' );
-$club = get_option( 'wpcm_default_club' );
-$center = $club;
+$default_club = get_default_club();
+$center = $default_club;
 $orderby = strtolower( $orderby );	
 $order = strtoupper( $order );
 if ( $linkpage <= 0 )
@@ -178,13 +178,13 @@ $output .=
 
 		$output .= '<td class="club">' . $club->thumb;
 
-		if( $linkclub ) {
+		if( $linkclub == '1' ) {
 			$output .= '<a href="' . get_the_permalink( $club->ID ) . '">';
 		}
 
 		$output .= ' ' . $club->post_title;
 
-		if( $linkclub ) {
+		if( $linkclub == '1' ) {
 			$output .= '</a>';
 		}
 

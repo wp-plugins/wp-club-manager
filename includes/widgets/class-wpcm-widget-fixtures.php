@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Widgets
  * @package 	WPClubManager/Widgets
- * @version 	1.1.1
+ * @version 	1.3.0
  * @extends 	WPCM_Widget
  */
 
@@ -64,16 +64,6 @@ class WPCM_Fixtures_Widget extends WPCM_Widget {
 				'std'   => 'All',
 				'label' => __( 'Venue', 'wpclubmanager' ),
 			),
-			'linktext'  => array(
-				'type'  => 'text',
-				'std'   => __( 'View all matches', 'wpclubmanager' ),
-				'label' => __( 'Link text', 'wpclubmanager' )
-			),
-			'linkpage' => array(
-				'type'  => 'pages_select',
-				'label' => __( 'Link page', 'wpclubmanager' ),
-				'std'   => 'None',
-			),
 			'display_options' => array(
 				'type'  => 'section_heading',
 				'label' => __( 'Display Options', 'wpclubmanager' ),
@@ -98,6 +88,21 @@ class WPCM_Fixtures_Widget extends WPCM_Widget {
 				'type'  => 'checkbox',
 				'std'   => 0,
 				'label' => __( 'Team', 'wpclubmanager' )
+			),
+			'link_options' => array(
+				'type'  => 'section_heading',
+				'label' => __( 'Link Options', 'wpclubmanager' ),
+				'std'   => '',
+			),
+			'linktext'  => array(
+				'type'  => 'text',
+				'std'   => __( 'View all standings', 'wpclubmanager' ),
+				'label' => __( 'Link text', 'wpclubmanager' )
+			),
+			'linkpage' => array(
+				'type'  => 'pages_select',
+				'label' => __( 'Link page', 'wpclubmanager' ),
+				'std'   => 'None',
 			),
 			
 		);
@@ -244,5 +249,3 @@ class WPCM_Fixtures_Widget extends WPCM_Widget {
 		$this->cache_widget( $args, $content );
 	}
 }
-
-register_widget( 'WPCM_Fixtures_Widget' );

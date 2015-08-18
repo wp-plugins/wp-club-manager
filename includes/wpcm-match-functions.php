@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Functions
- * @version     1.1.6
+ * @version     1.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -16,23 +16,24 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 function match_title( $title, $id = null ) {
 	if ( get_post_type( $id ) == 'wpcm_match' ) {
 		
-		$default_club = get_option('wpcm_default_club');
-		$title_format = get_option('wpcm_match_title_format');
+		$default_club = get_default_club();
+		$title_format = get_match_title_format();
 		$separator = get_option('wpcm_match_clubs_separator');
 		$home_id = (int)get_post_meta( $id, 'wpcm_home_club', true );
 		$away_id = (int)get_post_meta( $id, 'wpcm_away_club', true );
 		$home_club = get_post( $home_id );
 		$away_club = get_post( $away_id );
-		$search = array( '%home%', 'vs', '%away%' );
-		$replace = array( $home_club->post_title, $separator, $away_club->post_title );
-		
-		if ( $away_id == $default_club ) {
-			//away
-			$title = str_replace( $search, $replace, $title_format );
-		} else {
-			// home
-			$title = str_replace( $search, $replace, $title_format );
+		if( $title_format == '%home% vs %away%') {
+			$side1 = wpcm_get_team_name( $home_club, $id );
+			$side2 = wpcm_get_team_name( $away_club, $id );
+		}else{
+			$side1 = wpcm_get_team_name( $away_club, $id );
+			$side2 = wpcm_get_team_name( $home_club, $id );
 		}
+		
+		$title = $side1 . ' ' . $separator . ' ' . $side2;
+
+		return $title;
 	}
 	return $title;
 }
@@ -40,17 +41,10 @@ add_filter( 'the_title', 'match_title', 10, 2 );
 
 // generate title
 function match_wp_title( $title ) {
-	global $post;
 	if ( get_post_type( ) == 'wpcm_match' ) {
 
-		$id = $post->ID;
-		$home_id = (int)get_post_meta( $id, 'wpcm_home_club', true );
-		$away_id = (int)get_post_meta( $id, 'wpcm_away_club', true );
-		$home_club = get_post( $home_id );
-		$away_club = get_post( $away_id );
-		$title = match_title( $title, $id ) . ' | ' . get_the_date();
-
-		return $title;
+		$id = get_the_ID();
+		$title = match_title( $title, $id ) . ' | ' . get_the_date() . ' | ';
 	}
 	return $title;
 }
@@ -404,7 +398,7 @@ function wpcm_match_player_row( $key, $value, $count = 0 ) {
 		if ( has_post_thumbnail( $key ) ) {			
 			$image = ' ' . get_the_post_thumbnail( $key, 'player_thumbnail', array( 'class' => 'lineup-thumb' ) ) . ' ';
 		} else {			
-			$image = ' ' . apply_filters( 'wpclubmanager_match_player_image', sprintf( '<img src="%s" alt="Placeholder" class="lineup-thumb" />', wpcm_placeholder_img_src() ), $post->ID ) . ' ';		
+			$image = wpcm_placeholder_img('player_thumbnail');		
 		}
 	} else {
 		$image = '';

@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Meta Boxes
- * @version     1.1.0
+ * @version     1.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -23,7 +23,7 @@ class WPCM_Meta_Box_Match_Players {
 
 		$players = unserialize( get_post_meta( $post_id, 'wpcm_players', true ) );
 
-		$club = get_option('wpcm_default_club'); ?>
+		$club = get_default_club(); ?>
 		
 			<div class="playersdiv" id="wpcm_players">
 					

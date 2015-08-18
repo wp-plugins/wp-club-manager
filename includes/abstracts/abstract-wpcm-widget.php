@@ -5,7 +5,7 @@
  * @author 		Clubpress
  * @category 	Widgets
  * @package 	WPClubManager/Abstracts
- * @version 	1.1.1
+ * @version 	1.3
  * @extends 	WP_Widget
  */
 abstract class WPCM_Widget extends WP_Widget {
@@ -25,7 +25,7 @@ abstract class WPCM_Widget extends WP_Widget {
 			'description' => $this->widget_description
 		);
 
-		$this->WP_Widget( $this->widget_id, $this->widget_name, $widget_ops );
+		parent::__construct( $this->widget_id, $this->widget_name, $widget_ops );
 
 		add_action( 'save_post', array( $this, 'flush_widget_cache' ) );
 		add_action( 'deleted_post', array( $this, 'flush_widget_cache' ) );
@@ -64,6 +64,30 @@ abstract class WPCM_Widget extends WP_Widget {
 	 */
 	public function flush_widget_cache() {
 		wp_cache_delete( $this->widget_id, 'widget' );
+	}
+
+	/**
+	 * Output the html at the start of a widget
+	 *
+	 * @param  array $args
+	 * @return string
+	 */
+	public function widget_start( $args, $instance ) {
+		echo $args['before_widget'];
+
+		if ( $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base ) ) {
+			echo $args['before_title'] . $title . $args['after_title'];
+		}
+	}
+
+	/**
+	 * Output the html at the end of a widget
+	 *
+	 * @param  array $args
+	 * @return string
+	 */
+	public function widget_end( $args ) {
+		echo $args['after_widget'];
 	}
 
 	/**
@@ -145,15 +169,16 @@ abstract class WPCM_Widget extends WP_Widget {
 					?>
 					<p><label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo $setting['label']; ?></label>
 						<?php
-						wp_dropdown_categories(array(
-							'show_option_none' => __( 'All', 'wpclubmanager' ),
-							'hide_empty' => 0,
-							'orderby' => 'title',
-							'taxonomy' => $setting['taxonomy'],
-							'selected' => $value,
-							'name' => $this->get_field_name( $key ),
-							'id' => $this->get_field_id( $key )
-						)); ?>
+						$args = array(
+							'show_option_none' 	=> __( 'All', 'wpclubmanager' ),
+							'hide_empty' 		=> 0,
+							'orderby' 			=> 'title',
+							'taxonomy' 			=> $setting['taxonomy'],
+							'selected' 			=> $value,
+							'name' 				=> $this->get_field_name( $key ),
+							'id' 				=> $this->get_field_id( $key )
+						);
+						wp_dropdown_categories( $args ); ?>
 					</p>
 					<?php
 				break;
@@ -162,12 +187,32 @@ abstract class WPCM_Widget extends WP_Widget {
 					?>
 					<p><label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo $setting['label']; ?></label>
 						<?php
-						wp_dropdown_pages( array(
-							'show_option_none' => __( 'None', 'wpclubmanager' ),
-							'selected' => $value,
-							'name' => $this->get_field_name( $key ),
-							'id' => $this->get_field_id( $key )
-						) ); ?>
+						$args = array(
+							'show_option_none' 	=> __( 'None', 'wpclubmanager' ),
+							'selected' 			=> $value,
+							'name' 				=> $this->get_field_name( $key ),
+							'id' 				=> $this->get_field_id( $key )
+						);
+						wp_dropdown_pages( $args ); ?>
+					</p>
+					<?php
+				break;
+
+				case "posts_select" :
+					?>
+					<p><label for="<?php echo $this->get_field_id( $key ); ?>"><?php echo $setting['label']; ?></label>
+						<?php
+						$args = array(
+							'show_option_none' 	=> __( 'None', 'wpclubmanager' ),
+							'selected' 			=> $value,
+							'name' 				=> $this->get_field_name( $key ),
+							'id' 				=> $this->get_field_id( $key ),
+							'post_type'        	=> $setting['post_type'],
+							'orderby' 			=> $setting['orderby'],
+							'order' 			=> $setting['order'],
+							'limit' 			=> $setting['limit']
+						);
+						wpcm_dropdown_posts( $args );  ?>
 					</p>
 					<?php
 				break;

@@ -1,10 +1,10 @@
 <?php
 /**
- * Single Player Meta
+ * Single Player - Meta
  *
  * @author 		ClubPress
  * @package 	WPClubManager/Templates
- * @version     1.1
+ * @version     1.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

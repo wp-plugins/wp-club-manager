@@ -4,19 +4,36 @@
  *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
- * @version     1.2.17
+ * @version     1.3.0
  */
 
 global $post;
 
 $postid = get_the_ID();
-
+$format = get_match_title_format();
 $home_club = get_post_meta( $postid, 'wpcm_home_club', true );
 $away_club = get_post_meta( $postid, 'wpcm_away_club', true );
 $comps = get_the_terms( $postid, 'wpcm_comp' );
 $comp_status = get_post_meta( $postid, 'wpcm_comp_status', true );
 $seasons = get_the_terms( $postid, 'wpcm_season' );
 $teams = get_the_terms( $postid, 'wpcm_team' );
+if( $format == '%home% vs %away%' ) :
+	$side1 = $home_club;
+	$side2 = $away_club;
+else :
+	$side1 = $away_club;
+	$side2 = $home_club;
+endif;
+if( has_post_thumbnail( $side1 ) ) :
+	$crest1 = get_the_post_thumbnail( $side1, 'crest-medium', array( 'title' => wpcm_get_team_name( $side1, $postid ) ) );
+else :
+	$crest1 = wpcm_crest_placeholder_img( 'crest-medium' );
+endif;
+if( has_post_thumbnail( $side2 ) ) :
+	$crest2 = get_the_post_thumbnail( $side2, 'crest-medium', array( 'title' => wpcm_get_team_name( $side2, $postid ) ) );
+else :
+	$crest2 = wpcm_crest_placeholder_img( 'crest-medium' );
+endif;
 			
 echo '<li class="fixture">';
 
@@ -43,12 +60,12 @@ echo '<li class="fixture">';
 
 		echo '<div class="clubs">';
 			echo '<h4 class="home-clubs">';
-				echo '<div class="home-logo">' . get_the_post_thumbnail( $home_club, 'crest-medium', array( 'title' => get_the_title( $home_club ) ) ) . '</div>';
-				echo get_the_title( $home_club );
+				echo '<div class="home-logo">' . $crest1 . '</div>';
+				echo wpcm_get_team_name( $side1, $postid );
 			echo '</h4>';
 			echo '<h4 class="away-clubs">';
-				echo '<div class="away-logo">' . get_the_post_thumbnail( $away_club, 'crest-medium', array( 'title' => get_the_title( $away_club ) ) ) . '</div>';
-				echo get_the_title( $away_club );
+				echo '<div class="away-logo">' . $crest2 . '</div>';
+				echo wpcm_get_team_name( $side2, $postid );
 			echo '</h4>';
 		echo '</div>';
 	echo '</a>';

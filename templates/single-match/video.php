@@ -1,6 +1,6 @@
 <?php
 /**
- * Single Match Video
+ * Single Match - Video
  *
  * @author 		ClubPress
  * @package 	WPClubManager/Templates

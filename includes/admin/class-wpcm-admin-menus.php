@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.0.1
+ * @version     1.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -22,6 +22,7 @@ class WPCM_Admin_Menus {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 		add_action( 'admin_menu', array( $this, 'settings_menu' ), 50 );
 		add_action( 'admin_menu', array( $this, 'extensions_menu' ), 70 );
+		add_action( 'admin_menu', array( $this, 'status_menu' ), 60 );
 	}
 
 	/**
@@ -41,6 +42,13 @@ class WPCM_Admin_Menus {
 
 		remove_submenu_page('edit.php?post_type=wpcm_staff', 'edit-tags.php?taxonomy=wpcm_season&amp;post_type=wpcm_staff');
 		remove_submenu_page('edit.php?post_type=wpcm_staff', 'edit-tags.php?taxonomy=wpcm_team&amp;post_type=wpcm_staff');
+	}
+
+	/**
+	 * Status menu item
+	 */
+	public function status_menu() {
+		add_submenu_page( 'wpcm-settings', __( 'WP Club Manager Status', 'wpclubmanager' ),  __( 'Status', 'wpclubmanager' ) , 'manage_wpclubmanager', 'wpcm-status', array( $this, 'status_page' ) );
 	}
 
 	/**
@@ -71,6 +79,13 @@ class WPCM_Admin_Menus {
 	public function extensions_page() {
 		//$page = include( 'class-wpcm-admin-extensions.php' );
 		WPCM_Admin_Extensions::output();
+	}
+	/**
+	 * Init the extensions page
+	 */
+	public function status_page() {
+		//$page = include( 'class-wpcm-admin-status.php' );
+		WPCM_Admin_Status::output();
 	}
 }
 

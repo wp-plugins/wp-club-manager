@@ -1,6 +1,6 @@
 <?php
 /**
- * Single Player Image
+ * Single Player - Image
  *
  * @author 		ClubPress
  * @package 	WPClubManager/Templates

@@ -2,13 +2,13 @@
 Contributors: ClubPress, leonterry
 Tags: club, clubs, team, teams, sport, sports, sports club, club management, team management, league tables, leagues, clubpress, football, rugby, soccer, field hockey, ice hockey, baseball, basketball, aussie rules, netball, volleyball, floorball, gaelic football, hurling, handball
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
-Requires at least: 3.8
-Tested up to: 4.2
-Stable tag: 1.2.20
+Requires at least: 4.0
+Tested up to: 4.3
+Stable tag: 1.3.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-WP Club Manager is a powerful plugin to help you create and manage a sports club website quickly and easily.
+WP Club Manager is the only all-in-one plugin built specifically to help you easily create and manage a sports club website.
 
 == Description ==
 
@@ -17,17 +17,18 @@ Create and manage a sports club website quickly and easily using WordPress. Mana
 = Features Include =
 
 * Manage multiple teams in your club
-* Player and staff profiles
-* Player ratings
-* Player stats for each season
-* Club profiles
-* Fixtures and results table
-* League tables
-* Match reports
+* Comprehensive player and staff profiles
+* Player performance ratings
+* Full player stats for each season
+* Club profiles with head-to-head records
+* Fixtures and results tables
+* Automatically updated league tables
+* Match stats and reports
 * Manage club sponsors
 * Fixture, results, player, table and sponsor widgets
 * Import matches, players, staff and clubs from a CSV file
-* Flexible templates
+* Easy-to-use shortcodes
+* Customize appearance with flexible templates
 
 = Supported Sports =
 
@@ -130,11 +131,41 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 3. Extensive player profiles with season stats
 4. A slick admin interface blends in with WordPress
 
-== Upgrade Notice ==
-
-
-
 == Changelog ==
+
+= 1.3.0 - 18/08/2015
+
+* New - Added player stats split by teams
+* New - Added head-to-head matches on opponent club pages
+* New - Added team display names
+* New - Added admin dashboard widgets
+* New - Added plugin permalink settings
+* New - Added auto generated match post_title
+* New - Added prettier, SEO friendly match URLs
+* New - Added JSON-LD Rich Snippets to matches for improved SERPs
+* New - Added extra matches shortcode layout option
+* New - Added option to display matches shortcode by month
+* New - Added status page for easier debugging
+* New - Added check for outdated template files
+* Tweak - Choosing clubs in matches is quicker and easier
+* Tweak - Improved widget classes
+* Tweak - Removed deprecated PHP4 constructor on Widget classes
+* Tweak - Included crest placeholder on match pages and results/fixtures widgets
+* Tweak - Improved match shortcode templates
+* Tweak - Numerous code and performance improvements
+* Tweak - Updated compatibility for core Twenty Fifteen theme
+* Tweak - Updated welcome page
+* Fix - Fixed player stats updating for friendly matches
+* Fix - Fixed venue address formatting
+* Fix - Fixed warnings when no venue address set on club pages
+* Fix - Fixed venue map displaying when address not set on club pages
+* Fix - Fixed placeholder image size in players lists
+* Fix - Fixed possible division by zero issues
+* Fix - Fixed all match title formats
+* Fix - Fixed plugin admin notices
+* Fix - Fixed Link to Clubs in standings widget
+* Localisation - Updated Turkish, Italian and Russian (Thanks sivasspor, GhiMax and Shvark)
+* Localisation - Updated wpclubmanager.pot
 
 = 1.2.20 - 23/06/2015
 
@@ -434,3 +465,13 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 = 1.0.0 - 18/03/2014
 
 * Initial release
+
+== Upgrade Notice ==
+
+1.3.0 is a major update so it is important that you make backups, test extensions and your theme prior to updating.
+
+=Possible Upgrade Issues=
+
+If you have setup your club without any teams you may have some problems with player stats. If this happens, don't panic. Nothing has been lost but it is now necessary to create at least one team for your club and assign matches and players to a team. This is an unavoiable side effect of the new player stats by team feature and will only need to be done once. Player stats will recover once players and matches are assigned.
+
+There are some small changes to a number of templates so if you have a custom theme with modified WP Club Manager templates we recommend that you test your theme and make any necessary changes before updating.

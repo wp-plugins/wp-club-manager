@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Post Types
- * @version     1.0.0
+ * @version     1.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -27,11 +27,11 @@ class WPCM_Admin_CPT_Match extends WPCM_Admin_CPT {
 
 		add_filter( 'the_posts', array( $this, 'show_scheduled_matches' ) );
 
+		// Title data
+		add_filter( 'wp_insert_post_data', array( $this, 'wp_insert_post_data' ), 99, 2 );
+
 		// Publish text
 		add_filter( 'gettext', array( $this, 'text_replace' ) );
-
-		// add_filter( 'the_title', array( $this, 'match_title' ), 10, 2 );
-		// add_filter( 'wp_title', array( $this, 'match_wp_title' ), 10, 2 );
 
 		add_filter( 'manage_edit-wpcm_match_columns', array( $this, 'custom_edit_columns' ) );
 		add_action( 'manage_wpcm_match_posts_custom_column', array( $this, 'custom_columns' ) );
@@ -71,6 +71,36 @@ class WPCM_Admin_CPT_Match extends WPCM_Admin_CPT {
 		return $posts;
 	}
 
+	// Insert post title data
+	public function wp_insert_post_data( $data, $postarr ) {
+		if ( $data['post_type'] == 'wpcm_match' && $data['post_title'] == '' ) :
+
+				$default_club = get_default_club();
+				$title_format = get_match_title_format();
+				$separator = get_option('wpcm_match_clubs_separator');
+				$home_id = $_POST['wpcm_home_club'];
+				$away_id = $_POST['wpcm_away_club'];
+				$home_club = get_post( $home_id );
+				$away_club = get_post( $away_id );
+				if( $title_format == '%home% vs %away%') {
+					$side1 = wpcm_get_team_name( $home_club, $postarr['ID'] );
+					$side2 = wpcm_get_team_name( $away_club, $postarr['ID'] );
+				}else{
+					$side1 = wpcm_get_team_name( $away_club, $postarr['ID'] );
+					$side2 = wpcm_get_team_name( $home_club, $postarr['ID'] );
+				}
+
+				$title = $side1 . ' ' . $separator . ' ' . $side2;
+				$post_name = sanitize_title_with_dashes( $postarr['ID'] . '-' . $title );
+
+				$data['post_title'] = $title;
+				$data['post_name'] = $post_name;
+
+		endif;
+
+		return $data;
+	}
+
 	// text replace
 	public function text_replace( $string = '' ) {
 
@@ -83,62 +113,6 @@ class WPCM_Admin_CPT_Match extends WPCM_Admin_CPT {
 		}
 		return $string;
 	}
-
-	// // generate title
-	// public function match_title( $title, $id = null ) {
-
-	// 	if ( get_post_type( $id ) == 'wpcm_match' ) {
-			
-	// 		$default_club = get_option('wpcm_default_club');
-	// 		$title_format = get_option('wpcm_match_title_format');
-	// 		$home_id = (int)get_post_meta( $id, 'wpcm_home_club', true );
-	// 		$away_id = (int)get_post_meta( $id, 'wpcm_away_club', true );
-	// 		$home_club = get_post( $home_id );
-	// 		$away_club = get_post( $away_id );
-	// 		$search = array( '%home%', '%away%' );
-	// 		$replace = array( $home_club->post_title, $away_club->post_title );
-			
-	// 		if ( $away_id == $default_club ) {
-	// 			//away
-	// 			$title = str_replace( $search, $replace, $title_format );
-	// 		} else {
-	// 			// home
-	// 			$title = str_replace( $search, $replace, $title_format );
-	// 		}
-	// 	}
-
-	// 	return $title;
-	// }
-
-	// // generate title
-	// public function match_wp_title( $title, $sep, $seplocation ) {
-
-	// 	global $post;
-
-	// 	if ( get_post_type( ) == 'wpcm_match' ) {
-
-	// 		$title = '';
-
-	// 		if ( $seplocation == 'left' ) {
-	// 			$title .= ' ' . $sep . ' ';
-	// 		}
-
-	// 		$id = $post->ID;
-	// 		$home_id = (int)get_post_meta( $id, 'wpcm_home_club', true );
-	// 		$away_id = (int)get_post_meta( $id, 'wpcm_away_club', true );
-	// 		$home_club = get_post( $home_id );
-	// 		$away_club = get_post( $away_id );
-	// 		$title = match_title( $title, $id ) . ' ' . $sep . ' ' . get_the_date();
-
-	// 		if ( $seplocation == 'right' ) {
-	// 			$title .= ' ' . $sep . ' ';
-	// 		}
-
-	// 		return $title;
-	// 	}
-
-	// 	return $title;
-	// }
 
 	// // edit columns
 	public function custom_edit_columns($columns) {

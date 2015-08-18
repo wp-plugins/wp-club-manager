@@ -1,13 +1,11 @@
 <?php
 /**
- * WPClubManager Admin Functions
- *
- * Hooked-in functions for WPClubManager related events in admin.
+ * Admin Functions
  *
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.0.0
+ * @version     1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -24,7 +22,8 @@ function wpcm_get_screen_ids() {
     	'dashboard_page_wpcm-getting-started',
     	'toplevel_page_' . $wpcm_screen_id,
     	$wpcm_screen_id . '_page_wpcm-settings',
-    	//$wpcm_screen_id . '_page_wpcm-addons',
+    	$wpcm_screen_id . '_page_wpcm-addons',
+    	'club-manager_page_wpcm-status',
     	'edit-wpcm_club',
     	'wpcm_club',
     	'edit-wpcm_match',

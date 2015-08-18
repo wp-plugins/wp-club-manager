@@ -2,8 +2,6 @@
 /**
  * Staff shortcode template
  *
- * Override this template by copying it to yourtheme/wpclubmanager/content-single-staff.php
- *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
  * @version     1.1.2
