@@ -4,7 +4,7 @@
  *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
- * @version     1.3.0
+ * @version     1.3.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -290,7 +290,7 @@ if ( sizeof( $players ) > 0 ) {
 						$player_details[$player->ID]['appearances'] = $player_stats[0][0]['total']['appearances'];
 					}
 					$r = $player_detail['rating'];
-					$a = $player_details['appearances'];
+					$a = $player_detail['appearances'];
 					$avrating = wpcm_divide( $r, $a );
 					$output .= sprintf( "%01.2f", round($avrating, 2) );
 				} else {

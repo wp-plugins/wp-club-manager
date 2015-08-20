@@ -1,5 +1,5 @@
 <div class="wrap wpclubmanager">
-	<h2><?php _e( 'WP Club Manager Settings', 'wpclubmanager' ); ?></h2>
+	<h1><?php _e( 'WP Club Manager Settings', 'wpclubmanager' ); ?></h1>
 	<form method="post" id="mainform" action="" enctype="multipart/form-data">
 		<h2 class="nav-tab-wrapper wpcm-nav-tab-wrapper">
 			<?php

@@ -5,7 +5,7 @@
  * @author 		Clubpress
  * @category 	Shortcodes
  * @package 	WPClubManager/Shortcodes
- * @version     1.3.0
+ * @version     1.3.1
  */
 class WPCM_Shortcode_Matches {
 
@@ -25,7 +25,7 @@ class WPCM_Shortcode_Matches {
 		$season 	= ( isset( $atts['season'] ) ? $atts['season'] : null );
 		$team 		= ( isset( $atts['team'] ) ? $atts['team'] : null );
 		$month 		= ( isset( $atts['month'] ) ? $atts['month'] : null );
-		$venue 		= ( isset( $atts['venue'] ) ? $atts['$venue'] : null );
+		$venue 		= ( isset( $atts['venue'] ) ? $atts['venue'] : null );
 		$thumb 		= ( isset( $atts['thumb'] ) ? $atts['thumb'] : 0 );
 		$link_club  = ( isset( $atts['link_club'] ) ? $atts['link_club'] : 0 );
 		$linktext 	= ( isset( $atts['linktext'] ) ? $atts['linktext'] : __( 'View all results', 'wpclubmanager' ));

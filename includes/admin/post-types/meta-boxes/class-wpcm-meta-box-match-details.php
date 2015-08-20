@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Meta Boxes
- * @version     1.2.13
+ * @version     1.3.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -25,7 +25,7 @@ class WPCM_Meta_Box_Match_Details {
 
 		$comps = get_the_terms( $post_id, 'wpcm_comp' );
 		$wpcm_comp_status = get_post_meta( $post_id, 'wpcm_comp_status', true );
-		$match_team = get_post_meta( $post_id, 'wpcm_team', true );
+		$team = get_post_meta( $post_id, 'wpcm_team', true );
 		$neutral = get_post_meta( $post_id, 'wpcm_neutral', true );
 
 		if ( is_array( $comps ) ) {
@@ -42,6 +42,14 @@ class WPCM_Meta_Box_Match_Details {
 			$season = $seasons[0]->term_id;
 		} else {
 			$season = -1;
+		}
+
+		$teams = get_the_terms( $post->ID, 'wpcm_team' );
+
+		if ( is_array( $teams ) ) {
+			$team = $teams[0]->term_id;
+		} else {
+			$team = -1;
 		}
 
 		$venues = get_the_terms( $post->ID, 'wpcm_venue' );
@@ -89,7 +97,7 @@ class WPCM_Meta_Box_Match_Details {
 				'orderby' => 'title',
 				'hide_empty' => false,
 				'taxonomy' => 'wpcm_team',
-				'selected' => $match_team,
+				'selected' => $team,
 				'name' => 'wpcm_match_team',
 				'class' => 'chosen_select'
 			));
@@ -136,13 +144,13 @@ class WPCM_Meta_Box_Match_Details {
 		// }
 
 		if(isset($_POST['wpcm_match_team'])){
-			$match_team = $_POST['wpcm_match_team'];
+			$team = $_POST['wpcm_match_team'];
 		} else {
-			$match_team = null;
+			$team = null;
 		}
 		
-		update_post_meta( $post_id, 'wpcm_team', $match_team );
-		wp_set_post_terms( $post_id, $match_team, 'wpcm_team' );
+		update_post_meta( $post_id, 'wpcm_team', $team );
+		wp_set_post_terms( $post_id, $team, 'wpcm_team' );
 
 		$venue = $_POST['wpcm_venue'];
 		wp_set_post_terms( $post_id, $venue, 'wpcm_venue' );

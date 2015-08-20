@@ -4,7 +4,7 @@ Tags: club, clubs, team, teams, sport, sports, sports club, club management, tea
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -132,6 +132,12 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 4. A slick admin interface blends in with WordPress
 
 == Changelog ==
+
+= 1.3.1 - 19/08/2015
+* New - Added quick/bulk editing for matches
+* Fix - Fixed average rating player stat (Thanks to crstig)
+* Fix - Fixed Gaelic scores not showing in results widget (Thanks to funzeye)
+* Fix - Fixed undefined variable in matches shortcode (Thanks to funzeye)
 
 = 1.3.0 - 18/08/2015
 

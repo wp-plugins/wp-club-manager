@@ -4,11 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 } ?>
 
 <div class="wrap wpclubmanager-extensions">
-	<h2>
+	<h1>
 		<?php _e( 'WP Club Manager Extensions', 'wpclubmanager' ); ?>
-		<a href="https://wpclubmanager.com/extensions/" class="add-new-h2"><?php _e( 'Browse all extensions', 'wpclubmanager' ); ?></a>
-		<a href="https://wpclubmanager.com/themes/" class="add-new-h2"><?php _e( 'Browse themes', 'wpclubmanager' ); ?></a>
-	</h2>
+		<a href="https://wpclubmanager.com/extensions/" class="page-title-action"><?php _e( 'Browse all extensions', 'wpclubmanager' ); ?></a>
+		<a href="https://wpclubmanager.com/themes/" class="page-title-action"><?php _e( 'Browse themes', 'wpclubmanager' ); ?></a>
+	</h1>
 
 	<p><?php _e( 'These add-ons extend the functionality of WP Club Manager.', 'wpclubmanager' ); ?></p>
 

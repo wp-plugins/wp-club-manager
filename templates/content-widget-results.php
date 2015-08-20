@@ -4,7 +4,7 @@
  *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
- * @version     1.3.0
+ * @version     1.3.1
  */
 
 global $post;
@@ -17,10 +17,10 @@ $away_club = get_post_meta( $postid, 'wpcm_away_club', true );
 $home_goals = get_post_meta( $postid, 'wpcm_home_goals', true );
 $away_goals = get_post_meta( $postid, 'wpcm_away_goals', true );
 if( $sport == 'gaelic' ) {
-	$home_gaa_goals = get_post_meta( $postid, 'wpcm_home_gaa_goals', true );
-	$home_gaa_points = get_post_meta( $postid, 'wpcm_home_gaa_points', true );
-	$away_gaa_goals = get_post_meta( $postid, 'wpcm_away_gaa_goals', true );
-	$away_gaa_points = get_post_meta( $postid, 'wpcm_away_gaa_points', true );
+	$gaa_goals_home = get_post_meta( $postid, 'wpcm_home_gaa_goals', true );
+	$gaa_points_home = get_post_meta( $postid, 'wpcm_home_gaa_points', true );
+	$gaa_goals_away = get_post_meta( $postid, 'wpcm_away_gaa_goals', true );
+	$gaa_points_away = get_post_meta( $postid, 'wpcm_away_gaa_points', true );
 }
 $played = get_post_meta( $postid, 'wpcm_played', true );
 $comps = get_the_terms( $postid, 'wpcm_comp' );
