@@ -133,7 +133,8 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 == Changelog ==
 
-= 1.3.1 - 19/08/2015
+= 1.3.1 - 19/08/2015 =
+
 * New - Added quick/bulk editing for matches
 * Fix - Fixed average rating player stat (Thanks to crstig)
 * Fix - Fixed Gaelic scores not showing in results widget (Thanks to funzeye)
