@@ -31,6 +31,7 @@ jQuery( function($){
 		if (played) {
 			jQuery('.post-type-wpcm_match #poststuff #post-body-content').show();
 			jQuery('#wpclubmanager-match-result #results-table').show();
+			jQuery('.post-type-wpcm_match #poststuff #postexcerpt').hide();
 		} else {
 			jQuery('#wpclubmanager-match-result #results-table').hide();
 			jQuery('.post-type-wpcm_match #poststuff #post-body-content').hide();

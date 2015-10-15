@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Post Types
- * @version     1.0.0
+ * @version     1.3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -28,6 +28,7 @@ class WPCM_Admin_CPT_Player extends WPCM_Admin_CPT {
 		// Post title fields
 		add_filter( 'enter_title_here', array( $this, 'enter_title_here' ), 1, 2 );
 		add_filter( 'gettext', array( $this, 'text_replace' ), 10, 4 );
+		add_filter( 'admin_post_thumbnail_html', array( $this, 'custom_admin_post_thumbnail_html' ) );
 		add_filter( 'media_view_strings', array( $this, 'media_view_strings' ), 10, 2 );
 
 		add_filter( 'manage_edit-wpcm_player_columns', array( $this, 'custom_edit_columns' ) );
@@ -68,7 +69,7 @@ class WPCM_Admin_CPT_Player extends WPCM_Admin_CPT {
 	public function enter_title_here( $text, $post ) {
 		
 		if ( $post->post_type == 'wpcm_player' )
-			return __( 'Name', 'wpclubmanager' );
+			return __( 'Enter players name', 'wpclubmanager' );
 
 		return $text;
 	}
@@ -83,14 +84,20 @@ class WPCM_Admin_CPT_Player extends WPCM_Admin_CPT {
 		} elseif ( 'Publish <b>immediately</b>' == $string && $this->is_editing_product() ) {
 			$string = __( 'Joined on: <b>%1$s</b>', 'wpclubmanager' );
 		}
-		if ( 'Featured Image' == $string && $this->is_editing_product() ) {
-			$string = __( 'Player Image', 'wpclubmanager' );
-		} elseif ( 'Remove featured image' == $string && $this->is_editing_product() ) {
-			$string = __( 'Remove player image', 'wpclubmanager' );
-		} elseif ( 'Set featured image' == $string && $this->is_editing_product() ) {
-			$string = __( 'Set player image', 'wpclubmanager' );
-		}
+
 		return $string;
+	}
+
+	public function custom_admin_post_thumbnail_html( $content ) {
+	    global $current_screen;
+	 
+	    if( 'wpcm_player' == $current_screen->post_type ) {
+
+	        $content = str_replace( __( 'Set featured image' ), __( 'Set player image', 'wpclubmanager' ), $content);
+	    	$content = str_replace( __( 'Remove featured image' ), __( 'Remove player image', 'wpclubmanager' ), $content );
+	    }
+
+	        return $content;
 	}
 
 	/**

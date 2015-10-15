@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Functions
- * @version     1.3
+ * @version     1.3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -438,31 +438,34 @@ function wpcm_match_player_row( $key, $value, $count = 0 ) {
 		}
 	}
 
-	if( $sport == 'soccer' || $sport == 'rugby' || $sport == 'hockey_field' || $sport == 'footy' || $sport == 'floorball' || $sport == 'gaelic' || $sport == 'handball' ) {
+	if( get_option( 'wpcm_show_stats_greencards' ) == 'yes' || get_option( 'wpcm_show_stats_yellowcards' ) == 'yes' || get_option( 'wpcm_show_stats_blackcards' ) == 'yes' || get_option( 'wpcm_show_stats_redcards' ) == 'yes' ) {
 
-		$output .= '<td class="notes">';
+		//if( $sport == 'soccer' || $sport == 'rugby' || $sport == 'hockey_field' || $sport == 'footy' || $sport == 'floorball' || $sport == 'gaelic' || $sport == 'handball' ) {
 
-		if ( isset( $value['greencards'] ) ) {
+			$output .= '<td class="notes">';
+
+			if( get_option( 'wpcm_show_stats_greencards' ) == 'yes' && isset( $value['greencards'] ) ) {
+					
+				$output .= '<span class="greencard" title="' . __( 'Green Card', 'wpclubmanager' ) . '">' . __( 'Green Card', 'wpclubmanager' ) . '</span>';
+			}
 			
-			$output .= '<span class="greencard" title="' . __( 'Green Card', 'wpclubmanager' ) . '">' . __( 'Green Card', 'wpclubmanager' ) . '</span>';
-		}
-		
-		if ( isset( $value['yellowcards'] ) ) {
+			if ( get_option( 'wpcm_show_stats_yellowcards' ) == 'yes' && isset( $value['yellowcards'] ) ) {
+				
+				$output .= '<span class="yellowcard" title="' . __( 'Yellow Card', 'wpclubmanager' ) . '">' . __( 'Yellow Card', 'wpclubmanager' ) . '</span>';
+			}
+
+			if ( get_option( 'wpcm_show_stats_blackcards' ) == 'yes' && isset( $value['blackcards'] ) ) {
+				
+				$output .= '<span class="blackcard" title="' . __( 'Black Card', 'wpclubmanager' ) . '">' . __( 'Black Card', 'wpclubmanager' ) . '</span>';
+			}
 			
-			$output .= '<span class="yellowcard" title="' . __( 'Yellow Card', 'wpclubmanager' ) . '">' . __( 'Yellow Card', 'wpclubmanager' ) . '</span>';
-		}
+			if ( get_option( 'wpcm_show_stats_redcards' ) == 'yes' && isset( $value['redcards'] ) ) {
+				$output .= '<span class="redcard" title="' . __( 'Red Card', 'wpclubmanager' ) . '">' . __( 'Red Card', 'wpclubmanager' ) . '</span>';
+			}
 
-		if ( isset( $value['blackcards'] ) ) {
-			
-			$output .= '<span class="blackcard" title="' . __( 'Black Card', 'wpclubmanager' ) . '">' . __( 'Black Card', 'wpclubmanager' ) . '</span>';
-		}
-		
-		if ( isset( $value['redcards'] ) ) {
-			$output .= '<span class="redcard" title="' . __( 'Red Card', 'wpclubmanager' ) . '">' . __( 'Red Card', 'wpclubmanager' ) . '</span>';
-		}
+			$output .= '</td>';
 
-		$output .= '</td>';
-
+		//}
 	}
 
 	$output .= '</tr>';

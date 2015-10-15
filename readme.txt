@@ -4,7 +4,7 @@ Tags: club, clubs, team, teams, sport, sports, sports club, club management, tea
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
 Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -56,6 +56,7 @@ The WP Club Manager plugin has a growing catalogue of themes and extensions to a
 = Included Languages =
 
 * Arabic – العربية (ar)
+* Bulgarian – Български (bg_BG)
 * Chinese (China) - 中文 (zh_CN)
 * Czech – Čeština (cs_CZ)
 * Danish – Dansk (da_DK)
@@ -132,6 +133,19 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 4. A slick admin interface blends in with WordPress
 
 == Changelog ==
+
+= 1.3.2 - 15/10/2015
+
+* New - Added ability to display match previews
+* New - Added option to hide scores from non logged-in users
+* Tweak - Moved Teams to Players submenu
+* Tweak - Tweaked some text in admin screens
+* Tweak - Improved custom post type update messages
+* Fix - Removed edit from match bulk actions
+* Fix - Fixed visibility of cards in match lineup according to player settings
+* Localisation - Added Bulgarian language (Thanks AnaDimova)
+* Localisation - Updated Italian and Polish (Thanks GhiMax and grzegorzj74)
+* Localisation - Updated wpclubmanager.pot
 
 = 1.3.1 - 19/08/2015
 

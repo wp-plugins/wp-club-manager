@@ -5,7 +5,7 @@
  * Registers post types.
  *
  * @class 		WPCM_Post_Types
- * @version		1.3
+ * @version		1.3.2
  * @package		WPClubManager/Classes/
  * @category	Class
  * @author 		ClubPress
@@ -124,7 +124,7 @@ class WPCM_Post_Types {
 		);
 
 		register_taxonomy( 'wpcm_team',
-			apply_filters( 'wpclubmanager_taxonomy_objects_wpcm_team', array('wpcm_club','wpcm_player','wpcm_staff') ),
+			apply_filters( 'wpclubmanager_taxonomy_objects_wpcm_team', array('wpcm_player','wpcm_staff') ),
 			apply_filters( 'wpclubmanager_taxonomy_args_wpcm_team', array(
 				'hierarchical' =>true,
 				'labels' => array(
@@ -306,7 +306,7 @@ class WPCM_Post_Types {
 						'menu_name'           => __( 'Matches', 'wpclubmanager' )
 					),
 					'hierarchical'         => false,
-					'supports'             => array( 'editor' ),
+					'supports'             => array( 'editor', 'excerpt' ),
 					'public'               => true,
 					'show_ui'              => true,
 					'show_in_menu'         => true,

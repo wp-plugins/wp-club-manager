@@ -5,7 +5,7 @@
  * AJAX Event Handler
  *
  * @class 		WPCM_AJAX
- * @version		1.3
+ * @version		1.3.2
  * @package		WPClubManager/Classes
  * @category	Class
  * @author 		ClubPress
@@ -25,6 +25,19 @@ class WPCM_AJAX {
 		add_action( 'wp_ajax_wpcm_players_shortcode', array( $this, 'players_shortcode_ajax' ) );
 		add_action( 'wp_ajax_wpcm_staff_shortcode', array( $this, 'staff_shortcode_ajax' ) );
 		add_action( 'wp_ajax_wpcm_standings_shortcode', array( $this, 'standings_shortcode_ajax' ) );
+		add_action( 'wp_ajax_wpclubmanager_rated', array( $this, 'rated' ) );
+	}
+
+	/**
+	 * Triggered when clicking the rating footer.
+	 */
+	public static function rated() {
+		if ( ! current_user_can( 'manage_wpclubmanager' ) ) {
+			die(-1);
+		}
+
+		update_option( 'wpclubmanager_admin_footer_text_rated', 1 );
+		die();
 	}
 
 	/**

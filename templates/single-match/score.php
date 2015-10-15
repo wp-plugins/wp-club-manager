@@ -4,7 +4,7 @@
  *
  * @author 		ClubPress
  * @package 	WPClubManager/Templates
- * @version     1.3.0
+ * @version     1.3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -46,18 +46,26 @@ endif; ?>
 
 <div class="wpcm-match-score">
 
-	<?php if ( $played ) {
-
-		echo $side1;
-
-	} ?>
+	<?php
+	if ( $played ) {
+		if( get_option( 'wpcm_hide_scores') == 'yes' && ! is_user_logged_in() ) {
+			echo __('X', 'wpclubmanager' );
+		} else {	
+			echo $side1;
+		}
+	}
+	?>
 
 	<span class="wpcm-match-score-delimiter"><?php echo $sep ?></span>
 
-	<?php if ( $played ) {
-
-		echo $side2;
-
-	} ?>
+	<?php
+	if ( $played ) {
+		if( get_option( 'wpcm_hide_scores') == 'yes' && ! is_user_logged_in() ) {
+			echo __('X', 'wpclubmanager' );
+		} else {
+			echo $side2;
+		}
+	}
+	?>
 
 </div>

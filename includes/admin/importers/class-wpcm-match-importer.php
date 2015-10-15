@@ -27,8 +27,6 @@ if ( class_exists( 'WP_Importer' ) ) {
 				'wpcm_home_club' => __( 'Home Club', 'wpclubmanager' ),
 				'wpcm_away_club' => __( 'Away Club', 'wpclubmanager' ),
 				'wpcm_result' => __( 'Result', 'wpclubmanager' ),
-				//'wpcm_home_goals' => __( 'Home Score', 'wpclubmanager' ),
-				//'wpcm_away_goals' => __( 'Away Score', 'wpclubmanager' ),
 				'wpcm_comp' => __( 'Competition', 'wpclubmanager' ),
 				'wpcm_season' => __( 'Season', 'wpclubmanager' ),
 				'wpcm_team' => __( 'Team', 'wpclubmanager' ),
@@ -64,29 +62,32 @@ if ( class_exists( 'WP_Importer' ) ) {
 				foreach ( $columns as $index => $key ):
 					$meta[ $key ] = wpcm_array_value( $row, $index );
 				endforeach;
-				
-				$home_club = wpcm_array_value( $meta, 'wpcm_home_club' );
-				$away_club = wpcm_array_value( $meta, 'wpcm_away_club' );
 
+				// Get home club ID
+				$home_club = wpcm_array_value( $meta, 'wpcm_home_club' );
 				$home_object = get_page_by_title( $home_club, OBJECT, 'wpcm_club' );
 				if ( $home_object ):
 					$home_id = $home_object->ID;
 				else:
+					// Create club if doesn't exist
 					$home_id = wp_insert_post( array( 'post_type' => 'wpcm_club', 'post_status' => 'publish', 'post_title' => $home_club ) );
-
+					// Flag as import
 					update_post_meta( $home_id, '_wpcm_import', 1 );
 				endif;
 
+				// Get away club ID
+				$away_club = wpcm_array_value( $meta, 'wpcm_away_club' );
 				$away_object = get_page_by_title( $away_club, OBJECT, 'wpcm_club' );
 				if ( $away_object ):
 					$away_id = $away_object->ID;
 				else:
+					// Create club if doesn't exist
 					$away_id = wp_insert_post( array( 'post_type' => 'wpcm_club', 'post_status' => 'publish', 'post_title' => $away_club ) );
-
+					// Flag as import
 					update_post_meta( $away_id, '_wpcm_import', 1 );
 				endif;
 
-				// Format date
+				// Format date and time
 				$date = wpcm_array_value( $meta, 'post_date' );
 				$time = wpcm_array_value( $meta, 'post_time' );
 				$date = str_replace( '/', '-', trim( $date ) );
@@ -97,27 +98,26 @@ if ( class_exists( 'WP_Importer' ) ) {
 
 				$date .= ' ' . trim( $time );
 
+				// Insert match data
 				$args = array( 'post_type' => 'wpcm_match', 'post_status' => 'publish', 'post_date' => $date );
-
 				$id = wp_insert_post( $args );
 
 				// Flag as import
 				update_post_meta( $id, '_wpcm_import', 1 );
 
-				// // Update date of birth
+				// Update home club
 				update_post_meta( $id, 'wpcm_home_club', $home_id );
 
-				// // Update date of birth
+				// Update away club
 				update_post_meta( $id, 'wpcm_away_club', $away_id );
 
+				// Update result
 				$result = wpcm_array_value( $meta, 'wpcm_result' );
 				if( $result ) :
 					$scores = explode( '-', wpcm_array_value( $meta, 'wpcm_result' ) );
 					$home_goals = trim($scores[0]);
 					$away_goals = trim($scores[1]);
 					$goals = array( 'total' => array( 'home' => $home_goals, 'away' => $away_goals) );
-
-					var_dump($goals);
 
 					if( $home_goals >= '0' ):
 						update_post_meta( $id, 'wpcm_home_goals', $home_goals );
@@ -155,7 +155,7 @@ if ( class_exists( 'WP_Importer' ) ) {
 				endif;
 				update_post_meta( $id, 'wpcm_team', $team_ids );
 
-				// Update competitions
+				// Update venues
 				$venues = wpcm_array_value( $meta, 'wpcm_venue' );
 				wp_set_object_terms( $id, $venues, 'wpcm_venue', false );
 
@@ -163,7 +163,7 @@ if ( class_exists( 'WP_Importer' ) ) {
 
 			endforeach;
 
-			// Show Result
+			// Show import result
 			echo '<div class="updated settings-error below-h2"><p>
 				'.sprintf( __( 'Import complete - imported <strong>%s</strong> matches and skipped <strong>%s</strong>.', 'wpclubmanager' ), $this->imported, $this->skipped ).'
 			</p></div>';

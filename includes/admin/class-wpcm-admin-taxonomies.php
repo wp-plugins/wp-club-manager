@@ -45,7 +45,6 @@ class WPCM_Admin_Taxonomies {
 		add_filter('manage_edit-wpcm_venue_columns', array( $this, 'venue_edit_columns') );
 	}
 
-
 	/**
 	 * Thumbnail column added to category admin.
 	 *

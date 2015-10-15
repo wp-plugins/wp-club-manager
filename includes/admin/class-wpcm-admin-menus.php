@@ -38,7 +38,7 @@ class WPCM_Admin_Menus {
 	    $main_page = add_menu_page( __( 'Club Manager', 'wpclubmanager' ), __( 'Club Manager', 'wpclubmanager' ), 'manage_wpclubmanager', 'wpcm-settings' , array( $this, 'settings_page' ), WPCM()->plugin_url() . '/assets/images/logo.png', '55.4' );
 
 		remove_submenu_page('edit.php?post_type=wpcm_player', 'edit-tags.php?taxonomy=wpcm_season&amp;post_type=wpcm_player');
-		remove_submenu_page('edit.php?post_type=wpcm_player', 'edit-tags.php?taxonomy=wpcm_team&amp;post_type=wpcm_player');
+		//remove_submenu_page('edit.php?post_type=wpcm_player', 'edit-tags.php?taxonomy=wpcm_team&amp;post_type=wpcm_player');
 
 		remove_submenu_page('edit.php?post_type=wpcm_staff', 'edit-tags.php?taxonomy=wpcm_season&amp;post_type=wpcm_staff');
 		remove_submenu_page('edit.php?post_type=wpcm_staff', 'edit-tags.php?taxonomy=wpcm_team&amp;post_type=wpcm_staff');

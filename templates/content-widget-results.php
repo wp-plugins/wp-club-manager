@@ -4,7 +4,7 @@
  *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
- * @version     1.3.1
+ * @version     1.3.2
  */
 
 global $post;
@@ -47,6 +47,10 @@ else :
 		$goals2 = $home_goals;
 	}
 endif;
+if( get_option( 'wpcm_hide_scores') == 'yes' && ! is_user_logged_in() ) {
+	$goals1 = __('X', 'wpclubmanager' );
+	$goals2 = __('X', 'wpclubmanager' );
+}
 if( has_post_thumbnail( $side1 ) ) :
 	$crest1 = get_the_post_thumbnail( $side1, 'crest-medium', array( 'title' => wpcm_get_team_name( $side1, $postid ) ) );
 else :

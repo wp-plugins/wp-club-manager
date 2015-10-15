@@ -22,7 +22,7 @@ class WPCM_Admin_CPT {
 	public function __construct() {
 
 		// Insert into X media browser
-		add_filter( 'media_view_strings', array( $this, 'change_insert_into_post' ) );
+		//add_filter( 'media_view_strings', array( $this, 'change_insert_into_post' ) );
 	}
 
 	/**

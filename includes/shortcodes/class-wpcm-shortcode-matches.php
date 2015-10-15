@@ -5,7 +5,7 @@
  * @author 		Clubpress
  * @category 	Shortcodes
  * @package 	WPClubManager/Shortcodes
- * @version     1.3.1
+ * @version     1.3.2
  */
 class WPCM_Shortcode_Matches {
 
@@ -245,26 +245,34 @@ class WPCM_Shortcode_Matches {
 				}
 
 				// Display result - match.php Template
-				if( $sport == 'gaelic' ) {
-					$result = ( $played ? $home_gaa_goals . '-' . $home_gaa_points . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_gaa_goals . '-' . $away_gaa_points : '' ) . ' ' . ( $played ? $outcome : '' );
+				if( get_option( 'wpcm_hide_scores') == 'yes' && ! is_user_logged_in() ) {
+					$result = ( $played ? __( 'x', 'wpclubmanager' ) . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . __( 'x', 'wpclubmanager' ) : '' );
 				} else {
-					$result = ( $played ? $home_goals . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_goals : '' ) . ' ' . ( $played ? $outcome : '' );
+					if( $sport == 'gaelic' ) {
+						$result = ( $played ? $home_gaa_goals . '-' . $home_gaa_points . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_gaa_goals . '-' . $away_gaa_points : '' ) . ' ' . ( $played ? $outcome : '' );
+					} else {
+						$result = ( $played ? $home_goals . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_goals : '' ) . ' ' . ( $played ? $outcome : '' );
+					}
 				}
 
 				// Display status - match-2.php Template
 				if( $played ) {
 					$status_class = 'result';
-					if( $format == '%home% vs %away%' ) {
-						if( $sport == 'gaelic' ) {
-							$status = $home_gaa_goals . '-' . $home_gaa_points . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_gaa_goals . '-' . $away_gaa_points;
-						} else {
-							$status = $home_goals . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_goals;
-						}
+					if( get_option( 'wpcm_hide_scores') == 'yes' && ! is_user_logged_in() ) {
+						$status = __('x', 'wpclubmanager' ) . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . __('x', 'wpclubmanager' );
 					} else {
-						if( $sport == 'gaelic' ) {
-							$status = $away_gaa_goals . '-' . $away_gaa_points . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $home_gaa_goals . '-' . $home_gaa_points;
+						if( $format == '%home% vs %away%' ) {
+							if( $sport == 'gaelic' ) {
+								$status = $home_gaa_goals . '-' . $home_gaa_points . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_gaa_goals . '-' . $away_gaa_points;
+							} else {
+								$status = $home_goals . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $away_goals;
+							}
 						} else {
-							$status = $away_goals . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $home_goals;
+							if( $sport == 'gaelic' ) {
+								$status = $away_gaa_goals . '-' . $away_gaa_points . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $home_gaa_goals . '-' . $home_gaa_points;
+							} else {
+								$status = $away_goals . ' ' . get_option( 'wpcm_match_goals_delimiter' ) . ' ' . $home_goals;
+							}
 						}
 					}
 				} else {

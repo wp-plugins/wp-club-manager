@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.1.0
+ * @version     1.3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -69,6 +69,14 @@ class WPCM_Settings_General extends WPCM_Settings_Page {
 				'default'	=> 'EN',
 				'type' 		=> 'single_select_country',
 				'desc_tip'	=>  true,
+			),
+
+			array(
+				'title' => __( 'Hide Scores', 'wpclubmanager' ),
+				'desc' 		=> __( 'Check this box to hide scores from guests.', 'wpclubmanager' ),
+				'id' 		=> 'wpcm_hide_scores',
+				'default'	=> 'no',
+				'type' 		=> 'checkbox'
 			),
 
 			array( 'type' => 'sectionend', 'id' => 'general_options'),

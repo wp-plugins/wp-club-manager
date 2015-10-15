@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Meta Boxes
- * @version     1.3
+ * @version     1.3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -92,20 +92,27 @@ class WPCM_Admin_Meta_Boxes {
 	 */
 	public function add_meta_boxes() {
 		
-		add_meta_box( 'wpclubmanager-club-stats', __( 'Statistics', 'wpclubmanager' ), 'WPCM_Meta_Box_Club_Stats::output', 'wpcm_club', 'normal', 'low' );
+		add_meta_box( 'wpclubmanager-club-stats', __( 'Club Statistics', 'wpclubmanager' ), 'WPCM_Meta_Box_Club_Stats::output', 'wpcm_club', 'normal', 'low' );
+		add_meta_box( 'postimagediv', __('Club Badge'), 'post_thumbnail_meta_box', 'wpcm_club', 'side', 'low' );
 
 		add_meta_box( 'wpclubmanager-match-result', __('Match Result', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Result::output', 'wpcm_match', 'side', 'default');
 		add_meta_box( 'wpclubmanager-match-video', __('Match Video', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Video::output', 'wpcm_match', 'side', 'default');
 		add_meta_box( 'wpclubmanager-match-fixture', __('Match Fixture', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Fixture::output', 'wpcm_match', 'normal', 'high');
+		add_meta_box( 'postexcerpt', __('Match Preview', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Preview::output', 'wpcm_match', 'normal');
 		add_meta_box( 'wpclubmanager-match-details', __('Match Details', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Details::output', 'wpcm_match', 'normal', 'high');
-		add_meta_box( 'wpclubmanager-match-players', __('Players', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Players::output', 'wpcm_match', 'normal', 'low');
+		add_meta_box( 'wpclubmanager-match-players', __('Select Players', 'wpclubmanager'), 'WPCM_Meta_Box_Match_Players::output', 'wpcm_match', 'normal', 'low');
 
-		add_meta_box( 'wpclubmanager-player-details', __( 'Basic Information', 'wpclubmanager' ), 'WPCM_Meta_Box_Player_Details::output', 'wpcm_player', 'normal', 'core' );
-		add_meta_box( 'wpclubmanager-player-stats', __( 'Statistics', 'wpclubmanager' ), 'WPCM_Meta_Box_Player_Stats::output', 'wpcm_player', 'normal', 'low' );
+		add_meta_box( 'wpclubmanager-player-details', __( 'Player Information', 'wpclubmanager' ), 'WPCM_Meta_Box_Player_Details::output', 'wpcm_player', 'normal', 'core' );
+		add_meta_box( 'wpclubmanager-player-stats', __( 'Player Statistics', 'wpclubmanager' ), 'WPCM_Meta_Box_Player_Stats::output', 'wpcm_player', 'normal', 'low' );
+		add_meta_box( 'pageparentdiv', __('Player Order'), 'page_attributes_meta_box', 'wpcm_player', 'side', 'low' );
+		add_meta_box( 'postimagediv', __('Player Image'), 'post_thumbnail_meta_box', 'wpcm_player', 'side', 'low' );
 
 		add_meta_box( 'wpclubmanager-sponsor-link', __( 'Sponsor Details', 'wpclubmanager' ), 'WPCM_Meta_Box_Sponsor_Url::output', 'wpcm_sponsor', 'normal', 'core' );
+		add_meta_box( 'postimagediv', __('Sponsor Logo'), 'post_thumbnail_meta_box', 'wpcm_sponsor', 'side', 'low' );
 
-		add_meta_box( 'wpclubmanager-staff-details', __( 'Basic Information', 'wpclubmanager' ), 'WPCM_Meta_Box_Staff_Details::output', 'wpcm_staff', 'normal', 'core' );
+		add_meta_box( 'wpclubmanager-staff-details', __( 'Staff Information', 'wpclubmanager' ), 'WPCM_Meta_Box_Staff_Details::output', 'wpcm_staff', 'normal', 'core' );
+		add_meta_box( 'pageparentdiv', __('Staff Order'), 'page_attributes_meta_box', 'wpcm_staff', 'side', 'low' );
+		add_meta_box( 'postimagediv', __('Staff Image'), 'post_thumbnail_meta_box', 'wpcm_staff', 'side', 'low' );
 	}
 
 	/**
@@ -113,6 +120,7 @@ class WPCM_Admin_Meta_Boxes {
 	 */
 	public function remove_meta_boxes() {
 		
+		remove_meta_box( 'postexcerpt', 'wpcm_match', 'normal' );
 		remove_meta_box( 'wpcm_compdiv', 'wpcm_match', 'side');
 		remove_meta_box( 'wpcm_venuediv', 'wpcm_match', 'side');
 		remove_meta_box( 'wpcm_seasondiv', 'wpcm_match', 'side');

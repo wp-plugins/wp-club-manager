@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Functions
- * @version     1.3.0
+ * @version     1.3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -150,6 +150,42 @@ function wpcm_get_image_size( $image_size ) {
 	}
 
 	return apply_filters( 'wpclubmanager_get_image_size_' . $image_size, $size );
+}
+
+/**
+ * Queue some JavaScript code to be output in the footer.
+ *
+ * @param string $code
+ */
+function wpclubmanager_enqueue_js( $code ) {
+	global $wpclubmanager_queued_js;
+
+	if ( empty( $wpclubmanager_queued_js ) ) {
+		$wpclubmanager_queued_js = '';
+	}
+
+	$wpclubmanager_queued_js .= "\n" . $code . "\n";
+}
+
+/**
+ * Output any queued javascript code in the footer.
+ */
+function wpclubmanager_print_js() {
+	global $wpclubmanager_queued_js;
+
+	if ( ! empty( $wpclubmanager_queued_js ) ) {
+
+		echo "<!-- WP Club Manager JavaScript -->\n<script type=\"text/javascript\">\njQuery(function($) {";
+
+		// Sanitize
+		$wpclubmanager_queued_js = wp_check_invalid_utf8( $wpclubmanager_queued_js );
+		$wpclubmanager_queued_js = preg_replace( '/&#(x)?0*(?(1)27|39);?/i', "'", $wpclubmanager_queued_js );
+		$wpclubmanager_queued_js = str_replace( "\r", '', $wpclubmanager_queued_js );
+
+		echo $wpclubmanager_queued_js . "});\n</script>\n";
+
+		unset( $wpclubmanager_queued_js );
+	}
 }
 
 /**

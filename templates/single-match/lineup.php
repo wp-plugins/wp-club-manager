@@ -4,7 +4,7 @@
  *
  * @author 		ClubPress
  * @package 	WPClubManager/Templates
- * @version     1.1.5
+ * @version     1.3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -55,9 +55,12 @@ if ( $played ) {
 
 							endforeach;
 
-							if( $sport == 'soccer' || $sport == 'rugby' || $sport == 'hockey_field' || $sport == 'footy' || $sport == 'floorball' || $sport == 'gaelic' ) { ?>
-								<th class="notes"><?php _e('Cards', 'wpclubmanager') ?></th>
-							<?php } ?>
+							if( get_option( 'wpcm_show_stats_greencards' ) == 'yes' || get_option( 'wpcm_show_stats_yellowcards' ) == 'yes' || get_option( 'wpcm_show_stats_blackcards' ) == 'yes' || get_option( 'wpcm_show_stats_redcards' ) == 'yes' ) {
+
+								//if( $sport == 'soccer' || $sport == 'rugby' || $sport == 'hockey_field' || $sport == 'footy' || $sport == 'floorball' || $sport == 'gaelic' ) { ?>
+									<th class="notes"><?php _e('Cards', 'wpclubmanager') ?></th>
+								<?php //} 
+							} ?>
 
 						</tr>
 
@@ -114,9 +117,12 @@ if ( $played ) {
 
 							endforeach;
 
-							if( $sport == 'soccer' || $sport == 'rugby' || $sport == 'hockey_field' || $sport == 'footy' || $sport == 'floorball' || $sport == 'gaelic' ) { ?>
-								<th class="notes"><?php _e('Cards', 'wpclubmanager') ?></th>
-							<?php } ?>
+							if( get_option( 'wpcm_show_stats_greencards' ) == 'yes' || get_option( 'wpcm_show_stats_yellowcards' ) == 'yes' || get_option( 'wpcm_show_stats_blackcards' ) == 'yes' || get_option( 'wpcm_show_stats_redcards' ) == 'yes' ) {
+
+								//if( $sport == 'soccer' || $sport == 'rugby' || $sport == 'hockey_field' || $sport == 'footy' || $sport == 'floorball' || $sport == 'gaelic' ) { ?>
+									<th class="notes"><?php _e('Cards', 'wpclubmanager') ?></th>
+								<?php //} 
+							} ?>
 
 						</tr>
 
