@@ -8,26 +8,26 @@ Stable tag: 1.3.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-WP Club Manager is the only all-in-one plugin built specifically to help you easily create and manage a sports club website.
+A quick and easy way to create your club website. It's simple to use and has all the tools to manage your team activities.
 
 == Description ==
 
-Create and manage a sports club website quickly and easily using WordPress. Manage multiple teams in your club, player profiles and statistics, club staff, sponsors, league tables and keep track of upcoming and played matches all within one single plugin.
+WP Club Manager is the only all-in-one plugin built specifically to create and manage a sports club website with WordPress. Manage multiple teams in your club, player profiles and statistics, club staff, sponsors, league tables and keep track of your fixtures and results - all with one plugin.
 
 = Features Include =
 
-* Manage multiple teams in your club
-* Comprehensive player and staff profiles
+* Manage multiple teams
+* Player and staff profiles
 * Player performance ratings
-* Full player stats for each season
-* Club profiles with head-to-head records
-* Fixtures and results tables
+* Full player stats by season
+* Club profiles with head-to-head stats
+* Fixtures and results
 * Automatically updated league tables
 * Match stats and reports
 * Manage club sponsors
 * Fixture, results, player, table and sponsor widgets
 * Import matches, players, staff and clubs from a CSV file
-* Easy-to-use shortcodes
+* Easy-to-use shortcode buttons
 * Customize appearance with flexible templates
 
 = Supported Sports =
@@ -127,10 +127,23 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 
 == Screenshots ==
 
-1. Add matches and pick match teams
-2. Choosing your team is easy and quick
-3. Extensive player profiles with season stats
-4. A slick admin interface blends in with WordPress
+1. Clubs admin screen
+2. Players admin screen
+3. Add/Edit player screen
+4. Staff admin screen
+5. Matches admin screen
+6. Add a new match
+7. Adding match result and stats
+8. Sponsors admin screen
+9. WP Club Manager general settings
+10. Upcoming fixtures dashboard widget
+11. Plugin Widgets
+12. Shortcode buttons
+13. Frontend player profile
+14. Frontend match page
+15. Frontend matches list
+16. Frontend players stats table
+17. Frontend standings table
 
 == Changelog ==
 
