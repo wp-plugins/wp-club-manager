@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
-"POT-Creation-Date: 2015-10-15 14:22-0000\n"
-"PO-Revision-Date: 2015-10-15 20:22-0000\n"
+"POT-Creation-Date: 2015-11-11 21:31-0000\n"
+"PO-Revision-Date: 2015-11-11 22:03-0000\n"
 "Last-Translator: \n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/clubpress/"
 "wp-club-manager/language/en_GB/)\n"
@@ -88,63 +88,63 @@ msgstr "Fixtures & Results"
 
 #: ../includes/class-wpcm-ajax.php:125
 msgid "January"
-msgstr ""
+msgstr "January"
 
 #: ../includes/class-wpcm-ajax.php:126
 msgid "February"
-msgstr ""
+msgstr "February"
 
 #: ../includes/class-wpcm-ajax.php:127
 msgid "March"
-msgstr ""
+msgstr "March"
 
 #: ../includes/class-wpcm-ajax.php:128
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: ../includes/class-wpcm-ajax.php:129
 msgid "May"
-msgstr ""
+msgstr "May"
 
 #: ../includes/class-wpcm-ajax.php:130
 msgid "June"
-msgstr ""
+msgstr "June"
 
 #: ../includes/class-wpcm-ajax.php:131
 msgid "July"
-msgstr ""
+msgstr "July"
 
 #: ../includes/class-wpcm-ajax.php:132
 msgid "August"
-msgstr ""
+msgstr "August"
 
 #: ../includes/class-wpcm-ajax.php:133
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: ../includes/class-wpcm-ajax.php:134
 msgid "October"
-msgstr ""
+msgstr "October"
 
 #: ../includes/class-wpcm-ajax.php:135
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: ../includes/class-wpcm-ajax.php:136
 msgid "December"
-msgstr ""
+msgstr "December"
 
 #: ../includes/class-wpcm-ajax.php:143
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: ../includes/class-wpcm-ajax.php:147
 msgid "Classic"
-msgstr ""
+msgstr "Classic"
 
 #: ../includes/class-wpcm-ajax.php:148
 msgid "List"
-msgstr ""
+msgstr "List"
 
 #: ../includes/class-wpcm-ajax.php:160 ../includes/class-wpcm-ajax.php:326
 #: ../includes/class-wpcm-ajax.php:508 ../includes/class-wpcm-ajax.php:687
@@ -240,7 +240,7 @@ msgstr "Team"
 
 #: ../includes/class-wpcm-ajax.php:216
 msgid "Month"
-msgstr ""
+msgstr "Month"
 
 #: ../includes/class-wpcm-ajax.php:228
 #: ../includes/class-wpcm-post-types.php:154
@@ -260,7 +260,7 @@ msgstr "Show Thumbnail"
 
 #: ../includes/class-wpcm-ajax.php:250
 msgid "Link to Club Page"
-msgstr ""
+msgstr "Link to Club Page"
 
 #: ../includes/class-wpcm-ajax.php:255 ../includes/class-wpcm-ajax.php:418
 #: ../includes/class-wpcm-ajax.php:597 ../includes/class-wpcm-ajax.php:758
@@ -290,7 +290,7 @@ msgstr "Link page"
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:82
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:110
 #: ../includes/widgets/class-wpcm-widget-players.php:277
-#: ../templates/shortcodes/players.php:166
+#: ../templates/shortcodes/players.php:170
 #: ../templates/shortcodes/staff.php:141
 #: ../templates/single-player/meta.php:218
 msgid "None"
@@ -316,6 +316,12 @@ msgstr "Players"
 #: ../includes/widgets/class-wpcm-widget-players.php:125
 msgid "Appearances"
 msgstr "Appearances"
+
+#: ../includes/class-wpcm-ajax.php:301
+#: ../includes/widgets/class-wpcm-widget-players.php:125
+#: ../templates/shortcodes/players.php:46
+msgid "Sub Appearances"
+msgstr "Sub Appearances"
 
 #: ../includes/class-wpcm-ajax.php:304 ../includes/class-wpcm-ajax.php:491
 msgid "Thumbnail"
@@ -1545,7 +1551,7 @@ msgstr "Team Manager"
 
 #: ../includes/class-wpcm-install.php:428
 msgid "View WP Club Manager Settings"
-msgstr ""
+msgstr "View WP Club Manager Settings"
 
 #: ../includes/class-wpcm-install.php:428
 #: ../includes/admin/class-wpcm-admin-menus.php:65
@@ -1555,7 +1561,7 @@ msgstr "Settings"
 
 #: ../includes/class-wpcm-install.php:444
 msgid "View WP Club Manager Documentation"
-msgstr ""
+msgstr "View WP Club Manager Documentation"
 
 #: ../includes/class-wpcm-install.php:444
 #: ../includes/admin/class-wpcm-admin-welcome.php:243
@@ -1564,38 +1570,38 @@ msgstr "Docs"
 
 #: ../includes/class-wpcm-install.php:445
 msgid "Visit Support Forum"
-msgstr ""
+msgstr "Visit Support Forum"
 
 #: ../includes/class-wpcm-install.php:445
 msgid "Support"
-msgstr ""
+msgstr "Support"
 
 #: ../includes/class-wpcm-license-handler.php:128
 #, php-format
 msgid "%1$s License Key"
-msgstr ""
+msgstr "%1$s Licence Key"
 
 #: ../includes/class-wpcm-license-handler.php:160
 #: ../includes/class-wpcm-license-handler.php:223
 msgid "Nonce verification failed"
-msgstr ""
+msgstr "Nonce verification failed"
 
 #: ../includes/class-wpcm-license-handler.php:160
 #: ../includes/class-wpcm-license-handler.php:223
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: ../includes/class-wpcm-license-handler.php:292
 msgid "This license does not belong to the product you have entered it for."
-msgstr ""
+msgstr "This licence does not belong to the product you have entered it for."
 
 #: ../includes/class-wpcm-license-handler.php:297
 msgid "This license does not have any activations left"
-msgstr ""
+msgstr "This licence does not have any activations left"
 
 #: ../includes/class-wpcm-license-handler.php:302
 msgid "This license key is expired. Please renew it."
-msgstr ""
+msgstr "This licence key is expired. Please renew it."
 
 #: ../includes/class-wpcm-license-handler.php:307
 #, php-format
@@ -1603,6 +1609,8 @@ msgid ""
 "There was a problem activating your license key, please try again or contact "
 "support. Error code: %s"
 msgstr ""
+"There was a problem activating your licence key, please try again or contact "
+"support. Error code: %s"
 
 #: ../includes/class-wpcm-post-types.php:43
 #: ../includes/admin/importers/class-wpcm-club-importer.php:26
@@ -2102,13 +2110,12 @@ msgstr "Red Card"
 msgid "Apps"
 msgstr "Apps"
 
-#: ../includes/wpcm-player-functions.php:481
+#: ../includes/wpcm-player-functions.php:483
 #: ../includes/admin/settings/class-wpcm-settings-players.php:175
 msgid "Games Played"
 msgstr "Games Played"
 
-#: ../includes/wpcm-player-functions.php:481
-#: ../includes/admin/settings/class-wpcm-settings-players.php:175
+#: ../includes/wpcm-player-functions.php:483
 msgid "GP"
 msgstr "GP"
 
@@ -3103,6 +3110,8 @@ msgid ""
 "There is a new version of %1$s available. <a target=\"_blank\" class="
 "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
 msgstr ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
 
 #: ../includes/WPCM_Plugin_Updater.php:182
 #, php-format
@@ -3111,6 +3120,9 @@ msgid ""
 "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
 "\">update now</a>."
 msgstr ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
 
 #: ../includes/admin/class-wpcm-admin-assets.php:74
 msgid "WPClubManager"
@@ -3118,18 +3130,18 @@ msgstr "WPClubManager"
 
 #: ../includes/admin/class-wpcm-admin-dashboard.php:37
 msgid "This Week's Upcoming Matches"
-msgstr ""
+msgstr "This Week's Upcoming Matches"
 
 #: ../includes/admin/class-wpcm-admin-dashboard.php:60
 #, php-format
 msgid "%s "
 msgid_plural "%s "
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s"
+msgstr[1] "%s "
 
 #: ../includes/admin/class-wpcm-admin-dashboard.php:205
 msgid "No upcoming matches."
-msgstr ""
+msgstr "No upcoming matches."
 
 #: ../includes/admin/class-wpcm-admin-importers.php:33
 #: ../includes/widgets/class-wpcm-widget-players.php:28
@@ -3171,11 +3183,11 @@ msgstr "Club Manager"
 #: ../includes/admin/class-wpcm-admin-menus.php:51
 #: ../includes/admin/views/html-admin-page-status.php:14
 msgid "WP Club Manager Status"
-msgstr ""
+msgstr "WP Club Manager Status"
 
 #: ../includes/admin/class-wpcm-admin-menus.php:51
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: ../includes/admin/class-wpcm-admin-menus.php:58
 #: ../includes/admin/views/html-admin-page-extensions.php:8
@@ -3194,7 +3206,7 @@ msgstr "Action failed. Please refresh the page and retry."
 #: ../includes/admin/class-wpcm-admin-permalink-settings.php:42
 #: ../includes/admin/views/html-admin-settings.php:2
 msgid "WP Club Manager Settings"
-msgstr ""
+msgstr "WP Club Manager Settings"
 
 #: ../includes/admin/class-wpcm-admin-permalink-settings.php:70
 msgid ""
@@ -3202,11 +3214,14 @@ msgid ""
 "settings only apply when <strong>not using \"default\" permalinks above</"
 "strong>."
 msgstr ""
+"These settings control the permalinks used for WP Club Manager. These "
+"settings only apply when <strong>not using \"default\" permalinks above</"
+"strong>."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:45
 #, php-format
 msgid "Player updated. <a href=\"%s\">View Player</a>"
-msgstr ""
+msgstr "Player updated. <a href=\"%s\">View Player</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:46
 #: ../includes/admin/class-wpcm-admin-post-types.php:60
@@ -3214,7 +3229,7 @@ msgstr ""
 #: ../includes/admin/class-wpcm-admin-post-types.php:88
 #: ../includes/admin/class-wpcm-admin-post-types.php:102
 msgid "Custom field updated."
-msgstr ""
+msgstr "Custom field updated."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:47
 #: ../includes/admin/class-wpcm-admin-post-types.php:61
@@ -3222,30 +3237,30 @@ msgstr ""
 #: ../includes/admin/class-wpcm-admin-post-types.php:89
 #: ../includes/admin/class-wpcm-admin-post-types.php:103
 msgid "Custom field deleted."
-msgstr ""
+msgstr "Custom field deleted."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:48
 msgid "Player updated."
-msgstr ""
+msgstr "Player updated."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:49
 #, php-format
 msgid "Player restored to revision from %s"
-msgstr ""
+msgstr "Player restored to revision from %s"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:50
 #, php-format
 msgid "Player published. <a href=\"%s\">View Player</a>"
-msgstr ""
+msgstr "Player published. <a href=\"%s\">View Player</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:51
 msgid "Player saved."
-msgstr ""
+msgstr "Player saved."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:52
 #, php-format
 msgid "Player submitted. <a target=\"_blank\" href=\"%s\">Preview Player</a>"
-msgstr ""
+msgstr "Player submitted. <a target=\"_blank\" href=\"%s\">Preview Player</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:53
 #, php-format
@@ -3253,6 +3268,8 @@ msgid ""
 "Player scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
 "\">Preview Player</a>"
 msgstr ""
+"Player scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
+"\">Preview Player</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:54
 #: ../includes/admin/class-wpcm-admin-post-types.php:68
@@ -3260,41 +3277,42 @@ msgstr ""
 #: ../includes/admin/class-wpcm-admin-post-types.php:96
 #: ../includes/admin/class-wpcm-admin-post-types.php:110
 msgid "M j, Y @ G:i"
-msgstr ""
+msgstr "M j, Y @ G:i"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:55
 #, php-format
 msgid ""
 "Player draft updated. <a target=\"_blank\" href=\"%s\">Preview Player</a>"
 msgstr ""
+"Player draft updated. <a target=\"_blank\" href=\"%s\">Preview Player</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:59
 #, php-format
 msgid "Staff updated. <a href=\"%s\">View Staff</a>"
-msgstr ""
+msgstr "Staff updated. <a href=\"%s\">View Staff</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:62
 msgid "Staff updated."
-msgstr ""
+msgstr "Staff updated."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:63
 #, php-format
 msgid "Staff restored to revision from %s"
-msgstr ""
+msgstr "Staff restored to revision from %s"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:64
 #, php-format
 msgid "Staff published. <a href=\"%s\">View Staff</a>"
-msgstr ""
+msgstr "Staff published. <a href=\"%s\">View Staff</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:65
 msgid "Staff saved."
-msgstr ""
+msgstr "Staff saved."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:66
 #, php-format
 msgid "Staff submitted. <a target=\"_blank\" href=\"%s\">Preview Staff</a>"
-msgstr ""
+msgstr "Staff submitted. <a target=\"_blank\" href=\"%s\">Preview Staff</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:67
 #, php-format
@@ -3302,39 +3320,42 @@ msgid ""
 "Staff scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
 "\">Preview Staff</a>"
 msgstr ""
+"Staff scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
+"\">Preview Staff</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:69
 #, php-format
 msgid "Staff draft updated. <a target=\"_blank\" href=\"%s\">Preview Staff</a>"
 msgstr ""
+"Staff draft updated. <a target=\"_blank\" href=\"%s\">Preview Staff</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:73
 #, php-format
 msgid "Match updated. <a href=\"%s\">View Match</a>"
-msgstr ""
+msgstr "Match updated. <a href=\"%s\">View Match</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:76
 msgid "Match updated."
-msgstr ""
+msgstr "Match updated."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:77
 #, php-format
 msgid "Match restored to revision from %s"
-msgstr ""
+msgstr "Match restored to revision from %s"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:78
 #, php-format
 msgid "Match published. <a href=\"%s\">View Match</a>"
-msgstr ""
+msgstr "Match published. <a href=\"%s\">View Match</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:79
 msgid "Match saved."
-msgstr ""
+msgstr "Match saved."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:80
 #, php-format
 msgid "Match submitted. <a target=\"_blank\" href=\"%s\">Preview Match</a>"
-msgstr ""
+msgstr "Match submitted. <a target=\"_blank\" href=\"%s\">Preview Match</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:81
 #, php-format
@@ -3342,39 +3363,42 @@ msgid ""
 "Match scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
 "\">Preview Match</a>"
 msgstr ""
+"Match scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
+"\">Preview Match</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:83
 #, php-format
 msgid "Match draft updated. <a target=\"_blank\" href=\"%s\">Preview Match</a>"
 msgstr ""
+"Match draft updated. <a target=\"_blank\" href=\"%s\">Preview Match</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:87
 #, php-format
 msgid "Club updated. <a href=\"%s\">View Club</a>"
-msgstr ""
+msgstr "Club updated. <a href=\"%s\">View Club</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:90
 msgid "Club updated."
-msgstr ""
+msgstr "Club updated."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:91
 #, php-format
 msgid "Club restored to revision from %s"
-msgstr ""
+msgstr "Club restored to revision from %s"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:92
 #, php-format
 msgid "Club published. <a href=\"%s\">View Club</a>"
-msgstr ""
+msgstr "Club published. <a href=\"%s\">View Club</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:93
 msgid "Club saved."
-msgstr ""
+msgstr "Club saved."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:94
 #, php-format
 msgid "Club submitted. <a target=\"_blank\" href=\"%s\">Preview Club</a>"
-msgstr ""
+msgstr "Club submitted. <a target=\"_blank\" href=\"%s\">Preview Club</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:95
 #, php-format
@@ -3382,42 +3406,44 @@ msgid ""
 "Club scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
 "\">Preview Club</a>"
 msgstr ""
+"Club scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
+"\">Preview Club</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:97
 #, php-format
 msgid "Club draft updated. <a target=\"_blank\" href=\"%s\">Preview Club</a>"
-msgstr ""
+msgstr "Club draft updated. <a target=\"_blank\" href=\"%s\">Preview Club</a>"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:101
 #: ../includes/admin/class-wpcm-admin-post-types.php:104
 msgid "Sponsor updated."
-msgstr ""
+msgstr "Sponsor updated."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:105
 #, php-format
 msgid "Sponsor restored to revision from %s"
-msgstr ""
+msgstr "Sponsor restored to revision from %s"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:106
 msgid "Sponsor published."
-msgstr ""
+msgstr "Sponsor published."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:107
 msgid "Sponsor saved."
-msgstr ""
+msgstr "Sponsor saved."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:108
 msgid "Sponsor submitted."
-msgstr ""
+msgstr "Sponsor submitted."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:109
 #, php-format
 msgid "Sponsor scheduled for: <strong>%1$s</strong>."
-msgstr ""
+msgstr "Sponsor scheduled for: <strong>%1$s</strong>."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:111
 msgid "Sponsor draft updated."
-msgstr ""
+msgstr "Sponsor draft updated."
 
 #: ../includes/admin/class-wpcm-admin-settings.php:61
 #: ../includes/admin/class-wpcm-admin-welcome.php:368
@@ -3448,12 +3474,13 @@ msgstr "Deactivate Licence"
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:58
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:78
 msgid "Display Name"
-msgstr ""
+msgstr "Display Name"
 
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:60
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:82
 msgid "The team label is used to display a shortened version of the team name."
 msgstr ""
+"The team label is used to display a shortened version of the team name."
 
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:119
 #: ../includes/admin/class-wpcm-admin-taxonomies.php:139
@@ -3587,7 +3614,7 @@ msgstr "What's New In This Version"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:295
 msgid "Display Team Names"
-msgstr ""
+msgstr "Display Team Names"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:296
 msgid ""
@@ -3595,10 +3622,13 @@ msgid ""
 "to set a name for each team in your club that will be displayed throughout "
 "the front-end of your site."
 msgstr ""
+"Get more clarity with the new team display names feature which enables you "
+"to set a name for each team in your club that will be displayed throughout "
+"the front-end of your site."
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:298
 msgid "New Matches Shortcode List"
-msgstr ""
+msgstr "New Matches Shortcode List"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:299
 msgid ""
@@ -3606,10 +3636,13 @@ msgid ""
 "shortcode style option. You can choose between the original classic table "
 "layout or a new, modern list style."
 msgstr ""
+"More choice to display your fixtures and results with a new matches "
+"shortcode style option. You can choose between the original classic table "
+"layout or a new, modern list style."
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:305
 msgid "Head to Head Club Records"
-msgstr ""
+msgstr "Head to Head Club Records"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:306
 msgid ""
@@ -3617,10 +3650,13 @@ msgid ""
 "clubs head-to-head features. See your wins, losses and draws at a glance or "
 "view each match in more detail."
 msgstr ""
+"Easily view your clubs match records against your opponents with the new "
+"clubs head-to-head features. See your wins, losses and draws at a glance or "
+"view each match in more detail."
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:308
 msgid "Rich Snippets for Matches"
-msgstr ""
+msgstr "Rich Snippets for Matches"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:309
 msgid ""
@@ -3628,6 +3664,9 @@ msgid ""
 "which allow search engines to gather information about your matches and "
 "display them search results."
 msgstr ""
+"Improve your club websites SERPs with the new Rich Snippets for matches "
+"which allow search engines to gather information about your matches and "
+"display them search results."
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:315
 #: ../includes/admin/class-wpcm-admin-welcome.php:468
@@ -3839,16 +3878,20 @@ msgid ""
 "If you like <strong>WP Club Manager</strong> please leave us a %s&#9733;"
 "&#9733;&#9733;&#9733;&#9733;%s rating. A huge thank you in advance!"
 msgstr ""
+"If you like <strong>WP Club Manager</strong> please leave us a %s&#9733;"
+"&#9733;&#9733;&#9733;&#9733;%s rating. A huge thank you in advance!"
 
 #: ../includes/admin/class-wpcm-admin.php:114
 msgid "Many thanks :)"
-msgstr ""
+msgstr "Many thanks :)"
 
 #: ../includes/admin/class-wpcm-admin.php:122
 msgid ""
 "Thank you for managing your club with WP Club Manager, your support is much "
 "appreciated."
 msgstr ""
+"Thank you for managing your club with WP Club Manager, your support is much "
+"appreciated."
 
 #: ../includes/admin/wpcm-admin-functions.php:19
 msgid "wpcm-settings"
@@ -4047,14 +4090,14 @@ msgstr ""
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:55
 msgid "Enter club name"
-msgstr ""
+msgstr "Enter club name"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:65
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:96
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:56
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:94
 msgid "Set featured image"
-msgstr ""
+msgstr "Set featured image"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:65
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:82
@@ -4067,7 +4110,7 @@ msgstr "Set club badge"
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:57
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:95
 msgid "Remove featured image"
-msgstr ""
+msgstr "Remove featured image"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:66
 msgid "Remove club badge"
@@ -4126,7 +4169,7 @@ msgstr "teams"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:72
 msgid "Enter players name"
-msgstr ""
+msgstr "Enter players name"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:81
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:79
@@ -4159,7 +4202,7 @@ msgstr "positions"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:46
 msgid "Enter sponsor name"
-msgstr ""
+msgstr "Enter sponsor name"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:56
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:73
@@ -4173,7 +4216,7 @@ msgstr "Remove sponsor logo"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:70
 msgid "Enter staff name"
-msgstr ""
+msgstr "Enter staff name"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:94
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-staff.php:111
@@ -4208,7 +4251,7 @@ msgstr "Uploaded to this %s"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:95
 msgid "Club Statistics"
-msgstr ""
+msgstr "Club Statistics"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:96
 msgid "Club Badge"
@@ -4224,12 +4267,12 @@ msgstr "Match Video"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:100
 msgid "Match Fixture"
-msgstr ""
+msgstr "Match Fixture"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:101
 #: ../templates/single-match/report.php:39
 msgid "Match Preview"
-msgstr ""
+msgstr "Match Preview"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:102
 #: ../includes/admin/views/html-bulk-edit-match.php:15
@@ -4239,19 +4282,19 @@ msgstr "Match Details"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:103
 msgid "Select Players"
-msgstr ""
+msgstr "Select Players"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:105
 msgid "Player Information"
-msgstr ""
+msgstr "Player Information"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:106
 msgid "Player Statistics"
-msgstr ""
+msgstr "Player Statistics"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:107
 msgid "Player Order"
-msgstr ""
+msgstr "Player Order"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:108
 msgid "Player Image"
@@ -4267,11 +4310,11 @@ msgstr "Sponsor Logo"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:113
 msgid "Staff Information"
-msgstr ""
+msgstr "Staff Information"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:114
 msgid "Staff Order"
-msgstr ""
+msgstr "Staff Order"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:115
 msgid "Staff Image"
@@ -4305,7 +4348,7 @@ msgstr "Home"
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-fixture.php:35
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-fixture.php:51
 msgid "Choose club"
-msgstr ""
+msgstr "Choose club"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-fixture.php:44
 msgid "Away"
@@ -4316,8 +4359,8 @@ msgid "Starting Lineup"
 msgstr "Starting Lineup"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:32
-msgid "Substitutes"
-msgstr "Substitutes"
+msgid "Substitutes Used"
+msgstr "Substitutes Used"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:36
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:40
@@ -4392,7 +4435,7 @@ msgstr "Choose %s"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-stats.php:33
 msgid "Choose a team and season to edit the manual stats."
-msgstr ""
+msgstr "Choose a team and season to edit the manual stats."
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-stats.php:52
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-stats.php:148
@@ -4460,11 +4503,11 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:75
 msgid "Hide Scores"
-msgstr ""
+msgstr "Hide Scores"
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:76
 msgid "Check this box to hide scores from guests."
-msgstr ""
+msgstr "Check this box to hide scores from guests."
 
 #: ../includes/admin/settings/class-wpcm-settings-licenses.php:22
 msgid "Licenses"
@@ -4570,6 +4613,10 @@ msgstr "Display Player Stats"
 #: ../includes/admin/settings/class-wpcm-settings-players.php:170
 msgid "<p>Choose which player stats to display throughout the site.</p>"
 msgstr "<p>Choose which player stats to display throughout the site.</p>"
+
+#: ../includes/admin/settings/class-wpcm-settings-players.php:175
+msgid "Substitute Appearances"
+msgstr "Substitute Appearances"
 
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:38
 msgid "Staff Profile Options"
@@ -4716,52 +4763,56 @@ msgid ""
 "Our catalog of WP Club Manager Extensions can be found on wpclubmanager.com "
 "here: <a href=\"%s\">WP Club Manager Extensions Catalog</a>"
 msgstr ""
+"Our catalogue of WP Club Manager Extensions can be found on wpclubmanager."
+"com here: <a href=\"%s\">WP Club Manager Extensions Catalogue</a>"
 
 #: ../includes/admin/views/html-admin-page-status.php:18
 msgid ""
 "Please copy and paste this information in your ticket when contacting "
 "support:"
 msgstr ""
+"Please copy and paste this information in your ticket when contacting "
+"support:"
 
 #: ../includes/admin/views/html-admin-page-status.php:19
 msgid "Get System Report"
-msgstr ""
+msgstr "Get System Report"
 
 #: ../includes/admin/views/html-admin-page-status.php:23
 msgid "Copied!"
-msgstr ""
+msgstr "Copied!"
 
 #: ../includes/admin/views/html-admin-page-status.php:23
 msgid "Copy for Support"
-msgstr ""
+msgstr "Copy for Support"
 
 #: ../includes/admin/views/html-admin-page-status.php:36
 msgid "WordPress Environment"
-msgstr ""
+msgstr "WordPress Environment"
 
 #: ../includes/admin/views/html-admin-page-status.php:41
 msgid "Home URL"
-msgstr ""
+msgstr "Home URL"
 
 #: ../includes/admin/views/html-admin-page-status.php:46
 msgid "Site URL"
-msgstr ""
+msgstr "Site URL"
 
 #: ../includes/admin/views/html-admin-page-status.php:51
 msgid "WPCM Version"
-msgstr ""
+msgstr "WPCM Version"
 
 #: ../includes/admin/views/html-admin-page-status.php:56
 msgid "WP Version"
-msgstr ""
+msgstr "WP Version"
 
 #: ../includes/admin/views/html-admin-page-status.php:61
 msgid "WP Multisite"
-msgstr ""
+msgstr "WP Multisite"
 
 #: ../includes/admin/views/html-admin-page-status.php:66
 msgid "WP Memory Limit"
-msgstr ""
+msgstr "WP Memory Limit"
 
 #: ../includes/admin/views/html-admin-page-status.php:72
 #, php-format
@@ -4769,26 +4820,28 @@ msgid ""
 "%s - We recommend setting memory to at least 64MB. See: <a href=\"%s\" "
 "target=\"_blank\">Increasing memory allocated to PHP</a>"
 msgstr ""
+"%s - We recommend setting memory to at least 64MB. See: <a href=\"%s\" "
+"target=\"_blank\">Increasing memory allocated to PHP</a>"
 
 #: ../includes/admin/views/html-admin-page-status.php:79
 msgid "WP Debug Mode"
-msgstr ""
+msgstr "WP Debug Mode"
 
 #: ../includes/admin/views/html-admin-page-status.php:84
 msgid "Language"
-msgstr ""
+msgstr "Language"
 
 #: ../includes/admin/views/html-admin-page-status.php:93
 msgid "Server Environment"
-msgstr ""
+msgstr "Server Environment"
 
 #: ../includes/admin/views/html-admin-page-status.php:98
 msgid "Server Info"
-msgstr ""
+msgstr "Server Info"
 
 #: ../includes/admin/views/html-admin-page-status.php:103
 msgid "PHP Version"
-msgstr ""
+msgstr "PHP Version"
 
 #: ../includes/admin/views/html-admin-page-status.php:111
 #, php-format
@@ -4796,97 +4849,99 @@ msgid ""
 "%s - We recommend a minimum PHP version of 5.4. See: <a href=\"%s\" target="
 "\"_blank\">How to update your PHP version</a>"
 msgstr ""
+"%s - We recommend a minimum PHP version of 5.4. See: <a href=\"%s\" target="
+"\"_blank\">How to update your PHP version</a>"
 
 #: ../includes/admin/views/html-admin-page-status.php:116
 msgid "Couldn't determine PHP version because phpversion() doesn't exist."
-msgstr ""
+msgstr "Couldn't determine PHP version because phpversion() doesn't exist."
 
 #: ../includes/admin/views/html-admin-page-status.php:122
 msgid "PHP Post Max Size"
-msgstr ""
+msgstr "PHP Post Max Size"
 
 #: ../includes/admin/views/html-admin-page-status.php:127
 msgid "PHP Time Limit"
-msgstr ""
+msgstr "PHP Time Limit"
 
 #: ../includes/admin/views/html-admin-page-status.php:132
 msgid "PHP Max Input Vars"
-msgstr ""
+msgstr "PHP Max Input Vars"
 
 #: ../includes/admin/views/html-admin-page-status.php:138
 msgid "MySQL Version"
-msgstr ""
+msgstr "MySQL Version"
 
 #: ../includes/admin/views/html-admin-page-status.php:149
 msgid "Max Upload Size"
-msgstr ""
+msgstr "Max Upload Size"
 
 #: ../includes/admin/views/html-admin-page-status.php:154
 msgid "Default Timezone is UTC"
-msgstr ""
+msgstr "Default Timezone is UTC"
 
 #: ../includes/admin/views/html-admin-page-status.php:159
 #, php-format
 msgid "Default timezone is %s - it should be UTC"
-msgstr ""
+msgstr "Default timezone is %s - it should be UTC"
 
 #: ../includes/admin/views/html-admin-page-status.php:170
 msgid "Active Plugins"
-msgstr ""
+msgstr "Active Plugins"
 
 #: ../includes/admin/views/html-admin-page-status.php:194
 msgid "Visit plugin homepage"
-msgstr ""
+msgstr "Visit plugin homepage"
 
 #: ../includes/admin/views/html-admin-page-status.php:199
 #, php-format
 msgctxt "by author"
 msgid "by %s"
-msgstr ""
+msgstr "by %s"
 
 #: ../includes/admin/views/html-admin-page-status.php:210
 msgid "Taxonomies"
-msgstr ""
+msgstr "Taxonomies"
 
 #: ../includes/admin/views/html-admin-page-status.php:255
 msgid "Theme"
-msgstr ""
+msgstr "Theme"
 
 #: ../includes/admin/views/html-admin-page-status.php:266
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: ../includes/admin/views/html-admin-page-status.php:271
 msgid "Author URL"
-msgstr ""
+msgstr "Author URL"
 
 #: ../includes/admin/views/html-admin-page-status.php:276
 msgid "Child Theme"
-msgstr ""
+msgstr "Child Theme"
 
 #: ../includes/admin/views/html-admin-page-status.php:287
 msgid "Parent Theme Name"
-msgstr ""
+msgstr "Parent Theme Name"
 
 #: ../includes/admin/views/html-admin-page-status.php:292
 msgid "Parent Theme Version"
-msgstr ""
+msgstr "Parent Theme Version"
 
 #: ../includes/admin/views/html-admin-page-status.php:297
 msgid "Parent Theme Author URL"
-msgstr ""
+msgstr "Parent Theme Author URL"
 
 #: ../includes/admin/views/html-admin-page-status.php:303
 msgid "WP Club Manager Support"
-msgstr ""
+msgstr "WP Club Manager Support"
 
 #: ../includes/admin/views/html-admin-page-status.php:307
 msgid "Not Declared"
-msgstr ""
+msgstr "Not Declared"
 
 #: ../includes/admin/views/html-admin-page-status.php:318
 msgid "Templates"
-msgstr ""
+msgstr "Templates"
 
 #: ../includes/admin/views/html-admin-page-status.php:355
 #, php-format
@@ -4894,23 +4949,25 @@ msgid ""
 "<code>%s</code> version <strong style=\"color:red\">%s</strong> is out of "
 "date. The core version is %s"
 msgstr ""
+"<code>%s</code> version <strong style=\"color:red\">%s</strong> is out of "
+"date. The core version is %s"
 
 #: ../includes/admin/views/html-admin-page-status.php:367
 #: ../includes/admin/views/html-admin-page-status.php:376
 msgid "Overrides"
-msgstr ""
+msgstr "Overrides"
 
 #: ../includes/admin/views/html-bulk-edit-match.php:23
 msgid "— No Change —"
-msgstr ""
+msgstr "— No Change —"
 
 #: ../includes/admin/views/html-notice-install.php:13
 msgid "<strong>Welcome to WP Club Manager</strong> &#8211; Enjoy :)"
-msgstr ""
+msgstr "<strong>Welcome to WP Club Manager</strong> &#8211; Enjoy :)"
 
 #: ../includes/admin/views/html-notice-install.php:14
 msgid "Skip setup"
-msgstr ""
+msgstr "Skip setup"
 
 #: ../includes/admin/views/html-notice-template-check.php:13
 msgid ""
@@ -4921,10 +4978,16 @@ msgid ""
 "wpclubmanager.com/docs/\" target=\"_blank\">learn more about WP Club Manager "
 "Template Structure here</a>."
 msgstr ""
+"<strong>Your theme has bundled outdated copies of WP Club Manager template "
+"files.</strong> If you notice an issue on your site, this could be the "
+"reason. Please contact your theme developer for further assistance. You can "
+"review the System Status report for full details or <a href=\"https://"
+"wpclubmanager.com/docs/\" target=\"_blank\">learn more about WP Club Manager "
+"Template Structure here</a>."
 
 #: ../includes/admin/views/html-notice-template-check.php:14
 msgid "System Status"
-msgstr ""
+msgstr "System Status"
 
 #: ../includes/admin/views/html-notice-template-check.php:14
 #: ../includes/admin/views/html-notice-theme-support.php:16
@@ -4943,23 +5006,27 @@ msgstr ""
 
 #: ../includes/admin/views/html-notice-theme-support.php:15
 msgid "Theme integration guide"
-msgstr ""
+msgstr "Theme integration guide"
 
 #: ../includes/admin/views/html-notice-update.php:13
 msgid ""
 "<strong>WP Club Manager Data Update Required</strong> &#8211; We just need "
 "to update your install to the latest version"
 msgstr ""
+"<strong>WP Club Manager Data Update Required</strong> &#8211; We just need "
+"to update your install to the latest version"
 
 #: ../includes/admin/views/html-notice-update.php:14
 msgid "Run the updater"
-msgstr ""
+msgstr "Run the updater"
 
 #: ../includes/admin/views/html-notice-update.php:18
 msgid ""
 "It is strongly recommended that you backup your database before proceeding. "
 "Are you sure you wish to run the updater now?"
 msgstr ""
+"It is strongly recommended that you backup your database before proceeding. "
+"Are you sure you wish to run the updater now?"
 
 #: ../includes/shortcodes/class-wpcm-shortcode-matches.php:129
 msgid "Opponent"
@@ -4978,7 +5045,7 @@ msgstr "N"
 #: ../includes/shortcodes/class-wpcm-shortcode-matches.php:249
 #: ../includes/shortcodes/class-wpcm-shortcode-matches.php:262
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:26
 msgid "Display upcoming fixtures."
@@ -5001,7 +5068,7 @@ msgstr "Kick Off"
 #: ../includes/widgets/class-wpcm-widget-results.php:99
 #: ../includes/widgets/class-wpcm-widget-standings.php:87
 msgid "Link Options"
-msgstr ""
+msgstr "Link Options"
 
 #: ../includes/widgets/class-wpcm-widget-fixtures.php:230
 msgid "No more matches scheduled."
@@ -5050,23 +5117,23 @@ msgstr "WPCM Standings"
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:57
 msgid "pts"
-msgstr ""
+msgstr "pts"
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:58
 msgid "Orderby"
-msgstr ""
+msgstr "Orderby"
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:62
 msgid "DESC"
-msgstr ""
+msgstr "DESC"
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:73
 msgid "Show club badge"
-msgstr ""
+msgstr "Show club badge"
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:78
 msgid "Link to club pages"
-msgstr ""
+msgstr "Link to club pages"
 
 #: ../templates/content-single-club.php:56
 msgid "Ground"
@@ -5079,14 +5146,14 @@ msgstr "More Info"
 #: ../templates/content-single-club.php:101
 #, php-format
 msgid "Matches against %s"
-msgstr ""
+msgstr "Matches against %s"
 
 #: ../templates/content-widget-results.php:51
 #: ../templates/content-widget-results.php:52
 #: ../templates/single-match/score.php:52
 #: ../templates/single-match/score.php:64
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #: ../templates/single-match/lineup.php:31
 msgid "Lineup"

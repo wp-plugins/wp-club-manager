@@ -1,13 +1,14 @@
 #
 # Translators:
+# Filip Vojtíšek <vojtisekf@me.com>, 2015
 # TheKesh <frantahlava@email.cz>, 2014
 # thegreat <jiri.the.great@gmail.com>, 2014
 # Milan Gaspar, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
-"POT-Creation-Date: 2015-10-15 14:22-0000\n"
-"PO-Revision-Date: 2015-10-15 20:22-0000\n"
+"POT-Creation-Date: 2015-11-11 21:31-0000\n"
+"PO-Revision-Date: 2015-11-20 11:43-0000\n"
 "Last-Translator: \n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/clubpress/wp-"
 "club-manager/language/cs_CZ/)\n"
@@ -39,11 +40,11 @@ msgstr "Adresa"
 
 #: ../includes/class-wpcm-ajax.php:67
 msgid "Latitude"
-msgstr "Nadmořská výška"
+msgstr "Zeměpisná šířka"
 
 #: ../includes/class-wpcm-ajax.php:72
 msgid "Longtitude"
-msgstr ""
+msgstr "Zeměpisná délka"
 
 #: ../includes/class-wpcm-ajax.php:77
 msgid "Width"
@@ -90,63 +91,63 @@ msgstr "Rozlosování & Výsledky"
 
 #: ../includes/class-wpcm-ajax.php:125
 msgid "January"
-msgstr ""
+msgstr "Leden"
 
 #: ../includes/class-wpcm-ajax.php:126
 msgid "February"
-msgstr ""
+msgstr "Únor"
 
 #: ../includes/class-wpcm-ajax.php:127
 msgid "March"
-msgstr ""
+msgstr "Březen"
 
 #: ../includes/class-wpcm-ajax.php:128
 msgid "April"
-msgstr ""
+msgstr "Duben"
 
 #: ../includes/class-wpcm-ajax.php:129
 msgid "May"
-msgstr ""
+msgstr "Květen"
 
 #: ../includes/class-wpcm-ajax.php:130
 msgid "June"
-msgstr ""
+msgstr "Červen"
 
 #: ../includes/class-wpcm-ajax.php:131
 msgid "July"
-msgstr ""
+msgstr "Červenec"
 
 #: ../includes/class-wpcm-ajax.php:132
 msgid "August"
-msgstr ""
+msgstr "Srpen"
 
 #: ../includes/class-wpcm-ajax.php:133
 msgid "September"
-msgstr ""
+msgstr "Září"
 
 #: ../includes/class-wpcm-ajax.php:134
 msgid "October"
-msgstr ""
+msgstr "Říjen"
 
 #: ../includes/class-wpcm-ajax.php:135
 msgid "November"
-msgstr ""
+msgstr "Listopad"
 
 #: ../includes/class-wpcm-ajax.php:136
 msgid "December"
-msgstr ""
+msgstr "Prosinec"
 
 #: ../includes/class-wpcm-ajax.php:143
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: ../includes/class-wpcm-ajax.php:147
 msgid "Classic"
-msgstr ""
+msgstr "Klasický"
 
 #: ../includes/class-wpcm-ajax.php:148
 msgid "List"
-msgstr ""
+msgstr "List"
 
 #: ../includes/class-wpcm-ajax.php:160 ../includes/class-wpcm-ajax.php:326
 #: ../includes/class-wpcm-ajax.php:508 ../includes/class-wpcm-ajax.php:687
@@ -242,7 +243,7 @@ msgstr "Tým"
 
 #: ../includes/class-wpcm-ajax.php:216
 msgid "Month"
-msgstr ""
+msgstr "Měsíc"
 
 #: ../includes/class-wpcm-ajax.php:228
 #: ../includes/class-wpcm-post-types.php:154
@@ -262,7 +263,7 @@ msgstr "Zobrazit náhled"
 
 #: ../includes/class-wpcm-ajax.php:250
 msgid "Link to Club Page"
-msgstr ""
+msgstr "Odkaz na stránku klubu"
 
 #: ../includes/class-wpcm-ajax.php:255 ../includes/class-wpcm-ajax.php:418
 #: ../includes/class-wpcm-ajax.php:597 ../includes/class-wpcm-ajax.php:758
@@ -292,7 +293,7 @@ msgstr "Odkaz na stránku"
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:82
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:110
 #: ../includes/widgets/class-wpcm-widget-players.php:277
-#: ../templates/shortcodes/players.php:166
+#: ../templates/shortcodes/players.php:170
 #: ../templates/shortcodes/staff.php:141
 #: ../templates/single-player/meta.php:218
 msgid "None"
@@ -317,7 +318,13 @@ msgstr "Hráči"
 #: ../includes/class-wpcm-ajax.php:301
 #: ../includes/widgets/class-wpcm-widget-players.php:125
 msgid "Appearances"
-msgstr "Vzhled"
+msgstr ""
+
+#: ../includes/class-wpcm-ajax.php:301
+#: ../includes/widgets/class-wpcm-widget-players.php:125
+#: ../templates/shortcodes/players.php:46
+msgid "Sub Appearances"
+msgstr ""
 
 #: ../includes/class-wpcm-ajax.php:304 ../includes/class-wpcm-ajax.php:491
 msgid "Thumbnail"
@@ -530,7 +537,7 @@ msgstr "Tabulka"
 
 #: ../includes/class-wpcm-ajax.php:784
 msgid "Link to Clubs"
-msgstr ""
+msgstr "Okaz na klub"
 
 #: ../includes/class-wpcm-ajax.php:791
 msgid "Display columns"
@@ -1570,7 +1577,7 @@ msgstr ""
 
 #: ../includes/class-wpcm-install.php:445
 msgid "Support"
-msgstr ""
+msgstr "Podpora"
 
 #: ../includes/class-wpcm-license-handler.php:128
 #, php-format
@@ -2104,13 +2111,12 @@ msgstr "Červená karta"
 msgid "Apps"
 msgstr "Aplikace"
 
-#: ../includes/wpcm-player-functions.php:481
+#: ../includes/wpcm-player-functions.php:483
 #: ../includes/admin/settings/class-wpcm-settings-players.php:175
 msgid "Games Played"
 msgstr "Odehrané zápasy"
 
-#: ../includes/wpcm-player-functions.php:481
-#: ../includes/admin/settings/class-wpcm-settings-players.php:175
+#: ../includes/wpcm-player-functions.php:483
 msgid "GP"
 msgstr "OZ"
 
@@ -2120,7 +2126,7 @@ msgstr "Baseball"
 
 #: ../includes/wpcm-preset-functions.php:33
 msgid "At Bats"
-msgstr ""
+msgstr "Na pálce"
 
 #: ../includes/wpcm-preset-functions.php:33
 msgid "AB"
@@ -3132,7 +3138,7 @@ msgstr[2] ""
 
 #: ../includes/admin/class-wpcm-admin-dashboard.php:205
 msgid "No upcoming matches."
-msgstr ""
+msgstr "Žádné nadcházející zápasy"
 
 #: ../includes/admin/class-wpcm-admin-importers.php:33
 #: ../includes/widgets/class-wpcm-widget-players.php:28
@@ -3229,7 +3235,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:48
 msgid "Player updated."
-msgstr ""
+msgstr "Hráč aktualizován"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:49
 #, php-format
@@ -3318,7 +3324,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:76
 msgid "Match updated."
-msgstr ""
+msgstr "Zápas aktualizován"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:77
 #, php-format
@@ -3332,7 +3338,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:79
 msgid "Match saved."
-msgstr ""
+msgstr "Zápas uložen."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:80
 #, php-format
@@ -3358,7 +3364,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:90
 msgid "Club updated."
-msgstr ""
+msgstr "Klub aktualizován."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:91
 #, php-format
@@ -3372,7 +3378,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:93
 msgid "Club saved."
-msgstr ""
+msgstr "Klub uložen."
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:94
 #, php-format
@@ -3664,7 +3670,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:373
 msgid "Quick and Easy Setup"
-msgstr ""
+msgstr "Rychlé a snadné nastavení"
 
 #: ../includes/admin/class-wpcm-admin-welcome.php:379
 msgid "1. Choose Your Sport"
@@ -3823,7 +3829,7 @@ msgstr "wpcm-nastaveni"
 #: ../includes/admin/importers/class-wpcm-club-importer.php:23
 #: ../includes/admin/importers/class-wpcm-club-importer.php:115
 msgid "Import Clubs"
-msgstr ""
+msgstr "Importovat kluby"
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:96
 #, php-format
@@ -3841,7 +3847,7 @@ msgstr ""
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:106
 msgid "View Clubs"
-msgstr ""
+msgstr "Zobrazit kluby"
 
 #: ../includes/admin/importers/class-wpcm-club-importer.php:123
 #: ../includes/admin/importers/class-wpcm-match-importer.php:195
@@ -3884,7 +3890,7 @@ msgstr ""
 #: ../includes/admin/importers/class-wpcm-match-importer.php:23
 #: ../includes/admin/importers/class-wpcm-match-importer.php:187
 msgid "Import Matches"
-msgstr ""
+msgstr "Importovat zápasy"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:25
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-match.php:126
@@ -3900,11 +3906,11 @@ msgstr ""
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:27
 msgid "Home Club"
-msgstr ""
+msgstr "Domácí klub"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:28
 msgid "Away Club"
-msgstr ""
+msgstr "Hostující klub"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:29
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-result.php:40
@@ -3921,7 +3927,7 @@ msgstr ""
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:178
 msgid "View Matches"
-msgstr ""
+msgstr "Zobrazit zápasy"
 
 #: ../includes/admin/importers/class-wpcm-match-importer.php:196
 #, php-format
@@ -3933,7 +3939,7 @@ msgstr ""
 #: ../includes/admin/importers/class-wpcm-player-importer.php:23
 #: ../includes/admin/importers/class-wpcm-player-importer.php:140
 msgid "Import Players"
-msgstr ""
+msgstr "Importovat hráče"
 
 #: ../includes/admin/importers/class-wpcm-player-importer.php:33
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:93
@@ -3997,7 +4003,7 @@ msgstr ""
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:55
 msgid "Enter club name"
-msgstr ""
+msgstr "Zadejte název klubu"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-club.php:65
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-player.php:96
@@ -4109,7 +4115,7 @@ msgstr "pozice"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:46
 msgid "Enter sponsor name"
-msgstr ""
+msgstr "Zadejte název sponzora"
 
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:56
 #: ../includes/admin/post-types/class-wpcm-admin-cpt-sponsor.php:73
@@ -4158,7 +4164,7 @@ msgstr "Nahráno %s"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:95
 msgid "Club Statistics"
-msgstr ""
+msgstr "Statistiky klubu"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:96
 msgid "Club Badge"
@@ -4189,19 +4195,19 @@ msgstr "Detaily zápasu"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:103
 msgid "Select Players"
-msgstr ""
+msgstr "Vybrat hráče"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:105
 msgid "Player Information"
-msgstr ""
+msgstr "Informace o hráči"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:106
 msgid "Player Statistics"
-msgstr ""
+msgstr "Statistiky hráče"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:107
 msgid "Player Order"
-msgstr ""
+msgstr "Řazení hráčů"
 
 #: ../includes/admin/post-types/class-wpcm-admin-meta-boxes.php:108
 msgid "Player Image"
@@ -4255,7 +4261,7 @@ msgstr "Domácí"
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-fixture.php:35
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-fixture.php:51
 msgid "Choose club"
-msgstr ""
+msgstr "Zvolit klub"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-fixture.php:44
 msgid "Away"
@@ -4266,8 +4272,8 @@ msgid "Starting Lineup"
 msgstr "Zahajovací sestava"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:32
-msgid "Substitutes"
-msgstr "Náhradníci"
+msgid "Substitutes Used"
+msgstr ""
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:36
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:40
@@ -4328,7 +4334,7 @@ msgstr "Zrušit"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-video.php:37
 msgid "Add video"
-msgstr ""
+msgstr "Přidat video"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-player-details.php:51
 msgid "Squad Number"
@@ -4358,7 +4364,7 @@ msgstr "URL odkaz"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-sponsor-url.php:34
 msgid "Open link in new window?"
-msgstr ""
+msgstr "Otevřít odkaz v novém okně?"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-staff-details.php:65
 msgid "Email Address"
@@ -4410,7 +4416,7 @@ msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:75
 msgid "Hide Scores"
-msgstr ""
+msgstr "Skrýt výsledky"
 
 #: ../includes/admin/settings/class-wpcm-settings-general.php:76
 msgid "Check this box to hide scores from guests."
@@ -4521,6 +4527,10 @@ msgstr "Zobrazit hráčovy statistiky"
 msgid "<p>Choose which player stats to display throughout the site.</p>"
 msgstr "<p> Vyberte, které statistiky hráče budou zobrazeny na webu. </ p>"
 
+#: ../includes/admin/settings/class-wpcm-settings-players.php:175
+msgid "Substitute Appearances"
+msgstr ""
+
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:38
 msgid "Staff Profile Options"
 msgstr "Možnosti profilu personálu"
@@ -4589,7 +4599,7 @@ msgstr "Tímto nastavíte počet bodů za prohru."
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:71
 msgid "Points for overtime win"
-msgstr ""
+msgstr "Body za výhru v prodloužení"
 
 #: ../includes/admin/settings/class-wpcm-settings-standings.php:72
 msgid ""
@@ -4725,7 +4735,7 @@ msgstr ""
 
 #: ../includes/admin/views/html-admin-page-status.php:84
 msgid "Language"
-msgstr ""
+msgstr "Jazyk"
 
 #: ../includes/admin/views/html-admin-page-status.php:93
 msgid "Server Environment"
@@ -5003,7 +5013,7 @@ msgstr ""
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:58
 msgid "Orderby"
-msgstr ""
+msgstr "Seřadit podle"
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:62
 msgid "DESC"
@@ -5011,7 +5021,7 @@ msgstr ""
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:73
 msgid "Show club badge"
-msgstr ""
+msgstr "Ukázat znak klubu"
 
 #: ../includes/widgets/class-wpcm-widget-standings.php:78
 msgid "Link to club pages"

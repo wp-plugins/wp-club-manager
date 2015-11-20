@@ -4,12 +4,13 @@
 # Joe <stielerjohannes@ymail.com>, 2015
 # Patrick Kindler <patrick.kindler@gmx.de>, 2014-2015
 # Sven <germantic@emailoo.de>, 2015
+# Thore Kausch <thore@plenty-berater.de>, 2015
 # fvottendorf <transifex@fv-o.de>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
-"POT-Creation-Date: 2015-10-15 14:22-0000\n"
-"PO-Revision-Date: 2015-10-15 20:22-0000\n"
+"POT-Creation-Date: 2015-11-11 21:31-0000\n"
+"PO-Revision-Date: 2015-11-11 22:03-0000\n"
 "Last-Translator: \n"
 "Language-Team: German (Germany) (http://www.transifex.com/clubpress/wp-club-"
 "manager/language/de_DE/)\n"
@@ -92,63 +93,63 @@ msgstr "Begegnungen & Ergebnisse"
 
 #: ../includes/class-wpcm-ajax.php:125
 msgid "January"
-msgstr ""
+msgstr "Januar"
 
 #: ../includes/class-wpcm-ajax.php:126
 msgid "February"
-msgstr ""
+msgstr "Februar"
 
 #: ../includes/class-wpcm-ajax.php:127
 msgid "March"
-msgstr ""
+msgstr "März"
 
 #: ../includes/class-wpcm-ajax.php:128
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: ../includes/class-wpcm-ajax.php:129
 msgid "May"
-msgstr ""
+msgstr "Mai"
 
 #: ../includes/class-wpcm-ajax.php:130
 msgid "June"
-msgstr ""
+msgstr "Juni"
 
 #: ../includes/class-wpcm-ajax.php:131
 msgid "July"
-msgstr ""
+msgstr "Juli"
 
 #: ../includes/class-wpcm-ajax.php:132
 msgid "August"
-msgstr ""
+msgstr "August"
 
 #: ../includes/class-wpcm-ajax.php:133
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: ../includes/class-wpcm-ajax.php:134
 msgid "October"
-msgstr ""
+msgstr "Oktober"
 
 #: ../includes/class-wpcm-ajax.php:135
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: ../includes/class-wpcm-ajax.php:136
 msgid "December"
-msgstr ""
+msgstr "Dezember"
 
 #: ../includes/class-wpcm-ajax.php:143
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: ../includes/class-wpcm-ajax.php:147
 msgid "Classic"
-msgstr ""
+msgstr "klassisch"
 
 #: ../includes/class-wpcm-ajax.php:148
 msgid "List"
-msgstr ""
+msgstr "Liste"
 
 #: ../includes/class-wpcm-ajax.php:160 ../includes/class-wpcm-ajax.php:326
 #: ../includes/class-wpcm-ajax.php:508 ../includes/class-wpcm-ajax.php:687
@@ -244,7 +245,7 @@ msgstr "Mannschaft"
 
 #: ../includes/class-wpcm-ajax.php:216
 msgid "Month"
-msgstr ""
+msgstr "Monat"
 
 #: ../includes/class-wpcm-ajax.php:228
 #: ../includes/class-wpcm-post-types.php:154
@@ -264,7 +265,7 @@ msgstr "Thumbnail anzeigen"
 
 #: ../includes/class-wpcm-ajax.php:250
 msgid "Link to Club Page"
-msgstr ""
+msgstr "Link zur Vereinsseite"
 
 #: ../includes/class-wpcm-ajax.php:255 ../includes/class-wpcm-ajax.php:418
 #: ../includes/class-wpcm-ajax.php:597 ../includes/class-wpcm-ajax.php:758
@@ -294,7 +295,7 @@ msgstr "Seite verknüpfen"
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:82
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:110
 #: ../includes/widgets/class-wpcm-widget-players.php:277
-#: ../templates/shortcodes/players.php:166
+#: ../templates/shortcodes/players.php:170
 #: ../templates/shortcodes/staff.php:141
 #: ../templates/single-player/meta.php:218
 msgid "None"
@@ -320,6 +321,12 @@ msgstr "Spieler"
 #: ../includes/widgets/class-wpcm-widget-players.php:125
 msgid "Appearances"
 msgstr "Einsätze"
+
+#: ../includes/class-wpcm-ajax.php:301
+#: ../includes/widgets/class-wpcm-widget-players.php:125
+#: ../templates/shortcodes/players.php:46
+msgid "Sub Appearances"
+msgstr ""
 
 #: ../includes/class-wpcm-ajax.php:304 ../includes/class-wpcm-ajax.php:491
 msgid "Thumbnail"
@@ -1572,7 +1579,7 @@ msgstr ""
 
 #: ../includes/class-wpcm-install.php:445
 msgid "Support"
-msgstr ""
+msgstr "Support"
 
 #: ../includes/class-wpcm-license-handler.php:128
 #, php-format
@@ -2110,13 +2117,12 @@ msgstr "Rote Karte"
 msgid "Apps"
 msgstr "Spiele"
 
-#: ../includes/wpcm-player-functions.php:481
+#: ../includes/wpcm-player-functions.php:483
 #: ../includes/admin/settings/class-wpcm-settings-players.php:175
 msgid "Games Played"
 msgstr "Absolvierte Spiele"
 
-#: ../includes/wpcm-player-functions.php:481
-#: ../includes/admin/settings/class-wpcm-settings-players.php:175
+#: ../includes/wpcm-player-functions.php:483
 msgid "GP"
 msgstr "AS"
 
@@ -3142,7 +3148,7 @@ msgstr[1] ""
 
 #: ../includes/admin/class-wpcm-admin-dashboard.php:205
 msgid "No upcoming matches."
-msgstr ""
+msgstr "keine baldigen Matches"
 
 #: ../includes/admin/class-wpcm-admin-importers.php:33
 #: ../includes/widgets/class-wpcm-widget-players.php:28
@@ -3185,11 +3191,11 @@ msgstr "WP Club Manager"
 #: ../includes/admin/class-wpcm-admin-menus.php:51
 #: ../includes/admin/views/html-admin-page-status.php:14
 msgid "WP Club Manager Status"
-msgstr ""
+msgstr "WP Club Manager Status"
 
 #: ../includes/admin/class-wpcm-admin-menus.php:51
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: ../includes/admin/class-wpcm-admin-menus.php:58
 #: ../includes/admin/views/html-admin-page-extensions.php:8
@@ -3242,7 +3248,7 @@ msgstr ""
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:48
 msgid "Player updated."
-msgstr ""
+msgstr "Spieler aktualisiert"
 
 #: ../includes/admin/class-wpcm-admin-post-types.php:49
 #, php-format
@@ -4293,8 +4299,8 @@ msgid "Starting Lineup"
 msgstr "Startaufstellung"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:32
-msgid "Substitutes"
-msgstr "Auswechselspieler"
+msgid "Substitutes Used"
+msgstr ""
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:36
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:40
@@ -4552,6 +4558,10 @@ msgid "<p>Choose which player stats to display throughout the site.</p>"
 msgstr ""
 "<p>Wählen Sie, welche Spielerstatistiken auf der Website angezeigt werden "
 "sollen.</ p>"
+
+#: ../includes/admin/settings/class-wpcm-settings-players.php:175
+msgid "Substitute Appearances"
+msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:38
 msgid "Staff Profile Options"

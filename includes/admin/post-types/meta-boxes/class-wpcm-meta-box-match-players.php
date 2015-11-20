@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin/Meta Boxes
- * @version     1.3
+ * @version     1.3.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -29,7 +29,7 @@ class WPCM_Meta_Box_Match_Players {
 					
 				<ul class="wpcm_stats-tabs">
 					<li class="tabs"><a href="#wpcm_lineup" tabindex="3"><?php _e( 'Starting Lineup', 'wpclubmanager' ); ?></a></li>
-					<li class="hide-if-no-js"><a href="#wpcm_subs" tabindex="3"><?php _e( 'Substitutes', 'wpclubmanager' ); ?></a></li>
+					<li class="hide-if-no-js"><a href="#wpcm_subs" tabindex="3"><?php _e( 'Substitutes Used', 'wpclubmanager' ); ?></a></li>
 				</ul>
 				<div id="wpcm_lineup" class="tabs-panel">
 					<?php wpcm_match_player_stats_table( $players, 'lineup' ); ?>

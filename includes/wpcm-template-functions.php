@@ -8,7 +8,7 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Templates
- * @version     1.3.0
+ * @version     1.3.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -230,7 +230,7 @@ if ( ! function_exists( 'wpclubmanager_template_single_player_dropdown' ) ) {
 			'meta_key' => 'wpcm_number'
 		);
 
-		if ( is_array( $team ) ) {
+		if ( is_array( $teams ) ) {
 			$args['tax_query'][] = array(
 				'taxonomy' => 'wpcm_team',
 				'field' => 'term_id',

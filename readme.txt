@@ -2,9 +2,9 @@
 Contributors: ClubPress, leonterry
 Tags: club, clubs, team, teams, sport, sports, sports club, club management, team management, league tables, leagues, clubpress, football, rugby, soccer, field hockey, ice hockey, baseball, basketball, aussie rules, netball, volleyball, floorball, gaelic football, hurling, handball
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZGGZXX2EQTZ9E
-Requires at least: 4.0
-Tested up to: 4.3
-Stable tag: 1.3.2
+Requires at least: 3.8
+Tested up to: 4.4
+Stable tag: 1.3.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -146,6 +146,21 @@ You can help improve this plugin by reporting any bugs or contributing to the so
 17. Frontend standings table
 
 == Changelog ==
+
+= 1.3.4 - 20/11/2015
+
+* Fix - Fixed broken players widget limit
+* Localisation - Updated Czech language (Thanks excllab)
+
+= 1.3.3 - 11/11/2015
+
+* New - Added options to display substitute appearance stats
+* Tweak - Updated `templates/shortcodes/players.php` to include sub appearance stats
+* Fix - Players shortcode & widget correctly filter stats by team
+* Fix - Fixed player dropdown teams filter in player profiles
+* Fix - Fixed matches shortcode formatting of thumbs and club links in editor
+* Localisation - Updated German language (Thanks tkausch)
+* Localisation - Updated wpclubmanager.pot
 
 = 1.3.2 - 15/10/2015
 

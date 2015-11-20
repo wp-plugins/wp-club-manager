@@ -33,14 +33,31 @@
 				'linktext': '',
 				'linkpage': '',
 				'title': '',
-				'thumb': '1',
-				'link_club': '0',
+				'thumb': 1,
+				'link_club': 1,
 				};
 			var shortcode = '[wpcm_matches';
-			
+
 			for( var index in options) {
-				
-				var value = form.find('#option-' + index).val();
+				if ( index == 'thumb' ) {
+					values = form.find('[name="thumb"]');
+					var stats = new Array();
+					$.each( values, function( key, val) {
+						if ( $(val).attr( 'checked' ))
+							stats.push( $(val).val() );
+					});
+					value = stats;
+				} else if ( index == 'link_club' ) {
+					values = form.find('[name="link_club"]');
+					var stats = new Array();
+					$.each( values, function( key, val) {
+						if ( $(val).attr( 'checked' ))
+							stats.push( $(val).val() );
+					});
+					value = stats;
+				} else {
+					var value = form.find('#option-' + index).val();
+				}
 				
 				// attaches the attribute to the shortcode only if it's different from the default value
 				if ( value !== options[index] )

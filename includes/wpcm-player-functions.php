@@ -7,7 +7,7 @@
  * @author 		ClubPress
  * @category 	Core
  * @package 	WPClubManager/Functions
- * @version     1.3
+ * @version     1.3.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -468,6 +468,8 @@ function wpcm_player_stats_table( $stats = array(), $team = 0, $season = 0 ) {
  */
 function wpcm_profile_stats_table( $stats = array(), $team = 0, $season = 0 ) {
 
+	$id = get_the_ID();
+
 	if ( array_key_exists( $team, $stats ) ):
 
 		if ( array_key_exists( $season, $stats[$team] ) ):
@@ -498,18 +500,39 @@ function wpcm_profile_stats_table( $stats = array(), $team = 0, $season = 0 ) {
 		</thead>
 		<tbody>
 			<tr>
-				<?php foreach( $stats_labels as $key => $val ) {
+				<?php
+				foreach( $stats_labels as $key => $val ) {
 
-					if( $key == 'rating' ) {
+					if( $key == 'appearances' ) {
+
+						if( get_option( 'wpcm_show_stats_appearances' ) == 'yes' ) { 
+
+							if( get_option( 'wpcm_show_stats_subs' ) == 'yes' ) { 
+								$subs = get_player_subs_total( $id, $season, $team );
+								if( $subs > 0 ) {
+									$sub = ' <span class="sub-appearances">(' . $subs . ')</span>';
+								}else{
+									$sub = '';
+								}
+							} ?>
+					
+							<td><span data-index="appearances"><?php wpcm_stats_value( $stats, 'total', 'appearances' ); ?><?php echo ( get_option( 'wpcm_show_stats_subs' ) == 'yes' ? $sub : '' ); ?></span></td>
+
+						<?php
+						}
+
+					} elseif( $key == 'rating' ) {
 
 						$rating = get_wpcm_stats_value( $stats, 'total', 'rating' );
 						$apps = get_wpcm_stats_value( $stats, 'total', 'appearances' );
 						$avrating = wpcm_divide( $rating, $apps );
 
-						if( get_option( 'wpcm_show_stats_rating' ) == 'yes' ) : ?>
+						if( get_option( 'wpcm_show_stats_rating' ) == 'yes' ) { ?>
 					
 							<td><span data-index="rating"><?php echo sprintf( "%01.2f", round($avrating, 2) ); ?></span></td>
-						<?php endif;
+
+						<?php
+						}
 
 					} else { 
 
@@ -525,4 +548,78 @@ function wpcm_profile_stats_table( $stats = array(), $team = 0, $season = 0 ) {
 		</tbody>
 	</table>
 <?php
+}
+
+function get_player_subs_total( $id = null, $season = null, $team = null ) {
+
+	//$id = get_the_ID();
+
+	// convert atts to something more useful
+	if ( $season <= 0  )
+		$season = null;
+	if ( $team <= 0  )
+		$team = null;
+
+	$default_club = get_option( 'wpcm_default_club' );
+
+	// get results
+	$query_args = array(
+		'tax_query' => array(),
+		'numberposts' => '-1',
+		'order' => 'ASC',
+		'orderby' => 'post_date',
+		'post_type' => 'wpcm_match',
+		'post_status' => 'publish',
+		'posts_per_page' => '-1'
+	);
+	$query_args['meta_query'] = array(
+		'relation' => 'OR',
+		array(
+			'key' => 'wpcm_home_club',
+			'value' => $default_club,
+		),
+		array(
+			'key' => 'wpcm_away_club',
+			'value' => $default_club,
+		)
+	);
+	if ( isset( $season ) ) {
+		$query_args['tax_query'][] = array(
+			'taxonomy' => 'wpcm_season',
+			'terms' => $season,
+			'field' => 'term_id'
+		);
+	}
+	if ( isset( $team ) ) {
+		$query_args['tax_query'][] = array(
+			'taxonomy' => 'wpcm_team',
+			'terms' => $team,
+			'field' => 'term_id'
+		);
+	}
+
+	$matches = get_posts( $query_args );
+
+	$size = sizeof( $matches );
+
+	$total_subs = '0';
+
+	if ( $size > 0 ) {
+
+		$total_subs = 0;
+
+		foreach( $matches as $match ) {
+
+			$player = unserialize( get_post_meta( $match->ID, 'wpcm_players', true ) );
+
+			if( is_array($player) && array_key_exists('subs', $player) && array_key_exists($id, $player['subs']) ) {
+
+				$total_subs ++;
+
+			}
+		}
+	}
+
+
+	return $total_subs;
 }

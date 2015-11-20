@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Admin
  * @package 	WPClubManager/Admin
- * @version     1.1.0
+ * @version     1.3.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -172,7 +172,7 @@ class WPCM_Settings_Players extends WPCM_Settings_Page {
 
 		$wpcm_player_stats_labels = wpcm_get_sports_stats_labels();
 
-		$stats_labels = array( 'appearances' => '<a title="' . __('Games Played', 'wpclubmanager') . '">' . __( 'GP', 'wpclubmanager' ) . '</a>' );
+		$stats_labels = array( 'appearances' => __( 'Games Played', 'wpclubmanager' ), 'subs' => __( 'Substitute Appearances', 'wpclubmanager' ) );
 		$stats_labels = array_merge( $stats_labels, $wpcm_player_stats_labels );
 
 		foreach ( $stats_labels as $key => $value ) {

@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Club Manager\n"
-"POT-Creation-Date: 2015-10-15 14:22-0000\n"
-"PO-Revision-Date: 2015-10-15 20:22-0000\n"
+"POT-Creation-Date: 2015-11-11 21:31-0000\n"
+"PO-Revision-Date: 2015-11-11 22:03-0000\n"
 "Last-Translator: \n"
 "Language-Team: Finnish (http://www.transifex.com/clubpress/wp-club-manager/"
 "language/fi/)\n"
@@ -291,7 +291,7 @@ msgstr "Linkin sivu"
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:82
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-details.php:110
 #: ../includes/widgets/class-wpcm-widget-players.php:277
-#: ../templates/shortcodes/players.php:166
+#: ../templates/shortcodes/players.php:170
 #: ../templates/shortcodes/staff.php:141
 #: ../templates/single-player/meta.php:218
 msgid "None"
@@ -317,6 +317,12 @@ msgstr "Pelaajat"
 #: ../includes/widgets/class-wpcm-widget-players.php:125
 msgid "Appearances"
 msgstr "Ottelut"
+
+#: ../includes/class-wpcm-ajax.php:301
+#: ../includes/widgets/class-wpcm-widget-players.php:125
+#: ../templates/shortcodes/players.php:46
+msgid "Sub Appearances"
+msgstr ""
 
 #: ../includes/class-wpcm-ajax.php:304 ../includes/class-wpcm-ajax.php:491
 msgid "Thumbnail"
@@ -2103,13 +2109,12 @@ msgstr "Punainen kortti"
 msgid "Apps"
 msgstr "Ottelut"
 
-#: ../includes/wpcm-player-functions.php:481
+#: ../includes/wpcm-player-functions.php:483
 #: ../includes/admin/settings/class-wpcm-settings-players.php:175
 msgid "Games Played"
 msgstr "Pelatut ottelut"
 
-#: ../includes/wpcm-player-functions.php:481
-#: ../includes/admin/settings/class-wpcm-settings-players.php:175
+#: ../includes/wpcm-player-functions.php:483
 msgid "GP"
 msgstr "O"
 
@@ -4319,8 +4324,8 @@ msgid "Starting Lineup"
 msgstr "Avauskokoonpano"
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:32
-msgid "Substitutes"
-msgstr "Vaihtopelaajat"
+msgid "Substitutes Used"
+msgstr ""
 
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:36
 #: ../includes/admin/post-types/meta-boxes/class-wpcm-meta-box-match-players.php:40
@@ -4572,6 +4577,10 @@ msgstr "Näytä pelaajan tilastot"
 #: ../includes/admin/settings/class-wpcm-settings-players.php:170
 msgid "<p>Choose which player stats to display throughout the site.</p>"
 msgstr "<p>Valitse mitkä pelaajan tilastot näytetään sivuilla.</p>"
+
+#: ../includes/admin/settings/class-wpcm-settings-players.php:175
+msgid "Substitute Appearances"
+msgstr ""
 
 #: ../includes/admin/settings/class-wpcm-settings-staff.php:38
 msgid "Staff Profile Options"

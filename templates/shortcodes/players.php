@@ -4,7 +4,7 @@
  *
  * @author 		Clubpress
  * @package 	WPClubManager/Templates
- * @version     1.3.1
+ * @version     1.3.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -42,15 +42,15 @@ $stats_labels = array_merge(
 		'season' => __( 'Season', 'wpclubmanager' ),
 		'dob' => __( 'Date of Birth', 'wpclubmanager' ),
 		'hometown' => __( 'Hometown', 'wpclubmanager' ),
-		'joined' => __( 'Joined', 'wpclubmanager' )
+		'joined' => __( 'Joined', 'wpclubmanager' ),
+		'subs' => __( 'Sub Appearances', 'wpclubmanager' )
 	),
 	$player_stats_labels
 );
 
-if ( $limit == 0 )
+if ( $limit == 0 ) {
 	$limit = -1;
-if ( $team <= 0 )
-	$team = null;
+}
 
 $stats = explode( ',', $stats );
 
@@ -62,8 +62,9 @@ foreach( $stats as $key => $value ) {
 
 $numposts = $limit;
 
-if ( array_intersect_key( array_flip( $stats ), $player_stats_labels ) )
-$numposts = -1;
+if ( array_intersect_key( array_flip( $stats ), $player_stats_labels ) ){
+	$numposts = -1;
+}
 $orderby = strtolower( $orderby );	
 $order = strtoupper( $order );
 $output = '';
@@ -77,6 +78,7 @@ $args = array(
 	'order' => $order,
 	'suppress_filters' => 0
 );
+
 
 if ( $orderby == 'name' ) {
     $args['orderby'] = 'name';
@@ -114,25 +116,30 @@ $players = get_posts( $args );
 $count = 0;	
 
 if ( sizeof( $players ) > 0 ) {
+
 	if( $title ) {
 		$title = '<h3 class="wpcm-sc-title">' . $title . '</h3>';
-	} else{
+	} else {
 		$title = '';
 	}
+
 	if( $position ) {
 		$term = get_term( $position, 'wpcm_position' );
 		$name = $term->name;
 		$pos = ' ' . $name;
-	} else{
+	} else {
 		$pos = '';
 	}
+
 	$output .= '<div class="wpcm-players-shortcode' . strtolower($pos) . '">
 		' . $title . '
 		<table>
 			<thead>
 				<tr>';
 				foreach( $stats as $stat ) {
-					$output .= '<th class="'. $stat . '">' . $stats_labels[$stat] .'</th>';
+					if ( $stat !== 'subs' ) {
+						$output .= '<th class="'. $stat . '">' . $stats_labels[$stat] .'</th>';
+					}
 				}
 				$output .= '</tr>
 			</thead>
@@ -145,11 +152,13 @@ if ( sizeof( $players ) > 0 ) {
 		$player_details[$player->ID] = array();
 		$count++;
 
-		if ( array_intersect_key( array_flip( $stats ), $player_stats_labels ) )
+		if ( array_intersect_key( array_flip( $stats ), $player_stats_labels ) ) {
 			$player_stats = get_wpcm_player_stats_from_post( $player->ID );
-			$number = get_post_meta( $player->ID, 'wpcm_number', true );
-			$name = $player->post_title;
-			$positions = get_the_terms( $player->ID, 'wpcm_position' );
+		}
+		
+		$number = get_post_meta( $player->ID, 'wpcm_number', true );
+		$name = $player->post_title;
+		$positions = get_the_terms( $player->ID, 'wpcm_position' );
 
 		if ( has_post_thumbnail( $player->ID ) ) {
 			$thumb = get_the_post_thumbnail( $player->ID, 'player_thumbnail' );
@@ -160,11 +169,8 @@ if ( sizeof( $players ) > 0 ) {
 		if ( is_array( $positions ) ) {
 			$position = reset($positions);
 			$position = $position->name;
-
 		} else {
-
 			$position = __( 'None', 'wpclubmanager' );
-
 		}
 
 		$dob = get_post_meta( $player->ID, 'wpcm_dob', true );
@@ -175,133 +181,161 @@ if ( sizeof( $players ) > 0 ) {
 
 		foreach( $stats as $stat ) {
 
+			$player_details[$player->ID][$stat] = '';
+
 			if ( array_key_exists( $stat, $player_stats_labels ) )  {
-				if ( $season ) {
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= $player_stats[0][ $season ]['total'][$stat];
+				// $player_details[$player->ID][$stat] = '';
+				if ( $team ) {
+					if ( $season ) {
+						$player_details[$player->ID][$stat] = $player_stats[$team][$season]['total'][$stat];
+					} else {
+						$player_details[$player->ID][$stat] = $player_stats[$team][0]['total'][$stat];
+					}
 				} else {
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= $player_stats[0][0]['total'][$stat];
+					if ( $season ) {
+						$player_details[$player->ID][$stat] = $player_stats[0][$season]['total'][$stat];
+					} else {
+						$player_details[$player->ID][$stat] = $player_stats[0][0]['total'][$stat];
+					}
 				}
+				// if ( $season ) {
+				// 	$player_details[$player->ID][$stat] = '';
+				// 	$player_details[$player->ID][$stat] .= $player_stats[0][ $season ]['total'][$stat];
+				// } else {
+				// 	$player_details[$player->ID][$stat] = '';
+				// 	$player_details[$player->ID][$stat] .= $player_stats[0][0]['total'][$stat];
+				// }
+
 			} else {
+
 				switch ( $stat ) {
-				case 'thumb':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= '<a href="' . get_permalink( $player->ID ) . '">' . $thumb . '</a>';
+
+					case 'thumb':
+						$player_details[$player->ID][$stat] = '<a href="' . get_permalink( $player->ID ) . '">' . $thumb . '</a>';
 					break;
-				case 'flag':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= '<img class="flag" src="' . WPCM_URL . 'assets/images/flags/' . $natl . '.png" />';
+					case 'flag':
+						$player_details[$player->ID][$stat] = '<img class="flag" src="' . WPCM_URL . 'assets/images/flags/' . $natl . '.png" />';
 					break;
-				case 'number':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= $number;
+					case 'number':
+						$player_details[$player->ID][$stat] = $number;
 					break;
-				case 'name':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= '<a href="' . get_permalink( $player->ID ) . '">' . $name . '</a>';
+					case 'name':
+						$player_details[$player->ID][$stat] = '<a href="' . get_permalink( $player->ID ) . '">' . $name . '</a>';
 					break;
-				case 'position':
-					$player_details[$player->ID][$stat] = '';
-					$positions = get_the_terms( $player->ID, 'wpcm_position' );
-					if ( is_array( $positions ) ) {
-						$player_positions = array();
-						foreach ( $positions as $position ) {
-							$player_positions[] = $position->name;
+					case 'position':
+						$positions = get_the_terms( $player->ID, 'wpcm_position' );
+						if ( is_array( $positions ) ) {
+							$player_positions = array();
+							foreach ( $positions as $position ) {
+								$player_positions[] = $position->name;
+							}
+							$player_details[$player->ID][$stat] = implode( ', ', $player_positions );
 						}
-						$player_details[$player->ID][$stat] .= implode( ', ', $player_positions );
-					}
 					break;
-				case 'team':
-					$player_details[$player->ID][$stat] = '';
-					$teams = get_the_terms( $player->ID, 'wpcm_team' );
-					if ( is_array( $teams ) ) {
-						$player_teams = array();
-						foreach ( $teams as $team ) {
-							$player_teams[] = $team->name;
+					case 'team':
+						$teams = get_the_terms( $player->ID, 'wpcm_team' );
+						if ( is_array( $teams ) ) {
+							$player_teams = array();
+							foreach ( $teams as $team ) {
+								$player_teams[] = $team->name;
+							}
+							$player_details[$player->ID][$stat] = implode( ', ', $player_teams );
 						}
-						$player_details[$player->ID][$stat] .= implode( ', ', $player_teams );
-					}
 					break;
-				case 'season':
-					$player_details[$player->ID][$stat] = '';
-					$seasons = get_the_terms( $player->ID, 'wpcm_season' );
-					if ( is_array( $seasons ) ) {
-						$player_seasons = array();
-						foreach ( $seasons as $season ) {
-							$player_seasons[] = $season->name;
+					case 'season':
+						$seasons = get_the_terms( $player->ID, 'wpcm_season' );
+						if ( is_array( $seasons ) ) {
+							$player_seasons = array();
+							foreach ( $seasons as $season ) {
+								$player_seasons[] = $season->name;
+							}
+							$player_details[$player->ID][$stat] = implode( ', ', $player_seasons );
 						}
-						$player_details[$player->ID][$stat] .= implode( ', ', $player_seasons );
-					}
 					break;
-				case 'age':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= get_age( get_post_meta( $player->ID, 'wpcm_dob', true ) );
+					case 'age':
+						$player_details[$player->ID][$stat] = get_age( get_post_meta( $player->ID, 'wpcm_dob', true ) );
 					break;
-				case 'dob':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= date_i18n( get_option( 'date_format' ), strtotime( get_post_meta( $player->ID, 'wpcm_dob', true ) ) );
+					case 'dob':
+						$player_details[$player->ID][$stat] = date_i18n( get_option( 'date_format' ), strtotime( get_post_meta( $player->ID, 'wpcm_dob', true ) ) );
 					break;
-				case 'height':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= $height;
+					case 'height':
+						$player_details[$player->ID][$stat] = $height;
 					break;
-				case 'weight':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= $weight;
+					case 'weight':
+						$player_details[$player->ID][$stat] = $weight;
 					break;
-				case 'hometown':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] .= '<img class="flag" src="'. WPCM_URL .'assets/images/flags/' . $natl . '.png" /> ' . $hometown;
+					case 'hometown':
+						$player_details[$player->ID][$stat] = '<img class="flag" src="'. WPCM_URL .'assets/images/flags/' . $natl . '.png" /> ' . $hometown;
 					break;
-				case 'joined':
-					$player_details[$player->ID][$stat] = '';
-					$player_details[$player->ID][$stat] = date_i18n( get_option( 'date_format' ), strtotime( $player->post_date ) );
+					case 'joined':
+						$player_details[$player->ID][$stat] = date_i18n( get_option( 'date_format' ), strtotime( $player->post_date ) );
+					break;
+					case 'subs':
+						$player_details[$player->ID][$stat] = get_player_subs_total( $player->ID, $season, $team );
 					break;
 				}
 			}
 		}
 	}
+
 	if ( array_key_exists( $orderby, $player_stats_labels ) ) {
 		$player_details = subval_sort( $player_details, $orderby );
-		if ( $order == 'DESC' )
+		if ( $order == 'DESC' ) {
 			$player_details = array_reverse( $player_details );
+		}
 	}
+
 	$count = 0;
+
 	foreach( $player_details as $player_detail ) {
+		
 		$count++;
-		if ( $limit > 0 && $count > $limit )
+
+		if ( $limit > 0 && $count > $limit ) {
 			break;
+		}
 
 		$output .= '<tr>';
 
 		foreach( $stats as $stat ) {
 
-			$output .= '<td class="'. $stat . '">';
+			if ( $stat !== 'subs' ) {
+				$output .= '<td class="'. $stat . '">';
 
-			if ( $stat == 'rating' ) {
+				if ( $stat == 'rating' ) {
 
-				if ( $player_detail['rating'] > 0 ) {
-					if ( $season ) {
-						$player_details[$player->ID]['appearances'] = '';
-						$player_details[$player->ID]['appearances'] = $player_stats[0][ $season ]['total']['appearances'];
+					if ( $player_detail['rating'] > 0 ) {
+						//$player_details[$player->ID]['appearances'] = $player_stats[$team][$season]['total']['appearances'];
+						// if ( $season ) {
+						// 	$player_details[$player->ID]['appearances'] = '';
+						// 	$player_details[$player->ID]['appearances'] = $player_stats[0][ $season ]['total']['appearances'];
+						// } else {
+						// 	$player_details[$player->ID]['appearances'] = '';
+						// 	$player_details[$player->ID]['appearances'] = $player_stats[0][0]['total']['appearances'];
+						// }
+						$r = $player_detail['rating'];
+						$a = $player_detail['appearances'];
+						$avrating = wpcm_divide( $r, $a );
+						$output .= sprintf( "%01.2f", round($avrating, 2) );
 					} else {
-						$player_details[$player->ID]['appearances'] = '';
-						$player_details[$player->ID]['appearances'] = $player_stats[0][0]['total']['appearances'];
+						$output .= '0';
 					}
-					$r = $player_detail['rating'];
-					$a = $player_detail['appearances'];
-					$avrating = wpcm_divide( $r, $a );
-					$output .= sprintf( "%01.2f", round($avrating, 2) );
-				} else {
-					$output .= '0';
-				}
-				
-			} else {
-				$output .= $player_detail[$stat];
-			}
+					
+				} elseif ( $stat == 'appearances' ) {
+					if ( array_key_exists( 'subs', $player_detail ) ) {
+						$output .= $player_detail['appearances'] . ' (' . $player_detail['subs'] . ')';
+					} else {
+						$output .= $player_detail['appearances'];
+					}
 
-			$output .= '</td>';
+				} else {
+
+					$output .= $player_detail[$stat];
+
+				}
+
+				$output .= '</td>';
+			}
 		}
 
 		$output .= '</tr>';
@@ -310,7 +344,9 @@ if ( sizeof( $players ) > 0 ) {
 	
 	$output .= '</div>';
 
-	if ( isset( $linkpage ) && $linkpage ) $output .= '<a href="' . get_page_link( $linkpage ) . '" class="wpcm-view-link">' . $linktext . '</a>';
+	if ( isset( $linkpage ) && $linkpage ) {
+		$output .= '<a href="' . get_page_link( $linkpage ) . '" class="wpcm-view-link">' . $linktext . '</a>';
+	}
 
 	wp_reset_postdata();
 

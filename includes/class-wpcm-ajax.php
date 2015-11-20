@@ -5,7 +5,7 @@
  * AJAX Event Handler
  *
  * @class 		WPCM_AJAX
- * @version		1.3.2
+ * @version		1.3.3
  * @package		WPClubManager/Classes
  * @category	Class
  * @author 		ClubPress
@@ -117,7 +117,7 @@ class WPCM_AJAX {
 			'linkpage' => null,
 			'title' => __( 'Fixtures & Results', 'wpclubmanager' ),
 			'thumb' => 1,
-			'link_club' => 0,
+			'link_club' => 1,
 		);
 		$args = array_merge( $defaults, $_GET );
 
@@ -243,12 +243,12 @@ class WPCM_AJAX {
 					<tr>
 						<?php $field = 'thumb'; ?>
 						<th><label for="option-<?php echo $field; ?>"><?php _e( 'Show Thumbnail', 'wpclubmanager' ); ?></label></th>
-						<td><input type="checkbox" id="option-<?php echo $field; ?>" name="<?php echo $field; ?>" value="<?php echo $args[$field]; ?>" checked /></td>
+						<td><input type="checkbox" id="option-<?php echo $field; ?>" name="<?php echo $field; ?>" value="<?php echo $args[$field]; ?>" <?php checked( $args[$field], 1 ); ?> /></td>
 					</tr>
 					<tr>
 						<?php $field = 'link_club'; ?>
 						<th><label for="option-<?php echo $field; ?>"><?php _e( 'Link to Club Page', 'wpclubmanager' ); ?></label></th>
-						<td><input type="checkbox" id="option-<?php echo $field; ?>" name="<?php echo $field; ?>" value="<?php echo $args[$field]; ?>" checked /></td>
+						<td><input type="checkbox" id="option-<?php echo $field; ?>" name="<?php echo $field; ?>" value="<?php echo $args[$field]; ?>" <?php checked( $args[$field], 1 ); ?> /></td>
 					</tr>
 					<tr>
 						<?php $field = 'linktext'; ?>
@@ -298,7 +298,7 @@ class WPCM_AJAX {
 		
 		$wpcm_player_stats_labels = wpcm_get_sports_stats_labels();
 		
-		$player_stats_labels = array_merge( array( 'appearances' => __( 'Appearances', 'wpclubmanager' ) ), $wpcm_player_stats_labels );
+		$player_stats_labels = array_merge( array( 'appearances' => __( 'Appearances', 'wpclubmanager' ), 'subs' => __( 'Sub Appearances', 'wpclubmanager' ) ), $wpcm_player_stats_labels );
 		$stats_labels = array_merge(
 			array(
 				'thumb' => __( 'Thumbnail', 'wpclubmanager' ),

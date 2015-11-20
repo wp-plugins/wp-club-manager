@@ -5,7 +5,7 @@
  * @author 		ClubPress
  * @category 	Widgets
  * @package 	WPClubManager/Widgets
- * @version 	1.3.0
+ * @version 	1.3.3
  * @extends 	WP_Widget
  */
 
@@ -122,7 +122,7 @@ class WPCM_Players_Widget extends WPCM_Widget {
 		$data = wpcm_get_sport_presets();
 		$wpcm_player_stats_labels = $data[$sport]['stats_labels'];
 
-		$player_stats_labels = array_merge( array( 'appearances' => __( 'Appearances', 'wpclubmanager' ) ), $wpcm_player_stats_labels );
+		$player_stats_labels = array_merge( array( 'appearances' => __( 'Appearances', 'wpclubmanager' ), 'subs' => __( 'Sub Appearances', 'wpclubmanager' ) ), $wpcm_player_stats_labels );
 		$stats_labels = array_merge(
 			array(
 				'thumb' => __( 'Image', 'wpclubmanager' ),
